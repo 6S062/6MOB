@@ -8,7 +8,7 @@
 
 #import "SensorModel.h"
 
-#define kBLE_SCAN_TIMEOUT 3
+#define kBLE_SCAN_TIMEOUT 5
 
 static id _instance;
 @implementation SensorModel {
@@ -162,6 +162,7 @@ NSTimer *rssiTimer;
 {
     NSLog(@"bleDidDisconnect");
     [self.delegate bleDidDisconnect];
+    [self startScanning]; //restart scan
     
 }
 

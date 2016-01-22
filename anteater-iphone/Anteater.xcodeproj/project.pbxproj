@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB4946E41C4ECE83009F6FB0 /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4946931C4ECE83009F6FB0 /* CorePlot.framework */; };
 		DB4946E81C4ECEDC009F6FB0 /* SensorDataPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4946E71C4ECEDC009F6FB0 /* SensorDataPlotViewController.m */; };
-		DB4946EB1C4ED6F6009F6FB0 /* CorePlot.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DB4946931C4ECE83009F6FB0 /* CorePlot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DB9920051C51275A00ED881F /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4946931C4ECE83009F6FB0 /* CorePlot.framework */; };
+		DB9920061C51276000ED881F /* CorePlot.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DB4946931C4ECE83009F6FB0 /* CorePlot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DB9920091C5133EC00ED881F /* AnteaterREST.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9920081C5133EC00ED881F /* AnteaterREST.m */; };
 		DBA1178E1C499B93001E157C /* anteater-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA1178D1C499B93001E157C /* anteater-logo.png */; };
 		DBDF15AB1C46955900B45C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDF15AA1C46955900B45C35 /* main.m */; };
 		DBDF15AE1C46955900B45C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDF15AD1C46955900B45C35 /* AppDelegate.m */; };
@@ -30,7 +31,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DB4946EB1C4ED6F6009F6FB0 /* CorePlot.framework in CopyFiles */,
+				DB9920061C51276000ED881F /* CorePlot.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +120,9 @@
 		DB4946E31C4ECE83009F6FB0 /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		DB4946E61C4ECEDC009F6FB0 /* SensorDataPlotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorDataPlotViewController.h; sourceTree = "<group>"; };
 		DB4946E71C4ECEDC009F6FB0 /* SensorDataPlotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorDataPlotViewController.m; sourceTree = "<group>"; };
+		DB9920021C5126B900ED881F /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
+		DB9920071C5133EC00ED881F /* AnteaterREST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnteaterREST.h; sourceTree = "<group>"; };
+		DB9920081C5133EC00ED881F /* AnteaterREST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnteaterREST.m; sourceTree = "<group>"; };
 		DBA1178D1C499B93001E157C /* anteater-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "anteater-logo.png"; sourceTree = "<group>"; };
 		DBDF15A61C46955900B45C35 /* Anteater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anteater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBDF15AA1C46955900B45C35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -146,7 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB4946E41C4ECE83009F6FB0 /* CorePlot.framework in Frameworks */,
+				DB9920051C51275A00ED881F /* CorePlot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +246,7 @@
 		DBDF159D1C46955900B45C35 = {
 			isa = PBXGroup;
 			children = (
+				DB9920021C5126B900ED881F /* libCorePlot-CocoaTouch.a */,
 				DB4946931C4ECE83009F6FB0 /* CorePlot.framework */,
 				DB4946941C4ECE83009F6FB0 /* CorePlotHeaders */,
 				DBDF15C71C46958A00B45C35 /* RedBear BLE */,
@@ -271,6 +276,8 @@
 				DBDF15B01C46955900B45C35 /* SensorReadingTableViewController.m */,
 				DB4946E61C4ECEDC009F6FB0 /* SensorDataPlotViewController.h */,
 				DB4946E71C4ECEDC009F6FB0 /* SensorDataPlotViewController.m */,
+				DB9920071C5133EC00ED881F /* AnteaterREST.h */,
+				DB9920081C5133EC00ED881F /* AnteaterREST.m */,
 				DBDF15B21C46955900B45C35 /* SecondViewController.h */,
 				DBDF15B31C46955900B45C35 /* SecondViewController.m */,
 				DBDF15B51C46955900B45C35 /* Main.storyboard */,
@@ -374,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBDF15CA1C4695CA00B45C35 /* SensorModel.m in Sources */,
+				DB9920091C5133EC00ED881F /* AnteaterREST.m in Sources */,
 				DBDF15B41C46955900B45C35 /* SecondViewController.m in Sources */,
 				DBDF15AE1C46955900B45C35 /* AppDelegate.m in Sources */,
 				DB4946E81C4ECEDC009F6FB0 /* SensorDataPlotViewController.m in Sources */,
@@ -442,7 +450,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -479,7 +487,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -497,6 +505,10 @@
 				);
 				INFOPLIST_FILE = Anteater/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.mit.Anteater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -513,6 +525,10 @@
 				);
 				INFOPLIST_FILE = Anteater/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.mit.Anteater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

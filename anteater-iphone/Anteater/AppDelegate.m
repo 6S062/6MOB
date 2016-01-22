@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SensorModel.h"
+#import "AnteaterREST.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +21,11 @@
     // Override point for customization after application launch.
     
     [[SensorModel instance] startScanning];
+    [AnteaterREST getListOfAnthills:^(NSDictionary *hills) {
+        NSLog(@"Got :%@", [hills description]);
+    }];
+
+    
     return YES;
 }
 

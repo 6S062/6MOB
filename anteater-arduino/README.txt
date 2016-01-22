@@ -12,3 +12,7 @@ To set up DHT11, copy the DHT11 directory into your arduino/libraries directory,
 
 http://playground.arduino.cc/Main/DHT11Lib
 
+
+In theory, these instructions should enable low power mode, but my experience suggests that they 1) make it difficult to re-program the device, and 2) cause the BLE connection to drop immediately after it starts.
+
+http://redbearlab.com/blend-low-power-settings/

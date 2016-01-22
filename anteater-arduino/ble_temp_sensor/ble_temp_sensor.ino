@@ -42,11 +42,14 @@ void setup()
   //ble_set_name("My Name");
     Serial.print("I'm alive!");
 
+// Call the function to enable low power consumption
+//   ble_low_power();
+
   // Init. and start BLE library.
   ble_begin();
   
   // Enable serial debug
-  Serial.begin(57600);
+    Serial.begin(57600);
 
 }
 
@@ -99,8 +102,8 @@ void loop()
 
        // ble_write_string("Read sensor: ");
        // ble_do_events();
-        switch (chk)
-        {
+        switch (chk) {
+ 
           case DHTLIB_OK: 
 		//ble_write_string("OK"); 
                 //ble_write_string("Humidity (%): ");
@@ -133,19 +136,19 @@ void loop()
 
   }
 //
-//  Serial.print("Temperature (°C): ");
+//  Serial.print("Temperature (¬∞C): ");
 //  Serial.println((float)DHT11.temperature, 2);
 //
-//  Serial.print("Temperature (°F): ");
+//  Serial.print("Temperature (¬∞F): ");
 //  Serial.println(Fahrenheit(DHT11.temperature), 2);
 //
-//  Serial.print("Temperature (°K): ");
+//  Serial.print("Temperature (¬∞K): ");
 //  Serial.println(Kelvin(DHT11.temperature), 2);
 //
-//  Serial.print("Dew Point (°C): ");
+//  Serial.print("Dew Point (¬∞C): ");
 //  Serial.println(dewPoint(DHT11.temperature, DHT11.humidity));
 //
-//  Serial.print("Dew PointFast (°C): ");
+//  Serial.print("Dew PointFast (¬∞C): ");
 //  Serial.println(dewPointFast(DHT11.temperature, DHT11.humidity));
 
 //  delay();
@@ -168,3 +171,4 @@ void loop()
   ble_do_events();
 }
 
+  
