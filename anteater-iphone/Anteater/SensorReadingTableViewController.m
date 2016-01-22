@@ -57,7 +57,7 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"noConnCell"];
         
         if (!cell) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"sensorCell"];
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"noConnCell"];
         }
         cell.textLabel.text = [NSString stringWithFormat:@"No anthills currently connected"];
         return cell;
@@ -69,12 +69,12 @@
             //top cell contains some buttons to show a plot
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"plotCell"];
             if (!cell) {
-                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"sensorCell"];
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"plotCell"];
                 cell.imageView.image = [UIImage imageNamed:@"anteater-logo.png"];
             }
             cell.textLabel.text = [NSString stringWithFormat:@"%lu readings",(unsigned long)[rs count]];
             cell.detailTextLabel.text = [NSString stringWithFormat:@"Tap top plot values"];
-            cell.accessoryType = UITableViewCellAccessoryDetailButton;
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             return cell;
 
         } else {
