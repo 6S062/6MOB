@@ -27,7 +27,7 @@
 }
 
 -(NSString *)title {
-    return @"I AM AN ANTHILL";
+    return [_data objectForKey:@"id"];
 }
 
 @end

@@ -103,7 +103,7 @@
 
 }
 
-
+#define MAX_READINGS 300
 -(void)reloadData {
     BLESensorReading *r;
     _humData = [[NSMutableArray alloc] init];
@@ -111,7 +111,16 @@
     int first = -1;
     _minTime = 1000000000;
     _maxTime = -1000000000;
-    for (r in _readings) {
+    long start, len;
+    long i;
+    for ( i = 0; i < [_readings count]; i++) {
+        r = [_readings objectAtIndex:i];
+        if ([r.time timeIntervalSinceNow]*-1 <= MAX_TIME)
+            break;
+    }
+    start = i;
+    len = [_readings count] - i;
+    for (r in [_readings subarrayWithRange:(NSRange){start,len}]) {
         if (first == -1) {
             first =[r.time timeIntervalSince1970];
         }
