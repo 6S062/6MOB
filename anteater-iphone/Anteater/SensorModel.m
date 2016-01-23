@@ -155,7 +155,7 @@ static id _instance;
 -(NSString *)currentSensorId {
     if ([self isConnected])
         return _ble.activePeripheral.name;
-    else return NULL;
+    else return @"NONE";
 }
 
 

@@ -31,3 +31,4 @@
 -(NSString *)currentSensorId;
 
 @end
+
