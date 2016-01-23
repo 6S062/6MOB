@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Rew-fR-472">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="fJh-Ob-Y1g">
+            <objects>
+                <viewController id="Rew-fR-472" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S1e-v0-x4X"/>
+                        <viewControllerLayoutGuide type="bottom" id="YNq-yQ-8Vf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gaI-5W-s3D">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="anteater-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="duE-ZH-5c3">
+                                <rect key="frame" x="-318" y="-209" width="1000" height="1000"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME TO ANTEATER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mh-Es-zRv">
+                                <rect key="frame" x="0.0" y="50" width="320" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="0In-tF-fKn"/>
+                                    <constraint firstAttribute="width" constant="320" id="QIf-pp-UIg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="204.5" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bkl-eM-Wg7">
+                                <rect key="frame" x="58" y="204" width="204.5" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="204.5" id="HEF-dl-nfX"/>
+                                    <constraint firstAttribute="width" constant="204.5" id="SMr-Xu-x1K"/>
+                                    <constraint firstAttribute="height" constant="35" id="VZ8-kd-T5S"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhf-m3-75L">
+                                <rect key="frame" x="98" y="461" width="125" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="cFt-1i-x1p"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="175" id="r3b-sH-urk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <state key="normal" title="Get started">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="hitOK:" destination="Rew-fR-472" eventType="touchUpInside" id="gPk-ea-GtF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a user name to start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uh5-XV-pOD">
+                                <rect key="frame" x="61" y="234" width="198" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="198" id="ZI6-je-Zfp"/>
+                                    <constraint firstAttribute="height" constant="21" id="dkl-Ec-OXm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YNq-yQ-8Vf" firstAttribute="top" secondItem="Jhf-m3-75L" secondAttribute="bottom" constant="75" id="588-ob-9Q6"/>
+                            <constraint firstItem="Bkl-eM-Wg7" firstAttribute="centerX" secondItem="gaI-5W-s3D" secondAttribute="centerX" id="7eC-EX-vM7"/>
+                            <constraint firstItem="5mh-Es-zRv" firstAttribute="top" secondItem="S1e-v0-x4X" secondAttribute="bottom" constant="30" id="8UG-W8-9Lg"/>
+                            <constraint firstItem="Jhf-m3-75L" firstAttribute="centerX" secondItem="gaI-5W-s3D" secondAttribute="centerX" id="UET-9i-jmO"/>
+                            <constraint firstItem="Uh5-XV-pOD" firstAttribute="top" secondItem="5mh-Es-zRv" secondAttribute="bottom" constant="80" id="bOZ-Po-gBh"/>
+                            <constraint firstItem="Uh5-XV-pOD" firstAttribute="centerX" secondItem="gaI-5W-s3D" secondAttribute="centerX" id="dyn-sH-cy3"/>
+                            <constraint firstItem="5mh-Es-zRv" firstAttribute="centerX" secondItem="gaI-5W-s3D" secondAttribute="centerX" id="rz5-Ga-Vub"/>
+                            <constraint firstItem="Bkl-eM-Wg7" firstAttribute="top" secondItem="5mh-Es-zRv" secondAttribute="bottom" constant="50" id="vav-LY-Qds"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="okButton" destination="Jhf-m3-75L" id="lNP-Ys-f7c"/>
+                        <outlet property="userName" destination="Bkl-eM-Wg7" id="L6j-0o-e5g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cU5-xy-ATe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150" y="320"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="anteater-logo.png" width="1000" height="1000"/>
+    </resources>
+</document>
