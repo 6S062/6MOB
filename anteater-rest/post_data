@@ -1,0 +1,36 @@
+#!/usr/bin/env python
+import cgitb
+import json
+import cgi
+import psycopg2
+import sys
+import db
+
+cgitb.enable()    
+
+print("Content-Type: text/html;charset=utf-8\n\n")
+
+conn = psycopg2.connect(db.conn_string)
+cursor = conn.cursor()
+data = sys.stdin.read()
+f = open("/tmp/out.txt","w")
+f.write(data)
+
+d = json.loads(data)
+readings = d["readings"]
+f.write(str(readings))
+for r in readings:
+    val = r["value"]
+    time = r["timestamp"]
+    rtype = r["type"]
+    user = r["userid"]
+    rid = r["sensorid"]
+    query = "insert into readings(time,sensortype,sensorid,sensorvalue,userid) values (to_timestamp(%f),%d,'%s',%f,'%s')"%(time,rtype,rid,val,user)
+    f.write(query)
+    cursor.execute(query)
+    query = "update anthills set last_heard = to_timestamp(%f) where id = '%s'"%(time,rid)
+    cursor.execute(query)
+f.close()
+conn.commit()
+conn.close()
+
