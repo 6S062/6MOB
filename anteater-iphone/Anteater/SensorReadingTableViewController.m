@@ -72,7 +72,7 @@
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"plotCell"];
                 cell.imageView.image = [UIImage imageNamed:@"anteater-logo.png"];
             }
-            cell.textLabel.text = [NSString stringWithFormat:@"%lu readings",(unsigned long)[rs count]];
+            cell.textLabel.text = [NSString stringWithFormat:@"%@ – %lu readings",[[SensorModel instance] currentSensorId],(unsigned long)[rs count]];
             cell.detailTextLabel.text = [NSString stringWithFormat:@"Tap top plot values"];
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             return cell;
@@ -83,8 +83,9 @@
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"sensorCell"];
             if (!cell) {
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"sensorCell"];
-                cell.imageView.image = [UIImage imageNamed:@"anteater-logo.png"];
             }
+            cell.imageView.image = [r readingIcon];
+
             cell.textLabel.text = [NSString stringWithFormat:@"%@",[r formattedValue]];
             NSString *dateString = [NSDateFormatter localizedStringFromDate:r.time dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle];
             cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",dateString];
