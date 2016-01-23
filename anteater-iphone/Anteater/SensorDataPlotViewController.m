@@ -31,9 +31,9 @@
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     CPTXYGraph *g = [[CPTXYGraph alloc] initWithFrame:self.view.frame];
-    [g applyTheme:[CPTTheme themeNamed:kCPTDarkGradientTheme]];
-    g.paddingBottom = g.paddingLeft = g.paddingRight = g.paddingTop = 10.0;
-    g.paddingBottom = 40;
+    [g applyTheme:[CPTTheme themeNamed:kCPTPlainWhiteTheme]];
+    g.paddingBottom = g.paddingLeft = g.paddingRight = g.paddingTop = 0;
+    g.paddingBottom = 65;
     CPTGraphHostingView *gview = [[CPTGraphHostingView alloc] initWithFrame:self.view.frame];
     gview.hostedGraph =g;
     [self.view addSubview:gview];
@@ -62,24 +62,44 @@
     [g.plotAreaFrame setPaddingBottom:30.0f];
 
     _g = g;
+    gview.allowPinchScaling = FALSE;
+    gview.userInteractionEnabled = FALSE;
     [self reloadData];
     [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(reloadData) userInfo:nil repeats:YES];
 
 }
 
+#define MAX_TIME 150
 -(void) configAxes {
     
     
     CPTXYPlotSpace *ps = (CPTXYPlotSpace *)[_g defaultPlotSpace];
     ps.allowsUserInteraction = true;
     float wid = _maxTime - _minTime;
+    if (wid > MAX_TIME) wid = MAX_TIME;
     
-    ps.xRange = [[CPTPlotRange alloc] initWithLocation:@(_minTime - wid*.1) length:@(wid + wid*.2)];
-    ps.yRange = [[CPTPlotRange alloc] initWithLocation:@0 length:@100];
+    ps.xRange = [[CPTPlotRange alloc] initWithLocation:@(_maxTime - (wid * 1.1)) length:@(wid + wid*.2)];
+    ps.yRange = [[CPTPlotRange alloc] initWithLocation:@0 length:@120];
     
     CPTXYAxisSet *a = (CPTXYAxisSet *)_g.axisSet;
     a.xAxis.majorIntervalLength = @((_maxTime - _minTime)/10.0);
     a.yAxis.majorIntervalLength = @10;
+
+    CPTXYAxis *x = a.xAxis;
+    x.labelRotation = M_PI/4;
+    x.labelingPolicy = CPTAxisLabelingPolicyNone;
+
+    NSMutableArray *customLabels = [[NSMutableArray alloc] init];
+    for (int i = 0; i < MAX_TIME; i += 10) {
+        
+        CPTAxisLabel *newLabel = [[CPTAxisLabel alloc] initWithText:[NSString stringWithFormat:@"%ds",i] textStyle:x.labelTextStyle];
+        newLabel.tickLocation = @(i);
+        newLabel.offset = 0; //x.labelOffset + x.majorTickLength;
+        newLabel.rotation = M_PI/4;
+        [customLabels addObject:newLabel];
+    }
+    
+    x.axisLabels =  [NSSet setWithArray:customLabels];
 
 }
 
