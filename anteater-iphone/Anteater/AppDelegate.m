@@ -9,12 +9,17 @@
 #import "AppDelegate.h"
 #import "SensorModel.h"
 #import "AnteaterREST.h"
+#import <CoreLocation/CoreLocation.h>
+#import "SettingsModel.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation AppDelegate {
+    CLLocationManager *_locMgr;
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -24,8 +29,17 @@
     [AnteaterREST getListOfAnthills:^(NSDictionary *hills) {
         NSLog(@"Got :%@", [hills description]);
     }];
-
+    _locMgr = [[CLLocationManager alloc] init];
+    [_locMgr requestWhenInUseAuthorization];
     
+    if (![[SettingsModel instance] username]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIStoryboard *authStoryboard = [UIStoryboard storyboardWithName:@"LoginView" bundle:nil];
+            LoginViewController *loginViewController = [authStoryboard instantiateInitialViewController];
+            loginViewController.delegate = self;
+            [self.window.rootViewController presentViewController:loginViewController animated:NO completion:nil];
+        });
+    }
     return YES;
 }
 
@@ -49,6 +63,9 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void) loginComplete {
 }
 
 @end
