@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 
 typedef enum {
     kTemperatureReading = 1,
@@ -18,8 +20,11 @@ typedef enum {
 @property(readonly) float value;
 @property(readonly) SensorReadingType type;
 @property(readonly) NSDate *time;
+@property(readonly) NSString *sensorId;
 
--(id)initWithReadingValue:(float)value andType:(SensorReadingType)type atTime:(NSDate *)time;
+-(id)initWithReadingValue:(float)value andType:(SensorReadingType)type atTime:(NSDate *)time andSensorId:(NSString *)sensorId;
 -(NSString *)formattedValue;
+-(NSString *)toJson;
+-(UIImage *) readingIcon;
 
 @end
