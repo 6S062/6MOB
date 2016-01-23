@@ -28,6 +28,6 @@
 -(void)startScanning;
 -(void)stopScanning;
 -(BOOL)isConnected;
-
+-(NSString *)currentSensorId;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "SensorModel.h"
+#import "AnteaterREST.h"
 
 #define kBLE_SCAN_TIMEOUT 5
 
@@ -67,16 +68,17 @@ static id _instance;
                     float val = [s floatValue];
                     BLESensorReading *r;
                     if (_state == HUMID_STATE) {
-                        r = [[BLESensorReading alloc] initWithReadingValue:val andType:kHumidityReading atTime:[NSDate date]];
+                        r = [[BLESensorReading alloc] initWithReadingValue:val andType:kHumidityReading atTime:[NSDate date] andSensorId:[self currentSensorId]];
                         NSLog(@"Got reading of value %f, type HUMIDITY",val );
 
                     } else {
-                        r = [[BLESensorReading alloc] initWithReadingValue:val andType:kTemperatureReading atTime:[NSDate date]];
+                        r = [[BLESensorReading alloc] initWithReadingValue:val andType:kTemperatureReading atTime:[NSDate date] andSensorId:[self currentSensorId]];
                         NSLog(@"Got reading of value %f, type TEMPERATURE",val );
 
                     }
                     [((NSMutableArray *)_sensorReadings) addObject:r];
                     [self.delegate bleGotSensorReading:r];
+                    [AnteaterREST postListOfSensorReadings:@[r] andCallCallback:NULL];
                     _state = START_STATE;
                     _skip++;
                     _skip += [s length];
@@ -150,6 +152,12 @@ static id _instance;
     return (_ble.activePeripheral && _ble.activePeripheral.state == CBPeripheralStateConnected);
 }
 
+-(NSString *)currentSensorId {
+    if ([self isConnected])
+        return _ble.activePeripheral.name;
+    else return NULL;
+}
+
 
 NSTimer *rssiTimer;
 
@@ -171,6 +179,7 @@ NSTimer *rssiTimer;
     NSLog(@"bleDidConnect");
     [self.delegate bleDidConnect];
 }
+
 
 
 
