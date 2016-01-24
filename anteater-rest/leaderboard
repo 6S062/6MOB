@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+import cgitb
+import json
+import db
+import psycopg2
+from psycopg2.extras import RealDictCursor
+
+cgitb.enable()    
+print("Content-Type: text/html;charset=utf-8\n\n")
+
+conn = psycopg2.connect(db.conn_string)
+cursor = conn.cursor(cursor_factory=RealDictCursor)
+
+anthills = []
+
+query = "select user_id,device_id,count(*) as points from user_devices join readings on readings.userid = user_devices.device_id group by 1,2 order by 3 desc"
+cursor.execute(query)
+
+#anthill1 = {"id":1, "lat":42.3598, "lon":-71.0921}
+
+dict = {"users":cursor.fetchall()}
+print json.dumps(dict)
+conn.close()
+
