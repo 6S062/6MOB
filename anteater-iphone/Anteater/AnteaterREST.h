@@ -17,4 +17,6 @@
 +(void) getListOfAnthills:(void (^)(NSDictionary *))callback;
 +(void) postListOfSensorReadings:(NSArray<BLESensorReading *> *)readings andCallCallback:(void (^)(int resultCode, NSDictionary *))callback;
 +(void) registerUser:(NSString *)userid withDeviceId:(NSString *)deviceid andCallback:(void (^)(int resultCode, NSDictionary *)) callback;
++(void) getLeaderboard:(void (^)(NSDictionary *))callback;
+
 @end

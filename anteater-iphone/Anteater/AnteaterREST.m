@@ -37,7 +37,7 @@
 #define LEADERBOARD_URL @"http://carteldb.csail.mit.edu/rest/leaderboard"
 
 +(void) getLeaderboard:(void (^)(NSDictionary *))callback {
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:LEADERBOARD_URL]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://carteldb.csail.mit.edu/rest/leaderboard"]];
     [request setTimeoutInterval:TIMEOUT];
     
     [NSURLConnection sendAsynchronousRequest:request

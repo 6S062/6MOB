@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DB4946E81C4ECEDC009F6FB0 /* SensorDataPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4946E71C4ECEDC009F6FB0 /* SensorDataPlotViewController.m */; };
+		DB5D12971C5457C4007E9528 /* LeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5D12961C5457C4007E9528 /* LeaderboardViewController.m */; };
+		DB5D129A1C5459B9007E9528 /* LeaderboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5D12991C5459B9007E9528 /* LeaderboardCell.m */; };
 		DB9920051C51275A00ED881F /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4946931C4ECE83009F6FB0 /* CorePlot.framework */; };
 		DB9920061C51276000ED881F /* CorePlot.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DB4946931C4ECE83009F6FB0 /* CorePlot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB9920091C5133EC00ED881F /* AnteaterREST.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9920081C5133EC00ED881F /* AnteaterREST.m */; };
@@ -18,7 +20,6 @@
 		DB9920191C52E6E600ED881F /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9920181C52E6E600ED881F /* LoginView.storyboard */; };
 		DB9920231C53F51C00ED881F /* AnteaterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9920221C53F51C00ED881F /* AnteaterTests.m */; };
 		DB99202B1C53F56300ED881F /* SensorModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99202A1C53F56300ED881F /* SensorModelTest.m */; };
-		DBA1178E1C499B93001E157C /* anteater-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA1178D1C499B93001E157C /* anteater-logo.png */; };
 		DBDF15AB1C46955900B45C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDF15AA1C46955900B45C35 /* main.m */; };
 		DBDF15AE1C46955900B45C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDF15AD1C46955900B45C35 /* AppDelegate.m */; };
 		DBDF15B11C46955900B45C35 /* SensorReadingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDF15B01C46955900B45C35 /* SensorReadingTableViewController.m */; };
@@ -137,6 +138,10 @@
 		DB4946E31C4ECE83009F6FB0 /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		DB4946E61C4ECEDC009F6FB0 /* SensorDataPlotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorDataPlotViewController.h; sourceTree = "<group>"; };
 		DB4946E71C4ECEDC009F6FB0 /* SensorDataPlotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorDataPlotViewController.m; sourceTree = "<group>"; };
+		DB5D12951C5457C4007E9528 /* LeaderboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderboardViewController.h; sourceTree = "<group>"; };
+		DB5D12961C5457C4007E9528 /* LeaderboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderboardViewController.m; sourceTree = "<group>"; };
+		DB5D12981C5459B9007E9528 /* LeaderboardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderboardCell.h; sourceTree = "<group>"; };
+		DB5D12991C5459B9007E9528 /* LeaderboardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderboardCell.m; sourceTree = "<group>"; };
 		DB9920021C5126B900ED881F /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		DB9920071C5133EC00ED881F /* AnteaterREST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnteaterREST.h; sourceTree = "<group>"; };
 		DB9920081C5133EC00ED881F /* AnteaterREST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnteaterREST.m; sourceTree = "<group>"; };
@@ -153,7 +158,6 @@
 		DB9920221C53F51C00ED881F /* AnteaterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnteaterTests.m; sourceTree = "<group>"; };
 		DB9920241C53F51C00ED881F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB99202A1C53F56300ED881F /* SensorModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorModelTest.m; sourceTree = "<group>"; };
-		DBA1178D1C499B93001E157C /* anteater-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "anteater-logo.png"; sourceTree = "<group>"; };
 		DBDF15A61C46955900B45C35 /* Anteater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anteater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBDF15AA1C46955900B45C35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBDF15AC1C46955900B45C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -315,34 +319,37 @@
 		DBDF15A81C46955900B45C35 /* Anteater */ = {
 			isa = PBXGroup;
 			children = (
-				DBDF15CB1C469AA400B45C35 /* BLESensorReading.h */,
-				DBDF15CC1C469AA400B45C35 /* BLESensorReading.m */,
-				DBDF15C81C4695CA00B45C35 /* SensorModel.h */,
-				DBDF15C91C4695CA00B45C35 /* SensorModel.m */,
-				DBDF15AC1C46955900B45C35 /* AppDelegate.h */,
-				DBDF15AD1C46955900B45C35 /* AppDelegate.m */,
-				DBDF15AF1C46955900B45C35 /* SensorReadingTableViewController.h */,
-				DBDF15B01C46955900B45C35 /* SensorReadingTableViewController.m */,
-				DB4946E61C4ECEDC009F6FB0 /* SensorDataPlotViewController.h */,
-				DB4946E71C4ECEDC009F6FB0 /* SensorDataPlotViewController.m */,
+				DB9920071C5133EC00ED881F /* AnteaterREST.h */,
+				DB9920081C5133EC00ED881F /* AnteaterREST.m */,
 				DB99200D1C526D3400ED881F /* AnthillAnnotation.h */,
 				DB99200E1C526D3400ED881F /* AnthillAnnotation.m */,
 				DB99200A1C526A2000ED881F /* AnthillMapView.h */,
 				DB99200B1C526A2000ED881F /* AnthillMapView.m */,
-				DB9920071C5133EC00ED881F /* AnteaterREST.h */,
-				DB9920081C5133EC00ED881F /* AnteaterREST.m */,
-				DB9920101C52E33500ED881F /* SettingsModel.h */,
-				DB9920111C52E33500ED881F /* SettingsModel.m */,
+				DBDF15B21C46955900B45C35 /* AnthillMapViewController.h */,
+				DBDF15B31C46955900B45C35 /* AnthillMapViewController.m */,
+				DBDF15AC1C46955900B45C35 /* AppDelegate.h */,
+				DBDF15AD1C46955900B45C35 /* AppDelegate.m */,
+				DBDF15B81C46955900B45C35 /* Assets.xcassets */,
+				DBDF15CB1C469AA400B45C35 /* BLESensorReading.h */,
+				DBDF15CC1C469AA400B45C35 /* BLESensorReading.m */,
+				DBDF15BD1C46955900B45C35 /* Info.plist */,
+				DB5D12951C5457C4007E9528 /* LeaderboardViewController.h */,
+				DB5D12961C5457C4007E9528 /* LeaderboardViewController.m */,
+				DBDF15BA1C46955900B45C35 /* LaunchScreen.storyboard */,
 				DB9920181C52E6E600ED881F /* LoginView.storyboard */,
 				DB9920131C52E42E00ED881F /* LoginViewController.h */,
 				DB9920141C52E42E00ED881F /* LoginViewController.m */,
-				DBDF15B21C46955900B45C35 /* AnthillMapViewController.h */,
-				DBDF15B31C46955900B45C35 /* AnthillMapViewController.m */,
 				DBDF15B51C46955900B45C35 /* Main.storyboard */,
-				DBDF15B81C46955900B45C35 /* Assets.xcassets */,
-				DBA1178D1C499B93001E157C /* anteater-logo.png */,
-				DBDF15BA1C46955900B45C35 /* LaunchScreen.storyboard */,
-				DBDF15BD1C46955900B45C35 /* Info.plist */,
+				DB5D12981C5459B9007E9528 /* LeaderboardCell.h */,
+				DB5D12991C5459B9007E9528 /* LeaderboardCell.m */,
+				DB4946E61C4ECEDC009F6FB0 /* SensorDataPlotViewController.h */,
+				DB4946E71C4ECEDC009F6FB0 /* SensorDataPlotViewController.m */,
+				DBDF15C81C4695CA00B45C35 /* SensorModel.h */,
+				DBDF15C91C4695CA00B45C35 /* SensorModel.m */,
+				DBDF15AF1C46955900B45C35 /* SensorReadingTableViewController.h */,
+				DBDF15B01C46955900B45C35 /* SensorReadingTableViewController.m */,
+				DB9920101C52E33500ED881F /* SettingsModel.h */,
+				DB9920111C52E33500ED881F /* SettingsModel.m */,
 				DBDF15A91C46955900B45C35 /* Supporting Files */,
 			);
 			path = Anteater;
@@ -456,7 +463,6 @@
 			files = (
 				DBDF15BC1C46955900B45C35 /* LaunchScreen.storyboard in Resources */,
 				DBDF15B91C46955900B45C35 /* Assets.xcassets in Resources */,
-				DBA1178E1C499B93001E157C /* anteater-logo.png in Resources */,
 				DBDF15B71C46955900B45C35 /* Main.storyboard in Resources */,
 				DB9920191C52E6E600ED881F /* LoginView.storyboard in Resources */,
 			);
@@ -485,7 +491,9 @@
 				DB99200C1C526A2000ED881F /* AnthillMapView.m in Sources */,
 				DBDF15B41C46955900B45C35 /* AnthillMapViewController.m in Sources */,
 				DBDF15AE1C46955900B45C35 /* AppDelegate.m in Sources */,
+				DB5D129A1C5459B9007E9528 /* LeaderboardCell.m in Sources */,
 				DB4946E81C4ECEDC009F6FB0 /* SensorDataPlotViewController.m in Sources */,
+				DB5D12971C5457C4007E9528 /* LeaderboardViewController.m in Sources */,
 				DBDF15B11C46955900B45C35 /* SensorReadingTableViewController.m in Sources */,
 				DBDF15C61C46958200B45C35 /* BLE.m in Sources */,
 				DBDF15CD1C469AA400B45C35 /* BLESensorReading.m in Sources */,
@@ -680,6 +688,7 @@
 				DB9920291C53F51D00ED881F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBDF15A11C46955900B45C35 /* Build configuration list for PBXProject "Anteater" */ = {
 			isa = XCConfigurationList;
