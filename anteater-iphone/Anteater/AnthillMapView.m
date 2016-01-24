@@ -17,6 +17,7 @@
     NSMutableDictionary<NSString*, NSDictionary*> *_hills, *_oldHills;
 }
 
+
 -(void) doInit {
     [self setZoomEnabled:YES];
     self.delegate = self;
@@ -24,13 +25,17 @@
     
     _annots = [[NSMutableDictionary alloc] init];
     _hills = [[NSMutableDictionary alloc] init];
+    [self refreshAnthills];
+    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(refreshAnthills) userInfo:nil repeats:YES];
+}
 
+-(void) refreshAnthills {
     [AnteaterREST getListOfAnthills:^(NSDictionary *result){
         if (result) {
             NSArray *hills = [result objectForKey:@"anthills"];
             _oldHills = _hills;
             _hills = [[NSMutableDictionary alloc] init];
-
+            
             for (NSDictionary *h in hills) {
                 [_hills setObject:h forKey:[h objectForKey:@"id"]];
             }
@@ -41,8 +46,9 @@
         }
         
     }];
-    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(updateMapView) userInfo:nil repeats:YES];
+
 }
+
 
 -(void)resizeMap {
     float maxLat=-500,maxLon=-500,minLat=500,minLon=500;
@@ -103,16 +109,15 @@
 }
 
 -(void) updateMapView {
-    NSMutableArray *toRemove = [[_annots allKeys] copy];
+    NSMutableArray *toRemove = [[NSMutableArray alloc] initWithArray:[[_annots allKeys] copy]];
+    NSMutableArray *toAdd = [[NSMutableArray alloc] init];
     for (NSDictionary *h in [_hills allValues]) {
         NSString *hid =[h objectForKey:@"id"];
         NSDictionary *current = [_oldHills objectForKey:hid];
         if ([current isEqualToDictionary:h]) { //didn't change
             [toRemove removeObject:hid];
         } else {
-            AnthillAnnotation *a = [[AnthillAnnotation alloc] initWithAnthillData:h];
-            [self addAnnotation:a];
-            [_annots setObject:a forKey:hid];
+            [toAdd addObject:h];
         }
     }
     AnthillAnnotation *dummy = [[AnthillAnnotation alloc] initWithAnthillData:NULL];
@@ -120,14 +125,22 @@
     NSArray *annotsToRemove = [_annots objectsForKeys:toRemove notFoundMarker:dummy];
     [_annots removeObjectsForKeys:toRemove];
     [self removeAnnotations:annotsToRemove];
+    
+    for (NSDictionary *h in toAdd) {
+        AnthillAnnotation *a = [[AnthillAnnotation alloc] initWithAnthillData:h];
+        [self addAnnotation:a];
+        NSString *hid =[h objectForKey:@"id"];
+        [_annots setObject:a forKey:hid];
+    }
 
 }
 
 
 - (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation {
     if ([annotation isKindOfClass:[AnthillAnnotation class]]) {
+        AnthillAnnotation *a =(AnthillAnnotation *)annotation;
         MKPinAnnotationView *pin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil];
-        pin.pinTintColor = [UIColor yellowColor];
+        pin.pinTintColor = [a colorForAnthill ];
         pin.canShowCallout = YES;
         return pin;
     }

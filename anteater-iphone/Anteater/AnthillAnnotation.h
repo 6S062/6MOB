@@ -12,5 +12,6 @@
 @interface AnthillAnnotation : NSObject<MKAnnotation>
 
 -(id)initWithAnthillData:(NSDictionary *)data;
+-(UIColor *)colorForAnthill;
 
 @end
