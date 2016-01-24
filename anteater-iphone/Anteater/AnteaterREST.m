@@ -32,6 +32,28 @@
                            }];
 
 }
+
+
+#define LEADERBOARD_URL @"http://carteldb.csail.mit.edu/rest/leaderboard"
+
++(void) getLeaderboard:(void (^)(NSDictionary *))callback {
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:LEADERBOARD_URL]];
+    [request setTimeoutInterval:TIMEOUT];
+    
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               if (data) {
+                                   NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
+                                                                                        options:0
+                                                                                          error:nil];
+                                   NSLog(@"Async JSON: %@", json);
+                                   callback(json);
+                               }
+                           }];
+    
+}
+
 #define SENSOR_READINGS_URL @"http://carteldb.csail.mit.edu/rest/post_data"
 
 /* Readings should be an array of BLESensorReadings
