@@ -9,7 +9,7 @@
 #import "SensorModel.h"
 #import "AnteaterREST.h"
 
-#define kBLE_SCAN_TIMEOUT 5
+#define kBLE_SCAN_TIMEOUT 0 //no timeout
 
 static id _instance;
 @implementation SensorModel {
@@ -108,6 +108,13 @@ static id _instance;
 
 }
 
+-(void) bleDidDiscoverPeripheral:(CBPeripheral *)peripheral {
+    if (!_ble.activePeripheral) {
+        [_ble connectPeripheral:peripheral];
+
+    }
+}
+
 
 -(void) connectionTimer:(NSTimer *)timer
 {
@@ -124,7 +131,9 @@ static id _instance;
 -(void) doScan {
     [_ble findBLEPeripherals:kBLE_SCAN_TIMEOUT];
     
-    [NSTimer scheduledTimerWithTimeInterval:(float)kBLE_SCAN_TIMEOUT target:self selector:@selector(connectionTimer:) userInfo:nil repeats:NO];
+    if (kBLE_SCAN_TIMEOUT) {
+        [NSTimer scheduledTimerWithTimeInterval:(float)kBLE_SCAN_TIMEOUT target:self selector:@selector(connectionTimer:) userInfo:nil repeats:NO];
+    }
 }
 
 

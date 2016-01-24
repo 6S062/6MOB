@@ -14,7 +14,10 @@
 #import "BLE.h"
 #import "BLEDefines.h"
 
-@implementation BLE
+@implementation BLE {
+    BOOL _scanDeferred;
+    int _deferredTimeout;
+}
 
 @synthesize delegate;
 @synthesize CM;
@@ -181,16 +184,22 @@ static int rssi = 0;
 - (int) findBLEPeripherals:(int) timeout
 {
     NSLog(@"start finding");
-    
+
     if (self.CM.state != CBCentralManagerStatePoweredOn)
     {
         NSLog(@"CoreBluetooth not correctly initialized !");
         NSLog(@"State = %ld (%s)\r\n", (long)self.CM.state, [self centralManagerStateToString:self.CM.state]);
+        _scanDeferred = TRUE;
+        _deferredTimeout = timeout;
         return -1;
     }
-    
-    [NSTimer scheduledTimerWithTimeInterval:(float)timeout target:self selector:@selector(scanTimer:) userInfo:nil repeats:NO];
-    
+    [self.CM stopScan];
+
+    if (timeout > 0) {
+        [NSTimer scheduledTimerWithTimeInterval:(float)timeout target:self selector:@selector(scanTimer:) userInfo:nil repeats:NO];
+    }
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber  numberWithBool:YES], CBCentralManagerScanOptionAllowDuplicatesKey, nil];
+
 #if TARGET_OS_IPHONE
     [self.CM scanForPeripheralsWithServices:[NSArray arrayWithObject:[CBUUID UUIDWithString:@RBL_SERVICE_UUID]] options:nil];
 #else
@@ -205,7 +214,10 @@ static int rssi = 0;
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error;
 {
     [[self delegate] bleDidDisconnect];
-    
+    if (activePeripheral) {
+        [self.CM cancelPeripheralConnection:activePeripheral];
+        self.activePeripheral = NULL;
+    }
     isConnected = false;
 }
 
@@ -414,6 +426,10 @@ static int rssi = 0;
 {
 #if TARGET_OS_IPHONE
     NSLog(@"Status of CoreBluetooth central manager changed %ld (%s)", (long)central.state, [self centralManagerStateToString:central.state]);
+    if (central.state == CBCentralManagerStatePoweredOn && _scanDeferred) {
+        _scanDeferred = FALSE;
+        [self findBLEPeripherals:_deferredTimeout];
+    }
 #else
     [self isLECapableHardware];
 #endif
@@ -421,6 +437,8 @@ static int rssi = 0;
 
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
+    [delegate bleDidDiscoverPeripheral:peripheral];
+
     if (!self.peripherals) {
         self.peripherals = [[NSMutableArray alloc] initWithObjects:peripheral,nil];
         self.peripheralsRssi = [[NSMutableArray alloc] initWithObjects:RSSI, nil];
@@ -448,11 +466,11 @@ static int rssi = 0;
         NSLog(@"New UUID, adding");
     }
     
-    NSLog(@"didDiscoverPeripheral");
 }
 
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral
 {
+    [self.CM stopScan];
     if (peripheral.identifier != NULL)
         NSLog(@"Connected to %@ successful", peripheral.identifier.UUIDString);
     else
