@@ -8,7 +8,8 @@
 
 #import <MapKit/MapKit.h>
 #import <UIKit/UIKit.h>
+#import "CompassView.h"
 
 @interface AnthillMapView : MKMapView<MKMapViewDelegate>
-
+@property IBOutlet CompassView *cv;
 @end

@@ -26,6 +26,9 @@
     _annots = [[NSMutableDictionary alloc] init];
     _hills = [[NSMutableDictionary alloc] init];
     [self refreshAnthills];
+    self.showsCompass = TRUE;
+    self.showsScale = TRUE;
+    self.userTrackingMode = MKUserTrackingModeFollowWithHeading;
     [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(refreshAnthills) userInfo:nil repeats:YES];
 }
 
@@ -145,6 +148,10 @@
         return pin;
     }
     return nil;
+}
+
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
+    _cv.rotationOffset = mapView.camera.heading;
 }
 
 
