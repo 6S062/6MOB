@@ -20,6 +20,7 @@
 		DB9920191C52E6E600ED881F /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9920181C52E6E600ED881F /* LoginView.storyboard */; };
 		DB9920231C53F51C00ED881F /* AnteaterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9920221C53F51C00ED881F /* AnteaterTests.m */; };
 		DB99202B1C53F56300ED881F /* SensorModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99202A1C53F56300ED881F /* SensorModelTest.m */; };
+		DBD46E7B1C57A7700094D004 /* CompassView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD46E7A1C57A7700094D004 /* CompassView.m */; };
 		DBDF15AB1C46955900B45C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDF15AA1C46955900B45C35 /* main.m */; };
 		DBDF15AE1C46955900B45C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDF15AD1C46955900B45C35 /* AppDelegate.m */; };
 		DBDF15B11C46955900B45C35 /* SensorReadingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDF15B01C46955900B45C35 /* SensorReadingTableViewController.m */; };
@@ -158,6 +159,8 @@
 		DB9920221C53F51C00ED881F /* AnteaterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnteaterTests.m; sourceTree = "<group>"; };
 		DB9920241C53F51C00ED881F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB99202A1C53F56300ED881F /* SensorModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorModelTest.m; sourceTree = "<group>"; };
+		DBD46E791C57A7700094D004 /* CompassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompassView.h; sourceTree = "<group>"; };
+		DBD46E7A1C57A7700094D004 /* CompassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompassView.m; sourceTree = "<group>"; };
 		DBDF15A61C46955900B45C35 /* Anteater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anteater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBDF15AA1C46955900B45C35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBDF15AC1C46955900B45C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -321,6 +324,8 @@
 			children = (
 				DB9920071C5133EC00ED881F /* AnteaterREST.h */,
 				DB9920081C5133EC00ED881F /* AnteaterREST.m */,
+				DBD46E791C57A7700094D004 /* CompassView.h */,
+				DBD46E7A1C57A7700094D004 /* CompassView.m */,
 				DB99200D1C526D3400ED881F /* AnthillAnnotation.h */,
 				DB99200E1C526D3400ED881F /* AnthillAnnotation.m */,
 				DB99200A1C526A2000ED881F /* AnthillMapView.h */,
@@ -493,6 +498,7 @@
 				DBDF15AE1C46955900B45C35 /* AppDelegate.m in Sources */,
 				DB5D129A1C5459B9007E9528 /* LeaderboardCell.m in Sources */,
 				DB4946E81C4ECEDC009F6FB0 /* SensorDataPlotViewController.m in Sources */,
+				DBD46E7B1C57A7700094D004 /* CompassView.m in Sources */,
 				DB5D12971C5457C4007E9528 /* LeaderboardViewController.m in Sources */,
 				DBDF15B11C46955900B45C35 /* SensorReadingTableViewController.m in Sources */,
 				DBDF15C61C46958200B45C35 /* BLE.m in Sources */,
