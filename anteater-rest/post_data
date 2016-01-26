@@ -5,13 +5,14 @@ import cgi
 import psycopg2
 import sys
 import db
+from psycopg2.extras import RealDictCursor
 
 cgitb.enable()    
 
 print("Content-Type: text/html;charset=utf-8\n\n")
 
 conn = psycopg2.connect(db.conn_string)
-cursor = conn.cursor()
+cursor = conn.cursor(cursor_factory=RealDictCursor)
 data = sys.stdin.read()
 f = open("/tmp/out.txt","w")
 f.write(data)
@@ -27,9 +28,29 @@ for r in readings:
     rid = r["sensorid"]
     query = "insert into readings(time,sensortype,sensorid,sensorvalue,userid) values (to_timestamp(%f),%d,'%s',%f,'%s')"%(time,rtype,rid,val,user)
     f.write(query)
+    f.write("\n")
+    query = "select extract('epoch' from last_heard) as last_heard from anthills where id = '%s'"%(rid)
+    f.write(query)
+    f.write("\n")
     cursor.execute(query)
+    dict = cursor.fetchall()
+    diff = float(time) - float(dict[0]["last_heard"])
+    f.write("\n")
+    f.write("diff = " + repr(diff) + "\n")
+    points = 0
+    if (diff > 360 * 5):
+        points = 1
+    elif (diff > 360 * 10):
+        points = 2
+    elif (diff > 360 * 30):
+        points = 5
+    if (points > 0):
+        query = "update user_devices set points = points + %d"%(points)
+        f.write(query)
+        cursor.execute(query)
     query = "update anthills set last_heard = to_timestamp(%f) where id = '%s'"%(time,rid)
     cursor.execute(query)
+    
 f.close()
 conn.commit()
 conn.close()

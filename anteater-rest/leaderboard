@@ -13,7 +13,7 @@ cursor = conn.cursor(cursor_factory=RealDictCursor)
 
 anthills = []
 
-query = "select user_id,device_id,count(*) as points from user_devices join readings on readings.userid = user_devices.device_id group by 1,2 order by 3 desc"
+query = "select user_id,device_id,points from user_devices"
 cursor.execute(query)
 
 #anthill1 = {"id":1, "lat":42.3598, "lon":-71.0921}
