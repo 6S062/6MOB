@@ -37,7 +37,13 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GFe-cE-qcW" customClass="AnthillMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <connections>
+                                    <outlet property="cv" destination="tpe-iM-IZT" id="2YD-CF-c7B"/>
+                                </connections>
                             </mapView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow" highlightedImage="I" translatesAutoresizingMaskIntoConstraints="NO" id="tpe-iM-IZT" customClass="CompassView">
+                                <rect key="frame" x="40" y="164" width="240" height="240"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -56,7 +62,7 @@
             </objects>
             <point key="canvasLocation" x="630" y="132"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Leaderboard-->
         <scene sceneID="HvP-yg-7gn">
             <objects>
                 <tableViewController id="nNt-OW-5nw" customClass="LeaderboardViewController" sceneMemberID="viewController">
@@ -73,25 +79,26 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyS-1G-qPv">
-                                            <rect key="frame" x="22" y="4" width="39" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <rect key="frame" x="22" y="4" width="49" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbN-Wn-h0m">
-                                            <rect key="frame" x="221" y="4" width="48" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <rect key="frame" x="221" y="4" width="75" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJG-JH-4on">
                                             <rect key="frame" x="79" y="4" width="123" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EntryCell" id="kSp-40-h0V" customClass="LeaderboardCell">
                                 <rect key="frame" x="0.0" y="122" width="320" height="44"/>
@@ -132,11 +139,35 @@
                             <outlet property="delegate" destination="nNt-OW-5nw" id="Eu0-gj-DKD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="tii-0A-RPg"/>
+                    <navigationItem key="navigationItem" title="Leaderboard" id="tii-0A-RPg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRu-nV-8CF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="549" y="826"/>
+        </scene>
+        <!--Compass-->
+        <scene sceneID="T1d-n4-MyN">
+            <objects>
+                <viewController title="Compass" id="fGt-uo-e7q" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o7A-u0-me9"/>
+                        <viewControllerLayoutGuide type="bottom" id="xVX-eJ-94U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qdM-Di-eAK" userLabel="Compass">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow" highlightedImage="I" translatesAutoresizingMaskIntoConstraints="NO" id="9JA-5r-SvT" customClass="CompassView">
+                                <rect key="frame" x="50" y="106" width="240" height="240"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Compass" id="08I-Dj-5Ik"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5I6-Tg-cve" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-325" y="587"/>
         </scene>
         <!--Leaderboard-->
         <scene sceneID="dMR-CA-ftg">
@@ -169,6 +200,7 @@
                         <segue destination="45J-EQ-QUT" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="AZl-nD-JXl" kind="relationship" relationship="viewControllers" id="yFR-h5-HTn"/>
+                        <segue destination="fGt-uo-e7q" kind="relationship" relationship="viewControllers" id="EBj-35-3JF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -196,6 +228,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="I" width="30" height="30"/>
+        <image name="arrow" width="999" height="999"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
