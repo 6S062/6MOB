@@ -2,6 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Current Sensor Readings-->
@@ -53,7 +56,7 @@
                             <constraint firstItem="GFe-cE-qcW" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="q9M-il-OF9"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="globe-32" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="map" destination="GFe-cE-qcW" id="WP2-pZ-tQO"/>
                     </connections>
@@ -148,7 +151,7 @@
         <!--Compass-->
         <scene sceneID="T1d-n4-MyN">
             <objects>
-                <viewController title="Compass" id="fGt-uo-e7q" sceneMemberID="viewController">
+                <viewController title="Compass" id="fGt-uo-e7q" customClass="CompassViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o7A-u0-me9"/>
                         <viewControllerLayoutGuide type="bottom" id="xVX-eJ-94U"/>
@@ -157,13 +160,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow" highlightedImage="I" translatesAutoresizingMaskIntoConstraints="NO" id="9JA-5r-SvT" customClass="CompassView">
-                                <rect key="frame" x="50" y="106" width="240" height="240"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="compass" highlightedImage="I" translatesAutoresizingMaskIntoConstraints="NO" id="9JA-5r-SvT">
+                                <rect key="frame" x="25" y="167" width="270" height="269"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="269" id="3bj-VG-H2n"/>
+                                </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="needle" translatesAutoresizingMaskIntoConstraints="NO" id="whg-fk-VaT" customClass="CompassView">
+                                <rect key="frame" x="146" y="217" width="29" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="fAl-IB-rj5"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="distanceLabel" destination="gs5-BV-mUf" id="soc-Ep-ZnD"/>
+                                    <outlet property="headingLabel" destination="Q6u-LF-y6U" id="rsm-1b-7E0"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Heading " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6u-LF-y6U">
+                                <rect key="frame" x="25" y="438" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Distance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gs5-BV-mUf">
+                                <rect key="frame" x="201" y="438" width="94" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="wTQ-hB-B6x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83Z-u7-6EA">
+                                <rect key="frame" x="0.0" y="31" width="320" height="128"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9JA-5r-SvT" firstAttribute="centerX" secondItem="whg-fk-VaT" secondAttribute="centerX" id="1rh-ME-qYp"/>
+                            <constraint firstItem="9JA-5r-SvT" firstAttribute="top" secondItem="83Z-u7-6EA" secondAttribute="bottom" constant="8" symbolic="YES" id="AvX-mu-5cj"/>
+                            <constraint firstItem="Q6u-LF-y6U" firstAttribute="top" secondItem="9JA-5r-SvT" secondAttribute="bottom" constant="2" id="B7t-a5-BH1"/>
+                            <constraint firstItem="83Z-u7-6EA" firstAttribute="top" secondItem="o7A-u0-me9" secondAttribute="bottom" constant="11" id="Bjl-wG-FZq"/>
+                            <constraint firstItem="whg-fk-VaT" firstAttribute="centerY" secondItem="qdM-Di-eAK" secondAttribute="top" constant="317" id="DI3-UI-Oln"/>
+                            <constraint firstItem="Q6u-LF-y6U" firstAttribute="firstBaseline" secondItem="gs5-BV-mUf" secondAttribute="firstBaseline" id="FG4-dY-S1q"/>
+                            <constraint firstItem="gs5-BV-mUf" firstAttribute="baseline" secondItem="Q6u-LF-y6U" secondAttribute="baseline" id="KXl-m0-88c"/>
+                            <constraint firstItem="whg-fk-VaT" firstAttribute="centerX" secondItem="qdM-Di-eAK" secondAttribute="centerX" id="Xng-5V-vr0"/>
+                            <constraint firstItem="Q6u-LF-y6U" firstAttribute="leading" secondItem="9JA-5r-SvT" secondAttribute="leading" id="evS-uo-U8y"/>
+                            <constraint firstItem="gs5-BV-mUf" firstAttribute="leading" secondItem="Q6u-LF-y6U" secondAttribute="trailing" constant="80" id="gMZ-uN-ENC"/>
+                            <constraint firstItem="xVX-eJ-94U" firstAttribute="top" secondItem="Q6u-LF-y6U" secondAttribute="bottom" constant="60" id="kr2-fZ-VEP"/>
+                            <constraint firstItem="gs5-BV-mUf" firstAttribute="trailing" secondItem="9JA-5r-SvT" secondAttribute="trailing" id="qp8-2X-YqU"/>
+                            <constraint firstItem="9JA-5r-SvT" firstAttribute="top" secondItem="o7A-u0-me9" secondAttribute="bottom" constant="147" id="tFr-dp-vpk"/>
+                            <constraint firstItem="9JA-5r-SvT" firstAttribute="leading" secondItem="qdM-Di-eAK" secondAttribute="leadingMargin" constant="5" id="wAn-cw-qSL"/>
+                            <constraint firstItem="83Z-u7-6EA" firstAttribute="centerX" secondItem="whg-fk-VaT" secondAttribute="centerX" id="xKw-Hh-gcy"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Compass" id="08I-Dj-5Ik"/>
+                    <tabBarItem key="tabBarItem" title="Compass" image="compass-32" id="08I-Dj-5Ik"/>
+                    <connections>
+                        <outlet property="compass" destination="whg-fk-VaT" id="84q-1f-lZM"/>
+                        <outlet property="picker" destination="83Z-u7-6EA" id="tUN-gN-m8M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5I6-Tg-cve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,7 +228,7 @@
         <scene sceneID="dMR-CA-ftg">
             <objects>
                 <navigationController id="AZl-nD-JXl" userLabel="Leaderboard" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Leaderboard" id="iol-2L-Lkx" userLabel="Leaderboard"/>
+                    <tabBarItem key="tabBarItem" title="Leaderboard" image="olympic_medal-32" id="iol-2L-Lkx" userLabel="Leaderboard"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JJf-bc-Lbd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -211,7 +266,7 @@
         <scene sceneID="8lM-me-kQq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="45J-EQ-QUT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Readings" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Readings" image="dew_point-32" selectedImage="dew_point-32" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hb3-ea-4gm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -230,7 +285,11 @@
     <resources>
         <image name="I" width="30" height="30"/>
         <image name="arrow" width="999" height="999"/>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="compass" width="575" height="666"/>
+        <image name="compass-32" width="32" height="32"/>
+        <image name="dew_point-32" width="32" height="32"/>
+        <image name="globe-32" width="32" height="32"/>
+        <image name="needle" width="29" height="370"/>
+        <image name="olympic_medal-32" width="32" height="32"/>
     </resources>
 </document>
