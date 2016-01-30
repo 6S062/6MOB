@@ -10,6 +10,7 @@
 		DB4946E81C4ECEDC009F6FB0 /* SensorDataPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4946E71C4ECEDC009F6FB0 /* SensorDataPlotViewController.m */; };
 		DB5D12971C5457C4007E9528 /* LeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5D12961C5457C4007E9528 /* LeaderboardViewController.m */; };
 		DB5D129A1C5459B9007E9528 /* LeaderboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5D12991C5459B9007E9528 /* LeaderboardCell.m */; };
+		DB970A631C5C411D00A708CF /* CompassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB970A621C5C411D00A708CF /* CompassViewController.m */; };
 		DB9920051C51275A00ED881F /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4946931C4ECE83009F6FB0 /* CorePlot.framework */; };
 		DB9920061C51276000ED881F /* CorePlot.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DB4946931C4ECE83009F6FB0 /* CorePlot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB9920091C5133EC00ED881F /* AnteaterREST.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9920081C5133EC00ED881F /* AnteaterREST.m */; };
@@ -143,6 +144,8 @@
 		DB5D12961C5457C4007E9528 /* LeaderboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderboardViewController.m; sourceTree = "<group>"; };
 		DB5D12981C5459B9007E9528 /* LeaderboardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderboardCell.h; sourceTree = "<group>"; };
 		DB5D12991C5459B9007E9528 /* LeaderboardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderboardCell.m; sourceTree = "<group>"; };
+		DB970A611C5C411D00A708CF /* CompassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompassViewController.h; sourceTree = "<group>"; };
+		DB970A621C5C411D00A708CF /* CompassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompassViewController.m; sourceTree = "<group>"; };
 		DB9920021C5126B900ED881F /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		DB9920071C5133EC00ED881F /* AnteaterREST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnteaterREST.h; sourceTree = "<group>"; };
 		DB9920081C5133EC00ED881F /* AnteaterREST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnteaterREST.m; sourceTree = "<group>"; };
@@ -201,6 +204,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB1A4E951C5D6CC700B88518 /* Compass */ = {
+			isa = PBXGroup;
+			children = (
+				DBD46E791C57A7700094D004 /* CompassView.h */,
+				DBD46E7A1C57A7700094D004 /* CompassView.m */,
+				DB970A611C5C411D00A708CF /* CompassViewController.h */,
+				DB970A621C5C411D00A708CF /* CompassViewController.m */,
+			);
+			name = Compass;
+			sourceTree = "<group>";
+		};
+		DB1A4E961C5D6CD500B88518 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				DB99200D1C526D3400ED881F /* AnthillAnnotation.h */,
+				DB99200E1C526D3400ED881F /* AnthillAnnotation.m */,
+				DB99200A1C526A2000ED881F /* AnthillMapView.h */,
+				DB99200B1C526A2000ED881F /* AnthillMapView.m */,
+				DBDF15B21C46955900B45C35 /* AnthillMapViewController.h */,
+				DBDF15B31C46955900B45C35 /* AnthillMapViewController.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		DB1A4E971C5D6CF600B88518 /* Sensor List and Plot */ = {
+			isa = PBXGroup;
+			children = (
+				DBDF15CB1C469AA400B45C35 /* BLESensorReading.h */,
+				DBDF15CC1C469AA400B45C35 /* BLESensorReading.m */,
+				DB4946E61C4ECEDC009F6FB0 /* SensorDataPlotViewController.h */,
+				DB4946E71C4ECEDC009F6FB0 /* SensorDataPlotViewController.m */,
+				DBDF15AF1C46955900B45C35 /* SensorReadingTableViewController.h */,
+				DBDF15B01C46955900B45C35 /* SensorReadingTableViewController.m */,
+			);
+			name = "Sensor List and Plot";
+			sourceTree = "<group>";
+		};
+		DB1A4E981C5D6D1D00B88518 /* Leaderboard */ = {
+			isa = PBXGroup;
+			children = (
+				DB5D12981C5459B9007E9528 /* LeaderboardCell.h */,
+				DB5D12991C5459B9007E9528 /* LeaderboardCell.m */,
+				DB5D12951C5457C4007E9528 /* LeaderboardViewController.h */,
+				DB5D12961C5457C4007E9528 /* LeaderboardViewController.m */,
+			);
+			name = Leaderboard;
+			sourceTree = "<group>";
+		};
+		DB1A4E991C5D6D3400B88518 /* Login Screen */ = {
+			isa = PBXGroup;
+			children = (
+				DB9920181C52E6E600ED881F /* LoginView.storyboard */,
+				DB9920131C52E42E00ED881F /* LoginViewController.h */,
+				DB9920141C52E42E00ED881F /* LoginViewController.m */,
+			);
+			name = "Login Screen";
+			sourceTree = "<group>";
+		};
 		DB4946941C4ECE83009F6FB0 /* CorePlotHeaders */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,35 +385,18 @@
 			children = (
 				DB9920071C5133EC00ED881F /* AnteaterREST.h */,
 				DB9920081C5133EC00ED881F /* AnteaterREST.m */,
-				DBD46E791C57A7700094D004 /* CompassView.h */,
-				DBD46E7A1C57A7700094D004 /* CompassView.m */,
-				DB99200D1C526D3400ED881F /* AnthillAnnotation.h */,
-				DB99200E1C526D3400ED881F /* AnthillAnnotation.m */,
-				DB99200A1C526A2000ED881F /* AnthillMapView.h */,
-				DB99200B1C526A2000ED881F /* AnthillMapView.m */,
-				DBDF15B21C46955900B45C35 /* AnthillMapViewController.h */,
-				DBDF15B31C46955900B45C35 /* AnthillMapViewController.m */,
 				DBDF15AC1C46955900B45C35 /* AppDelegate.h */,
 				DBDF15AD1C46955900B45C35 /* AppDelegate.m */,
 				DBDF15B81C46955900B45C35 /* Assets.xcassets */,
-				DBDF15CB1C469AA400B45C35 /* BLESensorReading.h */,
-				DBDF15CC1C469AA400B45C35 /* BLESensorReading.m */,
-				DBDF15BD1C46955900B45C35 /* Info.plist */,
-				DB5D12951C5457C4007E9528 /* LeaderboardViewController.h */,
-				DB5D12961C5457C4007E9528 /* LeaderboardViewController.m */,
+				DB1A4E951C5D6CC700B88518 /* Compass */,
 				DBDF15BA1C46955900B45C35 /* LaunchScreen.storyboard */,
-				DB9920181C52E6E600ED881F /* LoginView.storyboard */,
-				DB9920131C52E42E00ED881F /* LoginViewController.h */,
-				DB9920141C52E42E00ED881F /* LoginViewController.m */,
+				DB1A4E981C5D6D1D00B88518 /* Leaderboard */,
+				DB1A4E991C5D6D3400B88518 /* Login Screen */,
 				DBDF15B51C46955900B45C35 /* Main.storyboard */,
-				DB5D12981C5459B9007E9528 /* LeaderboardCell.h */,
-				DB5D12991C5459B9007E9528 /* LeaderboardCell.m */,
-				DB4946E61C4ECEDC009F6FB0 /* SensorDataPlotViewController.h */,
-				DB4946E71C4ECEDC009F6FB0 /* SensorDataPlotViewController.m */,
+				DB1A4E961C5D6CD500B88518 /* Map */,
+				DB1A4E971C5D6CF600B88518 /* Sensor List and Plot */,
 				DBDF15C81C4695CA00B45C35 /* SensorModel.h */,
 				DBDF15C91C4695CA00B45C35 /* SensorModel.m */,
-				DBDF15AF1C46955900B45C35 /* SensorReadingTableViewController.h */,
-				DBDF15B01C46955900B45C35 /* SensorReadingTableViewController.m */,
 				DB9920101C52E33500ED881F /* SettingsModel.h */,
 				DB9920111C52E33500ED881F /* SettingsModel.m */,
 				DBDF15A91C46955900B45C35 /* Supporting Files */,
@@ -363,6 +407,7 @@
 		DBDF15A91C46955900B45C35 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DBDF15BD1C46955900B45C35 /* Info.plist */,
 				DBDF15AA1C46955900B45C35 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -501,6 +546,7 @@
 				DBD46E7B1C57A7700094D004 /* CompassView.m in Sources */,
 				DB5D12971C5457C4007E9528 /* LeaderboardViewController.m in Sources */,
 				DBDF15B11C46955900B45C35 /* SensorReadingTableViewController.m in Sources */,
+				DB970A631C5C411D00A708CF /* CompassViewController.m in Sources */,
 				DBDF15C61C46958200B45C35 /* BLE.m in Sources */,
 				DBDF15CD1C469AA400B45C35 /* BLESensorReading.m in Sources */,
 				DBDF15AB1C46955900B45C35 /* main.m in Sources */,
