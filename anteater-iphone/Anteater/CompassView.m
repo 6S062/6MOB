@@ -71,7 +71,7 @@
     double head =(_curHeading - _lastMagHeading) + _rotation;
     if (head < 0) head = head + 360;
     
-    NSLog(@"Got heading = %f (estimated direction = %f)", _lastMagHeading,  head);
+    //NSLog(@"Got heading = %f (estimated direction = %f)", _lastMagHeading,  head);
     CGAffineTransform t = CGAffineTransformMakeScale(_scale, _scale);
     //CGAffineTransformMakeTranslation(self.frame.size.width/2, self.frame.size.height/2);
     
