@@ -221,6 +221,14 @@ static int rssi = 0;
     isConnected = false;
 }
 
+-(void)disconnectActivePeripheral {
+    if (activePeripheral) {
+        [self.CM cancelPeripheralConnection:activePeripheral];
+        self.activePeripheral = NULL;
+    }
+    isConnected = false;
+}
+
 - (void) connectPeripheral:(CBPeripheral *)peripheral
 {
     NSLog(@"Connecting to peripheral with UUID : %@", peripheral.identifier.UUIDString);
@@ -429,6 +437,10 @@ static int rssi = 0;
     if (central.state == CBCentralManagerStatePoweredOn && _scanDeferred) {
         _scanDeferred = FALSE;
         [self findBLEPeripherals:_deferredTimeout];
+    }
+    if (central.state == CBCentralManagerStatePoweredOff && self.activePeripheral) {
+        [self disconnectActivePeripheral];
+        [self.delegate bleDidDisconnect];
     }
 #else
     [self isLECapableHardware];

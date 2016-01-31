@@ -49,6 +49,7 @@
 -(void) controlSetup;
 -(int) findBLEPeripherals:(int) timeout;
 -(void) connectPeripheral:(CBPeripheral *)peripheral;
+-(void)disconnectActivePeripheral;
 
 -(UInt16) swap:(UInt16) s;
 -(const char *) centralManagerStateToString:(int)state;
