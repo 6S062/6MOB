@@ -8,8 +8,10 @@
 
 #import "SensorModel.h"
 #import "AnteaterREST.h"
+#import "SettingsModel.h"
 
 #define kBLE_SCAN_TIMEOUT 0 //no timeout
+#define kCONNECT_FREQUENCY 0 // connected to a given hill only this frequently -- if 0, always connect
 
 static id _instance;
 @implementation SensorModel {
@@ -78,6 +80,20 @@ static id _instance;
                     }
                     [((NSMutableArray *)_sensorReadings) addObject:r];
                     [self.delegate bleGotSensorReading:r];
+                    NSMutableDictionary *lastConnectTimes;
+                    if ([[SettingsModel instance] lastConnectedTimes]) {
+                        lastConnectTimes = [NSMutableDictionary dictionaryWithDictionary:[[SettingsModel instance] lastConnectedTimes]];
+                    } else {
+                        lastConnectTimes = [[NSMutableDictionary alloc] init];
+                    }
+                    [lastConnectTimes setObject:[NSDate date] forKey:[[SensorModel instance] currentSensorId]];
+                    [[SettingsModel instance] setLastConnectedTimes:lastConnectTimes];
+                    
+                    if (kCONNECT_FREQUENCY) {
+                        //drop connection -- no need to get too much data
+                        [_ble disconnectActivePeripheral];
+                    }
+
                     [AnteaterREST postListOfSensorReadings:@[r] andCallCallback:NULL];
                     _state = START_STATE;
                     _skip++;
@@ -110,7 +126,13 @@ static id _instance;
 
 -(void) bleDidDiscoverPeripheral:(CBPeripheral *)peripheral {
     if (!_ble.activePeripheral) {
-        [_ble connectPeripheral:peripheral];
+        NSDictionary *lastConnectTimes = [[SettingsModel instance] lastConnectedTimes];
+        NSDate *d = [lastConnectTimes objectForKey:peripheral.name];
+        if (!kCONNECT_FREQUENCY || !d || [d timeIntervalSinceNow] * -1 > kCONNECT_FREQUENCY) {
+            [_ble connectPeripheral:peripheral];
+        } else {
+            NSLog(@"Not connecting to sensor %@, has connected recently",peripheral.name);
+        }
 
     }
 }

@@ -11,6 +11,9 @@
 @interface SettingsModel : NSObject
 
 @property NSString *username;
+@property NSDictionary *lastConnectedTimes;
 +(SettingsModel *)instance;
+
+
 
 @end
