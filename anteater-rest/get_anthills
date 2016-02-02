@@ -13,7 +13,7 @@ cursor = conn.cursor(cursor_factory=RealDictCursor)
 
 anthills = []
 
-query = "select id, lat, lon, extract('epoch' from last_heard) as last_heard from anthills"
+query = "select id, lat, lon, description, extract('epoch' from last_heard) as last_heard from anthills"
 cursor.execute(query)
 
 #anthill1 = {"id":1, "lat":42.3598, "lon":-71.0921}

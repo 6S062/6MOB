@@ -66,6 +66,7 @@
     } else {
         _scale = 1.0;
     }
+
     self.distanceLabel.text = [NSString stringWithFormat:@"%.1f km",distanceKm];
 
     double head =(_curHeading - _lastMagHeading) + _rotation;

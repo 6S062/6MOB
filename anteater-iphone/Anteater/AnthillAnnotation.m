@@ -27,15 +27,35 @@
 }
 
 -(NSString *)title {
-    return [_data objectForKey:@"id"];
+    NSString *idStr=[_data objectForKey:@"id"];
+    NSString *description = [_data objectForKey:@"description"];
+    if (!description || (NSNull *)description == [NSNull null])
+        return idStr;
+    else return  [NSString stringWithFormat:@"%@ - %@",idStr,description];
+
+}
+
+-(int)getPointsForVisitingAnthillWithDate:(NSDate *)d {
+    float diff = [d timeIntervalSinceNow] * -1;
+    if (diff > 360 * 30)
+        return 5;
+    else if (diff > 360 * 10)
+        return 2;
+    else if (diff > 360 * 5)
+        return 1;
+    else return 0;
+        
 }
 
 -(NSString *)subtitle {
+    NSString *dateString;
     NSNumber *date = [_data objectForKey:@"last_heard"];
     if (!date || (NSNull *)date == [NSNull null])
-        return @"No connections.";
+        return @"No connections (5 points)";
     NSDate *d = [NSDate dateWithTimeIntervalSince1970:[date floatValue]];
-    return [NSString stringWithFormat:@"Last heard:%@",[NSDateFormatter localizedStringFromDate:d dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle]];
+    dateString = [NSString stringWithFormat:@"Last heard:%@. ",[NSDateFormatter localizedStringFromDate:d dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle]];
+    
+    return  [NSString stringWithFormat:@"%@ (%d points)",dateString, [self getPointsForVisitingAnthillWithDate:d]];
 }
 
 
