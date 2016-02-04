@@ -1,0 +1,146 @@
+[
+  {
+    "name": "1. Introduction to the Course",
+    "events": [
+      {
+        "date": "2016-02-03",
+        "readings": [
+          {
+            "title": "None"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Positioning",
+    "events": [
+      {
+        "date": "2016-02-08",
+        "title": "2. Intro to Positioning; Trilateration, Location-Based Services; APIs",
+        "readings": [
+          {
+            "href": "http://onlinelibrary.wiley.com.libproxy.mit.edu/doi/10.1002/0470092335.ch6/pdf",
+            "title": "Location-based Services: Fundamentals and Operation, Chapter 6"
+          }
+        ],
+        "assignments": [
+          {
+            "title": "Out: Lab 0"
+          }
+        ]
+      },
+      {
+        "date": "2016-02-10",
+        "title": "3. GPS",
+        "readings": [
+          {
+            "href": "https://en.wikipedia.org/wiki/Global_Positioning_System",
+            "title": "Wikipedia: Global Positioning System"
+          },
+          {
+            "href": "http://www.cc.gatech.edu/~keith/classes/ubicomplexity/pdfs/infra/lamarca-placelab.pdf",
+            "title": "Place Lab: Device Positioning Using Radio Beacons in the Wild"
+          }
+        ],
+        "assignments": [
+          {
+            "title": "Due: Lab 0"
+          },
+          {
+            "title": "Out: Lab 1"
+          }
+        ]
+      },
+      {
+        "date": "2016-02-16 (Monday schedule on Tuesday)",
+        "title": "4. Indoor Localization/Networking",
+        "readings": [
+          {
+            "href": "http://research.microsoft.com/en-us/people/padmanab/infocom2000.pdf",
+            "title": "RADAR: An In-Building RF-based User Location and Tracking System"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Networking",
+    "events": [
+      {
+        "date": "2016-02-17",
+        "title": "5. Overview/BLE APIs",
+        "readings": [
+          {
+            "href": "http://iot.stanford.edu/pubs/zachariah-gateway-hotmobile15.pdf",
+            "title": "The Internet of Things Has a Gateway Problem"
+          }
+        ]
+      },
+      {
+        "date": "2016-02-22",
+        "title": "6. Multi-Hop Networking",
+        "readings": [
+          {
+            "href": "https://pdos.csail.mit.edu/archive/decouto/papers/heinzelman00.pdf",
+            "title": "LEACH: Energy-Efficient Communication Protocol for Wireless Microsensor Networks"
+          }
+        ]
+      },
+      {
+        "date": "2016-02-24",
+        "title": "7. Mesh Networking",
+        "readings": [
+          {
+            "href": "http://web.stanford.edu/class/cs344e/papers/sensys_awoo03.pdf",
+            "title": "Taming the Underlying Challenges of Reliable Multihop Routing in Sensor Networks"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Data Collection",
+    "events": [
+      {
+        "date": "2016-02-29",
+        "title": "8. Store-and-Forward",
+        "readings": [
+          {
+            "href": "http://www.princeton.edu/~mrm/asplos-x_annot.pdf",
+            "title": "Energy-Efficient Computing for Wildlife Tracking: Design Tradeoffs and Early Experiences with ZebraNet"
+          }
+        ],
+        "assignments": [
+          {
+            "title": "Due: Project Proposals"
+          }
+        ]
+      },
+      {
+        "date": "2016-03-02",
+        "title": "9. TBA",
+        "readings": [
+          {
+            "href": "http://db.cs.berkeley.edu/papers/osdi02-tag.pdf",
+            "title": "TAG: a Tiny AGgregation Service for Ad-Hoc Sensor Networks"
+          }
+        ],
+        "assignments": [
+          
+        ]
+      }
+    ]
+  },
+  {
+    "name": "..."
+  },
+  {
+    "name": "Quiz",
+    "events": [
+      {
+        "date": "2016-04-20"
+      }
+    ]
+  }
+]
