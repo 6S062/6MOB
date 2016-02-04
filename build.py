@@ -90,7 +90,7 @@ with open(sys.argv[1], 'r') as infile, open(sys.argv[2], 'w') as outfile:
 	outfile.write(header)
 	modules = json.load(infile)
 	for module in modules:
-		modname = module['name']
+		modname = module['module']
 		if 'events' not in module:
 			outfile.write("""<tr>\n<td></td>\n<td colspan="4">%s</td>\n</tr>\n\n""" % (modname,))
 		else:

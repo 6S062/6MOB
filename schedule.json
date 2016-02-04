@@ -1,6 +1,6 @@
 [
   {
-    "name": "1. Introduction to the Course",
+    "module": "1. Introduction to the Course",
     "events": [
       {
         "date": "2016-02-03",
@@ -13,7 +13,7 @@
     ]
   },
   {
-    "name": "Positioning",
+    "module": "Positioning",
     "events": [
       {
         "date": "2016-02-08",
@@ -65,7 +65,7 @@
     ]
   },
   {
-    "name": "Networking",
+    "module": "Networking",
     "events": [
       {
         "date": "2016-02-17",
@@ -100,7 +100,7 @@
     ]
   },
   {
-    "name": "Data Collection",
+    "module": "Data Collection",
     "events": [
       {
         "date": "2016-02-29",
@@ -133,10 +133,10 @@
     ]
   },
   {
-    "name": "..."
+    "module": "..."
   },
   {
-    "name": "Quiz",
+    "module": "Quiz",
     "events": [
       {
         "date": "2016-04-20"
