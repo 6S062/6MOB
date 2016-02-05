@@ -150,9 +150,9 @@
     return nil;
 }
 
-- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
-    _cv.rotationOffset = mapView.camera.heading;
-}
+//- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
+//    _cv.rotationOffset = mapView.camera.heading;
+//}
 
 
 @end
