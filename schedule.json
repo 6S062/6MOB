@@ -4,6 +4,12 @@
     "events": [
       {
         "date": "2016-02-03",
+        "materials": [
+          {
+            "_comment": "This is here as an example of how to include materials like slides.  Remove the underscores to make it show up.",
+            "_href": "asdf",
+            "_title": "(I)"
+          }],
         "readings": [
           {
             "title": "None"

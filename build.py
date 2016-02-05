@@ -1,10 +1,11 @@
 from __future__ import print_function
 import sys
+import os
 import json
 
 if len(sys.argv) < 3:
-	print('Usage: %s infile.json outfile.html' % sys.argv[0])
-	exit(1)
+    print('Usage: %s infile.json outfile.html' % sys.argv[0])
+    exit(1)
 
 header = """
 <!DOCTYPE html>
@@ -86,44 +87,47 @@ footer = """
 </html>
 """
 
-with open(sys.argv[1], 'r') as infile, open(sys.argv[2], 'w') as outfile:
-	outfile.write(header)
-	modules = json.load(infile)
-	for module in modules:
-		modname = module['module']
-		if 'events' not in module:
-			outfile.write("""<tr>\n<td></td>\n<td colspan="4">%s</td>\n</tr>\n\n""" % (modname,))
-		else:
-			numevents = len(module['events'])
-			for i, event in enumerate(module['events']):
-				date = event['date']
-				title = event.get('title', None)
-				readings = event.get('readings', [])
-				assignments = event.get('assignments', [])
-				outfile.write("""<tr>\n<td>%s</td>\n""" % (date,))
-				if title is None and numevents == 1:
-					outfile.write("""<td colspan="2">%s</td>\n""" % (modname,))
-				elif i == 0:
-					outfile.write("""<td rowspan="%d">%s</td>\n""" % (numevents, modname))
-				if title is not None:
-					outfile.write("""<td>%s</td>\n""" % (title,))
-				outfile.write("""<td>""")
-				for j, reading in enumerate(readings):
-					if j:
-						outfile.write("""<br>\n""")
-					if 'href' in reading:
-						outfile.write("""<a href="%s">%s</a>""" % (reading['href'], reading['title']))
-					else:
-						outfile.write("""%s""" % (reading['title'],))
-				outfile.write("""</td>\n""")
-				outfile.write("""<td>""")
-				for j, assignment in enumerate(assignments):
-					if j:
-						outfile.write("""<br>\n""")
-					if 'href' in assignment:
-						outfile.write("""<a href="%s">%s</a>""" % (assignment['href'], assignment['title']))
-					else:
-						outfile.write("""%s""" % (assignment['title'],))
-				outfile.write("""</td>\n""")
-				outfile.write("""</tr>\n\n""")
-	outfile.write(footer)
+def writeItems(outfile, items, colspan=1, newline=True):
+    outfile.write("""<td%s>""" % ("" if colspan == 1 else ' colspan="%d"' % colspan,))
+    j = 0
+    for item in items:
+        if 'title' not in item:
+            continue
+        if j:
+            outfile.write("""<br>\n""" if newline else " \n")
+        if 'href' in item:
+            outfile.write("""<a href="%s">%s</a>""" % (item['href'], item['title']))
+        else:
+            outfile.write("""%s""" % (item['title'],))
+        j += 1
+    outfile.write("""</td>\n""")
+
+try:
+    with open(sys.argv[1], 'r') as infile, open(sys.argv[2], 'w') as outfile:
+        outfile.write(header)
+        modules = json.load(infile)
+        for module in modules:
+            modname = module['module']
+            if 'events' not in module:
+                outfile.write("""<tr>\n<td></td>\n<td colspan="4">%s</td>\n</tr>\n\n""" % (modname,))
+            else:
+                numevents = len(module['events'])
+                for i, event in enumerate(module['events']):
+                    date = event['date']
+                    title = event.get('title', None)
+                    assignments = event.get('assignments', [])
+                    outfile.write("""<tr>\n<td>%s</td>\n""" % (date,))
+                    if i == 0 and title is not None:
+                        outfile.write("""<td rowspan="%d">%s</td>\n""" % (numevents, modname))
+                    colspan = 1
+                    if title is None and numevents == 1:
+                        title = modname
+                        colspan = 2
+                    writeItems(outfile, [{'title':title}] + event.get('materials', []), colspan=colspan, newline=False)
+                    writeItems(outfile, event.get('readings', []))
+                    writeItems(outfile, event.get('assignments', []))
+                    outfile.write("""</tr>\n\n""")
+        outfile.write(footer)
+except:
+    os.remove(sys.argv[2])
+    raise
