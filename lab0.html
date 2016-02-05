@@ -169,26 +169,30 @@
 <img src="images/lab0/lab_result.gif" alt="picture of iPhone simulator loading weather in a barebones app.">
 <p>You're building an app that basically loads the weather.</p>
 
-<p>The lookup function is asynchronous. If there's no network, the app doesn't hang or crash.</p>
+<p>The fetchWeather is asynchronous. If there's no network, the app shouldn't hang or crash.</p>
 
-<p>We're using the Wunderground API. Here's a key for you: 0b719bec26ab96ac. This code will work for the whole class, but expires in March. You'll be getting data from <a href="https://api.wunderground.com/api/0b719bec26ab96ac/conditions/q/02139.json">here</a></p>
+<p>We're using the Wunderground API. Here's a key for you: 0b719bec26ab96ac. This key will work for the lab, but expires in March. The JSON looks like <a href="https://api.wunderground.com/api/0b719bec26ab96ac/conditions/q/02139.json">this</a>.</p>
 
 <p>We've recorded <a href="https://www.youtube.com/playlist?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u">videos</a> with exact instructions on how to complete the lab. The goal is to get you comfortable with xCode, the docs, the simulator, and Objective-C. Maybe you'll even learn some shortcuts from watching them.</p>
 
 <p>The videos build off of one another. You can do the assignment in your own way, or in the exact way it's done in the videos. It's entirely up to you.</p>
 
+<div>
 <h4>Video 1 - Hello World</h4>
 <p>We create the project and print "Hello World". You'll also notice that we resize the simulator, and click on some of the menu bars. This just so that you see what those buttons do.</p>
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/zi6Z13-3oyI?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen>
 </iframe>
+</div>
 
 
+<hr>
 <h4>Video 2 - Making a <code>Weather</code> Class </h4>
 <p>Here, we define a weather class with some properties and methods</p>
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/usGJJQu54so?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen>
 </iframe>
+
 
 <h4>Video 3 - Flushing out the <code>Weather</code> Methods</h4>
 <p>We add some details to the weather methods from the previous video. In the next video, we instantiate the weather class, and debug it.</p>
