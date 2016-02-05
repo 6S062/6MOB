@@ -15,7 +15,6 @@
 #define radToDeg(x) ((x) * 180.0 / M_PI)
 
 @interface CompassView : UIImageView
-@property CGFloat rotationOffset;
 @property double lastMagHeading;
 @property CLLocationCoordinate2D userLoc, targetLoc;
 @property IBOutlet UILabel *headingLabel, *distanceLabel;

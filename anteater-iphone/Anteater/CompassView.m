@@ -13,7 +13,7 @@
 
 
 @implementation CompassView {
-    CGFloat _rotation, _curHeading, _lastHeading, _scale;
+    CGFloat _curHeading, _lastHeading, _scale;
     UIImage *_image;
 }
 
@@ -60,7 +60,8 @@
     
     CLLocationDistance distanceKm = [[[CLLocation alloc] initWithLatitude:_userLoc.latitude longitude:_userLoc.longitude] distanceFromLocation:[[CLLocation alloc] initWithLatitude:_targetLoc.latitude longitude:_targetLoc.longitude]] / 1000.0;
     if (distanceKm < 2.0) {
-        _scale = 1.0 - (pow(1000,(2.0 - distanceKm)/2.0) / 1000.0); //shrink arrow as we get closer
+        //_scale = 1.0 - (pow(1000,(2.0 - distanceKm)/2.0) / 1000.0); //shrink arrow as we get closer
+        _scale = 1.0;
         NSLog(@"Distance = %f, _scale = %f",distanceKm,_scale);
         
     } else {
@@ -69,7 +70,7 @@
 
     self.distanceLabel.text = [NSString stringWithFormat:@"%.1f km",distanceKm];
 
-    double head =(_curHeading - _lastMagHeading) + _rotation;
+    double head =(_curHeading - _lastMagHeading);
     if (head < 0) head = head + 360;
     
     //NSLog(@"Got heading = %f (estimated direction = %f)", _lastMagHeading,  head);
@@ -89,15 +90,6 @@
 }
 
 
--(CGFloat)rotationOffset {
-    return _rotation;
-}
-
--(void)setRotationOffset:(CGFloat)rotation {
-    _rotation = rotation;
-    [self rotateArrow];
-    
-}
 
 
 

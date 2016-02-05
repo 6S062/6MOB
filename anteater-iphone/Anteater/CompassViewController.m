@@ -35,6 +35,7 @@
         if (hills)
             _anthills = [hills objectForKey:@"anthills"];
         [_picker reloadAllComponents];
+        [self updateCompassScaleAndHeading];
     }];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
