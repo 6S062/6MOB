@@ -160,7 +160,7 @@
   <li>Ray Wenderlich has the best <a href="https://github.com/raywenderlich/objective-c-style-guide" target="_blank">style guide</a> out there. It'll make your c</easier to read and maintain.</p>
   <li>This <a href="http://www.amazon.com/gp/product/032194206X" target="_blank">Objective-C book</a> is the staff favorite</li>
   <li>This <a href="http://www.amazon.com/gp/product/0321942051?" target="_blank">iOS book</a> is full of nice tutorials</li>
-  <li>And then there's this <a href="http://goshdarnblocksyntax.com/ target="_blank"" title="That's the SFW link. You can probably work out the other one.">indespensible reference for block syntax.</a></li>
+  <li>And then there's this <a href="http://goshdarnblocksyntax.com/ target="_blank"" title="That's the SFW link. You can probably work out the other one.">indespensible reference for block syntax (which is kind of like lambdas).</a></li>
 </ul>
 
 
@@ -173,18 +173,80 @@
 
 <p>We're using the Wunderground API. Here's a key for you: 0b719bec26ab96ac. This code will work for the whole class, but expires in March. You'll be getting data from <a href="https://api.wunderground.com/api/0b719bec26ab96ac/conditions/q/02139.json">here</a></p>
 
-<p>We've recorded <a href="https://www.youtube.com/playlist?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u">videos</a>with exact instructions on how to build that app. The goal is to get you comfortable with xCode, the docs, the simulator, and Objective-C.</p>
+<p>We've recorded <a href="https://www.youtube.com/playlist?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u">videos</a> with exact instructions on how to complete the lab. The goal is to get you comfortable with xCode, the docs, the simulator, and Objective-C. Maybe you'll even learn some shortcuts from watching them.</p>
 
-<p>The videos build off of one another, but break in strategic places. You can do the assignment the exact way it's done in the videos, or your own way. It's entirely up to you.</p>
+<p>The videos build off of one another. You can do the assignment in your own way, or in the exact way it's done in the videos. It's entirely up to you.</p>
 
-<hr>
-<p>Creating the project and writing hello world:</p>
+<h4>Video 1 - Hello World</h4>
+<p>We create the project and print "Hello World". You'll also notice that we resize the simulator, and click on some of the menu bars. This just so that you see what those buttons do.</p>
 <iframe width="420" height="315"
 src="https://www.youtube.com/watch?v=zi6Z13-3oyI&list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u&index=1">
 </iframe>
 
+<h4>Video 2 - Making a <code>Weather</code> Class </h4>
+<p>Here, we define a weather class with some properties and methods</p>
+<iframe width="420" height="315"
+src="https://www.youtube.com/watch?v=usGJJQu54so&index=2&list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u">
+</iframe>
 
-<p></p>
+<h4>Video 3 - Flushing out the <code>Weather</code> Methods</h4>
+<p>We add some details to the weather methods from the previous video. In the next video, we instantiate the weather class, and debug it.</p>
+<iframe width="420" height="315"
+src="https://www.youtube.com/watch?v=r2aSxMbzJ0Y&list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u&index=3">
+</iframe>
+
+<h4>Video 4 - Instantiating and Debugging <code>Weather</code></h4>
+<p>There was an error with weather. We illustrate some of the tools tha the debugger has.</p>
+<p>Using the debugger will make your life much, much easier, and we think it's worth learning.</p>
+<iframe width="420" height="315"
+src="https://www.youtube.com/watch?v=m_JneOZb_Gk&index=4&list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u">
+</iframe>
+
+<h4>Video 5 - Adding a button to the UX, defining constraints</h4>
+<p>We add a new button to the interface and define its constraints.</p>
+<p><strong>We're pressing the control key while dragging from the button to the <code>.h</code> file</p>
+<iframe width="420" height="315"
+src="https://www.youtube.com/watch?v=vje0rXuqD80&list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u">
+</iframe>
+
+<h4>Video 6 - Enabling the button</h4>
+<p>This is pretty straightforward. We're making the button actually do stuff now.</p>
+<p>Again remember to press the control key while dragging!</p>
+<iframe width="420" height="315"
+src="https://www.youtube.com/watch?v=2tuVHTDPxn8&index=5&list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u">
+</iframe>
+
+<h4>Video 7 - Adding more UI Elements</h4>
+<p>We add some labels to display the weather. Note how we're using stack view heere.</p>
+<p>There are at least 5 ways to lay out elements in xCode. This is probably the fastest.</p>
+<iframe width="420" height="315"
+src="https://www.youtube.com/watch?v=NYgcR3tL6I4&index=7&list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u">
+</iframe>
+
+<h4></h4>
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/watch?v=F3SBBLW6vH8&index=8&list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u">
+</iframe>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zi6Z13-3oyI?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="420" height="315"
+src="">
+</iframe>
+<iframe width="420" height="315"
+src="">
+</iframe>
+<iframe width="420" height="315"
+src="">
+</iframe>
+<iframe width="420" height="315"
+src="">
+</iframe>
+<iframe width="420" height="315"
+src="">
+</iframe>
 
 
     <!-- FOOTER  -->
