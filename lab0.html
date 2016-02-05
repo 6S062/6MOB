@@ -101,8 +101,68 @@
 <p>You can get to class documentation by option+clicking the class in question.</p>
 
 
+<h2>Some info about Objective-C</h2>
 
-      
+<img src="images/lab0/weird.gif" alt="taylor swift wtf?">
+<p>Let's get this out of the way. Objective-C Looks Weird.</p>
+
+
+<img src="images/lab0/huge." alt="small dog, large ball">
+<p>It's a strict superset of C, which adds a lot of cruft, which makes it a huge language. So it's kind of unweildy to manipulate.</p>
+
+<img src="images/lab0/stop.gif" alt="">
+<p>Unfortunately, I'm running out of gifs to explain it to you. Enough fooling around. Let's bring the buzz-feed part of this lecture to a halt.</p>
+
+<h2>Let's look at some actual syntax</h2>
+
+<img src="images/lab0/example1.png" alt="[object performAction]; object.performAction();">
+<p>This example is clear enough. We're sending a method's selector (<code>performAction</code> to an object (<code>object</code>) </p>
+
+<img src="images/lab0/example2.png" alt="[object performAction:firstParameter]; object.performAction(firstParameter);">
+<p>Here, you're sending a method's selector selector, with a parameter to the same object.</p>
+
+<img src="images/lab0/example3.png" alt="[object performAction:firstParameter withTwoParameters:secondParameter]; object.performAction(firstParameter, secondParameter);">
+<p>And now this.</p>
+
+<img src="images/lab0/declaration.png" alt="">
+<p>Declaring methods looks odd, too. Sorry.</p>
+
+<p>(Some of images were stolen from <a href="https://ashfurrow.com/blog/why-objective-c-is-hard-to-learn/">https://ashfurrow.com/blog/why-objective-c-is-hard-to-learn/</a>, btw. There's a good post there.)</p>
+
+
+<h2>Objective-C Syntactic Sugar</h2>
+
+<p>There's some nice stuff built in, that's meant to simplify the syntax. For example, initializing arrays</p>
+
+<code>  NSArray *fizz = [NSArray arrayWithObjects:@"foo", @"bar", nil]</code>
+<p>becomes</p>
+<code>NSArray *fizz = @[@"foo", @"bar"]</code>
+
+<hr>
+<p>or</p>
+<code>NSNumber *num = [NSNumber numberWithInt:2];</code>
+<p>becomes</p>
+<code>NSNumber *num =@"2"</code>
+
+<hr>
+<p>or</p>
+<code>NSString *str = [myObj strProperty];</code>
+<p>becomes</p>
+<code>NSString *str = myObj.strProperty;</code>
+
+<p>You might notice that syntactic sugar often begins with an <code>@</code> symbol. This is the case.</p>
+
+<p>Keep in mind that some of this syntactic sugar is pretty recent. So when you find old stackoverflow answers, they may use older notation.</p>
+
+<h2>Some References</h2>
+<p>If you'd like to know more about C, here's <a href="images/lab0/Objective_C_Full_Presentation">a user's guide</a></p>
+<p>Ray Wenderlich has the best <a href="https://github.com/raywenderlich/objective-c-style-guide">style guide</a> out there. It'll make your code easier to read and maintain.</p>
+<p>This <a href="http://www.amazon.com/gp/product/032194206X">Objective-C book</a> is the staff favorite</p>
+<p>This <a href="http://www.amazon.com/gp/product/0321942051?">iOS book</a> is full of nice tutorials</p>
+<p>And then there's this <a href="http://goshdarnblocksyntax.com/">indespensible reference for block syntax.</a></p>
+
+<h2>On to your lab assignment!</h2>
+
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
