@@ -65,6 +65,7 @@ header = """
 <th colspan="2">Topic</th>
 <th>Reading</th>
 <th>Assignment</th>
+<th>Notes</th>
 </tr>
 </thead>
 """
@@ -109,7 +110,7 @@ try:
         for module in modules:
             modname = module['module']
             if 'events' not in module:
-                outfile.write("""<tr>\n<td></td>\n<td colspan="4">%s</td>\n</tr>\n\n""" % (modname,))
+                outfile.write("""<tr>\n<td></td>\n<td colspan="5">%s</td>\n</tr>\n\n""" % (modname,))
             else:
                 numevents = len(module['events'])
                 for i, event in enumerate(module['events']):
@@ -123,9 +124,10 @@ try:
                     if title is None and numevents == 1:
                         title = modname
                         colspan = 2
-                    writeItems(outfile, [{'title':title}] + event.get('materials', []), colspan=colspan, newline=False)
+                    writeItems(outfile, [{'title':title}], colspan=colspan)
                     writeItems(outfile, event.get('readings', []))
                     writeItems(outfile, event.get('assignments', []))
+                    writeItems(outfile, event.get('materials', []), newline=False)
                     outfile.write("""</tr>\n\n""")
         outfile.write(footer)
 except:

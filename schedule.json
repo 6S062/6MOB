@@ -6,10 +6,14 @@
         "date": "2016-02-03",
         "materials": [
           {
-            "_comment": "This is here as an example of how to include materials like slides.  Remove the underscores to make it show up.",
-            "_href": "asdf",
-            "_title": "(I)"
-          }],
+            "href": "materials/lec1-slides.pdf",
+            "title": "(I)"
+          },
+          {
+            "href": "materials/lec1.pdf",
+            "title": "(II)"
+          }
+        ],
         "readings": [
           {
             "title": "None"
@@ -60,11 +64,15 @@
       },
       {
         "date": "2016-02-16 (Monday schedule on Tuesday)",
-        "title": "4. Indoor Localization/Networking",
+        "title": "4. Indoor Location",
         "readings": [
           {
             "href": "http://research.microsoft.com/en-us/people/padmanab/infocom2000.pdf",
             "title": "RADAR: An In-Building RF-based User Location and Tracking System"
+          },
+          {
+            "href": "http://nms.lcs.mit.edu/papers/cricket.pdf",
+            "title": "The Cricket Location-Support System"
           }
         ]
       }
@@ -75,7 +83,7 @@
     "events": [
       {
         "date": "2016-02-17",
-        "title": "5. Overview/BLE APIs",
+        "title": "5. Connectivity Overview and BLE",
         "readings": [
           {
             "href": "http://iot.stanford.edu/pubs/zachariah-gateway-hotmobile15.pdf",
@@ -85,21 +93,21 @@
       },
       {
         "date": "2016-02-22",
-        "title": "6. Multi-Hop Networking",
+        "title": "6. Mesh and Multi-Hop Wireless Networks",
         "readings": [
           {
-            "href": "https://pdos.csail.mit.edu/archive/decouto/papers/heinzelman00.pdf",
-            "title": "LEACH: Energy-Efficient Communication Protocol for Wireless Microsensor Networks"
+            "href": "https://pdos.csail.mit.edu/papers/grid:mobicom03/paper.pdf",
+            "title": "A High-Throughput Path Metric for Multi-Hop Wireless Routing"
           }
         ]
       },
       {
         "date": "2016-02-24",
-        "title": "7. Mesh Networking",
+        "title": "7. Energy-Aware Wireless Networking",
         "readings": [
           {
-            "href": "http://web.stanford.edu/class/cs344e/papers/sensys_awoo03.pdf",
-            "title": "Taming the Underlying Challenges of Reliable Multihop Routing in Sensor Networks"
+            "href": "https://pdos.csail.mit.edu/archive/decouto/papers/heinzelman00.pdf",
+            "title": "LEACH: Energy-Efficient Communication Protocol for Wireless Microsensor Networks"
           }
         ]
       }
@@ -110,7 +118,7 @@
     "events": [
       {
         "date": "2016-02-29",
-        "title": "8. Store-and-Forward",
+        "title": "8. Data Muling",
         "readings": [
           {
             "href": "http://www.princeton.edu/~mrm/asplos-x_annot.pdf",
@@ -125,7 +133,7 @@
       },
       {
         "date": "2016-03-02",
-        "title": "9. TBA",
+        "title": "9. In-Network Aggregation",
         "readings": [
           {
             "href": "http://db.cs.berkeley.edu/papers/osdi02-tag.pdf",
