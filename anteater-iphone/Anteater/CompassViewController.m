@@ -84,7 +84,7 @@
     //NSLog(@"Got heading = %f (estimated direction = %f)", _lastMagHeading,  head);
     CGAffineTransform t = CGAffineTransformMakeScale(_scale, _scale);
     //CGAffineTransformMakeTranslation(self.frame.size.width/2, self.frame.size.height/2);
-    CGAffineTransformMakeRotation(<#CGFloat angle#>)
+
     _lastHeading = head; //head * .5 + _lastHeading * .5; //smooth
     
     t = CGAffineTransformRotate(t, degToRad(_lastHeading));
