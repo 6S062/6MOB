@@ -27,18 +27,27 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
 
+
+[ <a href="#layout">Xcode's Layout</a>
+| <a href="#xcode-shortcuts">Xcode Shortcuts</a>
+| <a href="#xcode-docs">Xcode Docs</a>
+| <a href="#obj-c">Objective-C Syntax</a>
+| <a href="#references">References</a>
+| <a href="#assignment">Lab Assignment</a>
+]
+
 <p>In this lab, we cover the basics of the Xcode IDE, the iOS Simulator, Xcode's Documentation Viewer, and the Objective-C programming language. By the end of lab, we'll have built a simple iPhone application that displays weather from the <a href="https://wunderground.com">wunderground.com</a> API.</p>
 
 <p>To complete this lab, you'll need to download <a href="macappstores://itunes.apple.com/us/app/xcode/id497799835">Xcode</a>. If you don't have a Mac of your own, you can use one of the Macs in the EECS lab, 38-530.</p>
 
 <hr>
 
-<h2>First, a little about Xcode's layout:</h2>
+<h2 name="layout">First, a little about Xcode's layout:</h2>
 <img src="images/lab0/xcode_layout.png" title="panels: left: navigator, top: menu, right: utilities (right top: inspector, right bottom: library) bottom: debugger (bottom left:variables, bottom right:console)" />
 
 <hr>
 
-<h2>Some helpful Xcode shortcuts and tips</h2>
+<h2 name="xcode-shortcuts">Some helpful Xcode shortcuts and tips</h2>
 <table>
   <tr>
     <td>View Documentation:</td>
@@ -61,7 +70,7 @@
 
 <hr>
 
-<h2>Some helpful iPhone simulator shortcuts and tips</h2>
+<h2 name="sim-shortcuts">Some helpful iOS Simulator shortcuts and tips</h2>
 <table>
   <tr>
     <td>Press Home Button:</td>
@@ -83,7 +92,7 @@
 &#x2318; = Command      |      &#x2325; = Option      |      &#x21E7; = Shift
 
 
-<h2>Xcode Documentation</h2>
+<h2 name="xcode-docs">Xcode Documentation</h2>
 <p>Shortcut: &#x21e7;&#x2318;0</p>
 <img src="images/lab0/amazing.gif" alt="amazing">
 <p>It's kind of amazing.</p>
@@ -109,22 +118,22 @@
 <img src="images/lab0/stop.gif" alt="">
 <p>Unfortunately, I'm running out of gifs to explain it to you. Enough fooling around. Let's bring the buzz-feed part of this lecture to a halt.</p>
 
-<h2>Let's look at some actual syntax</h2>
+<h2 name="obj-c">Let's look at some actual syntax</h2>
 
-<p>In the following examples, the above top code is Objective-C. The bottom code can be thought of as Python, though it really is just a generic OOP language.</p>
+<p>In the following examples, the code on top is Objective-C and the code on the bottom can be thought of as Python, though it really is just a generic OOP language.</p>
 
-<h4>Sending selectors to Objects:</h4>
+<h4>Passing Messages to Objects:</h4>
 <img src="images/lab0/example1.png" alt="[object performAction]; object.performAction();">
-<p>This above example is clear enough. We're sending a method's selector (<code>performAction</code>) to an object (<code>object</code>) </p>
+<p>This above example is clear enough. We're calling a method (<code>performAction</code>) on an object (<code>object</code>). In Objective-C parlance we're passing a message to an object, telling it, "Run your implementation of the method performAction." The name of a method is referred to as a selector.</p>
 
 <img src="images/lab0/example2.png" alt="[object performAction:firstParameter]; object.performAction(firstParameter);">
-<p>Here, you're sending a method's selector selector, with a parameter to the same object.</p>
+<p>Here, we call a method which takes one parameter. Note that methods in Objective-C indicate their parameters with colons.</p>
 
 <img src="images/lab0/example3.png" alt="[object performAction:firstParameter withTwoParameters:secondParameter]; object.performAction(firstParameter, secondParameter);">
-<p>And now this.</p>
+<p>Note that method parameters are interspersed with method names, <code>-performAction:withTwoParameters:</code>. This is similar to keyword arguments in Python, except none of the parameters is optional. If you take this into consideration when naming your methods, you will find Objective-C code can be very readable and self-documenting.</p>
 
 
-<h4>Declaring methods on Objects:</h4>
+<h4>Declaring Methods on Objects:</h4>
 <img src="images/lab0/declaration.png" alt="">
 <p>Declaring methods looks odd, too. Sorry.</p>
 
@@ -140,7 +149,7 @@
 
 <p>Properties that are <code>atomic</code> are fully retrieved or set, even if called simultaneously from different threads.</p>
 
-<p>Here is an concise <a href="https://stackoverflow.com/questions/9859719/objective-c-declared-property-attributes-nonatomic-copy-strong-weak">Stack Overflow post on property attributes</a>. The <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/EncapsulatingData/EncapsulatingData.html">Apple documentation on encapsulating data</a> is also quite helpful. </p>
+<p>Here is a concise <a href="https://stackoverflow.com/questions/9859719/objective-c-declared-property-attributes-nonatomic-copy-strong-weak">Stack Overflow post on property attributes</a>. The <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/EncapsulatingData/EncapsulatingData.html">Apple documentation on encapsulating data</a> is also quite helpful. </p>
 
 <h2>Objective-C Syntactic Sugar</h2>
 
@@ -164,7 +173,7 @@
 
 <p>Keep in mind that some of this syntactic sugar is quite recent. When you find old StackOverflow answers, they may use older notation.</p>
 
-<h2>Some References</h2>
+<h2 name="references">Some References</h2>
 <ul>
   <li>If you'd like to know more about Objective-C, here's <a href="images/lab0/Objective_C_Full_Presentation.pdf" target="_blank">a user's guide</a></li>
   <li>Ray Wenderlich has the best <a href="https://github.com/raywenderlich/objective-c-style-guide" target="_blank">style guide</a> out there. It'll make your code easier to read and maintain.</p>
@@ -175,9 +184,9 @@
   <li>If you want a deeper understanding of Objective-C and the why and how of the Cocoa APIs, Apple's <a href="https://developer.apple.com/library/ios/documentation/General/Conceptual/CocoaEncyclopedia/Introduction/Introduction.html">Concepts in Objective-C Programming</a> is your best source.</li>
 </ul>
 
-<h2>On to your lab assignment!</h2>
+<h2 name="assignment">On to your lab assignment!</h2>
 
-<img src="images/lab0/lab_result.gif" alt="picture of iPhone simulator loading weather in a barebones app.">
+<img src="images/lab0/lab_result.gif" alt="picture of iOS Simulator loading weather in a barebones app.">
 <p>You're building an app that basically loads the weather.</p>
 
 <p>The fetchWeather is asynchronous. If there's no network, the app shouldn't hang or crash.</p>
