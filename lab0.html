@@ -27,14 +27,14 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
 
-<p>In this lab, we cover the basics of the Xcode IDE, the iPhone simulator, Xcode Documentation, and Objective-C. By the end of lab, we'll have built a simple iPhone application that displays weather from the <a href="https://wunderground.com">wunderground.com</a> API</p>
+<p>In this lab, we cover the basics of the Xcode IDE, the iOS Simulator, Xcode's Documentation Viewer, and the Objective-C programming language. By the end of lab, we'll have built a simple iPhone application that displays weather from the <a href="https://wunderground.com">wunderground.com</a> API.</p>
 
-<p>To complete this lab, you'll need to download <a href="macappstores://itunes.apple.com/us/app/xcode/id497799835">Xcode</a> or work on a lab computer.</p>
+<p>To complete this lab, you'll need to download <a href="macappstores://itunes.apple.com/us/app/xcode/id497799835">Xcode</a>. If you don't have a Mac of your own, you can use one of the Macs in the EECS lab, 38-530.</p>
 
 <hr>
 
 <h2>First, a little about Xcode's layout:</h2>
-<img src="images/lab0/xcode_layout.png" title="panels: left: navigator, top: menu, right: utilities (right top: inspector, right bottom: library) bottom: debugger (bottom left:variables, bottom right:console)">
+<img src="images/lab0/xcode_layout.png" title="panels: left: navigator, top: menu, right: utilities (right top: inspector, right bottom: library) bottom: debugger (bottom left:variables, bottom right:console)" />
 
 <hr>
 
@@ -76,7 +76,7 @@
     <td>&#x2318;&#8594;</td>
   </tr>
   <tr>
-    <td>If the keyboard isn't appearing/disapperaing as expected:</td>
+    <td>If the keyboard isn't appearing/disappearing as expected:</td>
     <td>Hardware -> Keyboard</td>
   </tr>
 </table>
@@ -108,7 +108,7 @@
 
 
 <img src="images/lab0/huge.gif" alt="small dog, large ball">
-<p>It's a strict superset of C, which adds a lot of cruft, which makes it a huge language. So it's kind of unweildy to manipulate.</p>
+<p>It's a strict superset of C, which adds a lot of cruft, which makes it a huge language. So it's kind of unwieldy.</p>
 
 <img src="images/lab0/stop.gif" alt="">
 <p>Unfortunately, I'm running out of gifs to explain it to you. Enough fooling around. Let's bring the buzz-feed part of this lecture to a halt.</p>
@@ -134,7 +134,7 @@
 
 <p>There's some nice stuff built in, that's meant to simplify the syntax. For example, initializing arrays</p>
 
-<code>  NSArray *fizz = [NSArray arrayWithObjects:@"foo", @"bar", nil]</code>
+<code>NSArray *fizz = [NSArray arrayWithObjects:@"foo", @"bar", nil]</code>
 <p>becomes</p>
 <code>NSArray *fizz = @[@"foo", @"bar"]</code>
 
@@ -156,13 +156,14 @@
 
 <h2>Some References</h2>
 <ul>
-  <li>If you'd like to know more about C, here's <a href="images/lab0/Objective_C_Full_Presentation.pdf" target="_blank">a user's guide</a></li>
-  <li>Ray Wenderlich has the best <a href="https://github.com/raywenderlich/objective-c-style-guide" target="_blank">style guide</a> out there. It'll make your c</easier to read and maintain.</p>
+  <li>If you'd like to know more about Objective-C, here's <a href="images/lab0/Objective_C_Full_Presentation.pdf" target="_blank">a user's guide</a></li>
+  <li>Ray Wenderlich has the best <a href="https://github.com/raywenderlich/objective-c-style-guide" target="_blank">style guide</a> out there. It'll make your code easier to read and maintain.</p>
   <li>This <a href="http://www.amazon.com/gp/product/032194206X" target="_blank">Objective-C book</a> is the staff favorite</li>
   <li>This <a href="http://www.amazon.com/gp/product/0321942051?" target="_blank">iOS book</a> is full of nice tutorials</li>
-  <li>And then there's this <a href="http://goshdarnblocksyntax.com/" target="_blank" title="This is the SFW link. You can probably work out the other one.">indespensible reference for block syntax (which is kind of like lambdas).</a></li>
+  <li>And then there's this <a href="http://goshdarnblocksyntax.com/" target="_blank" title="This is the SFW link. You can probably work out the other one.">indispensable reference for Objective-C's block syntax (which are similar to lambdas and closures).</a></li>
+  <li>Additionally, Apple has excellent <a href="https://developer.apple.com/library/ios/navigation/">developer docs</a>. In particular, <a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/OOP_ObjC/Introduction/Introduction.html">their introduction to Objective-C</a>.</li>
+  <li>If you want a deeper understanding of Objective-C and the why and how of the Cocoa APIs, Apple's <a href="https://developer.apple.com/library/ios/documentation/General/Conceptual/CocoaEncyclopedia/Introduction/Introduction.html">Concepts in Objective-C Programming</a> is your best source.</li>
 </ul>
-
 
 <h2>On to your lab assignment!</h2>
 
@@ -203,7 +204,7 @@ src="https://www.youtube.com/embed/r2aSxMbzJ0Y?list=PLvcqxggo1z8GxADVB48Ts-CxsWF
 <hr>
 <hr>
 <h4>Video 4 - Instantiating and Debugging <code>Weather</code></h4>
-<p>There was an error with weather. We illustrate some of the tools tha the debugger has.</p>
+<p>There was an error with weather. We illustrate some of the tools the debugger has.</p>
 <p>Using the debugger will make your life much, much easier, and we think it's worth learning.</p>
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/m_JneOZb_Gk?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen>
@@ -230,7 +231,7 @@ src="https://www.youtube.com/embed/2tuVHTDPxn8?list=PLvcqxggo1z8GxADVB48Ts-CxsWF
 <hr>
 <hr>
 <h4>Video 7 - Adding more UI Elements</h4>
-<p>We add some labels to display the weather. Note how we're using stack view heere.</p>
+<p>We add some labels to display the weather. Note how we're using stack view here.</p>
 <p>There are at least 5 ways to lay out elements in Xcode. This is probably the fastest.</p>
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/NYgcR3tL6I4?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen>
@@ -240,7 +241,7 @@ src="https://www.youtube.com/embed/NYgcR3tL6I4?list=PLvcqxggo1z8GxADVB48Ts-CxsWF
 <hr>
 <h4>Video 8 - Making the UI Labels Update</h4>
 <p>We now update the UI Labels when results are fetched from the API</p>
-<p>You may notice us fixing a misplaced view warning. The view was well defined, but the placemenet wasn't done correctly, so we ask Xcode to update the placement and the error goes away</p>
+<p>You may notice us fixing a misplaced view warning. The view was well defined, but the placement wasn't done correctly, so we ask Xcode to update the placement and the error goes away</p>
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/F3SBBLW6vH8?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen>
 </iframe>
@@ -256,7 +257,7 @@ src="https://www.youtube.com/embed/u4oOeNQ-_oI?list=PLvcqxggo1z8GxADVB48Ts-CxsWF
 <hr>
 <hr>
 <h4>Video 10 - Blocks and Async</h4>
-<p>We update the app to work asynchronously. Mobile devides often have very flakey connections, so it's important to know how to deal with them.</p>
+<p>We update the app to work asynchronously. Mobile devices often have very flakey connections, so it's important to know how to deal with them.</p>
 <p>Confused about what's going on? Checkout <a href="http://rypress.com/tutorials/objective-c/blocks">this handy guide</a> and <a href="http://goshdarnblocksyntax.com/" target="_blank" title="This is the SFW link. You can probably work out the other one.">this reference</a>.</p>
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/k1EvVjqArZg?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen>
