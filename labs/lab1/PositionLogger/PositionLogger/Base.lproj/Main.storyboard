@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AQN-T1-kYl"/>
+                        <viewControllerLayoutGuide type="bottom" id="8or-g6-LsI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click to toggle recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uc5-QJ-BRF">
+                                <rect key="frame" x="0.0" y="190" width="320" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="bgE-cX-gCy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an accuracy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNZ-UQ-NGD">
+                                <rect key="frame" x="0.0" y="71" width="320" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Mci-zZ-Q1U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="osL-hL-eIy">
+                                <rect key="frame" x="56" y="108" width="209" height="29"/>
+                                <segments>
+                                    <segment title="Cellular"/>
+                                    <segment title="WiFi"/>
+                                    <segment title="GPS"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbk-aA-aGR">
+                                <rect key="frame" x="98" y="229" width="124" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="hitRecordStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wxu-7f-5gC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUb-jQ-7wN">
+                                <rect key="frame" x="52" y="306" width="216" height="30"/>
+                                <state key="normal" title="Email Log File"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="emailLogFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OR1-gz-I9R"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3ZX-d9-vg4">
+                                <rect key="frame" x="76" y="234" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFo-aY-i2m">
+                                <rect key="frame" x="52" y="344" width="216" height="30"/>
+                                <state key="normal" title="Clear Log File"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="hitClearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5pJ-vw-lRh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jNZ-UQ-NGD" firstAttribute="top" secondItem="AQN-T1-kYl" secondAttribute="bottom" constant="51" id="1Gw-wh-xYi"/>
+                            <constraint firstAttribute="trailing" secondItem="jNZ-UQ-NGD" secondAttribute="trailing" id="2S3-z4-iPP"/>
+                            <constraint firstItem="3ZX-d9-vg4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="6Lq-Sk-1Ha"/>
+                            <constraint firstItem="xbk-aA-aGR" firstAttribute="centerY" secondItem="3ZX-d9-vg4" secondAttribute="centerY" id="6aT-c8-Huc"/>
+                            <constraint firstItem="ZFo-aY-i2m" firstAttribute="trailing" secondItem="gUb-jQ-7wN" secondAttribute="trailing" id="9L1-lz-6UT"/>
+                            <constraint firstItem="xbk-aA-aGR" firstAttribute="leading" secondItem="3ZX-d9-vg4" secondAttribute="trailing" constant="2" id="A9B-re-IXy"/>
+                            <constraint firstItem="osL-hL-eIy" firstAttribute="centerX" secondItem="jNZ-UQ-NGD" secondAttribute="centerX" id="D8G-zj-63g"/>
+                            <constraint firstItem="gUb-jQ-7wN" firstAttribute="top" secondItem="xbk-aA-aGR" secondAttribute="bottom" constant="47" id="Dcl-yE-GJv"/>
+                            <constraint firstItem="gUb-jQ-7wN" firstAttribute="centerX" secondItem="xbk-aA-aGR" secondAttribute="centerX" id="OQe-zw-bZ1"/>
+                            <constraint firstItem="Uc5-QJ-BRF" firstAttribute="top" secondItem="osL-hL-eIy" secondAttribute="bottom" constant="54" id="VDw-9v-Vrl"/>
+                            <constraint firstItem="xbk-aA-aGR" firstAttribute="top" secondItem="Uc5-QJ-BRF" secondAttribute="bottom" constant="18" id="VYC-iW-gPS"/>
+                            <constraint firstItem="Uc5-QJ-BRF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZHw-L3-pXV"/>
+                            <constraint firstItem="gUb-jQ-7wN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="36" id="Zcq-6L-ezL"/>
+                            <constraint firstItem="Uc5-QJ-BRF" firstAttribute="centerX" secondItem="xbk-aA-aGR" secondAttribute="centerX" id="Zk7-eC-wj9"/>
+                            <constraint firstItem="ZFo-aY-i2m" firstAttribute="leading" secondItem="gUb-jQ-7wN" secondAttribute="leading" id="ddG-4h-fZV"/>
+                            <constraint firstItem="Uc5-QJ-BRF" firstAttribute="leading" secondItem="jNZ-UQ-NGD" secondAttribute="leading" id="jbW-VB-Iqm"/>
+                            <constraint firstItem="Uc5-QJ-BRF" firstAttribute="trailing" secondItem="jNZ-UQ-NGD" secondAttribute="trailing" id="sWd-9G-xvF"/>
+                            <constraint firstItem="ZFo-aY-i2m" firstAttribute="top" secondItem="gUb-jQ-7wN" secondAttribute="bottom" constant="8" id="t8g-k6-Fkx"/>
+                            <constraint firstItem="osL-hL-eIy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="tyk-2o-DUx"/>
+                            <constraint firstItem="osL-hL-eIy" firstAttribute="top" secondItem="jNZ-UQ-NGD" secondAttribute="bottom" constant="16" id="y5l-Ee-hGr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accuracyControl" destination="osL-hL-eIy" id="985-C0-kyW"/>
+                        <outlet property="recordingIndicator" destination="3ZX-d9-vg4" id="B6X-jG-uxl"/>
+                        <outlet property="startStopButton" destination="xbk-aA-aGR" id="obg-bV-Fvx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="357"/>
+        </scene>
+    </scenes>
+</document>
