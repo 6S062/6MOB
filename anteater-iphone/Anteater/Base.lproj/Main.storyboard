@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -171,10 +171,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="fAl-IB-rj5"/>
                                 </constraints>
-                                <connections>
-                                    <outlet property="distanceLabel" destination="gs5-BV-mUf" id="soc-Ep-ZnD"/>
-                                    <outlet property="headingLabel" destination="Q6u-LF-y6U" id="rsm-1b-7E0"/>
-                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Heading " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6u-LF-y6U">
                                 <rect key="frame" x="25" y="438" width="96" height="21"/>
@@ -217,6 +213,8 @@
                     <tabBarItem key="tabBarItem" title="Compass" image="compass-32" id="08I-Dj-5Ik"/>
                     <connections>
                         <outlet property="compass" destination="whg-fk-VaT" id="84q-1f-lZM"/>
+                        <outlet property="distanceLabel" destination="gs5-BV-mUf" id="hLJ-Ld-h7z"/>
+                        <outlet property="headingLabel" destination="Q6u-LF-y6U" id="B6Q-L2-QWj"/>
                         <outlet property="picker" destination="83Z-u7-6EA" id="tUN-gN-m8M"/>
                     </connections>
                 </viewController>

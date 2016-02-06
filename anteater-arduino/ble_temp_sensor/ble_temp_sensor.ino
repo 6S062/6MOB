@@ -36,7 +36,7 @@ void setup()
   //ble_set_pins(3, 2);
   
   // Set your BLE Shield name here, max. length 10
-  ble_set_name("HILL6");  
+  ble_set_name("HILL4");  
     Serial.print("I'm alive!");
 
 // Call the function to enable low power consumption

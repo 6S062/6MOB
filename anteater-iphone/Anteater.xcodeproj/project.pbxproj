@@ -183,6 +183,7 @@
 		DBDF15C91C4695CA00B45C35 /* SensorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorModel.m; sourceTree = "<group>"; };
 		DBDF15CB1C469AA400B45C35 /* BLESensorReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLESensorReading.h; sourceTree = "<group>"; };
 		DBDF15CC1C469AA400B45C35 /* BLESensorReading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLESensorReading.m; sourceTree = "<group>"; };
+		DBEBBD1B1C6519710079BD25 /* CompassViewController-stripped.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CompassViewController-stripped.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +212,7 @@
 				DBD46E7A1C57A7700094D004 /* CompassView.m */,
 				DB970A611C5C411D00A708CF /* CompassViewController.h */,
 				DB970A621C5C411D00A708CF /* CompassViewController.m */,
+				DBEBBD1B1C6519710079BD25 /* CompassViewController-stripped.m */,
 			);
 			name = Compass;
 			sourceTree = "<group>";
