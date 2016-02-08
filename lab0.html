@@ -28,26 +28,30 @@
       <section id="main_content" class="inner">
 
 
-[ <a href="#layout">Xcode's Layout</a>
-| <a href="#xcode-shortcuts">Xcode Shortcuts</a>
-| <a href="#xcode-docs">Xcode Docs</a>
+[ <a href="#layout">xCode's Layout</a>
+| <a href="#xcode-shortcuts">xCode Shortcuts</a>
+| <a href="#xcode-docs">xCode Docs</a>
 | <a href="#obj-c">Objective-C Syntax</a>
 | <a href="#references">References</a>
 | <a href="#assignment">Lab Assignment</a>
 ]
 
-<p>In this lab, we cover the basics of the Xcode IDE, the iOS Simulator, Xcode's Documentation Viewer, and the Objective-C programming language. By the end of lab, we'll have built a simple iPhone application that displays weather from the <a href="https://wunderground.com">wunderground.com</a> API.</p>
+<p>In this lab, we cover the basics of the xCode IDE, the iOS Simulator, xCode's Documentation Viewer, and the Objective-C programming language. By the end of lab, we'll have built a simple iPhone application that displays weather from the <a href="https://wunderground.com">wunderground.com</a> API.</p>
 
-<p>To complete this lab, you'll need to download <a href="macappstores://itunes.apple.com/us/app/xcode/id497799835">Xcode</a>. If you don't have a Mac of your own, you can use one of the Macs in the EECS lab, 38-530.</p>
+<p>To complete this lab, you'll need to download <a href="macappstores://itunes.apple.com/us/app/xcode/id497799835">xCode</a>. If you don't have a Mac of your own, you can use one of the Macs in the EECS lab, 38-530.</p>
 
 <hr>
 
-<h2 id="layout">First, a little about Xcode's layout:</h2>
+<h2 id="layout">First, a little about xCode's layout:</h2>
 <img src="images/lab0/xcode_layout.png" title="panels: left: navigator, top: menu, right: utilities (right top: inspector, right bottom: library) bottom: debugger (bottom left:variables, bottom right:console)" />
 
+<br />
+
+<img src="images/lab0/toggle_buttons.png" title="buttons (left to right): Single (standard) editor, Assistant (split screen) editor, Version (git) editor | Toggle Nagivator, Toggle Debugger, Toggle Utilities" alt="">
+
 <hr>
 
-<h2 id="xcode-shortcuts">Some helpful Xcode shortcuts and tips</h2>
+<h2 id="xcode-shortcuts">Some helpful xCode shortcuts and tips</h2>
 <table>
   <tr>
     <td>View Documentation:</td>
@@ -92,7 +96,7 @@
 &#x2318; = Command      |      &#x2325; = Option      |      &#x21E7; = Shift
 
 
-<h2 id="xcode-docs">Xcode Documentation</h2>
+<h2 id="xcode-docs">xCode Documentation</h2>
 <p>Shortcut: &#x21e7;&#x2318;0</p>
 <img src="images/lab0/amazing.gif" alt="amazing">
 <p>It's kind of amazing.</p>
@@ -107,7 +111,7 @@
 <p>It includes ready-to-build example projects for downloads.</p>
 
 <img src="images/lab0/option_click.gif" alt="option_click">
-<p>You can get to class documentation by option+clicking the class in question.</p>
+<p>You can get to class documentation by option + clicking the class in question.</p>
 
 
 <h2>Some info about Objective-C</h2>
@@ -193,7 +197,7 @@
 
 <p>We're using the Wunderground API. Here's a key for you: 0b719bec26ab96ac. This key will work for the lab, but expires in March. The JSON looks like <a href="https://api.wunderground.com/api/0b719bec26ab96ac/conditions/q/02139.json">this</a>.</p>
 
-<p>We've recorded <a href="https://www.youtube.com/playlist?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u">videos</a> with exact instructions on how to complete the lab. The goal is to get you comfortable with Xcode, the docs, the simulator, and Objective-C. Maybe you'll even learn some shortcuts from watching them.</p>
+<p>We've recorded <a href="https://www.youtube.com/playlist?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u">videos</a> with exact instructions on how to complete the lab. The goal is to get you comfortable with xCode, the docs, the simulator, and Objective-C. Maybe you'll even learn some shortcuts from watching them.</p>
 
 <p>The videos build off of one another. You can do the assignment in your own way, or in the exact way it's done in the videos. It's entirely up to you.</p>
 
@@ -251,7 +255,7 @@ src="https://www.youtube.com/embed/2tuVHTDPxn8?list=PLvcqxggo1z8GxADVB48Ts-CxsWF
 <hr>
 <h4>Video 7 - Adding more UI Elements</h4>
 <p>We add some labels to display the weather. Note how we're using stack view here.</p>
-<p>There are at least 5 ways to lay out elements in Xcode. This is probably the fastest.</p>
+<p>There are at least 5 ways to lay out elements in xCode. This is probably the fastest.</p>
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/NYgcR3tL6I4?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen>
 </iframe>
@@ -260,7 +264,7 @@ src="https://www.youtube.com/embed/NYgcR3tL6I4?list=PLvcqxggo1z8GxADVB48Ts-CxsWF
 <hr>
 <h4>Video 8 - Making the UI Labels Update</h4>
 <p>We now update the UI Labels when results are fetched from the API</p>
-<p>You may notice us fixing a misplaced view warning. The view was well defined, but the placement wasn't done correctly, so we ask Xcode to update the placement and the error goes away</p>
+<p>You may notice us fixing a misplaced view warning. The view was well defined, but the placement wasn't done correctly, so we ask xCode to update the placement and the error goes away</p>
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/F3SBBLW6vH8?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen>
 </iframe>
@@ -276,7 +280,7 @@ src="https://www.youtube.com/embed/u4oOeNQ-_oI?list=PLvcqxggo1z8GxADVB48Ts-CxsWF
 <hr>
 <hr>
 <h4>Video 10 - Blocks and Async</h4>
-<p>We update the app to work asynchronously. Mobile devices often have very flakey connections, so it's important to know how to deal with them.</p>
+<p>We update the app to work asynchronously. Mobile devices often have very flaky connections, so it's important to know how to deal with them.</p>
 <p>Confused about what's going on? Checkout <a href="http://rypress.com/tutorials/objective-c/blocks">this handy guide</a> and <a href="http://goshdarnblocksyntax.com/" target="_blank" title="This is the SFW link. You can probably work out the other one.">this reference</a>.</p>
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/k1EvVjqArZg?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen>
