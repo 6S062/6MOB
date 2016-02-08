@@ -1,0 +1,58 @@
+Course title: Mobile and Sensor Computing
+(not IoT)
+
+Hari wants course to be "Sensor-centric"
+    "How to acquire, deliver, process, make sense of sensor data"
+Also,
+    Connectivity
+    Actuation
+
+Lectures:
+    2 per week, 1-1.5 hr (Hari wants to let the students go early)
+    15-16 lectures
+
+Mobile Phones, Sensors, and the Cloud
+    Think about Waze, Fitbit
+    Phone as gateway between sensor network and Internet
+
+Should we draw a distinction between sensors that are attached to things that move, things that don't move?
+
+Lecture topics:
+    Positioning technologies
+        Outdoor (GPS, Wi-Fi, cellular positioning; localization framework on iOS)
+        Indoor localization
+        Inertial measurement
+        Mapping, navigation APIs, systems
+    Networking
+        3G -- architecture, fundamental difference with Wi-Fi, statefulness and power, latency, reliability
+    Data
+        Compare & contrast SQLite vs BerkeleyDB
+        How do I organize and store the data I capture?
+        Lab: Test the performance of SQLite on different iOS versions
+            Local filesystem benchmarks
+        Eventually, you want to get this into the cloud
+            Consistency and synchronization of data
+            How does your calendar work?
+            Eventual consistency
+        Anonymization/aggregation
+        Geospatial indexes
+    NFC
+        Apple Pay
+        RFID?
+    Techniques for downsampling streams
+        Video, audio, acceleration
+    Time synchronization
+        Clock drift motivates the introduction of dynamic time warping
+    Mobile security
+        How sandboxes work
+        Fingerprint sensors
+        Malware and untrusted applications
+
+    Case studies / possible invited talks
+        Fitbit
+        Analog Devices
+        Medical implants
+
+Group project ideas:
+    Medical implants
+    IMU data filtering
