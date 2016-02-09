@@ -34,6 +34,17 @@
             "title": "Location-based Services: Fundamentals and Operation, Chapter 6"
           }
         ],
+        "materials": [
+          {
+            "href": "materials/lec2-slides.pdf",
+            "title": "(I)"
+          },
+          {
+            "href": "materials/lec2.pdf",
+            "title": "(II)"
+          }
+        ],
+
         "assignments": [
           {
             "title": "Out: Lab 0",
