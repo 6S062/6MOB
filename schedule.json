@@ -7,11 +7,11 @@
         "materials": [
           {
             "href": "materials/lec1-slides.pdf",
-            "title": "(I)"
+            "title": "(Slides)"
           },
           {
             "href": "materials/lec1.pdf",
-            "title": "(II)"
+            "title": "(Notes)"
           }
         ],
         "readings": [
@@ -37,11 +37,11 @@
         "materials": [
           {
             "href": "materials/lec2-slides.pdf",
-            "title": "(I)"
+            "title": "(Notes)"
           },
           {
             "href": "materials/lec2.pdf",
-            "title": "(II)"
+            "title": "(Slides)"
           }
         ],
 
