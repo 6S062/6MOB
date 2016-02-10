@@ -63,6 +63,10 @@
           {
             "href": "http://www.cc.gatech.edu/~keith/classes/ubicomplexity/pdfs/infra/lamarca-placelab.pdf",
             "title": "Place Lab: Device Positioning Using Radio Beacons in the Wild"
+          },
+          {
+            "href": "reading_assignment_placelab.html",
+            "title": "Reading Question"
           }
         ],
         "assignments": [
