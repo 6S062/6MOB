@@ -19,12 +19,17 @@
     <div id="header_wrap" class="outer">
         <header class="inner">
             <h1 id="project_title">6.S062</h1>
-            <h2 id="project_tagline">Lab 1 </h2>
+      <h2 id="project_tagline">Lab 1 </h2>
+      <font color="white">Assigned: 2/10/2016<br>
+      <b>Due</b>: 2/22/2016</font>
+      <br>
+
         </header>
     </div>
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-        <section id="main_content" class="inner">
+      <section id="main_content" class="inner">
+      
             <ul>
                 <li><a href="#sec1">Section 1 - Location APIs and Exploring the Power Drain vs Accuracy Tradeoff</a></li>
                 <ul>
@@ -69,23 +74,23 @@
                 <li>Open the PositionLogger.xcodeproj file and compile and run the app, either on your device or in the simulator (use any of the iPhone simulators.) It should show a screen like what you see above. Clicking on the Start button should cause it to enter a recording state, but it won't actually be writing location data until you add the code to record location.</li>
             </ol>
             <h3 id="ios_loc_primer">iOS Location Primer</h3>
-            <p>The primary way that location is accessed on iOS use though the <a href="https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CLLocationManager_Class/">CoreLocation class CLLocationManager</a> ). Using this class you can request location updates at a certain accuracy, and also configure the accuracy with which data is created.</p>
+            <p>The primary way that location is accessed on iOS use though the <a href="https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CLLocationManager_Class/">CoreLocation class CLLocationManager</a>. Using this class you can request location updates at a certain accuracy, and also configure the accuracy with which data is created.</p>
             <p>
                 In the PostionLogger app, the main screen is an instance of a ViewController object (as specified in ViewController.m.) iOS creates one instance of the ViewController class for us when the application is initialized, because the Main.storyboard file, which we chose as the main storyboard for the app in the Info.plist file, specifies that the initial view for the app should be an instance of ViewController.
             </p>
             <p>
                 In the viewDidLoad method of ViewController.m, we've already created an instance of a CLLocationManager object for you to use and initialized some of the relevant properties of it. These are the lines at the beginning of the viewDidLoad method:
             </p>
+            <code class="objectivec hljs">
             <pre>
-              <code class="objectivec hljs">
               1  _locmgr = [[CLLocationManager alloc] init];
               2  [_locmgr requestAlwaysAuthorization];
               3  _locmgr.allowsBackgroundLocationUpdates = TRUE;
               4  _locmgr.delegate = self;
               5  _locmgr.distanceFilter = kCLDistanceFilterNone;
-              6  [_locmgr disallowDeferredLocationUpdates];
-              </code>
-            </pre>
+              6  [_locmgr disallowDeferredLocationUpdates];</pre>
+            </code>
+            
             <p>
                 You can read about the details of the methods in the CLLocationManager documentation, but the gist of this code is that we are requesting that:
             </p>
@@ -105,8 +110,9 @@
             <h3 id="task1">Task 1 – Capture Location Data</h3>
             <p>The goal of this first task is to log location data to a file and perform some simple analysis of the data.</p>
             <p>To acquire the log, you will need to modify the PositionLogger app to start capturing location samples when the "Start" button is tapped. Open the ViewController.m file. We have implemented most of this class for you -- scroll down and find the hitRecordStopButton method:
-            </p>
-            <pre><code>
+</p>
+
+            <code class="objectivec hljs"><pre>
             -(IBAction)hitRecordStopButton:(UIButton *)b {
                 if (!_isRecording) {
                     [self.accuracyControl setEnabled:FALSE];
@@ -114,7 +120,7 @@
                     _isRecording = TRUE;
                     [self.recordingIndicator startAnimating];
                     [self startRecordingLocationWithAccuracy:(LocationAccuracy)
-                          [self.accuracyControl selectedSegmentIndex]];
+                    [self.accuracyControl selectedSegmentIndex]];
                 } else {
                     [self.accuracyControl setEnabled:TRUE];
                     [b setTitle:@"Start" forState:UIControlStateNormal];
@@ -124,37 +130,32 @@
 
                 }
             }
-            </code></pre>
+</pre></code>
+
             <p>This method calls startRecordingLocationWithAccuracy or stopRecordingLocationWithAccuracy as appropriate. You need to implement the body of these methods.</p>
             <h3 id="1.1">1.1 Implement startRecordingLocationWithAccuracy</h3>
             <p>startRecordingLocationWithAccuracy should set the desiredAccuracy property of the _locMgr object to the appropriate accuracy based on the supplied value of the acc argument. Note that iOS does not explicitly allow an application to request GPS, WiFi, or Cellular positioning -- instead it provides the following constants to choose from:</p>
-            <pre><code>
+            <code class="objectivec hljs"><pre>
               extern const CLLocationAccuracy kCLLocationAccuracyBestForNavigation;
               extern const CLLocationAccuracy kCLLocationAccuracyBest;
               extern const CLLocationAccuracy kCLLocationAccuracyNearestTenMeters;
               extern const CLLocationAccuracy kCLLocationAccuracyHundredMeters;
               extern const CLLocationAccuracy kCLLocationAccuracyKilometer;
-              extern const CLLocationAccuracy kCLLocationAccuracyThreeKilometers;
-            </code></pre>
+              extern const CLLocationAccuracy kCLLocationAccuracyThreeKilometers; </pre></code>
             <h3 id="1.2">1.2 Implement stopRecordingLocationWithAccuracy</h3>
             <p>stopRecordingLocationWithAccuracy just needs to call stopUpdatingLocation on the _locMgr object. (It's OK to call this function on the _locMgr even if it is already stopped.)</p>
             <h3 id="1.3">1.3 Implementing didUpdateLocations</h3>
             <p>
                 The next step is to implement code to log position updates as they arrive. We've already set up the instance of ViewController.m as the delegate of the _locMgr object. This means that it will call the didUpdateLocations method on ViewController.m when a location update is available. You need to implement this method. Its signature is as follows:</p>
-            <pre><code>
- - (void)locationManager:(CLLocationManager *)manager
-     didUpdateLocations:(NSArray<CLLocation *> *)locations;
-     </code></pre>
-            <p style="background-color: white">Tip: You can find this definition in the CLLocationManager.h iOS header file, which you can open by typing ⌘-shift-O and then entering the first few characters of the file's name.</p>
+            <code class="objectivec hljs"><pre> - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations;</pre></code>
+            <p style="background-color: #CCCCFF">Tip: You can find this definition in the CLLocationManager.h iOS header file, which you can open by typing ⌘-shift-O and then entering the first few characters of the file's name.</p>
             <p>Your implementation of didUpdateLocations should iterate through the locations and log them to the file. We've provided a method logLineToDataFile that logs an NSString object to the log file (which you can then email to yourself using the email button.)</p>
             <p>In the later part of this lab, you're going to visualize and analyze this data, so you'll need log at least the timestamp of the reading, the latitude, the longitude, the horizontal accuracy, and the battery level of the device. To get the current battery level you can call:</p>
-            <pre><code>[[UIDevice currentDevice] batteryLevel];</code></pre>
+            <code class="objectivec hljs"><pre>[[UIDevice currentDevice] batteryLevel];</pre></code>
             <p>We'd also suggest logging the course (bearing) and speed attributes from the supplied CLLocation objects. For time, we suggest just converting the timestamp (NSDate) object in each CLLocation to a Unix time stamp by calling [location.timestamp timeIntervalSince1970] on it.</p>
             <p>Note that we currently write a header at the start of the log file in the viewDidLoad method:</p>
-            <pre><code>
-      [self logLineToDataFile:@"Time,Lat,Lon,Altitude,
-      Accuracy,Heading,Speed,Battery\n"];
-    </code></pre>
+            <code class="objectivec hljs"><pre>
+      [self logLineToDataFile:@"Time,Lat,Lon,Altitude, Accuracy,Heading,Speed,Battery\n"];</pre></code>
             <p>
                 You may want to modify this depending on what you choose to log.
             </p>
@@ -176,9 +177,7 @@ Task 2  – Compare the Accuracy of the Location Methods
             </p>
             <p>
                 See this map for the route you will walk:
-            </p>
-            <p>
-                https://www.google.com/maps/d/edit?mid=zcVI9zKum-vM.kVzhADJu9RDg&usp=sharing
+                <a href="https://www.google.com/maps/d/edit?mid=zcVI9zKum-vM.kVzhADJu9RDg&usp=sharing">https://www.google.com/maps/d/edit?mid=zcVI9zKum-vM.kVzhADJu9RDg&usp=sharing</a>
             </p>
             <p>
                 According to Google, the length of this route is .306 miles (492.5 meters).
@@ -196,10 +195,10 @@ Task 2  – Compare the Accuracy of the Location Methods
             <p>
                 Once you have the three log files, your task is to compute the "connect the dots" distance for each path, and to plot each path on a map.
             </p>
-            <p>The "connect the dots" distance of a path is just the sum of the distances between every consecutive point. Each point is a latitude/longitude pair, which represents a point on the surface of the earth. For points that are close together, Euclidian distance is a close approximation of the actual distance, but for points that are far apart, a straight line can be quite far from the true distance between these points, which follows an arc on the surface of the Earth. The typical way to estimate this distance is to assume the Earth is a sphere (it isn't exactly spherical but pretty close), and to use the haversine formula to compute the distance between the two points:
+            <p>The "connect the dots" distance of a path is just the sum of the distances between every consecutive point. Each point is a latitude/longitude pair, which represents a point on the surface of the earth. For points that are close together, Euclidian distance is a close approximation of the actual distance, but for points that are far apart, a straight line can be quite far from the true distance between these points, which follows an arc on the surface of the Earth. The typical way to estimate this distance is to assume the Earth is a sphere (it isn't exactly spherical but pretty close), and to use the haversine formula discussed in class to compute the distance between the two points:
             </p>
             <img src="images/lab1/CodeCogsEqn.png" alt="">
-            <p>where the two points are (lat1,lon1) and (lat2,lon2) and r is the Earth's radius (6371 km). Be sure to convert lat/lon to radians (multiply by Pi and divide by 180.0 ) before using built-in trigonometric functions. (see <a href="https://en.wikipedia.org/wiki/Haversine_formula">https://en.wikipedia.org/wiki/Haversine_formula</a>)
+            <p>where the two points are (lat1,lon1) and (lat2,lon2) and r is the Earth's radius (6371 km). Be sure to convert lat/lon to radians (multiply by Pi and divide by 180.0 ) before using built-in trigonometric functions (see <a href="https://en.wikipedia.org/wiki/Haversine_formula">https://en.wikipedia.org/wiki/Haversine_formula</a>).
             </p>
             <p>
                 For each of the three logs, compute the "connect the dots" distance between all points in the trace using the haversine formula. How does it compare to the measure .306 miles?
@@ -209,9 +208,9 @@ Task 2  – Compare the Accuracy of the Location Methods
             <p>The deliverables for this task are the connect-the-dots distance you computed for the three different walks, as well as a plot of each of the three walks you did on a map.
             </p>
             <h3 id="task3">Task 3 – Compare the Battery Drain of the Location Methods</h3>
-            <p>For this task, you will compare the battery drain of the three different location accuracy settings. To do this, you'll need to start logging and let the app run for several hours (4 hours should be long enough), and then compare the battery level and the rate of drain while the app runs.
+            <p>For this task, you will compare the battery drain of the cellular and GPS  location accuracy settings. To do this, you'll need to start logging and let the app run for several hours (4 hours should be long enough), and then compare the battery level and the rate of drain while the app runs.
             </p>
-            <p>For each of the three accuracy settings:
+            <p>For the cellular and GPS settings
             </p>
             <ol>
                 <li>Fully charge the phone</li>
@@ -221,9 +220,9 @@ Task 2  – Compare the Accuracy of the Location Methods
                 <li>Stop recording and email yourself the file.</li>
                 <li>Clear the log.</li>
             </ol>
-            <p>Once you have the three log files, make a plot of the battery level of each over time, by using the time and battery level fields in the file. You can make your plot which whichever tool you like: Google Charts, Excel, pyplot, etc.
+            <p>Once you have the two log files, make a plot of the battery level of each over time, by using the time and battery level fields in the file. You can make your plot which whichever tool you like: Google Charts, Excel, pyplot, etc.
             </p>
-            <p>The deliverable for this task is the graph of the battery drain of the three different location methods. Note that if you don't have cellular service on the phone, running with cellular accuracy may produce results different than you expect!
+            <p>The deliverable for this task is the graph of the battery drain of the two different location methods. Note that if you don't have cellular service on the phone, running with cellular accuracy may produce results different than you expect!
             </p>
             <h2>Section 2 – Building the Anteater Compass</h2>
             <p>In this part of the lab, you'll work with the Anteater app and add location-based features.
@@ -237,11 +236,8 @@ Task 2  – Compare the Accuracy of the Location Methods
             </p>
             <p>To compute the direction this arrow should point, you need to measure the angle between the users current position (represented by a lat/lon point), and the destination anthill. The conventional way to do this is to model the earth as a sphere, and measure the angle of vector from the origin to the destination along the shortest path (the "great circle path"). The trigonometry to do this is fairly hairy, but thanks to the Internet the formula is easy to look up. Here's the Objective-C code to do this:
             </p>
-            <pre>
-    <code>
-      double angleRadians = atan2(sin(lon2-lon1)*cos(lat2), cos(lat1)*sin(lat2)-sin(lat1)*cos(lat2)*cos(lon2-lon1);
+    <code>  double angleRadians = atan2(sin(lon2-lon1)*cos(lat2), cos(lat1)*sin(lat2)-sin(lat1)*cos(lat2)*cos(lon2-lon1);
     </code>
-  </pre>
             <p>Here (lat1,lon1) is the starting point, and (lat2,lon2) is the ending point. In this formula, lat and lon need to be converted to radians, and the result is in radians.
             </p>
             <p>If you are curious about the derivation of this, there's a good explanation half way down this post: <a href="http://mathforum.org/library/drmath/view/55417.html">http://mathforum.org/library/drmath/view/55417.html</a>
@@ -266,11 +262,11 @@ Task 2  – Compare the Accuracy of the Location Methods
             </p>
             <p>When the user changes the currently selected anthill, the following method will be called:
             </p>
-            <pre><code>- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+            <code class="objectivec hljs"><pre>- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
 
     
-}</code></pre>
+}</pre></code>
             <p>You should fill in the body of this with code to recompute the angle to the current anthill. You may want to define a helper function to do this, because you will also want to recompute when the user's location changes.
             </p>
             <p>We've also initialized a CLLocationManager object and request that it start providing location updates to CompassViewController. You'll need to fill in the body of the didUpdateLocations method to get the user's current location, and update the current estimated angle to the selected anthill (using the same function you defined when the anthill changed.)
@@ -278,8 +274,8 @@ Task 2  – Compare the Accuracy of the Location Methods
             <h4 id="4.2">4.2  Compute θ2</h4>
             <p>Modern iPhones have a magnetometer that can measure the orientation of the phone with respect to the Earth's magnetic field (its heading). An app can be requested to be notified of the phone's heading as it changes by calling the startUpdatingHeading method on the CLLocationManager object. We have already done this for you in CompassViewController.m's viewDidLoad method. You should fill in the body of the
             </p>
-            <pre><code>- (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
-</code></pre>
+            <code class="objectivec hljs"><pre>- (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
+</pre></code>
             <p>method with code to compute θ1 - θ2. You can access the current heading of the device (in radians) by accessing the trueHeading property of the provided newHeading object.
             </p>
             <h4 id="4.3">4.3  Rotate the Needle by θ1 - θ2</h4>
