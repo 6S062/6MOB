@@ -74,7 +74,8 @@
             "title": "Due: Lab 0"
           },
           {
-            "title": "Out: Lab 1"
+            "title": "Out: Lab 1",
+	    "href": "lab1.html"
           }
         ]
       },
