@@ -72,8 +72,8 @@
             <p>Your job is to implement the calls to the iOS CoreLocation API to request location updates at the desired accuracy, and then compare the accuracy and power drain of the different approaches.</p>
             <h3 id="s1_getting_started">Getting Started</h3>
             <ol>
-                <li>Download the PositionLogger source code by doing a git clone of XXX. (If you are unfamiliar with git, read the brief tutorial at XXX.)</li>
-                <li>Open the PositionLogger.xcodeproj file and compile and run the app, either on your device or in the simulator (use any of the iPhone simulators.) It should show a screen like what you see above. Clicking on the Start button should cause it to enter a recording state, but it won't actually be writing location data until you add the code to record location.</li>
+                <li>Download the PositionLogger source code downloading it from <a href="PostionLogger.tar.gz">here</a>. Once you have downloaded it unzip it by typing "tar -xvzf PositionLogger.tar.gz".  This will create a directory called "PositionLogger-Blank", containing an XCode project.
+                <li>Open PositionLogger.xcodeproj in XCode on a Mac (recall that the lab in 38-500 has Macs available for your use).  Compile and run the app, either on your device or in the simulator (use any of the iPhone simulators.) It should show a screen like what you see above. Clicking on the Start button should cause it to enter a recording state, but it won't actually be writing location data until you add the code to record location.</li>
             </ol>
             <h3 id="ios_loc_primer">iOS Location Primer</h3>
             <p>The primary way that location is accessed on iOS use though the <a href="https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CLLocationManager_Class/">CoreLocation class CLLocationManager</a>. Using this class you can request location updates at a certain accuracy, and also configure the accuracy with which data is created.</p>
@@ -231,6 +231,9 @@ Task 2  – Compare the Accuracy of the Location Methods
             </p>
             <p>Recall that the Anteater App is a crowdsourced sensor data collection app, where users earn points for collecting sensor data from nearby sensors. In the Anteater app, mobile devices are the anteaters, and the sensors are the anthills.
             </p>
+<p>
+Start by downloading the <a href="anteater.tar.gz">Anteater App Skeleton</a>.  Untar this file to create a directory called "anteater-blank".  Open the anteater.xcodeproj file in this directory in XCode.  You should be able to build and run the project in the simulator or your phone.  This app is not able to connect to Bluetooth-based Anthills (you'll do that in the next lab), and the compass won't rotate (that's the goal of this lab.)
+</p>
             <p>In later labs you'll work on the code to connect to the anthills, but for the second part of this lab, your job is to implement the compass UI in Anteater, as shown in the screenshot below.
             </p>
             <img src="images/lab1/interface.png" />
