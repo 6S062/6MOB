@@ -88,19 +88,31 @@ footer = """
 </html>
 """
 
-def writeItems(outfile, items, colspan=1, newline=True):
+def writeItems(outfile, items, colspan=1, newline=True, bullet=False, number=False):
     outfile.write("""<td%s>""" % ("" if colspan == 1 else ' colspan="%d"' % colspan,))
     j = 0
+    if bullet:
+        assert not number
+        outfile.write("""<ul>""")
+    elif number:
+        outfile.write("""<ol>""")
     for item in items:
         if 'title' not in item:
             continue
-        if j:
-            outfile.write("""<br>\n""" if newline else " \n")
+        if not bullet and not number:
+            if j:
+                outfile.write("""<br>\n""" if newline else " \n")
+        else:
+            outfile.write("""\n<li>""")
         if 'href' in item:
             outfile.write("""<a href="%s">%s</a>""" % (item['href'], item['title']))
         else:
             outfile.write("""%s""" % (item['title'],))
         j += 1
+    if bullet:
+        outfile.write("""</ul>""")
+    elif number:
+        outfile.write("""</ol>""")
     outfile.write("""</td>\n""")
 
 try:
@@ -125,9 +137,9 @@ try:
                         title = modname
                         colspan = 2
                     writeItems(outfile, [{'title':title}], colspan=colspan)
-                    writeItems(outfile, event.get('readings', []))
+                    writeItems(outfile, event.get('readings', []), bullet=True)
                     writeItems(outfile, event.get('assignments', []))
-                    writeItems(outfile, event.get('materials', []), newline=False)
+                    writeItems(outfile, event.get('materials', []))
                     outfile.write("""</tr>\n\n""")
         outfile.write(footer)
 except:
