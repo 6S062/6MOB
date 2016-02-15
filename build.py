@@ -129,7 +129,7 @@ try:
                     date = event['date']
                     title = event.get('title', None)
                     assignments = event.get('assignments', [])
-                    outfile.write("""<tr>\n<td>%s</td>\n""" % (date,))
+                    outfile.write("""<tr>\n<td style="white-space:nowrap;">%s</td>\n""" % (date,))
                     if i == 0 and title is not None:
                         outfile.write("""<td rowspan="%d">%s</td>\n""" % (numevents, modname))
                     colspan = 1
