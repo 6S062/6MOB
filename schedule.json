@@ -65,7 +65,7 @@
             "title": "Place Lab: Device Positioning Using Radio Beacons in the Wild"
           },
           {
-            "href": "reading_assignment_placelab.html",
+            "href": "reading_assignments.html#2016-02-10",
             "title": "Reading Question"
           }
         ],
@@ -90,6 +90,10 @@
           {
             "href": "http://nms.lcs.mit.edu/papers/cricket.pdf",
             "title": "The Cricket Location-Support System"
+          },
+          {
+            "href": "reading_assignments.html#2016-02-16",
+            "title": "Reading Question"
           }
         ]
       }
@@ -105,6 +109,10 @@
           {
             "href": "http://iot.stanford.edu/pubs/zachariah-gateway-hotmobile15.pdf",
             "title": "The Internet of Things Has a Gateway Problem"
+          },
+          {
+            "href": "reading_assignments.html#2016-02-17",
+            "title": "Reading Question"
           }
         ]
       },
