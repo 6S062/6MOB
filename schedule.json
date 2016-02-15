@@ -77,6 +77,12 @@
             "title": "Out: Lab 1",
 	    "href": "lab1.html"
           }
+        ],
+        "materials": [
+          {
+            "href": "materials/gps_slides.pdf",
+            "title": "(Slides+<br>Notes)"
+          }
         ]
       },
       {
