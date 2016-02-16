@@ -86,7 +86,7 @@
         ]
       },
       {
-        "date": "2016-02-16<br>(Monday<br>schedule on<br>Tuesday)",
+        "date": "2016-02-17",
         "title": "4. Indoor Location",
         "readings": [
           {
@@ -109,7 +109,7 @@
     "module": "Networking",
     "events": [
       {
-        "date": "2016-02-17",
+        "date": "2016-02-22",
         "title": "5. Connectivity Overview and BLE",
         "readings": [
           {
@@ -122,8 +122,17 @@
           }
         ]
       },
+      { "date": "2016-02-23",
+        "title": "",
+        "assignments": [
+          {
+            "href": "lab1.html",
+            "title": "Due: Lab1"
+          }
+        ]
+      },
       {
-        "date": "2016-02-22",
+        "date": "2016-02-24",
         "title": "6. Mesh and Multi-Hop Wireless Networks",
         "readings": [
           {
@@ -132,11 +141,8 @@
           }
         ]
       },
-      { "date": "2016-02-23",
-        "title": "<a href='lab1.html'>Lab 1</a> due."
-      },
       {
-        "date": "2016-02-24",
+        "date": "2016-02-29",
         "title": "7. Energy-Aware Wireless Networking",
         "readings": [
           {
@@ -151,7 +157,7 @@
     "module": "Data Collection",
     "events": [
       {
-        "date": "2016-02-29",
+        "date": "2016-03-02",
         "title": "8. Data Muling",
         "readings": [
           {
@@ -166,7 +172,7 @@
         ]
       },
       {
-        "date": "2016-03-02",
+        "date": "2016-03-07",
         "title": "9. In-Network Aggregation",
         "readings": [
           {
