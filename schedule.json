@@ -101,6 +101,16 @@
             "href": "reading_assignments.html#2016-02-16",
             "title": "Reading Question"
           }
+        ],
+        "materials": [
+          {
+            "href": "materials/lec4-cricket.pdf",
+            "title": "(Slides)"
+          },
+          {
+            "href": "materials/lec4-indoorloc-notes.pdf",
+            "title": "(Notes)"
+          }
         ]
       }
     ]
