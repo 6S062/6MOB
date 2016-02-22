@@ -127,7 +127,7 @@
             "title": "The Internet of Things Has a Gateway Problem"
           },
           {
-            "href": "reading_assignments.html#2016-02-17",
+            "href": "reading_assignments.html#2016-02-22",
             "title": "Reading Question"
           }
         ]
@@ -147,7 +147,11 @@
         "readings": [
           {
             "href": "https://pdos.csail.mit.edu/papers/grid:mobicom03/paper.pdf",
-            "title": "A High-Throughput Path Metric for Multi-Hop Wireless Routing"
+            "title": "ETX: A High-Throughput Path Metric for Multi-Hop Wireless Routing"
+          },
+          {
+            "href": "reading_assignments.html#2016-02-24",
+            "title": "Reading Question"
           }
         ]
       },
