@@ -175,8 +175,8 @@
         "title": "8. Data Muling",
         "readings": [
           {
-            "href": "http://www.princeton.edu/~mrm/asplos-x_annot.pdf",
-            "title": "Energy-Efficient Computing for Wildlife Tracking: Design Tradeoffs and Early Experiences with ZebraNet"
+            "href": "http://db.cs.berkeley.edu/papers/osdi02-tag.pdf",
+            "title": "TAG: a Tiny AGgregation Service for Ad-Hoc Sensor Networks"
           }
         ],
         "assignments": [
@@ -190,8 +190,8 @@
         "title": "9. In-Network Aggregation",
         "readings": [
           {
-            "href": "http://db.cs.berkeley.edu/papers/osdi02-tag.pdf",
-            "title": "TAG: a Tiny AGgregation Service for Ad-Hoc Sensor Networks"
+            "href": "http://www.princeton.edu/~mrm/asplos-x_annot.pdf",
+            "title": "Energy-Efficient Computing for Wildlife Tracking: Design Tradeoffs and Early Experiences with ZebraNet"
           }
         ],
         "assignments": [
