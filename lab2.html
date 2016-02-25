@@ -30,8 +30,26 @@
     </div>
     <div id="main_content_wrap" class="outer">
         <section id="main_content" class="inner">
+        <ul>
+            <li><a href="#gettingstarted">Getting Started</a></li>
+            <li><a href="#sec1">Section 1</a></li>
+            <ul>
+                <li><a href="#task01">Task 1</a></li>
+                <li><a href="#task02">Task 2</a></li>
+                <li><a href="#task03">Task 3</a></li>
+                <li><a href="#task04">Task 4</a></li>
+                <li><a href="#task05">Task 5</a></li>
+            </ul>
+            <li><a href="#sec2">Section 2</a></li>
+            <ul>
+                <li><a href="#task05">Task 6</a></li>
+            </ul>
+            <li><a href="#completing">Completing the Lab</a></li>
+        </ul>
+
+
             <p> The goal of this lab is to implement code in the Anteater app to scan for a nearby Anthill, connect to it, and stream temperature and humidity readings from it. We have provided you with all of the code to show sensor readings in a table in the UI, an to plot sensor readings on a chart, but you will need to implement all of the networking code, and the code to extract sensor readings from packets sent by the Anthill. </p>
-            <h2>  Getting Started </h2>
+            <h2 id="gettingstarted">  Getting Started </h2>
             <p> We have provided you with a skeleton class,
                 <code>SensorModel.m</code> that you will need to implement. This class defines six methods you need to implement in this lab: </p>
             <pre><code>@property(atomic,readonly) NSArray *sensorReadings;
@@ -56,7 +74,7 @@
                 To test this lab, you will need to obtain an <i>anthill</i> node. We have placed several battery powered anthills in the building 36 lab, but we also have anthills you can check out for your own testing purposes. Note that the bluetooth functions you will implement do not work properly on the iPhone simulator, so you will need to test on a real device. If you are working with a partner, please check out only one anthill as we have a limited number of them.
             </p>
             <p> The anthill you receive will have a sensor connected, and a USB Micro port. To power the anthill, it will need to be powered over USB to your laptop, or to any other USB charger (the anthills in the 5th floor lab are battery powered.) </p>
-            <h2> Section 1:  Connecting to an Anthill </h2>
+            <h2 id="sec1"> Section 1:  Connecting to an Anthill </h2>
             <p>
                 The goal of this section is to successfully establish a connection with an anthill. In the next section you will extract data from packets sent by the anthill.
             </p>
@@ -81,7 +99,7 @@
             </p>
             <center> <img src="images/lab2/flowchart.png" width=800px></img>
             </center>
-            <h3> Task 1: Initialize Bluetooth, and Start Scanning for Anthills</h3>
+            <h3 id="task01"> Task 1: Initialize Bluetooth, and Start Scanning for Anthills</h3>
             <p>
                 Before you can scan for an anthill, you need to initialize a
                 <code>CBCentralManager</code> object. A good place to do this is in the <code>init</code> method of <code>SensorModel</code>. Since you will need access this object repeatedly, you probably want to store it in an instance variable of the class.
@@ -116,7 +134,7 @@
                 To verify that this task is completed, use the debugger to confirm
                 <code>centralManageDidUpdateState</code> is called and that the status is <code>CBCentralManagerStatePoweredOn</code>. Also verify that when startScanning is called in the presence of an anthill, you receive a callback to <code>didDiscoverPeripheral</code>.
             </p>
-            <h3> Task 2: Implement <code>didDiscoverPeripheral</code> </h3>
+            <h3 id="task02"> Task 2: Implement <code>didDiscoverPeripheral</code> </h3>
             <p>
                 <code>didDiscoverPeripheral</code> will be called when a BLE Peripheral advertising the above characteristic comes into proximity of your phone. As per the flowchart, when this happens, you need to connect to device, and then scan for services and characteristics.
             </p>
@@ -142,7 +160,7 @@
                 If the connection is successul, <code>didConnectPeripheral</code> will be called. You will need to define <code>didConnectPeripheral</code>, as per the signature in
                 <code>&lt;CoreBluetooth/CoreBluetooth.h&gt;</code>. Use the debugger to verify that this method is called correctly.
             </p>
-            <h3> Task 3: Implement <code>didConnectPeripheral</code> </h3>
+            <h3 id="task03"> Task 3: Implement <code>didConnectPeripheral</code> </h3>
             <p>
                 Once you have connected to a peripheral, you need to discover its services and characteristics (ultimately, you just need to start listening for the sensor data characteristic, but iOS will not allow you to do this until you have first discovered the characteristic you want listen for.)
             </p>
@@ -156,7 +174,7 @@
                 <code>didDiscoverServices</code>. You will need to define this method, as per the signature in
                 <code>&lt;CoreBluetooth/CoreBluetooth.h&gt;</code>. Use the debugger to verify that this method is called correctly.
             </p>
-            <h3> Task 4: Implement <code>didDiscoverServices</code> and
+            <h3 id="task04"> Task 4: Implement <code>didDiscoverServices</code> and
 <code>didDiscoverCharacteristicsForService</code>, and listen for
 updates to the sensor data characteristic. </h3>
             <p>
@@ -185,7 +203,7 @@ updates to the sensor data characteristic. </h3>
                 iOS will now start calling the
                 <code>didUpdateValueForCharacteristic</code> method (which you need to define as with other methods) whenever a new packet of sensor data is available. To complete this task, verify that this is happening by setting breakpoints in this method in the debugger.
             </p>
-            <h3> Task 5: Implement the other methods of <code>SensorModel</code>. </h3> You should now be able to implement all of the methods of
+            <h3 id="task05"> Task 5: Implement the other methods of <code>SensorModel</code>. </h3> You should now be able to implement all of the methods of
             <code>SensorModel</code>. You should have implemented
             <code>startScanning</code> above (if you didn't, do so now.) The other methods are as follows:
             <ol>
@@ -201,7 +219,7 @@ updates to the sensor data characteristic. </h3>
                 </li>
                 <li><code>-(NSString *)currentSensorId</code>: This method should return an identifier for the currently connected anthill. We have programmed each anthill with a unique id, which you can retrieve from the <code>name</code> property of the currently connected peripheral.</li>
             </ol>
-            <h2> Section 2:  Extracting readings from an Anthill </h2>
+            <h2 id="sec2"> Section 2:  Extracting readings from an Anthill </h2>
             <p>
                 When a connection is established, the Anthill begins streaming packets containing sensor data on the sensor data characteristic you subscribed to in task 4. You will need to extract sensor readings from this characteristic and post them to the application. (For the purposes of this lab, you do not explicitly request any data or send any commands to the anthill.)
             </p>
@@ -230,7 +248,7 @@ updates to the sensor data characteristic. </h3>
     NSData *d = [NSData dataWithBytes:data length:length];
     NSString *s = [[NSString alloc] initWithData:d encoding:NSUTF8StringEncoding];
 </code></pre>
-            <h3> Task 6: Implement <code>didUpdateValueForCharacteristic</code> </h3>
+            <h3 id="task06"> Task 6: Implement <code>didUpdateValueForCharacteristic</code> </h3>
             <p>
                 To complete this task, implement code to extract messages from the stream of packets delivered to
                 <code>didUpdateValueForCharacteristic</code>.
@@ -246,7 +264,7 @@ updates to the sensor data characteristic. </h3>
             <pre><code>[AnteaterREST postListOfSensorReadings:@[r] andCallCallback:NULL];</code></pre>
             <p>to post the reading to the Anteater server.</p>
             </code>
-            <h2>Completing the Lab</h2>
+            <h2 id="completing">Completing the Lab</h2>
             <p>The TA will checkoff your lab assignment. A checkoff will require successfully displaying sensor readings on the Readings screen, as well as disconnected and reconnected from a an anthill (by powering it down and powering it back up.)</p>
         </section>
     </div>
