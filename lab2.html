@@ -17,14 +17,15 @@
 <body>
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
-        <header class="inner">
-            <h1 id="project_title">6.S062</h1>
-            <h2 id="project_tagline">Lab 2: Getting Data From Anthills </h2>
-            <font color="white">Assigned: 2/16/2016
+        <section id="main_content" class="inner">
+            <header class="inner">
+                <h1 id="project_title">6.S062</h1>
+                <h2 id="project_tagline">Lab 2: Getting Data From Anthills </h2>
+                <font color="white">Assigned: 2/16/2016
+                    <br>
+                    <b>Due</b>: 3/09/2016</font>
                 <br>
-                <b>Due</b>: 3/09/2016</font>
-            <br>
-        </header>
+            </header>
     </div>
     <div id="main_content_wrap" class="outer">
         <p> The goal of this lab is to implement code in the Anteater app to scan for a nearby Anthill, connect to it, and stream temperature and humidity readings from it. We have provided you with all of the code to show sensor readings in a table in the UI, an to plot sensor readings on a chart, but you will need to implement all of the networking code, and the code to extract sensor readings from packets sent by the Anthill. </p>
@@ -66,12 +67,12 @@
         </p>
         <p> The basic sequence is as follows: </p>
         <ol>
-            <li> Start scanning for anthills
-                <li> Once an anthill is discovered, connect to it
-                    <li> Once you have connected, discover its services
-                        <li> For each service, discover its characteristics
-                            <li> For each characteristic, check if it is the sensor data characteristic; if it is, start listening for notifications to the state of the characteristic
-                                <li> On each state update, process the received data to extract any sensor readings. Since each state update is at most 20 bytes, the anthill may fragment one sensor reading across several packets.
+            <li> Start scanning for anthills</li>
+            <li> Once an anthill is discovered, connect to it</li>
+            <li> Once you have connected, discover its services</li>
+            <li> For each service, discover its characteristics</li>
+            <li> For each characteristic, check if it is the sensor data characteristic; if it is, start listening for notifications to the state of the characteristic</li>
+            <li> On each state update, process the received data to extract any sensor readings. Since each state update is at most 20 bytes, the anthill may fragment one sensor reading across several packets.</li>
         </ol>
         <p>
             Figure 1 shows the sequence of calls that you will make in iOS to implement this functionality, along with some snippets of code to make each transition. (here <code>CM</code> is a
@@ -192,12 +193,14 @@ updates to the sensor data characteristic. </h3>
                                 <li><code>-(void)stopScanning</code>: You should call the
                                     <code>stopScan</code> method on the saved
                                     <code>BTCentralManager</code> object.
-                                    <li><code>-(BOOL)isConnected</code>: You can assume you are connected if successfully received a call to
-                                        <code>bleDidConnect</code> and have not yet received a call to
-                                        <code>bleDidDisconnect</code>. You should implement
-                                        <code>bleDidDisconnect</code> to track the connection status. Note that when <code>bleDidDisconnect</code> is called you should discard any saved references to the current peripheral since it will no longer be valid. You should also call the delegate method
-                                        <code>bleDidDisconnect</code>.
-                                        <li><code>-(NSString *)currentSensorId</code>: This method should return an identifier for the currently connected anthill. We have programmed each anthill with a unique id, which you can retrieve from the <code>name</code> property of the currently connected peripheral.
+                                </li>
+                                <li><code>-(BOOL)isConnected</code>: You can assume you are connected if successfully received a call to
+                                    <code>bleDidConnect</code> and have not yet received a call to
+                                    <code>bleDidDisconnect</code>. You should implement
+                                    <code>bleDidDisconnect</code> to track the connection status. Note that when <code>bleDidDisconnect</code> is called you should discard any saved references to the current peripheral since it will no longer be valid. You should also call the delegate method
+                                    <code>bleDidDisconnect</code>.
+                                </li>
+                                <li><code>-(NSString *)currentSensorId</code>: This method should return an identifier for the currently connected anthill. We have programmed each anthill with a unique id, which you can retrieve from the <code>name</code> property of the currently connected peripheral.</li>
                             </ol>
                             <h2> Section 2:  Extracting readings from an Anthill </h2>
                             <p>
@@ -206,9 +209,9 @@ updates to the sensor data characteristic. </h3>
                             <p>
                                 The anthill sends a stream of ASCII characters, containing one of three types of messages: humidity readings, temperature readings, and error messages. Each message begins with a single letter, and then has a custom payload. The messages are as follows:
                                 <ul>
-                                    <li> 'H': humidity. The payload consists of an ASCII representation of the percent relatively humidity, as a floating point number, followed by a 'D', indicating the end of the number.
-                                        <li> 'T': temperature. The payload consists of an ASCII representation of the temperature (in Fahrenheit), as a floating point number, followed by a 'D', indicating the end of the number.
-                                            <li> 'E': an error, followed by an additional character indicating the type of the error (you can simply ignore error messages, but will need to parse these messages.)
+                                    <li> 'H': humidity. The payload consists of an ASCII representation of the percent relatively humidity, as a floating point number, followed by a 'D', indicating the end of the number.</li>
+                                    <li> 'T': temperature. The payload consists of an ASCII representation of the temperature (in Fahrenheit), as a floating point number, followed by a 'D', indicating the end of the number.</li>
+                                    <li> 'E': an error, followed by an additional character indicating the type of the error (you can simply ignore error messages, but will need to parse these messages.)</li>
                                 </ul>
                             </p>
                             <p>
@@ -249,6 +252,7 @@ updates to the sensor data characteristic. </h3>
                             <h2>Completing the Lab</h2> The TA will checkoff your lab assignment. A checkoff will require successfully displaying sensor readings on the Readings screen, as well as disconnected and reconnected from a an anthill (by powering it down and powering it back up.)
                             <hr>
                             <address></address>
+                            </section>
     </div>
     <!-- hhmts start -->Last modified: Thu Feb 25 09:38:25 EST 2016
     <!-- hhmts end -->
