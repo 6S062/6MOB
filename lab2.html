@@ -79,7 +79,7 @@
                 Figure 1 shows the sequence of calls that you will make in iOS to implement this functionality, along with some snippets of code to make each transition. (here <code>CM</code> is a
                 <code>CBCentralManager</code> object).
             </p>
-            <center> <img src="flowchart.png" width=800px></img>
+            <center> <img src="images/lab2/flowchart.png" width=800px></img>
             </center>
             <h3> Task 1: Initialize Bluetooth, and Start Scanning for Anthills</h3>
             <p>
@@ -169,8 +169,8 @@ updates to the sensor data characteristic. </h3>
 </code></pre>
             <p> As each characteristic of each service is discovered, you will receive a call to <code>didDiscoverCharacteristicsForService</code> (this is a <code>CBPeripheralDelegate</code> method, and as with the <code>CBCentralManagerDelegate</code> methods above you will need to define this callback to receive it. Also make sure you set up the peripheral delegate properly in task 2 above.)
             </p>
-            <p> The flowchart indicates that you need to wait until
-                <code>didDiscoverCharacteristicsForService</code> is called for the service with UUID <code>RBL_SERVICE_UUID</code>. Once you find this service, you should look for the characteristic with UUID <code>RBL_CHAR_TX_UUID</code>, since this is the characteristic where sensor data will be delivered by the anthill.
+            <p><strong> The flowchart indicates that you need to wait until
+                <code>didDiscoverCharacteristicsForService</code> is called for the service with UUID <code>RBL_SERVICE_UUID</code>. Once you find this service, you should look for the characteristic with UUID <code>RBL_CHAR_TX_UUID</code>, since this is the characteristic where sensor data will be delivered by the anthill.</strong>
             </p>
             <p> The code in the flowchart shows how to achieve this. Once you've found the desired characteristic, you call <code>setNotifyValue</code> on the characteristic, as follows: </p>
             <pre><code>        if ([[[service UUID] UUIDString] isEqualToString:@RBL_SERVICE_UUID]) {
@@ -240,7 +240,7 @@ updates to the sensor data characteristic. </h3>
                 <code>bleGotSensorReading</code>. You should also add it to the <code>self.sensorReadings</code> array, which the UI will access to update its list of sensor readings.
             </p>
             <p> This task is complete when you can see sensor readings streaming into sensor reading display on the Anteater Readings screen, as show below: </p>
-            <center><img src="readings.png" width=300px></img>
+            <center><img src="images/lab2/readings.png" width=300px></img>
             </center>
             <p> Although we won't check this for the lab, for each reading <code>r</code> you should also call the method</p>
             <pre><code>[AnteaterREST postListOfSensorReadings:@[r] andCallCallback:NULL];</code></pre>
