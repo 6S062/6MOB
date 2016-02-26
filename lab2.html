@@ -50,8 +50,9 @@
 
             <p> The goal of this lab is to implement code in the Anteater app to scan for a nearby Anthill, connect to it, and stream temperature and humidity readings from it. We have provided you with all of the code to show sensor readings in a table in the UI, and to plot sensor readings on a chart, but you will need to implement all of the networking code, and the code to extract sensor readings from packets sent by the Anthill. </p>
             <h2 id="gettingstarted">  Getting Started </h2>
-            <p> We have provided you with a skeleton class,
-                <code>SensorModel.m</code> that you will need to implement. This class defines six methods you need to implement in this lab: </p>
+            <p> The Anteater code we  provided for <a href="lab1.html">lab
+1</a> included a skeleton class,
+                <code>SensorModel.m</code> that you will need to implement.  <code>SensorModel.h</code> defines four methods and a property you need to implement in this lab: </p>
             <pre><code>@property(atomic,readonly) NSArray *sensorReadings;
 -(void)startScanning;
 -(void)stopScanning;
@@ -65,15 +66,20 @@
 -(void) bleGotSensorReading:(BLESensorReading*)reading;
 </code></pre>
             <p> These methods let the application know when a sensor connects or disconnects, or when some data is received. </p>
-            <p> The Anteater code we provided in <a href="../lab1/lab1.html">lab
-1</a> includes this skeleton class, as well as the complete implementation of <code>SensorReadingTableViewController</code> which creates and instance of <code>SensorModel</code> and sets itself as the delegate of that instance. </p>
+            <p> The code you downloaded for <a href="lab1.html">lab
+1</a> also includes a complete implementation of the class <code>SensorReadingTableViewController</code>, which creates an instance of <code>SensorModel</code> and sets itself as the delegate of that instance. </p>
             <p>
                 This lab is divided into two <i>sections</i>. In the first section, you will implement the code to scan for and connect to an anthill, and then in the second section you will implement the code to extract readings from packets sent by the anthill and deliver them to the app.
             </p>
             <p>
-                To test this lab, you will need to obtain an <i>anthill</i> node. We have placed several battery powered anthills in the building 36 lab, but we also have anthills you can check out for your own testing purposes. Note that the bluetooth functions you will implement do not work properly on the iPhone simulator, so you will need to test on a real device. If you are working with a partner, please check out only one anthill as we have a limited number of them.
+                To test this lab, you will need to obtain an <i>anthill</i> node. We have placed several battery powered anthills in the building 36 lab, but we also have anthills you can check out for your own testing purposes (checkout instructions will be posted on Piazza). Note that the bluetooth functions you will implement do not work properly on the iPhone simulator, so you will need to test on a real device. If you are working with a partner, please check out only one anthill as we have a limited number of them.
             </p>
-            <p> The anthill you receive will have a sensor connected, and a USB Micro port. To power the anthill, it will need to be powered over USB to your laptop, or to any other USB charger (the anthills in the 5th floor lab are battery powered.) </p>
+<p> The anthill you receive will have a sensor connected, and a USB Micro port. To power the anthill, it will need to be powered over USB to your laptop, or to any other USB charger (the anthills in the 5th floor lab are battery powered), as shown below:
+
+<center>
+<img width=300 src="images/lab2/anthill.png"></img>
+</center>
+</p>
             <h2 id="sec1"> Section 1:  Connecting to an Anthill </h2>
             <p>
                 The goal of this section is to successfully establish a connection with an anthill. In the next section you will extract data from packets sent by the anthill.
@@ -97,7 +103,7 @@
                 Figure 1 shows the sequence of calls that you will make in iOS to implement this functionality, along with some snippets of code to make each transition. (here <code>CM</code> is a
                 <code>CBCentralManager</code> object).
             </p>
-            <center> <img src="images/lab2/flowchart.png" width=800px></img>
+            <center> <img src="images/lab2/flowchart.png" width=900px></img>
             </center>
             <h3 id="task01"> Task 1: Initialize Bluetooth, and Start Scanning for Anthills</h3>
             <p>
@@ -238,7 +244,7 @@ updates to the sensor data characteristic. </h3>
             <p>
                 You can extract the bytes from an incoming packet in <code>didUpdateValueForCharacteristic</code> as follows:
                 <pre><code>            unsigned char data[20];
-            data_len = MAX(20,characteristic.value.length);
+            data_len = MIN(20,characteristic.value.length);
             [characteristic.value getBytes:data length:data_len];
 </code></pre>
             </p>
@@ -268,8 +274,7 @@ updates to the sensor data characteristic. </h3>
             <p>The TA will checkoff your lab assignment. A checkoff will require successfully displaying sensor readings on the Readings screen, as well as disconnected and reconnected from a an anthill (by powering it down and powering it back up.)</p>
         </section>
     </div>
-    <!-- hhmts start -->Last modified: Thu Feb 26 18:49:05 EST 2016
-    <!-- hhmts end -->
+    <!-- hhmts start -->Last modified: Thu Feb 25 20:29:46 EST 2016 <!-- hhmts end -->
 </body>
 
 </html>
