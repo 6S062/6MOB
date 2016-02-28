@@ -181,7 +181,6 @@
         ],
         "assignments": [
           {
-            "title": "Due: Project Proposals"
           }
         ]
       },
@@ -197,7 +196,26 @@
         "assignments": [
           
         ]
+      },
+      {
+        "date": "2016-03-09",
+        "title": "9. Inertial Sensing",
+        "readings": [
+          {
+          }
+        ],
+        "assignments": [ {
+            "title": "Due: Project Proposals"          
+	    },
+	    {
+	    "title": "Lab 2",
+	    "href": "https://cmtelematics.quip.com/lPMeAwPK2abm"
+	    }
+        ]
       }
+
+
+
     ]
   },
   {
