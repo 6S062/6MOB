@@ -160,8 +160,8 @@
         "title": "7. Energy-Aware Wireless Networking",
         "readings": [
           {
-            "href": "https://pdos.csail.mit.edu/archive/decouto/papers/heinzelman00.pdf",
-            "title": "LEACH: Energy-Efficient Communication Protocol for Wireless Microsensor Networks"
+            "href": "http://ieeexplore.ieee.org.libproxy.mit.edu/stamp/stamp.jsp?tp=&arnumber=1045297",
+            "title": "LEACH: An Application-Specific Protocol Architecture for Wireless Microsensor Networks"
           }
         ]
       }
@@ -205,17 +205,14 @@
           }
         ],
         "assignments": [ {
-            "title": "Due: Project Proposals"          
-	    },
-	    {
-	    "title": "Lab 2",
-	    "href": "https://cmtelematics.quip.com/lPMeAwPK2abm"
-	    }
+          "title": "Due: Project Proposals"          
+        },
+        {
+          "title": "Lab 2",
+          "href": "https://cmtelematics.quip.com/lPMeAwPK2abm"
+        }
         ]
       }
-
-
-
     ]
   },
   {
