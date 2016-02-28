@@ -211,13 +211,19 @@
         ],
         "assignments": [ {
           "title": "Due: Project Proposals"          
-        },
+        }
+        ]
+      },
+       {
+        "date": "2016-03-11",
+        "assignments": [         
         {
           "title": "Lab 2",
           "href": "https://cmtelematics.quip.com/lPMeAwPK2abm"
         }
         ]
       }
+
     ]
   },
   {
