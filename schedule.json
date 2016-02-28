@@ -204,7 +204,7 @@
       },
       {
         "date": "2016-03-09",
-        "title": "9. Inertial Sensing",
+        "title": "10. Inertial Sensing",
         "readings": [
           {
           }
@@ -219,7 +219,7 @@
         "assignments": [         
         {
           "title": "Lab 2",
-          "href": "https://cmtelematics.quip.com/lPMeAwPK2abm"
+          "href": ""
         }
         ]
       }
