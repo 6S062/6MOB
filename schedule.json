@@ -201,10 +201,16 @@
         "assignments": [
           
         ]
-      },
+      }
+    ]
+  },
+  {
+    "module": "Inertial Sensing",
+    "events": [
+      
       {
         "date": "2016-03-09",
-        "title": "10. Inertial Sensing",
+        "title": "10. Inertial Navigation",
         "readings": [
           {
           }
