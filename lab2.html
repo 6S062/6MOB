@@ -148,7 +148,7 @@
                 When <code>didDiscoverPeripheral</code> is called, you are given a handle to a <code>CBPeripheral</code> object. This is the peripheral you want to try to connect to (in this lab you are going to connect to the first peripheral you discover, and stay connected to it until it moves out of range, rather than trying to prioritize connecting to certain anthills.)
             </p>
             <p> <b> Important: </b> Before connecting to the peripheral, make sure you retain a reference to it (i.e., by assigning it to an instance variable of the
-                <code>SensorModel</code> class.) Otherwise iOS will not call any of the delegate methods on the peripheral. Also be sure to set <code>delegate.peripheral = self</code>.
+                <code>SensorModel</code> class.) Otherwise iOS will not call any of the delegate methods on the peripheral. Also be sure to set <code>peripheral.delegate = self</code> so that your SensorModel receives CBPeripheralDelegate messages for that peripheral.
             </p>
             <p>
                 You can also used this saved peripheral to access peripheral properties (i.e., its name or UUID) to implement the other methods of <code>SensorModel</code>.
@@ -215,12 +215,12 @@ updates to the sensor data characteristic. </h3>
             <ol>
                 <li><code>-(void)stopScanning</code>: You should call the
                     <code>stopScan</code> method on the saved
-                    <code>BTCentralManager</code> object.
+                    <code>CBCentralManager</code> object.
                 </li>
-                <li><code>-(BOOL)isConnected</code>: You can assume you are connected if successfully received a call to
-                    <code>bleDidConnect</code> and have not yet received a call to
-                    <code>bleDidDisconnect</code>. You should implement
-                    <code>bleDidDisconnect</code> to track the connection status. Note that when <code>bleDidDisconnect</code> is called you should discard any saved references to the current peripheral since it will no longer be valid. You should also call the delegate method
+                <li><code>-(BOOL)isConnected</code>: You can assume you are connected if you successfully received a call to
+                    <code>didConnectPeripheral</code> and have not yet received a call to
+                    <code>didDisconnectPeripheral</code>. You should implement
+                    <code>didDisconnectPeripheral</code> to track the connection status. Note that when <code>didDisconnectPeripheral</code> is called you should discard any saved references to the current peripheral since it will no longer be valid. You should also call the delegate method
                     <code>bleDidDisconnect</code>.
                 </li>
                 <li><code>-(NSString *)currentSensorId</code>: This method should return an identifier for the currently connected anthill. We have programmed each anthill with a unique id, which you can retrieve from the <code>name</code> property of the currently connected peripheral.</li>
