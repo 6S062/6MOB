@@ -269,7 +269,11 @@
     ]
   },
   {
-    "module": "SPRING BREAK!"
+    "module": "SPRING BREAK!",
+    "events": [
+      {
+        "date": "2016-03-21 -- 2016-03-25"
+      }]
   },
   {
     "module": "..."
