@@ -116,7 +116,7 @@
     ]
   },
   {
-    "module": "Networking",
+    "module": "Networking, In-network Computation, Data Muling",
     "events": [
       {
         "date": "2016-02-22",
@@ -164,12 +164,7 @@
             "title": "LEACH: An Application-Specific Protocol Architecture for Wireless Microsensor Networks"
           }
         ]
-      }
-    ]
-  },
-  {
-    "module": "Data Collection",
-    "events": [
+      },
       {
         "date": "2016-03-02",
         "title": "8. In-network Aggregation",
@@ -245,14 +240,23 @@
       },
        {
         "date": "2016-03-11",
+        "title": "No Class",
         "assignments": [         
         {
           "title": "Due: Lab 2",
           "href": "https://github.mit.edu/pages/srmadden/6MOB/lab2.html"
         }
         ]
+      },
+      {
+      "date": "2016-03-14",
+      "title": "11. Activity Recognition",
+      "readings": [
+      {
+          "href":"http://link.springer.com.libproxy.mit.edu/chapter/10.1007/978-3-540-24646-6_1",
+          "title":"Bao, L., & Intille, S. S. (2004). Activity recognition from user-annotated acceleration data"
+      }]
       }
-
     ]
   },
   {
