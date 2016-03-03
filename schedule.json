@@ -256,6 +256,15 @@
           "href":"http://link.springer.com.libproxy.mit.edu/chapter/10.1007/978-3-540-24646-6_1",
           "title":"Bao, L., & Intille, S. S. (2004). Activity recognition from user-annotated acceleration data"
       }]
+      },
+      {
+      "date": "2016-03-16",
+      "title": "12. Pothole detection",
+      "readings": [
+      {
+          "href":"http://nms.csail.mit.edu/papers/p2-mobisys-2008.pdf",
+          "title":"The Pothole Patrol: Using a Mobile Sensor Network for Road Surface Monitoring"
+      }]
       }
     ]
   },
