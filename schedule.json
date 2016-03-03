@@ -187,7 +187,17 @@
         "assignments": [
           {
           }
-        ]
+        ],
+        "materials": [
+          {
+            "href": "materials/tinydb-slides.pdf",
+            "title": "(Slides)"
+          },
+          {
+            "href": "materials/tinydb-notes.pdf",
+            "title": "(Notes)"
+          }
+         ]
       },
       {
         "date": "2016-03-07",
