@@ -196,7 +196,12 @@
           {
             "href": "http://www.princeton.edu/~mrm/asplos-x_annot.pdf",
             "title": "Energy-Efficient Computing for Wildlife Tracking: Design Tradeoffs and Early Experiences with ZebraNet"
-          }
+          },
+            {
+                            "href": "reading_assignments.html#2016-03-07",
+            "title": "Reading Question"
+
+            }
         ],
         "assignments": [
           
@@ -212,8 +217,15 @@
         "date": "2016-03-09",
         "title": "10. Inertial Navigation",
         "readings": [
-          {
-          }
+            {
+                "href":"http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/pbra017e_ch2",
+                "title":"Fundamental principles and historical developments of inertial navigation (requires MIT Certs)"
+            },
+            {
+                "href":"http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/pbra017e_ch3",
+                "title":"Basic principles of strapdown inertial navigation systems (requires MIT Certs)"
+            }
+
         ],
         "assignments": [ {
           "title": "Due: Project Proposals",
