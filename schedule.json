@@ -269,6 +269,60 @@
     ]
   },
   {
+    "module": "Inertial Sensing",
+    "events": [
+      
+      {
+        "date": "2016-03-09",
+        "title": "10. Inertial Navigation",
+        "readings": [
+            {
+                "href":"http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/pbra017e_ch2",
+                "title":"Fundamental principles and historical developments of inertial navigation (requires MIT Certs)"
+            },
+            {
+                "href":"http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/pbra017e_ch3",
+                "title":"Basic principles of strapdown inertial navigation systems (requires MIT Certs)"
+            }
+
+        ],
+        "assignments": [ {
+          "title": "Due: Project Proposals",
+          "href": "https://github.mit.edu/pages/srmadden/6MOB/projects.html"
+        }
+        ]
+      },
+       {
+        "date": "2016-03-11",
+        "title": "No Class",
+        "assignments": [         
+        {
+          "title": "Due: Lab 2",
+          "href": "https://github.mit.edu/pages/srmadden/6MOB/lab2.html"
+        }
+        ]
+      },
+      {
+      "date": "2016-03-14",
+      "title": "11. Activity Recognition",
+      "readings": [
+      {
+          "href":"http://link.springer.com.libproxy.mit.edu/chapter/10.1007/978-3-540-24646-6_1",
+          "title":"Activity recognition from user-annotated acceleration data"
+      }]
+      },
+      {
+      "date": "2016-03-16",
+      "title": "12. Pothole detection",
+      "readings": [
+      {
+          "href":"http://nms.csail.mit.edu/papers/p2-mobisys-2008.pdf",
+          "title":"The Pothole Patrol: Using a Mobile Sensor Network for Road Surface Monitoring"
+      }]
+      }
+    ]
+  },
+  {
     "module": "SPRING BREAK!",
     "events": [
       {
@@ -276,7 +330,61 @@
       }]
   },
   {
-    "module": "..."
+    "module": "Map-matching and map inference",
+    "events": [
+      {
+        "date": "2016-03-28",
+        "title": "13. Map-matching",
+        "readings": [
+          {
+            "href": "http://nms.csail.mit.edu/papers/index.php?detail=203",
+            "title": "Accurate, Low-Energy Trajectory Mapping for Mobile Devices"
+          }]
+      },
+      {
+        "date": "2016-03-30",
+        "title": "14. Map inference",
+        "readings": [
+          {
+            "href": "http://dl.acm.org.libproxy.mit.edu/citation.cfm?id=2424333", 
+            "title": "Map inference in the face of noise and disparity"
+          }]
+      }
+    ]
+  },
+
+  {
+    "module": "Acoustic and image sensing",
+    "events": [
+      
+      {
+        "date": "2016-04-04",
+        "title": "15. Acoustic sensing",
+        "readings": [
+            {
+                "href": "http://dl.acm.org.libproxy.mit.edu/citation.cfm?id=1182815",
+                "title": "The design and implementation of a self-calibrating distributed acoustic sensing platform (requires MIT Certs)"
+            }]
+      },
+      {
+        "date": "2016-04-06",
+        "title": "16. Shooter localization",
+        "readings": [
+           {
+          "href":"http://delivery.acm.org.libproxy.mit.edu/10.1145/1040000/1031497/p1-simon.pdf?ip=18.9.61.111&id=1031497&acc=ACTIVE%20SERVICE&key=7777116298C9657D%2EDE5F786C30E1A3B4%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=758889701&CFTOKEN=67782054&__acm__=1457145080_95020e45966caae4f93313197feae207",
+          "title":"Sensor Network-Based Countersniper System (requires MIT certs)"
+      }]
+      },
+      {
+      "date": "2016-04-11",
+      "title": "17. Continuous object recognition",
+      "readings": [
+      {
+          "href":"http://nms.csail.mit.edu/papers/index.php?detail=236",
+          "title":"Glimpse: Continuous, Real-Time Object Recognition on Mobile Devices"
+      }]
+      }
+    ]
   },
   {
     "module": "Quiz",
