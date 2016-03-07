@@ -333,6 +333,19 @@
     ]
   },
   {
+    "module": "Security",
+    "events": [
+      {
+        "date": "2016-04-13",
+        "title": "18. IoT security",
+        "readings": [
+        {
+           "title": "TBD"
+        }]
+      }
+    ]
+  },
+  {
     "module": "Quiz",
     "events": [
       {
