@@ -210,7 +210,14 @@
         ],
         "assignments": [
           
-        ]
+        ],
+        "materials": [
+          {
+            "href": "materials/zebranet.pdf",
+            "title": "(Notes)"
+          }
+         ]
+
       }
     ]
   },
@@ -236,7 +243,23 @@
           "title": "Due: Project Proposals",
           "href": "https://github.mit.edu/pages/srmadden/6MOB/projects.html"
         }
-        ]
+                       ],
+       "materials": [
+          {
+            "href": "materials/inertial-slides.pdf",
+            "title": "(Slides)"
+          },
+          {
+            "href": "materials/inertial.pdf",
+            "title": "(Notes)"
+          },
+                     {
+            "href": "materials/motion.zip",
+            "title": "(iOS Demo App)"
+          },
+
+         ]
+
       },
        {
         "date": "2016-03-11",
