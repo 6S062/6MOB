@@ -243,7 +243,7 @@
           "title": "Due: Project Proposals",
           "href": "https://github.mit.edu/pages/srmadden/6MOB/projects.html"
         }
-                       ],
+       ],
        "materials": [
           {
             "href": "materials/inertial-slides.pdf",
@@ -253,10 +253,10 @@
             "href": "materials/inertial.pdf",
             "title": "(Notes)"
           },
-                     {
+          {
             "href": "materials/motion.zip",
             "title": "(iOS Demo App)"
-          },
+          }
 
          ]
 
