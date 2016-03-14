@@ -278,7 +278,23 @@
       {
           "href":"http://link.springer.com.libproxy.mit.edu/chapter/10.1007/978-3-540-24646-6_1",
           "title":"Activity recognition from user-annotated acceleration data"
-      }]
+      }],
+                 "materials": [
+          {
+            "href": "materials/activity-slides.pdf",
+            "title": "(Slides)"
+          },
+          {
+            "href": "materials/activity-notes.pdf",
+            "title": "(Notes)"
+          },
+          {
+            "href": "materials/feature_test.zip",
+            "title": "(Python Demos -- See README.txt)"
+          }
+
+         ]
+
       },
       {
       "date": "2016-03-16",
