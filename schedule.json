@@ -311,7 +311,23 @@
           }
 
 
-      ]
+      ],
+     "materials": [
+          {
+            "href": "materials/pothole-slides.pdf",
+            "title": "(Slides)"
+          },
+          {
+            "href": "materials/pothole-notes.pdf",
+            "title": "(Notes)"
+          },
+          {
+            "href": "materials/pothole-demo.zip",
+            "title": "(Python Demos -- See README.txt)"
+          }
+
+         ]
+
       }
     ]
   },
