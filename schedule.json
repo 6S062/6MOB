@@ -75,7 +75,7 @@
           },
           {
             "title": "Out: Lab 1",
-	    "href": "lab1.html"
+            "href": "lab1.html"
           }
         ],
         "materials": [
@@ -402,7 +402,13 @@
       {
           "href":"http://nms.csail.mit.edu/papers/index.php?detail=236",
           "title":"Glimpse: Continuous, Real-Time Object Recognition on Mobile Devices"
-      }]
+      }],
+      "assignments": [
+        {
+          "title": "Due: Lab 3",
+          "href": "lab3.html"
+        }
+       ]
       }
     ]
   },
