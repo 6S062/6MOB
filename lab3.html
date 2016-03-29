@@ -203,7 +203,7 @@ span.inequality span.i5 {
     // Compute size, clippedSize
     // Rescale points to lie in [0,1] x [0,1]
     
-    // -- TASK 1B --
+    // -- <span id="task1b_code">TASK 1B</span> --
     double features[N_FEATURES] = {};
     // Classify each point according to which zone of a 3x3 Tic-Tac-Toe board it would fall in
     // Compute the time spent in each zone and the distance traveled horizontally and vertically
@@ -226,7 +226,7 @@ span.inequality span.i5 {
     // -- TASK 1D --
     // The output of the training procedure goes at the top of GestureProcessor.m.
     
-    // -- TASK 1E --
+    // -- <span id="task1e_code">TASK 1E</span> --
     int best_label = N_LABELS;
     double best_score = -INFINITY;
     // Dot product with gesture templates in weights[][]
@@ -399,7 +399,7 @@ span.inequality span.i5 {
         <p>Having decided which zone the segment belongs to, you should then compute the
         time difference between samples[i] and samples[i-1], the x difference, and the y
         difference, and add these three values to the appropriate locations in the array
-        features[].  When you are finished summing, these statements should be true
+        features[] (still in <a href="#task1b_code"><code>processGesture2D:...</code></a>).  When you are finished summing, these statements should be true
         (don't forget to initialize the features array to zero):</p>
 
         <pre>
@@ -512,7 +512,7 @@ features[26] = sum (over segments in the bottom right zone) of net movement in t
         <h3 id="task1e">Task 1E &mdash; Have you noticed that these tasks are letters of the alphabet?</h3>
         <p>Next, you need to compare the feature vectors computed in
         <code>processGesture2D...</code> with the weights array, using the
-        vector dot product (i.e. sum of products of components).  You should
+        vector dot product (i.e. sum of products of components).  In the <a href="#task1e_code">appropriate place in <code>processGesture2D:...</code></a>, you should
         write some C code equivalent to the following Python code:</p>
 
         <pre><code class="hljs python">for i in range(N_LABELS):
@@ -856,14 +856,14 @@ q<sub>z</sub> = n<sub>z</sub> sin(φ/2),</pre>
     GLKQuaternion attitude = GLKQuaternionFromCMQuaternion(motion.attitude.quaternion);
     GLKVector3 userAcceleration = GLKVector3FromCMAcceleration(motion.userAcceleration);
     
-    // -- TASK 2A --
+    // -- <span id="task2a_code">TASK 2A</span> --
     GLKVector3 acceleration = userAcceleration;
     // rotate acceleration from instantaneous coordinates into persistent coordinates
     
-    // -- TASK 2B --
+    // -- <span id="task2b_code">TASK 2B</span> --
     // integrate acceleration into _velocity and _velocity into _position
     
-    // -- TASK 2C --
+    // -- <span id="task2c_code">TASK 2C</span> --
     // apply your choice of braking to _velocity and _position to stabilize the integration loop
     
     // add the new data to the log
@@ -888,7 +888,7 @@ q<sub>z</sub> = n<sub>z</sub> sin(φ/2),</pre>
         </div>
 
         <h3 id="task2a">Task 2A &mdash; Coordinate Transformation</h3>
-        <p>Your first task in <a href="#accumulateMotion"><code>accumulateMotion:</code></a>
+        <p>Your first task in <a href="#task2a_code"><code>accumulateMotion:</code></a>
         will be to use the quaternion stored in <code>attitude</code> to convert the
         vector <code>acceleration</code> into a persistent set of coordinates that do
         not vary with the orientation of the phone.  Fortunately, there's a function in
@@ -965,7 +965,7 @@ q<sub>z</sub> = n<sub>z</sub> sin(φ/2),</pre>
         <a href="https://en.wikipedia.org/wiki/Numerical_partial_differential_equations" target="_blank">field</a>.
 
         <p>Your job for this task is to translate this math into code in
-        <a href="#accumulateMotion"><code>accumulateMotion:</code></a>.  The
+        <a href="#task2b_code"><code>accumulateMotion:</code></a>.  The
         <code>Gesture3DViewController</code> already has instance variables called
         <code>_velocity</code> and <code>_position</code> that you should use for this
         purpose, and we've initialized a variable <code>dt</code> with the expected time
@@ -1053,13 +1053,13 @@ q<sub>z</sub> = n<sub>z</sub> sin(φ/2),</pre>
                             minSize:(double)minSize {
     Sample2D samples2D[count];
     
-    // -- TASK 3A --
+    // -- <span id="task3a_code">TASK 3A</span> --
     // Estimate left-right, up-down axes by averaging orientation over time:
     GLKMatrix3 M = {};
     // For each i, convert samples[i].attitude to a 3x3 matrix and sum it into M.
     // Then find the rotation matrix most similar to the resulting sum.
     
-    // -- TASK 3B --
+    // -- <span id="task3b_code">TASK 3B</span> --
     // Project points to 2D:
     // For each i, form the matrix-vector product of M with samples[i].location
     // and copy the transformed x and y coordinates, along with the timestamp,
@@ -1091,7 +1091,7 @@ q<sub>z</sub> = n<sub>z</sub> sin(φ/2),</pre>
 
         <p>Your job for this part is to use the attitude (that is, orientation) quaternion
         recorded in each of the 3-D motion samples in
-        <a href="#process3d"><code>processGesture3DWithSamples:count:minSize:</code></a>
+        <a href="#task3a_code"><code>processGesture3DWithSamples:count:minSize:</code></a>
         to estimate the instantaneous orientation of the phone's y-axis &mdash; a proxy
         for the user's notion of up and down &mdash; and the phone's x-axis &mdash; a
         proxy for the user's notion of left and right.</p>
@@ -1138,9 +1138,10 @@ q<sub>z</sub> = n<sub>z</sub> sin(φ/2),</pre>
         <p>The final task for this lab is to project the coordinates of the 3-D sample
         points to 2-D coordinates suitable for use by
         <code>processGesture2DWithSamples:count:minSize:</code>.
-        You will need to form the matrix-vector product of the rotation matrix M from
-        Task 3A with <code>samples[i].location</code> for each i, and then copy the
-        transformed x and y coordinates, along with the timestamp
+        In the <a href="#task3b_code">appropriate place</a> in the code, you
+        will need to form the matrix-vector product of the rotation matrix M
+        from Task 3A with <code>samples[i].location</code> for each i, and then
+        copy the transformed x and y coordinates, along with the timestamp
         <code>samples[i].t</code>, into <code>samples2D[i]</code>.</p>
 
         <h3 id="task3c">Task 3C &mdash; Optional Improvements</h3>
