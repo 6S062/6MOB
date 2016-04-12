@@ -400,32 +400,13 @@
       }]
       },
       {
-      "date": "2016-04-11",
+      "date": "2016-04-13",
       "title": "17. Continuous object recognition",
       "readings": [
       {
           "href":"http://nms.csail.mit.edu/papers/index.php?detail=236",
           "title":"Glimpse: Continuous, Real-Time Object Recognition on Mobile Devices"
       }]
-      }
-    ]
-  },
-  {
-    "module": "Security",
-    "events": [
-      {
-        "date": "2016-04-13",
-        "title": "18. IoT security",
-        "readings": [
-        {
-           "title": "TBD"
-        }],
-        "assignments": [
-          {
-            "title": "Due: Lab 3",
-            "href": "lab3.html"
-          }
-         ]
       }
     ]
   },
