@@ -130,6 +130,16 @@
             "href": "reading_assignments.html#2016-02-22",
             "title": "Reading Question"
           }
+        ],
+        "materials": [
+          {
+            "href": "lectures/lec5-networkintro.pptx",
+            "title": "(Slides)"
+          },
+          {
+            "href": "lectures/lec5-networkintro.pdf",
+            "title": "(PDF)"
+          }
         ]
       },
       { "date": "2016-02-23",
@@ -153,6 +163,16 @@
             "href": "reading_assignments.html#2016-02-24",
             "title": "Reading Question"
           }
+        ],
+        "materials": [
+          {
+            "href": "lectures/lec6-meshetx.pptx",
+            "title": "(Slides)"
+          },
+          {
+            "href": "lectures/lec6-meshetx.pdf",
+            "title": "(Notes)"
+          }
         ]
       },
       {
@@ -162,6 +182,12 @@
           {
             "href": "http://ieeexplore.ieee.org.libproxy.mit.edu/stamp/stamp.jsp?tp=&arnumber=1045297",
             "title": "LEACH: An Application-Specific Protocol Architecture for Wireless Microsensor Networks"
+          }
+        ],
+        "materials": [
+          {
+            "href": "lectures/lec7-leach.pptx",
+            "title": "(Slides)"
           }
         ]
       },
@@ -290,7 +316,7 @@
           },
           {
             "href": "materials/feature_test.zip",
-            "title": "(Python Demos -- See README.txt)"
+            "title": "(Python Demos &mdash; See README.txt)"
           }
 
          ]
@@ -323,7 +349,7 @@
           },
           {
             "href": "materials/pothole-demo.zip",
-            "title": "(Python Demos -- See README.txt)"
+            "title": "(Python Demos &mdash; See README.txt)"
           }
 
          ]
@@ -359,6 +385,16 @@
             "title": "Out: Lab 3",
             "href": "lab3.html"
           }
+        ],
+        "materials": [
+          {
+            "href": "lectures/ctrack.pptx",
+            "title": "(Slides)"
+          },
+          {
+            "href": "lectures/lec13-ctrack.pdf",
+            "title": "(PDF)"
+          }
         ]
       },
       {
@@ -372,7 +408,13 @@
           {
             "href": "reading_assignments.html#2016-03-30",
             "title": "Reading Question"
-          }]
+          }],
+        "materials": [
+          {
+            "href": "lectures/lec14-biagioni-gis12.pdf",
+            "title": "(Slides)"
+          }
+        ]
       }
     ]
   },
@@ -394,10 +436,21 @@
         "date": "2016-04-06",
         "title": "16. Shooter localization",
         "readings": [
-           {
-          "href":"http://www.eecs.harvard.edu/~mdw/course/cs263/papers/simon-sensys04.pdf",
-          "title":"Sensor Network-Based Countersniper System"
-      }]
+          {
+            "href":"http://www.eecs.harvard.edu/~mdw/course/cs263/papers/simon-sensys04.pdf",
+            "title":"Sensor Network-Based Countersniper System"
+          }
+        ],
+        "materials": [
+          {
+            "href":"lectures/ShooterSlides.ppt",
+            "title":"(Slides)"
+          },
+          {
+            "href":"lectures/lec16-shooter.pdf",
+            "title":"(PDF)"
+          }
+        ]
       },
       {
       "date": "2016-04-13",
