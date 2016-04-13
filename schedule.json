@@ -142,7 +142,8 @@
           }
         ]
       },
-      { "date": "2016-02-23",
+      {
+        "date": "2016-02-23",
         "title": "",
         "assignments": [
           {
@@ -218,7 +219,7 @@
             "href": "materials/tinydb-notes.pdf",
             "title": "(Notes)"
           }
-         ]
+        ]
       },
       {
         "date": "2016-03-07",
@@ -228,47 +229,43 @@
             "href": "http://www.princeton.edu/~mrm/asplos-x_annot.pdf",
             "title": "Energy-Efficient Computing for Wildlife Tracking: Design Tradeoffs and Early Experiences with ZebraNet"
           },
-            {
-                            "href": "reading_assignments.html#2016-03-07",
+          {
+            "href": "reading_assignments.html#2016-03-07",
             "title": "Reading Question"
-
-            }
+          }
         ],
         "assignments": [
-          
         ],
         "materials": [
           {
             "href": "materials/zebranet.pdf",
             "title": "(Notes)"
           }
-         ]
-
+        ]
       }
     ]
   },
   {
     "module": "Inertial Sensing",
     "events": [
-      
       {
         "date": "2016-03-09",
         "title": "10. Inertial Navigation",
         "readings": [
-            {
-                "href":"http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/pbra017e_ch2",
-                "title":"Fundamental principles and historical developments of inertial navigation (requires MIT Certs)"
-            },
-            {
-                "href":"http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/pbra017e_ch3",
-                "title":"Basic principles of strapdown inertial navigation systems (requires MIT Certs)"
-            }
-
+          {
+            "href":"http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/pbra017e_ch2",
+            "title":"Fundamental principles and historical developments of inertial navigation (requires MIT Certs)"
+          },
+          {
+            "href":"http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/pbra017e_ch3",
+            "title":"Basic principles of strapdown inertial navigation systems (requires MIT Certs)"
+          }
         ],
-        "assignments": [ {
-          "title": "Due: Project Proposals",
-          "href": "https://github.mit.edu/pages/srmadden/6MOB/projects.html"
-        }
+        "assignments": [
+          {
+            "title": "Due: Project Proposals",
+            "href": "https://github.mit.edu/pages/srmadden/6MOB/projects.html"
+          }
        ],
        "materials": [
           {
@@ -283,29 +280,28 @@
             "href": "materials/motion.zip",
             "title": "(iOS Demo App)"
           }
-
          ]
-
       },
-       {
+      {
         "date": "2016-03-11",
         "title": "No Class (Friday)",
         "assignments": [         
-        {
-          "title": "Due: Lab 2",
-          "href": "https://github.mit.edu/pages/srmadden/6MOB/lab2.html"
-        }
+          {
+            "title": "Due: Lab 2",
+            "href": "https://github.mit.edu/pages/srmadden/6MOB/lab2.html"
+          }
         ]
       },
       {
-      "date": "2016-03-14",
-      "title": "11. Activity Recognition",
-      "readings": [
-      {
-          "href":"http://link.springer.com.libproxy.mit.edu/chapter/10.1007/978-3-540-24646-6_1",
-          "title":"Activity recognition from user-annotated acceleration data"
-      }],
-                 "materials": [
+        "date": "2016-03-14",
+        "title": "11. Activity Recognition",
+        "readings": [
+          {
+            "href":"http://link.springer.com.libproxy.mit.edu/chapter/10.1007/978-3-540-24646-6_1",
+            "title":"Activity recognition from user-annotated acceleration data"
+          }
+        ],
+        "materials": [
           {
             "href": "materials/activity-slides.pdf",
             "title": "(Slides)"
@@ -318,27 +314,22 @@
             "href": "materials/feature_test.zip",
             "title": "(Python Demos &mdash; See README.txt)"
           }
-
-         ]
-
+        ]
       },
       {
-      "date": "2016-03-16",
-      "title": "12. Pothole detection",
-      "readings": [
-      {
-          "href":"http://nms.csail.mit.edu/papers/p2-mobisys-2008.pdf",
-          "title":"The Pothole Patrol: Using a Mobile Sensor Network for Road Surface Monitoring"
-      },
+        "date": "2016-03-16",
+        "title": "12. Pothole detection",
+        "readings": [
           {
-                            "href": "reading_assignments.html#2016-03-16",
+            "href":"http://nms.csail.mit.edu/papers/p2-mobisys-2008.pdf",
+            "title":"The Pothole Patrol: Using a Mobile Sensor Network for Road Surface Monitoring"
+          },
+          {
+            "href": "reading_assignments.html#2016-03-16",
             "title": "Reading Question"
-
           }
-
-
-      ],
-     "materials": [
+        ],
+        "materials": [
           {
             "href": "materials/pothole-slides.pdf",
             "title": "(Slides)"
@@ -351,9 +342,7 @@
             "href": "materials/pothole-demo.zip",
             "title": "(Python Demos &mdash; See README.txt)"
           }
-
-         ]
-
+        ]
       }
     ]
   },
@@ -362,7 +351,8 @@
     "events": [
       {
         "date": "2016-03-21<br>to<br>2016-03-25"
-      }]
+      }
+    ]
   },
   {
     "module": "Map-matching and map inference",
@@ -418,19 +408,18 @@
       }
     ]
   },
-
   {
     "module": "Acoustic and image sensing",
     "events": [
-      
       {
         "date": "2016-04-04",
         "title": "15. Acoustic sensing",
         "readings": [
-            {
-                "href": "http://ieeexplore.ieee.org.libproxy.mit.edu/xpl/login.jsp?tp=&arnumber=4505488&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D4505488",
-                "title": "VoxNet: An Interactive, Rapidly-Deployable Acoustic Monitoring Platform (requires MIT Certs)"
-            }]
+          {
+            "href": "http://ieeexplore.ieee.org.libproxy.mit.edu/xpl/login.jsp?tp=&arnumber=4505488&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D4505488",
+            "title": "VoxNet: An Interactive, Rapidly-Deployable Acoustic Monitoring Platform (requires MIT Certs)"
+          }
+        ]
       },
       {
         "date": "2016-04-06",
@@ -453,13 +442,20 @@
         ]
       },
       {
-      "date": "2016-04-13",
-      "title": "17. Continuous object recognition",
-      "readings": [
-      {
-          "href":"http://nms.csail.mit.edu/papers/index.php?detail=236",
-          "title":"Glimpse: Continuous, Real-Time Object Recognition on Mobile Devices"
-      }]
+        "date": "2016-04-13",
+        "title": "17. Continuous object recognition",
+        "readings": [
+          {
+            "href":"http://nms.csail.mit.edu/papers/index.php?detail=236",
+            "title":"Glimpse: Continuous, Real-Time Object Recognition on Mobile Devices"
+          }
+        ],
+        "materials": [
+          {
+            "href":"lectures/lec17-glimpse.pdf",
+            "title":"(Slides)"
+          }
+        ]
       }
     ]
   },
