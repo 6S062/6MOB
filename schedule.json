@@ -133,12 +133,8 @@
         ],
         "materials": [
           {
-            "href": "lectures/lec5-networkintro.pptx",
-            "title": "(Slides)"
-          },
-          {
             "href": "lectures/lec5-networkintro.pdf",
-            "title": "(PDF)"
+            "title": "(Slides)"
           }
         ]
       },
@@ -167,12 +163,8 @@
         ],
         "materials": [
           {
-            "href": "lectures/lec6-meshetx.pptx",
-            "title": "(Slides)"
-          },
-          {
             "href": "lectures/lec6-meshetx.pdf",
-            "title": "(Notes)"
+            "title": "(Slides)"
           }
         ]
       },
@@ -187,7 +179,7 @@
         ],
         "materials": [
           {
-            "href": "lectures/lec7-leach.pptx",
+            "href": "lectures/lec7-leach.pdf",
             "title": "(Slides)"
           }
         ]
@@ -378,12 +370,8 @@
         ],
         "materials": [
           {
-            "href": "lectures/ctrack.pptx",
-            "title": "(Slides)"
-          },
-          {
             "href": "lectures/lec13-ctrack.pdf",
-            "title": "(PDF)"
+            "title": "(Slides)"
           }
         ]
       },
@@ -432,12 +420,8 @@
         ],
         "materials": [
           {
-            "href":"lectures/ShooterSlides.ppt",
-            "title":"(Slides)"
-          },
-          {
             "href":"lectures/lec16-shooter.pdf",
-            "title":"(PDF)"
+            "title":"(Slides)"
           }
         ]
       },
