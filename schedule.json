@@ -407,6 +407,12 @@
             "href": "http://ieeexplore.ieee.org.libproxy.mit.edu/xpl/login.jsp?tp=&arnumber=4505488&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D4505488",
             "title": "VoxNet: An Interactive, Rapidly-Deployable Acoustic Monitoring Platform (requires MIT Certs)"
           }
+        ],
+        "materials": [
+          {
+            "href": "lectures/lec15-voxnet.pdf",
+            "title": "(Slides)"
+          }
         ]
       },
       {
