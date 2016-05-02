@@ -454,7 +454,17 @@
     "events": [
       {
         "date": "2016-04-20",
-        "title": "In-class quiz, 11 am - 12:30 pm"
+        "title": "In-class quiz, 11 am - 12:30 pm",
+        "materials": [
+          {
+            "href":"quiz.pdf",
+            "title":"(Quiz)"
+          },
+          {
+            "href":"quiz_solutions.pdf",
+            "title":"(Solutions)"
+          }
+        ]
       }
     ]
   }
