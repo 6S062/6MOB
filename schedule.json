@@ -144,7 +144,7 @@
         "assignments": [
           {
             "href": "lab1.html",
-            "title": "Due: Lab1"
+            "title": "Due: Lab 1"
           }
         ]
       },
@@ -463,6 +463,31 @@
           {
             "href":"quiz_solutions.pdf",
             "title":"(Solutions)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "module": "Projects",
+    "events": [
+      {
+        "date": "2016-05-10",
+        "title": "",
+        "assignments": [
+          {
+            "href":"presentation.html#abstract",
+            "title":"Poster abstracts due"
+          }
+        ]
+      },
+      {
+        "date": "2016-05-11",
+        "title": "Poster session, 11 am - 12:30&nbsp;pm",
+        "assignments": [
+          {
+            "href":"presentation.html",
+            "title":"Posters, Presentations, and Demos due"
           }
         ]
       }
