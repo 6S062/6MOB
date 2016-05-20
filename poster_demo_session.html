@@ -13,13 +13,13 @@
             margin-left:auto; 
             margin-right:auto;
             width:80%;
-            max-width:1000px;
+            max-width:940px;
             border:none;
         }
 
         table.projects td.title {
             padding-right:50px;
-            width:800px;
+            width:500px;
             border:none;
             padding-bottom:10px;
         }
@@ -37,6 +37,7 @@
         }
 
         table.projects td.left {
+            padding-left:10px;
             padding-right:36px;
             padding-top:0;
             margin-top:0;
@@ -54,7 +55,7 @@
             padding:0;
             margin:0;
             padding-top:5px;
-            max-width:100%;
+            max-width:400px;
             border:none;
         }
 
@@ -69,6 +70,79 @@
             display:block;
         }
 
+        table.projects td.buttons {
+            border:none;
+            padding:0;
+            text-align:right;
+            max-width:400px;
+            vertical-align:middle;
+        }
+
+        table.projects td.buttons a {
+            vertical-align:middle;
+            text-decoration:none;
+            cursor:pointer;
+            display:inline-block;
+            width:60px;
+            height:50px;
+            padding:0;
+            margin:0;
+            margin-left:6px;
+            background-color:#bbbbc2;
+            text-align:center;
+            transition: all 0.25s ease-in;
+            color:rgba(0,0,0,0);
+            background-image:none;
+            position:relative;
+            line-height:20px;
+            padding-top:10px;
+        }
+
+        table.projects td.buttons a:hover {
+            color: #000;
+        }
+
+        table.projects td.buttons a img {
+            opacity:1.0;
+            transition: all 0.25s ease-in;
+            box-shadow:none;
+            border:none;
+            padding:0;
+            margin:0;
+            position:absolute;
+        }
+
+        img.repo {
+            width:51px;
+            height:55px;
+            left:6px;
+            top:5px;
+        }
+
+        img.pdf {
+            width:42px;
+            height:40px;
+            left:10px;
+            top:10px;
+        }
+
+        img.video {
+            width:42px;
+            height:40px;
+            left:10px;
+            top:10px;
+        }
+
+        img.data {
+            width:42px;
+            height:41px;
+            left:9px;
+            top:10px;
+        }
+
+        table.projects td.buttons a:hover img {
+            opacity:0.0;
+        }
     </style>
 </head>
 <body>
@@ -94,10 +168,14 @@
 
             <table class="projects">
                 <tr>
-                    <td colspan="2" class="title">
+                    <td class="title">
                         <img src="images/noun_251228_cc.svg">
                         <h5>Activity Recognition and Correction for Weight Lifting</h5>
                         <h6>Katie Bartel, Kwame Efah</h6>
+                    </td>
+                    <td class="buttons">
+                        <a target="_blank" href="posters/bartel-efah.pdf">Poster<br>(PDF)<img class="pdf" src="images/pdf.svg"></a>
+                        <a target="_blank" href="https://github.com/kwbartel/BenchBuddy">Code<br>Repo<img class="repo" src="images/repo.svg"></a>
                     </td>
                 </tr>
                 <tr>
@@ -123,10 +201,14 @@
                 </tr>
 
                 <tr>
-                    <td colspan="2" class="title">
+                    <td class="title">
                         <img src="images/noun_521.svg">
                         <h5>Verge, Estimated Time of Arrival for Pedestrian Commutes</h5>
                         <h6>Jorrie Brettin, Brendan Chang</h6>
+                    </td>
+                    <td class="buttons">
+                        <a target="_blank" href="posters/brettin-chang.pdf">Poster<br>(PDF)<img class="pdf" src="images/pdf.svg"></a>
+                        <a target="_blank" href="https://github.com/BrendanSChang/verge">Code<br>Repo<img class="repo" src="images/repo.svg"></a>
                     </td>
                 </tr>
                 <tr>
@@ -183,10 +265,14 @@
                 </tr>
 
                 <tr>
-                    <td colspan="2" class="title">
+                    <td class="title">
                         <img src="images/noun_75728_cc.svg">
                         <h5>The MIT Tour-ing Machine</h5>
                         <h6>Natasha Consul, Smriti Pramanick</h6>
+                    </td>
+                    <td class="buttons">
+                        <a target="_blank" href="posters/consul-pramanick.pdf">Slides<br>(PDF)<img class="pdf" src="images/pdf.svg"></a>
+                        <a target="_blank" href="https://github.com/smritip/mit-touring-machine">Code<br>Repo<img class="repo" src="images/repo.svg"></a>
                     </td>
                 </tr>
                 <tr>
@@ -207,10 +293,16 @@
                 </tr>
 
                 <tr>
-                    <td colspan="2" class="title">
+                    <td class="title">
                         <img src="images/noun_212277_cc.svg">
                         <h5>Collaborative Automated Collision Resolution for Self-Driving Cars</h5>
                         <h6>Dillon Dumesnil, Jordan Lucier, Alexander Nordin</h6>
+                    </td>
+                    <td class="buttons">
+                        <a target="_blank" href="posters/dumesnil-lucier-nordin.pdf">Slides<br>(PDF)<img class="pdf" src="images/pdf.svg"></a>
+                        <a target="_blank" href="https://youtu.be/1jEQFhUjNEI">Video<br>Demo<img class="video" src="images/video.svg"></a>
+                        <a target="_blank" href="https://github.com/jlucier/6.S062-car-swarm">Code<br>Repo<img class="repo" src="images/repo.svg"></a>
+                        <a target="_blank" href="https://github.com/jlucier/car_tracker">Code<br>Repo<img class="repo" src="images/repo.svg"></a>
                     </td>
                 </tr>
                 <tr>
@@ -234,10 +326,16 @@
                 </tr>
 
                 <tr>
-                    <td colspan="2" class="title">
+                    <td class="title">
                         <img src="images/noun_15818_cc.svg">
                         <h5>SureLock: Intention-based BLE Locking Scheme</h5>
                         <h6>Austin Freel, Andrew Titus</h6>
+                    </td>
+                    <td class="buttons">
+                        <a target="_blank" href="posters/freel-titus.pdf">Poster<br>(PDF)<img class="pdf" src="images/pdf.svg"></a>
+                        <a target="_blank" href="https://youtu.be/MFM_eqwavqg">Video<br>Demo<img class="video" src="images/video.svg"></a>
+                        <a target="_blank" href="https://github.com/atitus5/6s062-Project">Code<br>Repo<img class="repo" src="images/repo.svg"></a>
+                        <a target="_blank" href="https://github.com/atitus5/6s062-Project/tree/master/logs">Data<br>Repo<img class="data" src="images/data.svg"></a>
                     </td>
                 </tr>
                 <tr>
@@ -259,10 +357,15 @@
                 </tr>
 
                 <tr>
-                    <td colspan="2" class="title">
+                    <td class="title">
                         <img src="images/noun_110488_cc.svg">
                         <h5>Air gesture recognizer on mobile devices</h5>
                         <h6>Hayley Song, Chongyuan Xiang</h6>
+                    </td>
+                    <td class="buttons">
+                        <a target="_blank" href="posters/song-xiang.pdf">Slides<br>(PDF)<img class="pdf" src="images/pdf.svg"></a>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=jmgfW-EGMBM">Video<br>Demo<img class="video" src="images/video.svg"></a>
+                        <a target="_blank" href="https://github.com/xiangcy/AirGestureClassifier">Code<br>Repo<img class="repo" src="images/repo.svg"></a>
                     </td>
                 </tr>
                 <tr>
@@ -286,10 +389,14 @@
                 </tr>
 
                 <tr>
-                    <td colspan="2" class="title">
+                    <td class="title">
                         <img src="images/noun_28242_cc.svg">
                         <h5>AirMuler: An Anonymous Data Muling Framework</h5>
                         <h6>Ankush Gupta, Justin Martinez</h6>
+                    </td>
+                    <td class="buttons">
+                        <a target="_blank" href="posters/gupta-martinez.pdf">Slides<br>(PDF)<img class="pdf" src="images/pdf.svg"></a>
+                        <a target="_blank" href="https://github.com/ankushg/airmuler">Code<br>Repo<img class="repo" src="images/repo.svg"></a>
                     </td>
                 </tr>
                 <tr>
@@ -319,10 +426,16 @@
                 </tr>
 
                 <tr>
-                    <td colspan="2" class="title">
+                    <td class="title">
                         <img src="images/noun_2108_cc.svg">
                         <h5>Matching Inertial Logs to Video Tracking for Indoor Positioning</h5>
                         <h6>Eric Lau, Geronimo Mirano, Harihar Subramanyam</h6>
+                    </td>
+                    <td class="buttons">
+                        <a target="_blank" href="posters/lau-mirano-subramanyam.pdf">Poster<br>(PDF)<img class="pdf" src="images/pdf.svg"></a>
+                        <a target="_blank" href="https://www.youtube.com/playlist?list=PLFIqHUP4pFcmnJPeBiSrUFxtCPGzVGleV">Video<br>Demo<img class="video" src="images/video.svg"></a>
+                        <a target="_blank" href="https://github.com/hariharsubramanyam/ObjectTracker">Code<br>Repo<img class="repo" src="images/repo.svg"></a>
+                        <a target="_blank" href="https://github.com/hariharsubramanyam/TrackerData">Data<br>Repo<img class="data" src="images/data.svg"></a>
                     </td>
                 </tr>
                 <tr>
@@ -350,10 +463,16 @@
                 </tr>
 
                 <tr>
-                    <td colspan="2" class="title">
+                    <td class="title">
                         <img src="images/noun_143916_cc.svg">
                         <h5>Lookout: A Distributed Sensing System for Arduino and Raspberry Pi</h5>
                         <h6>Katie Siegel, Rachel Wang</h6>
+                    </td>
+                    <td class="buttons">
+                        <a target="_blank" href="posters/siegel-wang.pdf">Poster<br>(PDF)<img class="pdf" src="images/pdf.svg"></a>
+                        <a target="_blank" href="https://github.com/rswang/6s062-mob">Code<br>Repo<img class="repo" src="images/repo.svg"></a>
+                        <a target="_blank" href="https://github.com/kathrynsiegel/6MOB-project-arduino">Code<br>Repo<img class="repo" src="images/repo.svg"></a>
+                        <a target="_blank" href="https://github.com/kathrynsiegel/6MOB-project-pi">Code<br>Repo<img class="repo" src="images/repo.svg"></a>
                     </td>
                 </tr>
                 <tr>
@@ -391,6 +510,9 @@
             Donkey by Luis Prado<br>
             Tracking Location by Friedrich Santana<br>
             internet of things by Felix Westphal
+            PDF File by Laurent Canivet
+            Video by Milky - Digital innovation
+            Graph by Simple Icons
             </p>
 
         </section>
