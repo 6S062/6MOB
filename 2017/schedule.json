@@ -43,8 +43,7 @@
 
         "assignments": [
           {
-            "title": "Out: Lab 0",
-            "href": "lab0.html"
+            "title": "Out: Lab 0"
           }
         ]
       },
@@ -67,12 +66,10 @@
         ],
         "assignments": [
           {
-            "title": "Due: Lab 0",
-            "href": "lab0.html"
+            "title": "Due: Lab 0"
           },
           {
-            "title": "Out: Lab 1",
-            "href": "lab1.html"
+            "title": "Out: Lab 1"
           }
         ],
         "materials": [
@@ -136,11 +133,9 @@
         "title": "",
         "assignments": [
           {
-            "href": "lab1.html",
             "title": "Due: Lab 1"
           },
           {
-            "href": "lab2.html",
             "title": "Out: Lab 2"
           }
         ]
@@ -269,8 +264,7 @@
         "title": "No Class (Friday)",
         "assignments": [
           {
-            "title": "Due: Lab 2",
-            "href": "lab2.html"
+            "title": "Due: Lab 2"
           }
         ]
       },
@@ -350,8 +344,7 @@
         ],
         "assignments": [
           {
-            "title": "Out: Lab 3",
-            "href": "lab3.html"
+            "title": "Out: Lab 3"
           }
         ],
         "materials": [
@@ -424,8 +417,7 @@
         ],
         "assignments": [
           {
-            "title": "Due: Lab 3",
-            "href": "lab3.html"
+            "title": "Due: Lab 3"
           }
         ],
         "materials": [
