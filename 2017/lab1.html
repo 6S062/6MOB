@@ -10,7 +10,9 @@
     <script>
     hljs.initHighlightingOnLoad();
     </script>
+    <script src="javascripts/tabs.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/tabs.css">
     <title>6.S062</title>
 </head>
 
@@ -60,7 +62,7 @@
                 In this lab, you will start by developing a small standalone application to measure location data, and then you will integrate location API support into Anteater.
             </p>
             <p>
-                Labs in 6.S062 consist of a number of tasks, each of which has one or more deliverables. This lab has 2 sections, the first dealing with the standalone app and the second with anteater.
+                Labs in 6.S062 consist of a number of tasks, each of which has one or more deliverables. This lab has 2 sections, the first dealing with the standalone app and the second with Anteater.
             </p>
 <p> You may work in this lab in pairs. </p>
 
@@ -72,7 +74,12 @@
             <p>Your job is to implement the calls to the iOS CoreLocation API to request location updates at the desired accuracy, and then compare the accuracy and power drain of the different approaches.</p>
             <h3 id="s1_getting_started">Getting Started</h3>
             <ol>
-                <li>Download the PositionLogger source code downloading it from <a href="PositionLogger.tar.gz">here</a>. Once you have downloaded it unzip it by typing "tar -xvzf PositionLogger.tar.gz".  This will create a directory called "PositionLogger-Blank", containing an XCode project.
+                <li>Download the PositionLogger source code:</li>
+                <ul>
+                    <li><a href="PositionLogger.tar.gz">Objective-C</a></li>
+                    <li><a href="PositionLogger-swift.tar.gz">Swift</a></li>
+                </ul>
+                <li>Unzip it by typing "tar -xvzf PositionLogger.tar.gz".  This will create a directory called "PositionLogger-Blank", containing an XCode project.</li>
                 <li>Open PositionLogger.xcodeproj in XCode on a Mac (recall that the lab in 38-500 has Macs available for your use).  Compile and run the app, either on your device or in the simulator (use any of the iPhone simulators.) It should show a screen like what you see above. Clicking on the Start button should cause it to enter a recording state, but it won't actually be writing location data until you add the code to record location.</li>
             </ol>
             <h3 id="ios_loc_primer">iOS Location Primer</h3>
@@ -83,15 +90,17 @@
             <p>
                 In the viewDidLoad method of ViewController.m, we've already created an instance of a CLLocationManager object for you to use and initialized some of the relevant properties of it. These are the lines at the beginning of the viewDidLoad method:
             </p>
-            <code class="objectivec hljs">
-            <pre>
-              1  _locmgr = [[CLLocationManager alloc] init];
-              2  [_locmgr requestAlwaysAuthorization];
-              3  _locmgr.allowsBackgroundLocationUpdates = TRUE;
-              4  _locmgr.delegate = self;
-              5  _locmgr.distanceFilter = kCLDistanceFilterNone;
-              6  [_locmgr disallowDeferredLocationUpdates];</pre>
-            </code>
+            <ul class="tab">
+                <li><a href="javascript:void(0)" class="tablinks tab1 active" onclick="switchTab(1);">Objective-C</a></li>
+                <li><a href="javascript:void(0)" class="tablinks tab2" onclick="switchTab(2);">Swift</a></li>
+            </ul>
+            <pre class="tabcontent tab1"><code class="objectivec hljs">1  _locmgr = [[CLLocationManager alloc] init];
+2  [_locmgr requestAlwaysAuthorization];
+3  _locmgr.allowsBackgroundLocationUpdates = TRUE;
+4  _locmgr.delegate = self;
+5  _locmgr.distanceFilter = kCLDistanceFilterNone;
+6  [_locmgr disallowDeferredLocationUpdates];</code></pre>
+            <pre class="tabcontent tab2"><code class="swift hljs">TODO</code></pre>
 
             <p>
                 You can read about the details of the methods in the CLLocationManager documentation, but the gist of this code is that we are requesting that:
@@ -298,7 +307,7 @@ Start by downloading the <a href="anteater.tar.gz">Anteater App Skeleton</a>.  U
                 <li>Plots of the battery drain for Task 3</li>
                 <li>A working compass demonstration for Task 4</li>
             </ul>
-	    <p>A TA will checkoff your lab when you are finished. We will post times when checkoffs will happen later. </p>
+        <p>A TA will checkoff your lab when you are finished. We will post times when checkoffs will happen later. </p>
             <!-- FOOTER  -->
             <div id="footer_wrap" class="outer">
                 <footer class="inner">

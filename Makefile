@@ -1,4 +1,4 @@
-all: index.html
+all: 2017/index.html
 
-index.html: schedule.json build.py
+2017/index.html: 2017/schedule.json build.py
 	./build.py $< $@

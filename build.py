@@ -52,7 +52,7 @@ header = """
 
       <h2> Labs and Software Development </h2>
 
-      The class will involving programming for iPhones in XCode, which requires a Mac for development.  There are Macs the EECS lab 38-530 available for our use.  See <a href="https://www.eecs.mit.edu/resources/eecs-instructional-laboratories">here</a> for lab hours. <!-- The W20 athena cluster also has Macs with XCode installed. (XCode can be installed on these Macs, but it isn't already installed -Favyen) -->  We will loan out iPhones for you use if you do not have a personal iPhone.
+      The class will involving programming for iPhones in XCode, which requires a Mac for development.  There are Macs the EECS lab 38-530 available for our use.  See <a href="https://www.eecs.mit.edu/resources/eecs-instructional-laboratories">here</a> for lab hours. The W20 athena cluster also has Macs with XCode installed (select XCode from Launchpad, and then enter your Athena username and password to accept the license agreement).  We will loan out iPhones for you use if you do not have a personal iPhone.
 <h2>
 <a id="readings-and-assignments" class="anchor" href="#readings-and-assignments" aria-hidden="true"><span class="octicon octicon-link"></span></a>Readings and Assignments</h2>
 
