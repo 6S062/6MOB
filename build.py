@@ -41,18 +41,18 @@ header = """
 
       <p>We will post the schedule of lectures, readings, and assignments for the course on this page.</p>
 
-      <p>The first day of class is Wednesday, February 3. <br>  Class meets Mondays and Wednesdays at 11:00-12:30 in 34-303.</p>
+      <p>The first day of class is Wednesday, February 8. <br>  Class meets Mondays and Wednesdays at 11:00-12:30 in 34-304.</p>
 
       <p>Please sign up for the course <a href="https://piazza.com/class/ijsinvo6sr44al">Piazza Site</a>, which we will use for discussions and announcements.</p>
 
       <h2> Staff </h2>
-      <b>Lecturers:</b> <ul> <li> Hari Balakrishnan (hari@csail.mit.edu) <li> Sam Madden (madden@csail.mit.edu)<br> </ul>
-      <b>TA:</b> <ul> <li> Peter Iannucci (iannucci@mit.edu)<br> </ul>
-      <b>Support Staff:</b> <ul> <li> Albert Carter (arcarter@csail.mit.edu) <li> Justin Anderson (jander@mit.edu) <br> </ul>
+      <b>Lecturers:</b> <ul> <li>Hari Balakrishnan (hari@csail.mit.edu)</li> <li>Sam Madden (madden@csail.mit.edu)</li> <br/> </ul>
+      <b>TA:</b> <ul> <li>Favyen Bastani (fbastani@mit.edu)</li> <li>Songtao He (songtao@mit.edu)</li> <br/> </ul>
+      <b>Support Staff:</b> <ul> <li>Albert Carter (arcarter@csail.mit.edu)</li> <li>Justin Anderson (jander@mit.edu)</li> <br/> </ul>
 
       <h2> Labs and Software Development </h2>
 
-      The class will involving programming for iPhones in XCode, which requires a Mac for development.  There are Macs the EECS lab 38-530 available for our use.  See <a href="https://www.eecs.mit.edu/resources/eecs-instructional-laboratories">here</a> for lab hours.  The W20 athena cluster also has Macs with XCode installed.  We will loan out iPhones for you use if you do not have a personal iPhone.
+      The class will involving programming for iPhones in XCode, which requires a Mac for development.  There are Macs the EECS lab 38-530 available for our use.  See <a href="https://www.eecs.mit.edu/resources/eecs-instructional-laboratories">here</a> for lab hours. <!-- The W20 athena cluster also has Macs with XCode installed. (XCode can be installed on these Macs, but it isn't already installed -Favyen) -->  We will loan out iPhones for you use if you do not have a personal iPhone.
 <h2>
 <a id="readings-and-assignments" class="anchor" href="#readings-and-assignments" aria-hidden="true"><span class="octicon octicon-link"></span></a>Readings and Assignments</h2>
 

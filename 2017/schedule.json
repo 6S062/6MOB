@@ -1,0 +1,463 @@
+[
+  {
+    "module": "1. Introduction to the Course",
+    "events": [
+      {
+        "date": "2017-02-08",
+        "materials": [
+          {
+            "title": "(Slides)"
+          },
+          {
+            "title": "(Notes)"
+          }
+        ],
+        "readings": [
+          {
+            "title": "None"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "module": "Positioning",
+    "events": [
+      {
+        "date": "2017-02-13",
+        "title": "2. Intro to Positioning; Trilateration, Location-Based Services; APIs",
+        "readings": [
+          {
+            "href": "http://onlinelibrary.wiley.com.libproxy.mit.edu/doi/10.1002/0470092335.ch6/pdf",
+            "title": "Location-based Services: Fundamentals and Operation, Chapter 6"
+          }
+        ],
+        "materials": [
+          {
+            "title": "(Slides)"
+          },
+          {
+            "title": "(Notes)"
+          }
+        ],
+
+        "assignments": [
+          {
+            "title": "Out: Lab 0",
+            "href": "lab0.html"
+          }
+        ]
+      },
+      {
+        "date": "2017-02-15",
+        "title": "3. GPS",
+        "readings": [
+          {
+            "href": "https://en.wikipedia.org/wiki/Global_Positioning_System",
+            "title": "Wikipedia: Global Positioning System"
+          },
+          {
+            "href": "http://www.cc.gatech.edu/~keith/classes/ubicomplexity/pdfs/infra/lamarca-placelab.pdf",
+            "title": "Place Lab: Device Positioning Using Radio Beacons in the Wild"
+          },
+          {
+            "href": "reading_assignments.html#2017-02-15",
+            "title": "Reading Question"
+          }
+        ],
+        "assignments": [
+          {
+            "title": "Due: Lab 0",
+            "href": "lab0.html"
+          },
+          {
+            "title": "Out: Lab 1",
+            "href": "lab1.html"
+          }
+        ],
+        "materials": [
+          {
+            "title": "(Slides+<br>Notes)"
+          }
+        ]
+      },
+      {
+        "date": "2017-02-22",
+        "title": "4. Indoor Location",
+        "readings": [
+          {
+            "href": "http://research.microsoft.com/en-us/people/padmanab/infocom2000.pdf",
+            "title": "RADAR: An In-Building RF-based User Location and Tracking System"
+          },
+          {
+            "href": "http://nms.lcs.mit.edu/papers/cricket.pdf",
+            "title": "The Cricket Location-Support System"
+          },
+          {
+            "href": "reading_assignments.html#2017-02-22",
+            "title": "Reading Question"
+          }
+        ],
+        "materials": [
+          {
+            "title": "(Slides)"
+          },
+          {
+            "title": "(Notes)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "module": "Networking, In-network Computation, Data Muling",
+    "events": [
+      {
+        "date": "2017-02-27",
+        "title": "5. Connectivity Overview and BLE",
+        "readings": [
+          {
+            "href": "http://iot.stanford.edu/pubs/zachariah-gateway-hotmobile15.pdf",
+            "title": "The Internet of Things Has a Gateway Problem"
+          },
+          {
+            "href": "reading_assignments.html#2017-02-27",
+            "title": "Reading Question"
+          }
+        ],
+        "materials": [
+          {
+            "title": "(Slides)"
+          }
+        ]
+      },
+      {
+        "date": "2017-02-30",
+        "title": "",
+        "assignments": [
+          {
+            "href": "lab1.html",
+            "title": "Due: Lab 1"
+          }
+        ]
+      },
+      {
+        "date": "2017-03-01",
+        "title": "6. Mesh and Multi-Hop Wireless Networks",
+        "readings": [
+          {
+            "href": "https://pdos.csail.mit.edu/papers/grid:mobicom03/paper.pdf",
+            "title": "ETX: A High-Throughput Path Metric for Multi-Hop Wireless Routing"
+          },
+          {
+            "href": "reading_assignments.html#2017-03-01",
+            "title": "Reading Question"
+          }
+        ],
+        "materials": [
+          {
+            "title": "(Slides)"
+          }
+        ]
+      },
+      {
+        "date": "2017-03-06",
+        "title": "7. Energy-Aware Wireless Networking",
+        "readings": [
+          {
+            "href": "http://ieeexplore.ieee.org.libproxy.mit.edu/stamp/stamp.jsp?tp=&arnumber=1045297",
+            "title": "LEACH: An Application-Specific Protocol Architecture for Wireless Microsensor Networks"
+          }
+        ],
+        "materials": [
+          {
+            "title": "(Slides)"
+          }
+        ]
+      },
+      {
+        "date": "2017-03-08",
+        "title": "8. In-network Aggregation",
+        "readings": [
+          {
+            "href": "http://db.cs.berkeley.edu/papers/osdi02-tag.pdf",
+            "title": "TAG: a Tiny AGgregation Service for Ad-Hoc Sensor Networks"
+          },
+          {
+            "href": "reading_assignments.html#2017-03-08",
+            "title": "Reading Question"
+          }
+
+        ],
+        "assignments": [
+          {
+          }
+        ],
+        "materials": [
+          {
+            "title": "(Slides)"
+          },
+          {
+            "title": "(Notes)"
+          }
+        ]
+      },
+      {
+        "date": "2017-03-13",
+        "title": "9. Data Muling",
+        "readings": [
+          {
+            "href": "http://www.princeton.edu/~mrm/asplos-x_annot.pdf",
+            "title": "Energy-Efficient Computing for Wildlife Tracking: Design Tradeoffs and Early Experiences with ZebraNet"
+          },
+          {
+            "href": "reading_assignments.html#2017-03-13",
+            "title": "Reading Question"
+          }
+        ],
+        "assignments": [
+        ],
+        "materials": [
+          {
+            "title": "(Notes)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "module": "Inertial Sensing",
+    "events": [
+      {
+        "date": "2017-03-15",
+        "title": "10. Inertial Navigation",
+        "readings": [
+          {
+            "href":"http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/pbra017e_ch2",
+            "title":"Fundamental principles and historical developments of inertial navigation (requires MIT Certs)"
+          },
+          {
+            "href":"http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/pbra017e_ch3",
+            "title":"Basic principles of strapdown inertial navigation systems (requires MIT Certs)"
+          }
+        ],
+        "assignments": [
+          {
+            "title": "Due: Project Proposals",
+            "href": "https://github.mit.edu/pages/srmadden/6MOB/projects.html"
+          }
+       ],
+       "materials": [
+          {
+            "title": "(Slides)"
+          },
+          {
+            "title": "(Notes)"
+          },
+          {
+            "href": "materials/motion.zip",
+            "title": "(iOS Demo App)"
+          }
+         ]
+      },
+      {
+        "date": "2017-03-19",
+        "title": "No Class (Friday)",
+        "assignments": [
+          {
+            "title": "Due: Lab 2",
+            "href": "https://github.mit.edu/pages/srmadden/6MOB/lab2.html"
+          }
+        ]
+      },
+      {
+        "date": "2017-03-20",
+        "title": "11. Activity Recognition",
+        "readings": [
+          {
+            "href":"http://link.springer.com.libproxy.mit.edu/chapter/10.1007/978-3-540-24646-6_1",
+            "title":"Activity recognition from user-annotated acceleration data"
+          }
+        ],
+        "materials": [
+          {
+            "title": "(Slides)"
+          },
+          {
+            "title": "(Notes)"
+          },
+          {
+            "href": "materials/feature_test.zip",
+            "title": "(Python Demos &mdash; See README.txt)"
+          }
+        ]
+      },
+      {
+        "date": "2017-03-22",
+        "title": "12. Pothole detection",
+        "readings": [
+          {
+            "href":"http://nms.csail.mit.edu/papers/p2-mobisys-2008.pdf",
+            "title":"The Pothole Patrol: Using a Mobile Sensor Network for Road Surface Monitoring"
+          },
+          {
+            "href": "reading_assignments.html#2017-03-22",
+            "title": "Reading Question"
+          }
+        ],
+        "materials": [
+          {
+            "title": "(Slides)"
+          },
+          {
+            "title": "(Notes)"
+          },
+          {
+            "href": "materials/pothole-demo.zip",
+            "title": "(Python Demos &mdash; See README.txt)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "module": "<br>SPRING BREAK!<br>",
+    "events": [
+      {
+        "date": "2017-03-27<br>to<br>2017-03-31"
+      }
+    ]
+  },
+  {
+    "module": "Map-matching and map inference",
+    "events": [
+      {
+        "date": "2017-04-03",
+        "title": "13. Map-matching",
+        "readings": [
+          {
+            "href": "http://nms.csail.mit.edu/papers/index.php?detail=203",
+            "title": "Accurate, Low-Energy Trajectory Mapping for Mobile Devices"
+          },
+          {
+            "href": "reading_assignments.html#2017-04-03",
+            "title": "Reading Question"
+          }
+        ],
+        "assignments": [
+          {
+            "title": "Out: Lab 3",
+            "href": "lab3.html"
+          }
+        ],
+        "materials": [
+          {
+            "title": "(Slides)"
+          }
+        ]
+      },
+      {
+        "date": "2017-04-05",
+        "title": "14. Map inference",
+        "readings": [
+          {
+            "href": "http://dl.acm.org.libproxy.mit.edu/citation.cfm?id=2424333",
+            "title": "Map inference in the face of noise and disparity"
+          },
+          {
+            "href": "reading_assignments.html#2017-04-05",
+            "title": "Reading Question"
+          }],
+        "materials": [
+          {
+            "title": "(Slides)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "module": "Acoustic and image sensing",
+    "events": [
+      {
+        "date": "2017-04-10",
+        "title": "15. Acoustic sensing",
+        "readings": [
+          {
+            "href": "http://ieeexplore.ieee.org.libproxy.mit.edu/xpl/login.jsp?tp=&arnumber=4505488&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D4505488",
+            "title": "VoxNet: An Interactive, Rapidly-Deployable Acoustic Monitoring Platform (requires MIT Certs)"
+          }
+        ],
+        "materials": [
+          {
+            "title": "(Slides)"
+          }
+        ]
+      },
+      {
+        "date": "2017-04-12",
+        "title": "16. Shooter localization",
+        "readings": [
+          {
+            "href":"http://www.eecs.harvard.edu/~mdw/course/cs263/papers/simon-sensys04.pdf",
+            "title":"Sensor Network-Based Countersniper System"
+          }
+        ],
+        "materials": [
+          {
+            "title":"(Slides)"
+          }
+        ]
+      },
+      {
+        "date": "2017-04-19",
+        "title": "17. Continuous object recognition",
+        "readings": [
+          {
+            "href":"http://nms.csail.mit.edu/papers/index.php?detail=236",
+            "title":"Glimpse: Continuous, Real-Time Object Recognition on Mobile Devices"
+          }
+        ],
+        "materials": [
+          {
+            "title":"(Slides)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "module": "Quiz",
+    "events": [
+      {
+        "date": "2017-04-24",
+        "title": "In-class quiz, 11 am - 12:30 pm"
+      }
+    ]
+  },
+  {
+    "module": "Projects",
+    "events": [
+      {
+        "date": "2017-05-09",
+        "title": "",
+        "assignments": [
+          {
+            "href":"presentation.html#abstract",
+            "title":"Project titles and abstracts due"
+          }
+        ]
+      },
+      {
+        "date": "2017-05-10",
+        "title": "<a href=\"https://github.mit.edu/pages/srmadden/6MOB/poster_demo_session.html\">Poster session, 11 am - 12:30&nbsp;pm</a>",
+        "assignments": [
+          {
+            "href":"presentation.html",
+            "title":"Posters, Presentations, and Demos due"
+          }
+        ]
+      }
+    ]
+  }
+]

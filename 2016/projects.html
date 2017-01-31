@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title> 6.S062 Final Project</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+
+		<link rel="stylesheet" href="stylesheets/github-markdown.css">
+		<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+		</style>
+
+
+</head>
+
+<body>
+		<article class="markdown-body">
+
+
+<h1> 6.S062 Final Project Proposal </h1>
+
+<p>Project proposals are due Wednesday, March 9, by 5 pm ET. </p>
+
+<p><strong>PROJECT LOGISTICS</strong> </p>
+
+<p>We have provided a list of suggested projects at this end of this document. Please feel free to come up with your own ideas, or modify our suggestions in any way you want. Our suggestions are not complete specifications of projects. </p>
+
+<ol>
+<li><p><strong>Teams</strong>: Unless there are special circumstances approved by the course staff, you should work in teams of three. Feel free to use the class Piazza forum to find project partners. </p></li>
+<li><p><strong>Schedule</strong>: One- to two-page proposals (details below) are due by Wednesday, March 9, 2016. We will read the proposals carefully over the following few days and get back to you by email if we have any questions. Please don&#8217;t wait for us to get back to you; get started as soon as possible! You have about two months to carry out the project, which is ample if your proposal is focused and you start early, but not otherwise. </p></li>
+<li><p><strong>Proposal</strong>: A write-up in no more than two pages (11 point font or greater) that should contain the following items:</p>
+
+<ul>
+<li><p>Project title (a detailed title is better than a vague one; you can always change it later if you don&#8217;t like it!) and names of the team members with email addresses.</p></li>
+<li><p>A clear statement of the problem: a one-sentence summary followed by a one-paragraph explanation. This should identify the goal, question, or hypothesis you&#8217;re addressing.</p></li>
+<li><p>A clear statement of your methodology. I.e., how are you going to solve the problems you&#8217;ve raised and motivated in the previous paragraph?</p></li>
+<li><p>A statement of plan and schedule, to convince us (and yourself!) that you can complete this by the end of the term.</p></li>
+<li><p>A list of resources you need to accomplish your work, with special emphasis on important components you don&#8217;t yet have access to. Be as clear as you can in your requirements and we will work towards getting what you need as quickly as possible. If your request can&#8217;t be accommodated for any reason, we will try to get back to you about it as soon as we find out.</p></li>
+<li><p>Any other questions you have or clarifications you need from us. </p></li>
+</ul></li>
+</ol>
+
+<hr />
+
+<p><strong>PROJECT IDEAS</strong> </p>
+
+<p>On all these topics, feel free to consult the published literature. Building on prior work is not only allowed, but it is recommended when it makes sense. </p>
+
+<p><strong>Positioning and location</strong></p>
+
+<ul>
+<li><p>Location-based messaging: build a system where users can use your app to leave messages around campus, let people discover them on their phone (possibly use anthills to determine the location), and then use their phone to retrieve messages posted at that location.</p></li>
+<li><p>Campus art tour: build a system that uses BLE-peripherals deployed around campus to provide a tour of art, hacks, or other interesting features inside of buildings at MIT. We can provide a small number of sensors (5&#8211;10) to build a prototype system in one building (e.g., the Stata center.)</p></li>
+<li><p>Accurate BLE ranging: what is the best you can do? Conduct a rigorous set of experiments to evaluate your algorithm. How much better is it than iOS&#8217;s?</p></li>
+<li><p>Given a set of nodes (Arduinos and/or phones), arranged in some shape or geometry, using BLE ranging (for example), develop a distributed method to have the nodes self-configure into a consistent coordinate system.</p></li>
+<li><p>Implement the Cricket location system on laptops or smartphones using acoustic hardware available on these devices. (If it&#8217;s easier, do it on laptops.) Sound hardware on these devices seems to support the lower end of the ultrasonic frequency range. (One challenge in this project is it is not 100% clear whether it can be made to work, but if it can, it would be super-cool!)</p></li>
+<li><p>Battery-efficient indoor-outdoor detector: On a smartphone, develop a battery-efficient way to detect if the phone is indoors or outdoors. Evaluate it systematically and fairly. (No scheme is going to be 100% perfect.) Use all tricks at your disposal, including the use of inertial sensors, screen state, history, even allowing user labeling for training if you wish. And evaluate its battery drain (to first order, how much GPS does your solution use?) </p></li>
+</ul>
+
+<p><strong>Connectivity &amp; Networking</strong></p>
+
+<ul>
+<li><p>Build a mesh network with BLE-based radios and investigate different ways to select routes. Is the ETX metric really the best? How do different methods compare?</p></li>
+<li><p>Build a generic protocol stack for data muling which can easily be used by smartphone applications. The stack will retrieve data from sensor nodes, store them, and deliver them. Options to provide &#8220;custody transfer&#8221; and &#8220;end-to-end ACKs&#8221; back to sensor nodes may be things your stack supports (or not &#8211; your choice).</p></li>
+<li><p>Crowd or traffic estimation: using Wi-fi and/or BLE sniffers, could you estimate how many people walk by Stata (or other parts of campus) every day, and at different times of day? How would you measure the accuracy of your system? </p></li>
+</ul>
+
+<p><strong>Inertial sensing and its applications</strong></p>
+
+<ul>
+<li><p>Build a 2016 version of the <a href="http://nms.csail.mit.edu/papers/index.php?detail=180">Pothole Patrol</a> on iOS.</p></li>
+<li><p>Using phone sensors alone, can you detect the following actions: (a) a user holding the phone to their ear making a call, (b) a user typing on screen. No spying on apps. It&#8217;s OK to check screen state, but primarily you should use the phone sensors. In addition to developing the method, focus on evaluating it systematically and fairly. (No scheme is going to be 100% perfect.)</p></li>
+<li><p>Conduct a careful empirical evaluation of iOS&#8217;s M7 activity monitor. Define performance metrics, justify them, and measure how well M7 does. </p></li>
+</ul>
+
+<p><strong>Data cleaning and data quality</strong></p>
+
+<ul>
+<li><p>Automatic map production: using smartphone position and/or inertial sensors, develop a system and app to create maps. You can apply this to walking trails, for example, or to roads. You can decide the domain. As a bonus, publish your contributed tracks or trails to open street maps.</p></li>
+<li><p>Build a system that keeps track of common sequences of locations a user travels on a weekly basis, using iOS significant change, region monitoring APIs, and geo-coding APIs. The challenge here is filtering out locations that are infrequent from frequent origin/destinations, and determining when several nearby addresses are actually the same.</p></li>
+<li><p>&#8220;Air gestures&#8221;: build a system that uses the gyroscope and accelerometer to perform a range of &#8220;air gestures&#8221; e.g., to control lights in a building or send messages to friends. The challenge here is identifying which of several gestures a user performed. </p></li>
+</ul>
+
+<p><strong>Personal health and wellness</strong></p>
+
+<ul>
+<li><p>Existing smartphone apps are good at tracking some fitness activities like running and cycling, but don&#8217;t do a good job with many other sports. Build an exercise tracking app for a fitness activity of your choice. For example, can you use an iPhone or BLE device strapped to your arm to measure different types of weightlifting activities, or their intensity (by looking at acceleration and gyroscope signals)? Or can a similar configuration be used to reconstruct the sequence of plays in an outdoor game like basketball or soccer? Rowing? Skiing? Tennis?</p></li>
+<li><p>Fall detection: Detecting people falling is a classic problem that people have worked on (and continue to work on). Develop fall detection software with either: (1) wearable sensors (accel, gyro) prototyped on iOS or Arduino, or (2) cameras. (There are two distinct projects here.) </p></li>
+</ul>
+
+</article>
+</body> </html>
