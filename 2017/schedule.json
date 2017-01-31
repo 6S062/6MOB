@@ -132,12 +132,16 @@
         ]
       },
       {
-        "date": "2017-02-30",
+        "date": "2017-02-28",
         "title": "",
         "assignments": [
           {
             "href": "lab1.html",
             "title": "Due: Lab 1"
+          },
+          {
+            "href": "lab2.html",
+            "title": "Out: Lab 2"
           }
         ]
       },
@@ -244,7 +248,7 @@
         "assignments": [
           {
             "title": "Due: Project Proposals",
-            "href": "https://github.mit.edu/pages/srmadden/6MOB/projects.html"
+            "href": "projects.html"
           }
        ],
        "materials": [
@@ -261,12 +265,12 @@
          ]
       },
       {
-        "date": "2017-03-19",
+        "date": "2017-03-17",
         "title": "No Class (Friday)",
         "assignments": [
           {
             "title": "Due: Lab 2",
-            "href": "https://github.mit.edu/pages/srmadden/6MOB/lab2.html"
+            "href": "lab2.html"
           }
         ]
       },
@@ -418,6 +422,12 @@
             "title":"Glimpse: Continuous, Real-Time Object Recognition on Mobile Devices"
           }
         ],
+        "assignments": [
+          {
+            "title": "Due: Lab 3",
+            "href": "lab3.html"
+          }
+        ],
         "materials": [
           {
             "title":"(Slides)"
@@ -450,7 +460,7 @@
       },
       {
         "date": "2017-05-10",
-        "title": "<a href=\"https://github.mit.edu/pages/srmadden/6MOB/poster_demo_session.html\">Poster session, 11 am - 12:30&nbsp;pm</a>",
+        "title": "<a href=\"poster_demo_session.html\">Poster session, 11 am - 12:30&nbsp;pm</a>",
         "assignments": [
           {
             "href":"presentation.html",
