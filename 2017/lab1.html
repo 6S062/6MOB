@@ -100,7 +100,12 @@
 4  _locmgr.delegate = self;
 5  _locmgr.distanceFilter = kCLDistanceFilterNone;
 6  [_locmgr disallowDeferredLocationUpdates];</code></pre>
-            <pre class="tabcontent tab2"><code class="swift hljs">TODO</code></pre>
+            <pre class="tabcontent tab2"><code class="swift hljs">1 self.locationManager = CLLocationManager()
+2 self.locationManager?.requestAlwaysAuthorization()
+3 self.locationManager?.allowsBackgroundLocationUpdates = true
+4 self.locationManager?.delegate = self
+5 self.locationManager?.distanceFilter = kCLDistanceFilterNone
+6 self.locationManager?.disallowDeferredLocationUpdates()</code></pre>
 
             <p>
                 You can read about the details of the methods in the CLLocationManager documentation, but the gist of this code is that we are requesting that:
@@ -123,50 +128,87 @@
             <p>To acquire the log, you will need to modify the PositionLogger app to start capturing location samples when the "Start" button is tapped. Open the ViewController.m file. We have implemented most of this class for you -- scroll down and find the hitRecordStopButton method:
 </p>
 
-            <code class="objectivec hljs"><pre>
-            -(IBAction)hitRecordStopButton:(UIButton *)b {
-                if (!_isRecording) {
-                    [self.accuracyControl setEnabled:FALSE];
-                    [b setTitle:@"Stop" forState:UIControlStateNormal];
-                    _isRecording = TRUE;
-                    [self.recordingIndicator startAnimating];
-                    [self startRecordingLocationWithAccuracy:(LocationAccuracy)
-                    [self.accuracyControl selectedSegmentIndex]];
-                } else {
-                    [self.accuracyControl setEnabled:TRUE];
-                    [b setTitle:@"Start" forState:UIControlStateNormal];
-                    _isRecording = FALSE;
-                    [self.recordingIndicator stopAnimating];
-                    [self stopRecordingLocationWithAccuracy];
+            <ul class="tab">
+                <li><a href="javascript:void(0)" class="tablinks tab1 active" onclick="switchTab(1);">Objective-C</a></li>
+                <li><a href="javascript:void(0)" class="tablinks tab2" onclick="switchTab(2);">Swift</a></li>
+            </ul>
+            <pre class="tabcontent tab1"><code class="objectivec hljs">-(IBAction)hitRecordStopButton:(UIButton *)b {
+    if (!_isRecording) {
+        [self.accuracyControl setEnabled:FALSE];
+        [b setTitle:@"Stop" forState:UIControlStateNormal];
+        _isRecording = TRUE;
+        [self.recordingIndicator startAnimating];
+        [self startRecordingLocationWithAccuracy:(LocationAccuracy)
+        [self.accuracyControl selectedSegmentIndex]];
+    } else {
+        [self.accuracyControl setEnabled:TRUE];
+        [b setTitle:@"Start" forState:UIControlStateNormal];
+        _isRecording = FALSE;
+        [self.recordingIndicator stopAnimating];
+        [self stopRecordingLocationWithAccuracy];
 
-                }
-            }
-</pre></code>
+    }
+}</code></pre>
+            <pre class="tabcontent tab2"><code class="swift hljs">if(!self.isRecording) {
+    self.accuracyControl.isEnabled = false
+    sender.setTitle("Stop", for: UIControlState.normal)
+    self.isRecording = true
+    self.recordingIndicator.startAnimating()
+    switch self.accuracyControl.selectedSegmentIndex {
+    case 0:
+        self.startRecordingLocationWithAccuracy(LocationAccuracy.Cellular)
+    case 1:
+        self.startRecordingLocationWithAccuracy(LocationAccuracy.WiFi)
+    case 2:
+        self.startRecordingLocationWithAccuracy(LocationAccuracy.GPS)
+    default: ()
+    }
+} else {
+    self.accuracyControl.isEnabled = true
+    sender.setTitle("Start", for: UIControlState.normal)
+    self.isRecording = false
+    self.recordingIndicator.stopAnimating()
+    self.stopRecordingLocationWithAccuracy()
+}</code></pre>
 
             <p>This method calls startRecordingLocationWithAccuracy or stopRecordingLocationWithAccuracy as appropriate. You need to implement the body of these methods.</p>
             <h3 id="1.1">1.1 Implement startRecordingLocationWithAccuracy</h3>
             <p>startRecordingLocationWithAccuracy should set the desiredAccuracy property of the _locMgr object to the appropriate accuracy based on the supplied value of the acc argument. Note that iOS does not explicitly allow an application to request GPS, WiFi, or Cellular positioning -- instead it provides the following constants to choose from:</p>
-            <code class="objectivec hljs"><pre>
-              extern const CLLocationAccuracy kCLLocationAccuracyBestForNavigation;
-              extern const CLLocationAccuracy kCLLocationAccuracyBest;
-              extern const CLLocationAccuracy kCLLocationAccuracyNearestTenMeters;
-              extern const CLLocationAccuracy kCLLocationAccuracyHundredMeters;
-              extern const CLLocationAccuracy kCLLocationAccuracyKilometer;
-              extern const CLLocationAccuracy kCLLocationAccuracyThreeKilometers; </pre></code>
+            <pre><code class="objectivec hljs">extern const CLLocationAccuracy kCLLocationAccuracyBestForNavigation;
+extern const CLLocationAccuracy kCLLocationAccuracyBest;
+extern const CLLocationAccuracy kCLLocationAccuracyNearestTenMeters;
+extern const CLLocationAccuracy kCLLocationAccuracyHundredMeters;
+extern const CLLocationAccuracy kCLLocationAccuracyKilometer;
+extern const CLLocationAccuracy kCLLocationAccuracyThreeKilometers;</code></pre>
             <h3 id="1.2">1.2 Implement stopRecordingLocationWithAccuracy</h3>
-            <p>stopRecordingLocationWithAccuracy just needs to call stopUpdatingLocation on the _locMgr object. (It's OK to call this function on the _locMgr even if it is already stopped.)</p>
+            <p>stopRecordingLocationWithAccuracy just needs to call stopUpdatingLocation on the CLLocationManager object. (It's OK to call this function on the CLLocationManager even if it is already stopped.)</p>
             <h3 id="1.3">1.3 Implementing didUpdateLocations</h3>
             <p>
-                The next step is to implement code to log position updates as they arrive. We've already set up the instance of ViewController.m as the delegate of the _locMgr object. This means that it will call the didUpdateLocations method on ViewController.m when a location update is available. You need to implement this method. Its signature is as follows:</p>
+                The next step is to implement code to log position updates as they arrive. We've already set up the instance of ViewController.m as the delegate of the CLLocationManager object. This means that it will call the didUpdateLocations method on ViewController.m when a location update is available. You need to implement this method. Its signature is as follows:</p>
             <code class="objectivec hljs"><pre> - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations;</pre></code>
-            <p style="background-color: #CCCCFF">Tip: You can find this definition in the CLLocationManager.h iOS header file, which you can open by typing ⌘-shift-O and then entering the first few characters of the file's name.</p>
-            <p>Your implementation of didUpdateLocations should iterate through the locations and log them to the file. We've provided a method logLineToDataFile that logs an NSString object to the log file (which you can then email to yourself using the email button.)</p>
-            <p>In the later part of this lab, you're going to visualize and analyze this data, so you'll need log at least the timestamp of the reading, the latitude, the longitude, the horizontal accuracy, and the battery level of the device. To get the current battery level you can call:</p>
-            <code class="objectivec hljs"><pre>[[UIDevice currentDevice] batteryLevel];</pre></code>
-            <p>We'd also suggest logging the course (bearing) and speed attributes from the supplied CLLocation objects. For time, we suggest just converting the timestamp (NSDate) object in each CLLocation to a Unix time stamp by calling [location.timestamp timeIntervalSince1970] on it.</p>
+            <p style="background-color: #CCCCFF">Tip for Objective-C: You can find this definition in the CLLocationManager.h iOS header file, which you can open by typing ⌘-shift-O and then entering the first few characters of the file's name.</p>
+            <p>Your implementation of didUpdateLocations should iterate through the locations and log them to the file. We've provided a method logLineToDataFile that logs a string (NSString object for Objective-C, String for Swift) to the log file (which you can then email to yourself using the email button.)</p>
+            <p>In the later part of this lab, you're going to visualize and analyze this data, so you'll need to at minimum log the reading's timestamp, latitude, longitude, and horizontal accuracy, along with the battery level of the device. To get the current battery level you can call:</p>
+            <ul class="tab">
+                <li><a href="javascript:void(0)" class="tablinks tab1 active" onclick="switchTab(1);">Objective-C</a></li>
+                <li><a href="javascript:void(0)" class="tablinks tab2" onclick="switchTab(2);">Swift</a></li>
+            </ul>
+            <pre class="tabcontent tab1"><code class="objectivec hljs">[[UIDevice currentDevice] batteryLevel];</code></pre>
+            <pre class="tabcontent tab2"><code class="swift hljs">UIDevice.current.batteryLevel</code></pre>
+            <p>We'd also suggest logging the course (bearing) and speed attributes from the supplied CLLocation objects. For time, we suggest just converting the timestamp (NSDate) object in each CLLocation to a Unix time stamp:</p>
+            <ul class="tab">
+                <li><a href="javascript:void(0)" class="tablinks tab1 active" onclick="switchTab(1);">Objective-C</a></li>
+                <li><a href="javascript:void(0)" class="tablinks tab2" onclick="switchTab(2);">Swift</a></li>
+            </ul>
+            <pre class="tabcontent tab1"><code class="objectivec hljs">[location.timestamp timeIntervalSince1970]</code></pre>
+            <pre class="tabcontent tab2"><code class="swift hljs">location.timestamp.timeIntervalSince1970</code></pre>
             <p>Note that we currently write a header at the start of the log file in the viewDidLoad method:</p>
-            <code class="objectivec hljs"><pre>
-      [self logLineToDataFile:@"Time,Lat,Lon,Altitude, Accuracy,Heading,Speed,Battery\n"];</pre></code>
+            <ul class="tab">
+                <li><a href="javascript:void(0)" class="tablinks tab1 active" onclick="switchTab(1);">Objective-C</a></li>
+                <li><a href="javascript:void(0)" class="tablinks tab2" onclick="switchTab(2);">Swift</a></li>
+            </ul>
+            <pre class="tabcontent tab1"><code class="objectivec hljs">[self logLineToDataFile:@"Time,Lat,Lon,Altitude, Accuracy,Heading,Speed,Battery\n"];</code></pre>
+            <pre class="tabcontent tab2"><code class="swift hljs">self.logLineToDataFile("Time,Lat,Lon,Altitude,Accuracy,Heading,Speed,Battery\n")</code></pre>
             <p>
                 You may want to modify this depending on what you choose to log.
             </p>
