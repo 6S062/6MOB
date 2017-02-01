@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="6.S062 : Mobile and Sensor Computing Course">
 
+    <script src="javascripts/tabs.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/tabs.css">
+ 
 
     <title>6.S062</title>
   </head>
@@ -197,16 +200,29 @@
 
 <p>We're using the Wunderground API. Here's a key for you: 0b719bec26ab96ac. This key will work for the lab, but expires in March. The JSON looks like <a href="https://api.wunderground.com/api/0b719bec26ab96ac/conditions/q/02139.json">http://api.wunderground.com/api/0b719bec26ab96ac/conditions/q/02139.json</a>.</p>
 
-<p>We've recorded <a href="https://www.youtube.com/playlist?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u">videos</a> with exact instructions on how to complete the lab. The goal is to get you comfortable with Xcode, the docs, the simulator, and Objective-C. Maybe you'll even learn some shortcuts from watching them.</p>
+<p>We've recorded <a href="https://www.youtube.com/playlist?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u">videos</a> with exact instructions on how to complete the lab in Object-C. We also provide text instructions on how to complete the lab in Swift. The goal is to get you comfortable with Xcode, the docs, the simulator, and Objective-C. Maybe you'll even learn some shortcuts from watching them.</p>
 
 <p>The videos build off of one another. You can do the assignment in your own way, or in the exact way it's done in the videos. It's entirely up to you.</p>
 
+
 <h4>Video 1 - Hello World</h4>
 <p>We create the project and print "Hello World". You'll also notice that we resize the simulator, and click on some of the menu bars. This just so that you see what those buttons do.</p>
+
+<ul class="tab">
+<li><a href="javascript:void(0)" class="tablinks tab1 active" onclick="switchTab(1);">Objective-C</a></li>
+<li><a href="javascript:void(0)" class="tablinks tab2" onclick="switchTab(2);">Swift</a></li>
+</ul>
+
+<pre class="tabcontent tab1"> 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/zi6Z13-3oyI?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen>
 </iframe>
-
+</pre>
+<pre class="tabcontent tab2"> 
+<iframe width="560" height="315"
+src="http://www.youtube.com/embed/JtbR3gY6YXY" frameborder="0" allowfullscreen>
+</iframe>
+</pre>
 
 <hr>
 <hr>
