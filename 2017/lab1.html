@@ -277,27 +277,27 @@ Task 2  – Compare the Accuracy of the Location Methods
             </p>
             <p>The deliverable for this task is the graph of the battery drain of the two different location methods. Note that if you don't have cellular service on the phone, running with cellular accuracy may produce results different than you expect!
             </p>
-            <h2>Section 2 – Building the Anteater Compass</h2>
+            <h2 id="sec2">Section 2 – Building the Anteater Compass</h2>
             <p>In this part of the lab, you'll work with the Anteater app and add location-based features.
             </p>
             <p>Recall that the Anteater App is a crowdsourced sensor data collection app, where users earn points for collecting sensor data from nearby sensors. In the Anteater app, mobile devices are the anteaters, and the sensors are the anthills.
             </p>
-<p>
-Start by downloading the <a href="anteater.tar.gz">Anteater App Skeleton</a>.  Untar this file to create a directory called "anteater-blank".  Open the anteater.xcodeproj file in this directory in XCode.  You should be able to build and run the project in the simulator or your phone.  This app is not able to connect to Bluetooth-based Anthills (you'll do that in the next lab), and the compass won't rotate (that's the goal of this lab.)
-</p>
+            <p>Start by downloading the Anteater App Skeleton:</p>
+            <ul>
+                <li><a href="anteater.tar.gz">Objective-C</a></li>
+                <li><a href="anteater-swift.tar.gz">Swift</a></li>
+            </ul>
+            <p>Untar this file to create a directory called "anteater-blank". Open the anteater.xcodeproj file in this directory in XCode.  You should be able to build and run the project in the simulator or your phone.  This app is not able to connect to Bluetooth-based Anthills (you'll do that in the next lab), and the compass won't rotate (that's the goal of this lab).</p>
             <p>In later labs you'll work on the code to connect to the anthills, but for the second part of this lab, your job is to implement the compass UI in Anteater, as shown in the screenshot below.
             </p>
             <img src="images/lab1/interface.png" />
             <p>In this interface, the orange arrow points the user what direction they should turn/walk to move towards the selected Anthill.
             </p>
-            <p>To compute the direction this arrow should point, you need to measure the angle between the users current position (represented by a lat/lon point), and the destination anthill. The conventional way to do this is to model the earth as a sphere, and measure the angle of vector from the origin to the destination along the shortest path (the "great circle path"). The trigonometry to do this is fairly hairy, but thanks to the Internet the formula is easy to look up. Here's the Objective-C code to do this:
+            <p>To compute the direction this arrow should point, you need to measure the angle between the user's current position (represented by a lat/lon point), and the destination anthill. The conventional way to do this is to model the earth as a sphere, and measure the angle of vector from the origin to the destination along the shortest path (the "great circle path"). The trigonometry to do this is fairly hairy, but thanks to the Internet the formula is easy to look up. Here's the code to do this:
             </p>
-    <code>  double angleRadians = atan2(sin(lon2-lon1)*cos(lat2), cos(lat1)*sin(lat2)-sin(lat1)*cos(lat2)*cos(lon2-lon1);
-    </code>
-            <p>Here (lat1,lon1) is the starting point, and (lat2,lon2) is the ending point. In this formula, lat and lon need to be converted to radians, and the result is in radians.
-            </p>
-            <p>If you are curious about the derivation of this, there's a good explanation half way down this post: <a href="http://mathforum.org/library/drmath/view/55417.html">http://mathforum.org/library/drmath/view/55417.html</a>
-            </p>
+            <code>atan2(sin(lon2-lon1)*cos(lat2), cos(lat1)*sin(lat2)-sin(lat1)*cos(lat2)*cos(lon2-lon1)</code>
+            <p>Here (lat1,lon1) is the starting point, and (lat2,lon2) is the ending point. In this formula, lat and lon need to be converted to radians, and the result is in radians.</p>
+            <p>If you are curious about the derivation of this, there's a good explanation half way down this post: <a href="http://mathforum.org/library/drmath/view/55417.html">http://mathforum.org/library/drmath/view/55417.html</a></p>
             <p>
                 From the article: <em>"Let's define three unit vectors, each in the direction of the line from the center of the earth to a point on the surface: N in the direction of the north pole, A in the direction of the initial point, and B in the direction of the final point on the course. Then the bearing we seek is the angle between the plane containing N and A, and the plane containing A and B. Thus it equals the angle between vectors perpendicular to these planes, namely, NxA and BxA."</em>
             </p>
@@ -314,31 +314,30 @@ Start by downloading the <a href="anteater.tar.gz">Anteater App Skeleton</a>.  U
             <p>We've created CompassViewController.m for you, but you will need to write most of the code. We've configured the UI to have a reference to the needle image.
             </p>
             <h4 id="4.1">4.1  Compute θ1</h4>
-            <p>You can compute θ1 using the above formula once you have both the user's location and the location of a target anthill. In the code we've given you, there is an _anthills array that is loaded when the view appears. We've provided a method called curSelectedLocation that will return the location of the currently selected anthill (when anthills is non-null/has been loaded.)
-            </p>
-            <p>When the user changes the currently selected anthill, the following method will be called:
-            </p>
-            <code class="objectivec hljs"><pre>- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+            <p>You can compute θ1 using the above formula once you have both the user's location and the location of a target anthill. In the code we've given you, there is an _anthills array that is loaded when the view appears. We've provided a method called curSelectedLocation that will return the location of the currently selected anthill (when anthills is non-null/has been loaded.)</p>
+            <p>When the user changes the currently selected anthill, the following method will be called:</p>
+            <ul class="tab">
+                <li><a href="javascript:void(0)" class="tablinks tab1 active" onclick="switchTab(1);">Objective-C</a></li>
+                <li><a href="javascript:void(0)" class="tablinks tab2" onclick="switchTab(2);">Swift</a></li>
+            </ul>
+            <pre class="tabcontent tab1"><code class="objectivec hljs">- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
 
+}</code></pre>
+            <pre class="tabcontent tab2"><code class="swift hljs">func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 
-}</pre></code>
+}</code></pre>
             <p>You should fill in the body of this with code to recompute the angle to the current anthill. You may want to define a helper function to do this, because you will also want to recompute when the user's location changes.
             </p>
             <p>We've also initialized a CLLocationManager object and request that it start providing location updates to CompassViewController. You'll need to fill in the body of the didUpdateLocations method to get the user's current location, and update the current estimated angle to the selected anthill (using the same function you defined when the anthill changed.)
             </p>
             <h4 id="4.2">4.2  Compute θ2</h4>
-            <p>Modern iPhones have a magnetometer that can measure the orientation of the phone with respect to the Earth's magnetic field (its heading). An app can be requested to be notified of the phone's heading as it changes by calling the startUpdatingHeading method on the CLLocationManager object. We have already done this for you in CompassViewController.m's viewDidLoad method. You should fill in the body of the
-            </p>
-            <code class="objectivec hljs"><pre>- (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
-</pre></code>
-            <p>method with code to compute θ1 - θ2. You can access the current heading of the device (in radians) by accessing the trueHeading property of the provided newHeading object.
+            <p>Modern iPhones have a magnetometer that can measure the orientation of the phone with respect to the Earth's magnetic field (its heading). An app can be requested to be notified of the phone's heading as it changes by calling the startUpdatingHeading method on the CLLocationManager object. We have already done this for you in CompassViewController.m's viewDidLoad method. You should fill in the body of the locationManager:didUpdateHeading method with code to compute θ1 - θ2. You can access the current heading of the device (in radians) by accessing the trueHeading property of the provided newHeading object.
             </p>
             <h4 id="4.3">4.3  Rotate the Needle by θ1 - θ2</h4>
-            <p>Whenever you get an update to the device's location or orientation, or a new anthill is selected, you should update the rotation of the needle. The needle is a UIView that is available as a property of CompassViewController. In iOS you can rotate (and scale/transform) any view simply by setting the value of the transform field of the view. This field is an instance of a CGAffineTransform struct. You can create a transform that specifies a particular rotation by calling the CGAffineTransformMakeRotation function. Create a transform and assign it to the needle property of your CompassViewController. The UI will automatically rotate the view to the correct orientation.
+            <p>Whenever you get an update to the device's location or orientation, or a new anthill is selected, you should update the rotation of the needle. The needle is a UIView that is available as a property of CompassViewController. In iOS you can rotate (and scale/transform) any view simply by setting the value of the transform field of the view. This field is an instance of a CGAffineTransform struct. You can create a transform that specifies a particular rotation by calling the CGAffineTransformMakeRotation function in Objective-C or <a href="https://developer.apple.com/reference/coregraphics/cgaffinetransform-rb5">CGAffineTransform.init with rotationAngle</a> in Swift. Create a transform and assign it to the needle property of your CompassViewController. The UI will automatically rotate the view to the correct orientation.
             </p>
-            <p>In addition, set the text of the distanceLabel label to the distance to the current anthill and the text of the headingLabel label to θ1 - θ2.
-            </p>
+            <p>In addition, set the text of the distanceLabel label to the distance to the current anthill and the text of the headingLabel label to θ1 - θ2.</p>
             <p>The deliverable for this task is a working implementation of the Anteater compass.
             </p>
             <h4 id="submission">Submission Instructions</h4>
