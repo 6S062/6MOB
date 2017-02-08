@@ -37,13 +37,13 @@ header = """
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p> [ Home | <a href="syllabus.html">Syllabus</a> | <a href="https://piazza.com/class/ijsinvo6sr44al">Piazza</a> ] </p>
+        <p> [ Home | <a href="syllabus.html">Syllabus</a> | <a href="https://piazza.com/class/iywy20zjxgq6qe">Piazza</a> ] </p>
 
       <p>We will post the schedule of lectures, readings, and assignments for the course on this page.</p>
 
       <p>The first day of class is Wednesday, February 8. <br>  Class meets Mondays and Wednesdays at 11:00-12:30 in 34-304.</p>
 
-      <p>Please sign up for the course <a href="https://piazza.com/class/ijsinvo6sr44al">Piazza Site</a>, which we will use for discussions and announcements.</p>
+      <p>Please sign up for the course <a href="https://piazza.com/class/iywy20zjxgq6qe">Piazza Site</a>, which we will use for discussions and announcements.</p>
 
       <h2> Staff </h2>
       <b>Lecturers:</b> <ul> <li>Hari Balakrishnan (hari@csail.mit.edu)</li> <li>Sam Madden (madden@csail.mit.edu)</li> <br/> </ul>
