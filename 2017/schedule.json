@@ -6,9 +6,11 @@
         "date": "2017-02-08",
         "materials": [
           {
+            "href": "materials/lec1-slides.pdf",
             "title": "(Slides)"
           },
           {
+            "href": "materials/lec1.pdf",
             "title": "(Notes)"
           }
         ],
