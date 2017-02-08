@@ -18,6 +18,12 @@
           {
             "title": "None"
           }
+        ],
+        "assignments": [
+          {
+            "title": "Out: Lab 0",
+            "href": "lab0.html"
+          }
         ]
       }
     ]
@@ -41,12 +47,6 @@
           {
             "title": "(Notes)"
           }
-        ],
-
-        "assignments": [
-          {
-            "title": "Out: Lab 0"
-          }
         ]
       },
       {
@@ -68,7 +68,8 @@
         ],
         "assignments": [
           {
-            "title": "Due: Lab 0"
+            "title": "Due: Lab 0",
+            "href": "lab0.html"
           },
           {
             "title": "Out: Lab 1"
