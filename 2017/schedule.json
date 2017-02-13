@@ -33,11 +33,24 @@
     "events": [
       {
         "date": "2017-02-13",
+        "title": "Snow"
+      },
+      {
+        "date": "2017-02-15",
         "title": "2. Intro to Positioning; Trilateration, Location-Based Services; APIs",
         "readings": [
           {
             "href": "http://onlinelibrary.wiley.com.libproxy.mit.edu/doi/10.1002/0470092335.ch6/pdf",
             "title": "Location-based Services: Fundamentals and Operation, Chapter 6"
+          }
+        ],
+        "assignments": [
+          {
+            "title": "Due: Lab 0",
+            "href": "lab0.html"
+          },
+          {
+            "title": "Out: Lab 1"
           }
         ],
         "materials": [
@@ -50,7 +63,7 @@
         ]
       },
       {
-        "date": "2017-02-15",
+        "date": "2017-02-22",
         "title": "3. GPS",
         "readings": [
           {
@@ -66,15 +79,6 @@
             "title": "Reading Question"
           }
         ],
-        "assignments": [
-          {
-            "title": "Due: Lab 0",
-            "href": "lab0.html"
-          },
-          {
-            "title": "Out: Lab 1"
-          }
-        ],
         "materials": [
           {
             "title": "(Slides+<br>Notes)"
@@ -82,7 +86,7 @@
         ]
       },
       {
-        "date": "2017-02-22",
+        "date": "2017-02-27",
         "title": "4. Indoor Location",
         "readings": [
           {
@@ -113,7 +117,7 @@
     "module": "Networking, In-network Computation, Data Muling",
     "events": [
       {
-        "date": "2017-02-27",
+        "date": "2017-03-01",
         "title": "5. Connectivity Overview and BLE",
         "readings": [
           {
@@ -125,15 +129,6 @@
             "title": "Reading Question"
           }
         ],
-        "materials": [
-          {
-            "title": "(Slides)"
-          }
-        ]
-      },
-      {
-        "date": "2017-02-28",
-        "title": "",
         "assignments": [
           {
             "title": "Due: Lab 1"
@@ -141,10 +136,15 @@
           {
             "title": "Out: Lab 2"
           }
+        ],
+        "materials": [
+          {
+            "title": "(Slides)"
+          }
         ]
       },
       {
-        "date": "2017-03-01",
+        "date": "2017-03-06",
         "title": "6. Mesh and Multi-Hop Wireless Networks",
         "readings": [
           {
@@ -163,7 +163,7 @@
         ]
       },
       {
-        "date": "2017-03-06",
+        "date": "2017-03-08",
         "title": "7. Energy-Aware Wireless Networking",
         "readings": [
           {
@@ -178,7 +178,7 @@
         ]
       },
       {
-        "date": "2017-03-08",
+        "date": "2017-03-13",
         "title": "8. In-network Aggregation",
         "readings": [
           {
@@ -191,10 +191,6 @@
           }
 
         ],
-        "assignments": [
-          {
-          }
-        ],
         "materials": [
           {
             "title": "(Slides)"
@@ -205,7 +201,7 @@
         ]
       },
       {
-        "date": "2017-03-13",
+        "date": "2017-03-15",
         "title": "9. Data Muling",
         "readings": [
           {
@@ -218,10 +214,23 @@
           }
         ],
         "assignments": [
-        ],
+          {
+            "title": "Due: Project Proposals",
+            "href": "projects.html"
+          }
+       ],
         "materials": [
           {
             "title": "(Notes)"
+          }
+        ]
+      },
+      {
+        "date": "2017-03-17",
+        "title": "No Class (Friday)",
+        "assignments": [
+          {
+            "title": "Due: Lab 2"
           }
         ]
       }
@@ -231,7 +240,7 @@
     "module": "Inertial Sensing",
     "events": [
       {
-        "date": "2017-03-15",
+        "date": "2017-03-20",
         "title": "10. Inertial Navigation",
         "readings": [
           {
@@ -243,12 +252,6 @@
             "title":"Basic principles of strapdown inertial navigation systems (requires MIT Certs)"
           }
         ],
-        "assignments": [
-          {
-            "title": "Due: Project Proposals",
-            "href": "projects.html"
-          }
-       ],
        "materials": [
           {
             "title": "(Slides)"
@@ -263,16 +266,7 @@
          ]
       },
       {
-        "date": "2017-03-17",
-        "title": "No Class (Friday)",
-        "assignments": [
-          {
-            "title": "Due: Lab 2"
-          }
-        ]
-      },
-      {
-        "date": "2017-03-20",
+        "date": "2017-03-22",
         "title": "11. Activity Recognition",
         "readings": [
           {
@@ -294,7 +288,11 @@
         ]
       },
       {
-        "date": "2017-03-22",
+        "date": "2017-03-27<br>to<br>2017-03-31",
+        "title": "SPRING BREAK!"
+      },
+      {
+        "date": "2017-04-03",
         "title": "12. Pothole detection",
         "readings": [
           {
@@ -304,6 +302,11 @@
           {
             "href": "reading_assignments.html#2017-03-22",
             "title": "Reading Question"
+          }
+        ],
+        "assignments": [
+          {
+            "title": "Out: Lab 3"
           }
         ],
         "materials": [
@@ -322,18 +325,10 @@
     ]
   },
   {
-    "module": "<br>SPRING BREAK!<br>",
-    "events": [
-      {
-        "date": "2017-03-27<br>to<br>2017-03-31"
-      }
-    ]
-  },
-  {
     "module": "Map-matching and map inference",
     "events": [
       {
-        "date": "2017-04-03",
+        "date": "2017-04-05",
         "title": "13. Map-matching",
         "readings": [
           {
@@ -345,11 +340,6 @@
             "title": "Reading Question"
           }
         ],
-        "assignments": [
-          {
-            "title": "Out: Lab 3"
-          }
-        ],
         "materials": [
           {
             "title": "(Slides)"
@@ -357,7 +347,7 @@
         ]
       },
       {
-        "date": "2017-04-05",
+        "date": "2017-04-10",
         "title": "14. Map inference",
         "readings": [
           {
@@ -380,7 +370,7 @@
     "module": "Acoustic and image sensing",
     "events": [
       {
-        "date": "2017-04-10",
+        "date": "2017-04-12",
         "title": "15. Acoustic sensing",
         "readings": [
           {
@@ -395,12 +385,17 @@
         ]
       },
       {
-        "date": "2017-04-12",
+        "date": "2017-04-19",
         "title": "16. Shooter localization",
         "readings": [
           {
             "href":"http://www.eecs.harvard.edu/~mdw/course/cs263/papers/simon-sensys04.pdf",
             "title":"Sensor Network-Based Countersniper System"
+          }
+        ],
+        "assignments": [
+          {
+            "title": "Due: Lab 3"
           }
         ],
         "materials": [
@@ -410,17 +405,12 @@
         ]
       },
       {
-        "date": "2017-04-19",
+        "date": "2017-04-24",
         "title": "17. Continuous object recognition",
         "readings": [
           {
             "href":"http://nms.csail.mit.edu/papers/index.php?detail=236",
             "title":"Glimpse: Continuous, Real-Time Object Recognition on Mobile Devices"
-          }
-        ],
-        "assignments": [
-          {
-            "title": "Due: Lab 3"
           }
         ],
         "materials": [
@@ -435,7 +425,7 @@
     "module": "Quiz",
     "events": [
       {
-        "date": "2017-04-24",
+        "date": "2017-04-26",
         "title": "In-class quiz, 11 am - 12:30 pm"
       }
     ]

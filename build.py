@@ -46,14 +46,19 @@ header = """
       <p>Please sign up for the course <a href="https://piazza.com/class/iywy20zjxgq6qe">Piazza Site</a>, which we will use for discussions and announcements.</p>
 
       <h2> Staff </h2>
-      <b>Lecturers:</b> <ul> <li>Hari Balakrishnan (hari@csail.mit.edu)</li> <li>Sam Madden (madden@csail.mit.edu)</li> <br/> </ul>
-      <b>TA:</b> <ul> <li>Favyen Bastani (fbastani@mit.edu)</li> <li>Songtao He (songtao@mit.edu)</li> <br/> </ul>
-      <b>Support Staff:</b> <ul> <li>Albert Carter (arcarter@csail.mit.edu)</li> <li>Justin Anderson (jander@mit.edu)</li> <br/> </ul>
+      <b>Lecturers:</b> <ul> <li>Hari Balakrishnan (hari@csail.mit.edu)</li> <li>Sam Madden (madden@csail.mit.edu)</li></ul>
+      <b>TA:</b> <ul> <li>Favyen Bastani (fbastani@mit.edu)</li> <li>Songtao He (songtao@mit.edu)</li></ul>
+      <b>Support Staff:</b> <ul> <li>Albert Carter (arcarter@csail.mit.edu)</li> <li>Justin Anderson (jander@mit.edu)</li></ul>
+      <b>Office Hours:</b>
+      <ul>
+        <li>Sam and Hari are available on an as-needed basis for office hours, just send them an e-mail.</li>
+        <li>TAs will hold office hours on Mondays 4pm-5pm and Thursdays 2pm-3pm in the 32-G9 lounge</li>
+      </ul>
 
       <h2> Labs and Software Development </h2>
 
       The class will involving programming for iPhones in XCode, which requires a Mac for development.  The W20 athena cluster has Macs with XCode installed (select XCode from Launchpad, and then enter your Athena username and password to accept the license agreement).  We will loan out iPhones for you use if you do not have a personal iPhone.
-    
+
 <h2>
 <a id="readings-and-assignments" class="anchor" href="#readings-and-assignments" aria-hidden="true"><span class="octicon octicon-link"></span></a>Readings and Assignments</h2>
 
