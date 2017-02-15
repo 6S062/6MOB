@@ -56,12 +56,22 @@
         ],
         "materials": [
           {
+            "href": "materials/lec2-slides.pdf",
             "title": "(Slides)"
           },
           {
+            "href": "materials/lec2.pdf",
             "title": "(Notes)"
+          },
+          {
+            "href": "materials/PositionLogger.zip",
+            "title": "(Position Logger Code)"
+          },
+          {
+            "href": "materials/RangingTest.zip",
+            "title": "(Ranging Code)"
           }
-        ]
+        ],
       },
       {
         "date": "2017-02-21",
