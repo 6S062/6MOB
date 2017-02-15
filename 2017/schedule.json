@@ -50,7 +50,8 @@
             "href": "lab0.html"
           },
           {
-            "title": "Out: Lab 1"
+            "title": "Out: Lab 1",
+            "href": "lab1.html"
           }
         ],
         "materials": [
@@ -150,7 +151,8 @@
         ],
         "assignments": [
           {
-            "title": "Due: Lab 1"
+            "title": "Due: Lab 1",
+            "href": "lab1.html"
           },
           {
             "title": "Out: Lab 2"
