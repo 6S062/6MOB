@@ -88,7 +88,12 @@
         ],
         "materials": [
           {
-            "title": "(Slides+<br>Notes)"
+            "title": "(Slides)",
+            "href": "materials/gps lecture 2017.zip"
+          },
+          {
+            "title": "(Video)",
+            "href": "https://www.youtube.com/watch?v=QrODQnAxEYI"
           }
         ]
       },
