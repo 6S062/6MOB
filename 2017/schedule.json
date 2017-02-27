@@ -141,7 +141,8 @@
         ],
         "materials": [
           {
-            "title": "(Slides)"
+            "title": "(Slides)",
+            "href": "materials/lec5-IOTx-WirelessNetworkConnectivity.pdf"
           }
         ]
       },
