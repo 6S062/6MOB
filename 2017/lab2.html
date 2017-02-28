@@ -52,41 +52,33 @@
             <h2 id="gettingstarted">  Getting Started </h2>
             <p> The Anteater code we  provided for <a href="lab1.html">lab
 1</a> included a skeleton class,
-                <code>SensorModel.m</code> that you will need to implement.  <code>SensorModel.h</code> defines four methods and a property you need to implement in this lab: </p>
-            <pre><code>@property(atomic,readonly) NSArray *sensorReadings;
--(void)startScanning;
--(void)stopScanning;
--(BOOL)isConnected;
--(NSString *)currentSensorId;
-</code></pre>
-            <p> In addition, to convey the status of a sensor connection, the
-                <code>SensorModel</code> class calls into a <i>delegate</i>, which implements the <code>SensorModelDelegate</code> protocol defined in <code>SensorModel.h</code>. The methods of the delegate are as follows: </p>
-            <pre><code>-(void) bleDidConnect;
--(void) bleDidDisconnect;
--(void) bleGotSensorReading:(BLESensorReading*)reading;
-</code></pre>
-            <p> These methods let the application know when a sensor connects or disconnects, or when some data is received. </p>
+                <code>SensorModel.swift</code> that you will need to implement. The <code>SensorModel</code> class will implement <code>BLEDelegate</code> and initialize an instance of <code>BLE</code> to handle interaction with the device. In addition, to convey the status of a sensor connection, <code>SensorModel</code> will make calls into a <i>delegate</i>, which implements the <code>SensorModelDelegate</code> protocol defined in <code>SensorModel.swift</code>. The methods of the delegate are as follows: </p>
+            <pre><code>func sensorModel(_ model: SensorModel, didChangeActiveHill hill: Hill?)
+func sensorModel(_ model: SensorModel, didReceiveReadings readings: [Reading] forHill hill: Hill?)</code></pre>
+            <p> These methods let the application know when a new sensor connects, or when some data is received. </p>
             <p> The code you downloaded for <a href="lab1.html">lab
-1</a> also includes a complete implementation of the class <code>SensorReadingTableViewController</code>, which creates an instance of <code>SensorModel</code> and sets itself as the delegate of that instance. </p>
+1</a> also includes a complete implementation of the class <code>HillsTableViewController</code>, which creates an instance of <code>SensorModel</code> and sets itself as the delegate of that instance. </p>
             <p>
                 This lab is divided into two <i>sections</i>. In the first section, you will implement the code to scan for and connect to an anthill, and then in the second section you will implement the code to extract readings from packets sent by the anthill and deliver them to the app.
             </p>
             <p>
-                To test this lab, you will need to obtain an <i>anthill</i> node. We have placed several battery powered anthills in the building 36 lab, but we also have anthills you can check out for your own testing purposes (checkout instructions will be posted on Piazza). Note that the bluetooth functions you will implement do not work properly on the iPhone simulator, so you will need to test on a real device. If you are working with a partner, please check out only one anthill as we have a limited number of them.
+                To test this lab, you will need to obtain an <i>anthill</i> node. Note that the bluetooth functions you will implement do not work properly on the iPhone simulator, so you will need to test on a real device. If you are working with a partner, please check out only one anthill as we have a limited number of them.
             </p>
-<p> The anthill you receive will have a sensor connected, and a USB Micro port. To power the anthill, it will need to be powered over USB to your laptop, or to any other USB charger (the anthills in the 5th floor lab are battery powered), as shown below:
+<p> The anthill you receive will have a sensor connected, and a USB Micro port. To power the anthill, it will need to be powered over USB to your laptop, or to any other USB charger, as shown below:
 
 <center>
 <img width=300 src="images/lab2/anthill.png"></img>
 </center>
 </p>
+            <p>The pins between the BLE node and sensor should be connected as follows:</p>
+            <ul>
+            	<li><strong>(+)</strong> on sensor to <strong>V33</strong> on BLE node</li>
+            	<li><strong>(-)</strong> on sensor to <strong>GND</strong> on BLE node</li>
+            	<li><strong>out</strong> on sensor to <strong>Pin 8</strong> on BLE node</li>
+            </ul>
             <h2 id="sec1"> Section 1:  Connecting to an Anthill </h2>
-            <p>
-                The goal of this section is to successfully establish a connection with an anthill. In the next section you will extract data from packets sent by the anthill.
-            </p>
-            <p>
-                Before working on this section, you should familiarize yourself with the basics of Bluetooth Low Energy (BLE) and the iOS APIs for accessing it. This <a href="https://developer.apple.com/library/ios/documentation/NetworkingInternetWeb/Conceptual/CoreBluetooth_concepts/CoreBluetoothOverview/CoreBluetoothOverview.html#//apple_ref/doc/uid/TP40013257-CH2-SW1">Apple Document</a> does a good job of summarizing these.
-            </p>
+            <p>The goal of this section is to successfully establish a connection with an anthill. In the next section you will extract data from packets sent by the anthill.</p>
+            <p>Before working on this section, you should familiarize yourself with the basics of Bluetooth Low Energy (BLE) and the iOS APIs for accessing it. This <a href="https://developer.apple.com/library/ios/documentation/NetworkingInternetWeb/Conceptual/CoreBluetooth_concepts/CoreBluetoothOverview/CoreBluetoothOverview.html#//apple_ref/doc/uid/TP40013257-CH2-SW1">Apple Document</a> does a good job of summarizing these.</p>
             <p>
                 Each anthill acts as a BLE Peripheral. The connection protocol is not that complicated, but the code is somewhat messy as each step in the protocol is asynchronous; that is, you make a call to perform some BLE function, and some time later a callback is triggered in your application to indicate that the function has completed.
             </p>
@@ -99,135 +91,39 @@
                 <li> For each characteristic, check if it is the sensor data characteristic; if it is, start listening for notifications to the state of the characteristic</li>
                 <li> On each state update, process the received data to extract any sensor readings. Since each state update is at most 20 bytes, the anthill may fragment one sensor reading across several packets.</li>
             </ol>
-            <p>
-                Figure 1 shows the sequence of calls that you will make in iOS to implement this functionality, along with some snippets of code to make each transition. (here <code>CM</code> is a
-                <code>CBCentralManager</code> object).
-            </p>
-            <center> <img src="images/lab2/flowchart.png" width=900px></img>
-            </center>
+            <p>You will need to add several functions to SensorModel in order to implement BLEDeegate:</p>
+            <pre><code>func ble(didUpdateState state: BLEState)
+func ble(didDiscoverPeripheral peripheral: CBPeripheral)
+func ble(didConnectToPeripheral peripheral: CBPeripheral)
+func ble(didDisconnectFromPeripheral peripheral: CBPeripheral)
+func ble(_ peripheral: CBPeripheral, didReceiveData data: Data?)</code></pre>
             <h3 id="task01"> Task 1: Initialize Bluetooth, and Start Scanning for Anthills</h3>
-            <p>
-                Before you can scan for an anthill, you need to initialize a
-                <code>CBCentralManager</code> object. A good place to do this is in the <code>init</code> method of <code>SensorModel</code>. Since you will need access this object repeatedly, you probably want to store it in an instance variable of the class.
+            <p>Before you can scan for an anthill, you need to initialize a <code>BLE</code> object. A good place to do this is in the <code>init</code> method of <code>SensorModel</code>. Since you will need access this object repeatedly, you probably want to store it in an instance variable of the class.</p>
+            <p>Keep in mind that after initializing the object, you will need to set its delegate to the current SensorModel object:<pre><code>ble.delegate = self</code></pre></p>
+            <p>Once you have created this object, the BLE will call <code>ble(didUpdateState ...)</code> to indicate the status of Bluetooth. You should check that the status is <code>BLEState.poweredOn</code> and if it is, initiate scanning for anthills if the app has previously called <code>startScanning</code>.
             </p>
+            <p>To initiate scanning, call the startScanning method on the <code>BLE</code> instance.</p>
+            <p>Once scanning has started, you will receive a callback to the <code>BLEDelegate</code> method <code>ble(didDiscoverPeripheral ...)</code>. You will need to define this method in <code>SensorModel</code>, as per the signature in the BLEDelegate protocol defined in <code>BLE.swift</code>.</p>
             <p>
-                You can see the line to allocate this object in the flowchart above:
-                <pre> <code> CM = [[CBCentralManager alloc] initWithDelegate:self queue:nil]
-</code> </pre> Here <code>CM</code> is the <code>CBCentralManager</code> variable.
+                To verify that this task is completed, use the debugger to confirm <code>didUpdateState</code> is called and that the status is <code>BLEState.poweredOn</code>. Also verify that when startScanning is called in the presence of an anthill, you receive a callback to <code>didDiscoverPeripheral</code>.
             </p>
-            <p>
-                Once you have created this object, iOS will call
-                <code>centralManagerDidUpdateState</code> to indicate the status of Bluetooth. As per the flowchart, check that the status is
-                <code>CBCentralManagerStatePoweredOn</code> and if it is, initiate scanning for anthills if the app has previously called <code>startScanning</code>. Otherwise, do nothing and when the app calls <code>startScanning</code> initiate scanning.
-            </p>
-            <p>
-                As shown in the flowchart, to scan, call:
-                <pre><code>     [CM scanForPeripheralsWithServices:[NSArray arrayWithObject:[CBUUID UUIDWithString:@RBL_SERVICE_UUID]] options:nil];
- </code></pre> Here, <code>RBL_SERVICE_UUID</code> is the UUID of the service on the peripheral you are trying to connect to.
-            </p>
-            <p>
-                You may want to define and some of the other UUIDs used by the Anthills as a constant, as follows:
-                <pre><code>#define RBL_SERVICE_UUID                         "713D0000-503E-4C75-BA94-3148F18D941E"
-#define RBL_CHAR_TX_UUID                         "713D0002-503E-4C75-BA94-3148F18D941E"
-#define RBL_CHAR_RX_UUID                         "713D0003-503E-4C75-BA94-3148F18D941E"
-</code></pre>
-            </p>
-            <p>
-                Once scanning has started, you will receive a callback to the <code>CBCentralManagerDelegate</code> method
-                <code>didDiscoverPeripheral</code>. You will need to define this method in <code>SensorModel</code>, as per the signature in the header file <code>&lt;CoreBluetooth/CoreBluetooth.h&gt;</code>.
-            </p>
-            <p>
-                To verify that this task is completed, use the debugger to confirm
-                <code>centralManageDidUpdateState</code> is called and that the status is <code>CBCentralManagerStatePoweredOn</code>. Also verify that when startScanning is called in the presence of an anthill, you receive a callback to <code>didDiscoverPeripheral</code>.
-            </p>
+
             <h3 id="task02"> Task 2: Implement <code>didDiscoverPeripheral</code> </h3>
+
+		        <p><code>didDiscoverPeripheral</code> will be called when a BLE Peripheral advertising the above characteristic comes into proximity of your phone. As per the flowchart, when this happens, you need to connect to device, and then scan for services and characteristics.</p>
+		        <p>When <code>didDiscoverPeripheral</code> is called, you are given a handle to a <code>CBPeripheral</code> object. This is the peripheral you want to try to connect to (in this lab, you are going to connect to the first peripheral you discover, and stay connected to it until it moves out of range, rather than trying to prioritize connecting to certain anthills).</p>
+		        <p>To connect to a peripheral, simply call <code>connectToPeripheral</code>. If the connection is successful, <code>didConnectToPeripheral</code> will be called. You will need to define <code>didConnectToPeripheral</code>, as per the signature in <code>BLE.swift</code>. Use the debugger to verify that this method is called correctly.</p>
+
+            <h3 id="task03"> Task 3: Implement <code>didConnectToPeripheral</code> </h3>
+		        <p>Once you have connected to a peripheral, you will need to call the delegate method <code>didChangeActiveHill</code>. The method takes an instance of Hill, which is defined towards the top of <code>SensorModel.swift</code> (the name of the Hill should be set to <code>peripheral.name</code>). You should initialize a Hill and store it in the activeHill instance variable, as the delegate will expect the same Hill later for the <code>didReceiveReadings</code> delegate method. You will also need to store the CBPeripheral in an instance variable, as you will want to distinguish the peripheral corresponding to activeHill from other peripherals.</p>
+		        <p>After connecting to a peripheral, the <code>BLE</code> instance will call the <code>discoverServices</code> function in the iOS BLE API; then, after services are discovered, the <code>BLE</code> instance will call <code>didDiscoverCharacteristicsForService</code> and handle updates to the sensor data characteristic. Finally, the <code>BLE</code> instance will request notifications for the sensor characteristic, and the iOS API will call <code>didUpdateValueForCharacteristic</code> on the <code>BLE</code> instance whenever a new packet of sensor data is available. The <code>BLE</code> instance will then call <code>didReceiveData</code> on the <code>SensorModel</code>.</p>
+		        <p>To complete this task, verify that <code>didReceiveData</code> is being called by setting breakpoints in this method in the debugger.</p>
+		        <p>Note that you will also need to implement <code>didDisconnectFromPeripheral</code>. If the provided peripheral matches the one corresponding to the activeHill, then you should call didChangeActiveHill with nil, so that the delegate is notified that there is no longer any connected hill.</p>
+
+
+        <h2 id="sec2"> Section 2:  Extracting readings from an Anthill </h2>
             <p>
-                <code>didDiscoverPeripheral</code> will be called when a BLE Peripheral advertising the above characteristic comes into proximity of your phone. As per the flowchart, when this happens, you need to connect to device, and then scan for services and characteristics.
-            </p>
-            <p>
-                When <code>didDiscoverPeripheral</code> is called, you are given a handle to a <code>CBPeripheral</code> object. This is the peripheral you want to try to connect to (in this lab you are going to connect to the first peripheral you discover, and stay connected to it until it moves out of range, rather than trying to prioritize connecting to certain anthills.)
-            </p>
-            <p> <b> Important: </b> Before connecting to the peripheral, make sure you retain a reference to it (i.e., by assigning it to an instance variable of the
-                <code>SensorModel</code> class.) Otherwise iOS will not call any of the delegate methods on the peripheral. Also be sure to set <code>peripheral.delegate = self</code> so that your SensorModel receives CBPeripheralDelegate messages for that peripheral.
-            </p>
-            <p>
-                You can also used this saved peripheral to access peripheral properties (i.e., its name or UUID) to implement the other methods of <code>SensorModel</code>.
-            </p>
-            <p>
-                To connect to a peripheral, as per the flowchart, call:</p>
-            <pre><code>[CM connectPeripheral:peripheral
-   options:[NSDictionary
-   dictionaryWithObject:[NSNumber numberWithBool:YES]
-   forKey:CBConnectPeripheralOptionNotifyOnDisconnectionKey]]
-</code></pre> Here, the dictionary you pass in indicates that you want iOS to call
-            <code>didDisconnectPeripheral</code> when the connection to the peripheral breaks.
-            </p>
-            <p>
-                If the connection is successful, <code>didConnectPeripheral</code> will be called. You will need to define <code>didConnectPeripheral</code>, as per the signature in
-                <code>&lt;CoreBluetooth/CoreBluetooth.h&gt;</code>. Use the debugger to verify that this method is called correctly.
-            </p>
-            <h3 id="task03"> Task 3: Implement <code>didConnectPeripheral</code> </h3>
-            <p>
-                Once you have connected to a peripheral, you need to discover its services and characteristics (ultimately, you just need to start listening for the sensor data characteristic, but iOS will not allow you to do this until you have first discovered the characteristic you want listen for.)
-            </p>
-            <p>
-                You should also call the delegate method <code>bleDidConnect</code> at this point.
-            </p>
-            <p>
-                As per the flow chart, after connecting to a peripheral, you should call <code>
-    [peripheral discoverServices:nil]
-</code>. As services are discovered, you will receive callbacks to
-                <code>didDiscoverServices</code>. You will need to define this method, as per the signature in
-                <code>&lt;CoreBluetooth/CoreBluetooth.h&gt;</code>. Use the debugger to verify that this method is called correctly.
-            </p>
-            <h3 id="task04"> Task 4: Implement <code>didDiscoverServices</code> and
-<code>didDiscoverCharacteristicsForService</code>, and listen for
-updates to the sensor data characteristic. </h3>
-            <p>
-                For each service that is discovered, you will receive a list of. characteristics. Iterate through each characteristic and call
-                <code>discoverCharacteristics</code>, as per the flowchart:</p>
-            <pre><code>for (CBService *s in peripheral.services)
-{
-    [peripheral discoverCharacteristics:nil forService:s];
-}
-</code></pre>
-            <p> As each characteristic of each service is discovered, you will receive a call to <code>didDiscoverCharacteristicsForService</code> (this is a <code>CBPeripheralDelegate</code> method, and as with the <code>CBCentralManagerDelegate</code> methods above you will need to define this callback to receive it. Also make sure you set up the peripheral delegate properly in task 2 above.)
-            </p>
-            <p><strong> The flowchart indicates that you need to wait until
-                <code>didDiscoverCharacteristicsForService</code> is called for the service with UUID <code>RBL_SERVICE_UUID</code>. Once you find this service, you should look for the characteristic with UUID <code>RBL_CHAR_TX_UUID</code>, since this is the characteristic where sensor data will be delivered by the anthill.</strong>
-            </p>
-            <p> The code in the flowchart shows how to achieve this. Once you've found the desired characteristic, you call <code>setNotifyValue</code> on the characteristic, as follows: </p>
-            <pre><code>        if ([[[service UUID] UUIDString] isEqualToString:@RBL_SERVICE_UUID]) {
-            for (CBCharacteristic *c in service.characteristics) {
-                if ([[[c UUID] UUIDString] isEqualToString:@RBL_CHAR_TX_UUID]) {
-                    [peripheral setNotifyValue:YES forCharacteristic:c];
-                }
-            }
-        }
-</code></pre>
-            <p>
-                iOS will now start calling the
-                <code>didUpdateValueForCharacteristic</code> method (which you need to define as with other methods) whenever a new packet of sensor data is available. To complete this task, verify that this is happening by setting breakpoints in this method in the debugger.
-            </p>
-            <h3 id="task05"> Task 5: Implement the other methods of <code>SensorModel</code>. </h3> You should now be able to implement all of the methods of
-            <code>SensorModel</code>. You should have implemented
-            <code>startScanning</code> above (if you didn't, do so now.) The other methods are as follows:
-            <ol>
-                <li><code>-(void)stopScanning</code>: You should call the
-                    <code>stopScan</code> method on the saved
-                    <code>CBCentralManager</code> object.
-                </li>
-                <li><code>-(BOOL)isConnected</code>: You can assume you are connected if you successfully received a call to
-                    <code>didConnectPeripheral</code> and have not yet received a call to
-                    <code>didDisconnectPeripheral</code>. You should implement
-                    <code>didDisconnectPeripheral</code> to track the connection status. Note that when <code>didDisconnectPeripheral</code> is called you should discard any saved references to the current peripheral since it will no longer be valid. You should also call the delegate method
-                    <code>bleDidDisconnect</code>.
-                </li>
-                <li><code>-(NSString *)currentSensorId</code>: This method should return an identifier for the currently connected anthill. We have programmed each anthill with a unique id, which you can retrieve from the <code>name</code> property of the currently connected peripheral.</li>
-            </ol>
-            <h2 id="sec2"> Section 2:  Extracting readings from an Anthill </h2>
-            <p>
-                When a connection is established, the Anthill begins streaming packets containing sensor data on the sensor data characteristic you subscribed to in task 4. You will need to extract sensor readings from this characteristic and post them to the application. (For the purposes of this lab, you do not explicitly request any data or send any commands to the anthill.)
+                When a connection is established, the Anthill begins streaming packets containing sensor data on the sensor data characteristic. You will need to extract sensor readings from this characteristic and post them to the application. (For the purposes of this lab, you do not explicitly request any data or send any commands to the anthill.)
             </p>
             <p>
                 The anthill sends a stream of ASCII characters, containing one of three types of messages: humidity readings, temperature readings, and error messages. Each message begins with a single letter, and then has a custom payload. The messages are as follows:
@@ -238,43 +134,30 @@ updates to the sensor data characteristic. </h3>
                 </ul>
             </p>
             <p>
-                This stream of messages is fragmented into 20 byte BLE packets. Note that this means that a given message may be spread across two BLE packets. You will receive one call to
-                <code>didUpdateValueForCharacteristic</code> for each packet, but will not necessarily be able to parse the entirely of each packet and will need to save the unparsed bytes in a buffer until additional bytes arrive.
+                This stream of messages is fragmented into BLE packets that are up to 20 bytes in length. Note that this means that a given message may be spread across two BLE packets. You will receive one call to
+                <code>didReceiveData</code> for each packet, but will not necessarily be able to parse the entirety of each packet and will need to save the unparsed bytes in a buffer until additional bytes arrive. You might also start receiving data from the middle of a packet.
             </p>
-            <p>
-                You can extract the bytes from an incoming packet in <code>didUpdateValueForCharacteristic</code> as follows:
-                <pre><code>            unsigned char data[20];
-            data_len = MIN(20,characteristic.value.length);
-            [characteristic.value getBytes:data length:data_len];
-</code></pre>
-            </p>
-            <p>You may also find the following code to convert a C-string to a <code>NSString *</code> useful:</p>
-            <pre><code>    char *data = "Hi there"; // a C-string
-    unsigned long length = strlen(data);
-    NSData *d = [NSData dataWithBytes:data length:length];
-    NSString *s = [[NSString alloc] initWithData:d encoding:NSUTF8StringEncoding];
-</code></pre>
-            <h3 id="task06"> Task 6: Implement <code>didUpdateValueForCharacteristic</code> </h3>
+            <h3 id="task06"> Task 6: Implement <code>didReceiveData</code> </h3>
             <p>
                 To complete this task, implement code to extract messages from the stream of packets delivered to
-                <code>didUpdateValueForCharacteristic</code>.
+                <code>didReceiveData</code>.
             </p>
             <p>
-                Once you have extracted a sensor reading from the stream, create a <code>BLESensorReading</code> object from it and call the delegate method
-                <code>bleGotSensorReading</code>. You should also add it to the <code>self.sensorReadings</code> array, which the UI will access to update its list of sensor readings.
+                Once you have extracted a sensor reading from the stream, create a <code>Reading</code> object from it (set type to either ReadingType.Temperature or ReadingType.Humidity, and sensorId to <code>peripheral.name</code>) and call the delegate method <code>didReceiveReadings</code>. You should also add it to the activeHill's <code>readings</code> array, which the UI will access to update its list of sensor readings.
             </p>
-            <p> This task is complete when you can see sensor readings streaming into sensor reading display on the Anteater Readings screen, as show below: </p>
+            <p>You might find these code snippets useful:</p>
+            <pre><code>// convert a non-nil Data optional into a String
+let str = String(data: data!, encoding: String.Encoding.ascii)!
+
+// convert a String to a Double
+let val = NSString(string: str).doubleValue</code></pre>
+            <p> This task is complete when you can see sensor readings streaming into sensor reading display on the Anteater Readings screen, as shown below: </p>
             <center><img src="images/lab2/readings.png" width=300px></img>
             </center>
-            <p> Although we won't check this for the lab, for each reading <code>r</code> you should also call the method</p>
-            <pre><code>[AnteaterREST postListOfSensorReadings:@[r] andCallCallback:NULL];</code></pre>
-            <p>to post the reading to the Anteater server.</p>
-            </code>
             <h2 id="completing">Completing the Lab</h2>
             <p>A TA will checkoff your lab assignment. A checkoff will require successfully displaying sensor readings on the Readings screen, as well as disconnected and reconnected from a an anthill (by powering it down and powering it back up.)</p>
         </section>
     </div>
-    <!-- hhmts start -->Last modified: Sun Feb 28 18:33:06 EST 2016 <!-- hhmts end -->
 </body>
 
 </html>
