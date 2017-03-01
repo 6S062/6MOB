@@ -165,7 +165,8 @@
             "href": "lab1.html"
           },
           {
-            "title": "Out: Lab 2"
+            "title": "Out: Lab 2",
+            "href": "lab2.html"
           }
         ],
         "materials": [
@@ -273,7 +274,8 @@
         "title": "No Class (Friday)",
         "assignments": [
           {
-            "title": "Due: Lab 2"
+            "title": "Due: Lab 2",
+            "href": "lab2.html"
           }
         ]
       },
