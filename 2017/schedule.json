@@ -229,12 +229,6 @@
             "title": "Reading Question"
           }
         ],
-        "assignments": [
-          {
-            "title": "Due: Project Proposals",
-            "href": "projects.html"
-          }
-       ],
         "materials": [
           {
             "title": "(Notes)"
@@ -259,6 +253,12 @@
             "title":"Basic principles of strapdown inertial navigation systems (requires MIT Certs)"
           }
         ],
+        "assignments": [
+          {
+            "title": "Due: Project Proposals",
+            "href": "projects.html"
+          }
+       ],
        "materials": [
           {
             "title": "(Slides)"
