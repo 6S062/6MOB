@@ -88,7 +88,12 @@
         ],
         "materials": [
           {
-            "title": "(Slides+<br>Notes)"
+            "title": "(Slides)",
+            "href": "materials/gps lecture 2017.zip"
+          },
+          {
+            "title": "(Video)",
+            "href": "https://www.youtube.com/watch?v=QrODQnAxEYI"
           }
         ]
       },
@@ -97,7 +102,7 @@
         "title": "4. Indoor Location",
         "readings": [
           {
-            "href": "http://research.microsoft.com/en-us/people/padmanab/infocom2000.pdf",
+            "href": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/infocom2000.pdf",
             "title": "RADAR: An In-Building RF-based User Location and Tracking System"
           },
           {
@@ -111,10 +116,8 @@
         ],
         "materials": [
           {
-            "title": "(Slides)"
-          },
-          {
-            "title": "(Notes)"
+            "title": "(Slides)",
+            "href": "materials/lec4-indoorloc.pdf"
           }
         ]
       }
@@ -138,7 +141,8 @@
         ],
         "materials": [
           {
-            "title": "(Slides)"
+            "title": "(Slides)",
+            "href": "materials/lec5-IOTx-WirelessNetworkConnectivity.pdf"
           }
         ]
       },
@@ -161,12 +165,14 @@
             "href": "lab1.html"
           },
           {
-            "title": "Out: Lab 2"
+            "title": "Out: Lab 2",
+            "href": "lab2.html"
           }
         ],
         "materials": [
           {
-            "title": "(Slides)"
+            "title": "(Slides)",
+            "href": "materials/lec6-ETXMesh.pdf"
           }
         ]
       },
@@ -215,8 +221,8 @@
         "title": "9. Data Muling",
         "readings": [
           {
-            "href": "http://www.princeton.edu/~mrm/asplos-x_annot.pdf",
-            "title": "Energy-Efficient Computing for Wildlife Tracking: Design Tradeoffs and Early Experiences with ZebraNet"
+            "href": "http://www.kevinfall.com/seipage/papers/p27-fall.pdf",
+            "title": "A Delay-Tolerant Network Architecture for Challenged Internets"
           },
           {
             "href": "reading_assignments.html#2017-03-13",
@@ -271,7 +277,8 @@
         "title": "No Class (Friday)",
         "assignments": [
           {
-            "title": "Due: Lab 2"
+            "title": "Due: Lab 2",
+            "href": "lab2.html"
           }
         ]
       },
