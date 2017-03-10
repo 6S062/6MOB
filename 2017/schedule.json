@@ -289,6 +289,11 @@
             "title":"Activity recognition from user-annotated acceleration data"
           }
         ],
+        "assignments": [
+          {
+            "title": "Out: Lab 3"
+          }
+        ],
         "materials": [
           {
             "title": "(Slides)"
@@ -354,11 +359,6 @@
             "title": "Reading Question"
           }
         ],
-        "assignments": [
-          {
-            "title": "Out: Lab 3"
-          }
-        ],
         "materials": [
           {
             "title": "(Slides)"
@@ -380,6 +380,18 @@
         "materials": [
           {
             "title": "(Slides)"
+          }
+        ]
+      },
+      {
+        "date": "2017-04-07",
+        "title": "No Class (Friday)",
+        "assignments": [
+          {
+            "title": "Due: Lab 3"
+          },
+          {
+            "title": "Out: Lab 4"
           }
         ]
       }
@@ -419,21 +431,17 @@
         ]
       },
       {
-        "date": "2017-04-14",
-        "title": "No Class (Friday)",
-        "assignments": [
-          {
-            "title": "Due: Lab 3"
-          }
-        ]
-      },
-      {
         "date": "2017-04-19",
         "title": "17. Continuous object recognition",
         "readings": [
           {
             "href":"http://nms.csail.mit.edu/papers/index.php?detail=236",
             "title":"Glimpse: Continuous, Real-Time Object Recognition on Mobile Devices"
+          }
+        ],
+        "assignments": [
+          {
+            "title": "Due: Lab 4"
           }
         ],
         "materials": [
