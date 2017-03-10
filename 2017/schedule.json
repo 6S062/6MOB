@@ -207,16 +207,18 @@
         ],
         "materials": [
           {
+            "href": "materials/tinydb-slides.pdf",
             "title": "(Slides)"
           },
           {
+            "href": "materials/tinydb-notes.pdf",
             "title": "(Notes)"
           }
         ]
       },
       {
         "date": "2017-03-13",
-        "title": "9. Data Muling",
+        "title": "9. Delay-Tolerant Networking",
         "readings": [
           {
             "href": "http://www.kevinfall.com/seipage/papers/p27-fall.pdf",
@@ -227,12 +229,6 @@
             "title": "Reading Question"
           }
         ],
-        "assignments": [
-          {
-            "title": "Due: Project Proposals",
-            "href": "projects.html"
-          }
-       ],
         "materials": [
           {
             "title": "(Notes)"
@@ -257,6 +253,12 @@
             "title":"Basic principles of strapdown inertial navigation systems (requires MIT Certs)"
           }
         ],
+        "assignments": [
+          {
+            "title": "Due: Project Proposals",
+            "href": "projects.html"
+          }
+       ],
        "materials": [
           {
             "title": "(Slides)"
