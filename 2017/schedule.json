@@ -231,6 +231,7 @@
         ],
         "materials": [
           {
+            "href": "materials/dtn.pdf",
             "title": "(Notes)"
           }
         ]
@@ -250,7 +251,7 @@
           },
           {
             "href":"http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/pbra017e_ch3",
-            "title":"Basic principles of strapdown inertial navigation systems (requires MIT Certs)"
+            "title":"Basic principles of strapdown inertial navigation systems -- <b>Sections 3.1 and 3.2 only</b> (requires MIT Certs)"
           },
           {
             "href": "reading_assignments.html#2017-03-15",
