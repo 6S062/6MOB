@@ -266,10 +266,13 @@
        ],
        "materials": [
           {
-            "title": "(Slides)"
+            "title": "(Slides)",
+            "href": "materials/inertial-slides.pdf"
+
           },
           {
-            "title": "(Notes)"
+            "title": "(Notes)",
+            "href": "materials/inertial-notes.pdf"
           },
           {
             "href": "materials/motion.zip",
@@ -294,6 +297,10 @@
           {
             "href":"http://link.springer.com.libproxy.mit.edu/chapter/10.1007/978-3-540-24646-6_1",
             "title":"Activity recognition from user-annotated acceleration data"
+          },
+          {
+            "href": "reading_assignments.html#2017-03-20",
+            "title": "Reading Question"
           }
         ],
         "assignments": [
