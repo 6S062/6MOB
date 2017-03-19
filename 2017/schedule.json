@@ -231,6 +231,7 @@
         ],
         "materials": [
           {
+            "href": "materials/dtn.pdf",
             "title": "(Notes)"
           }
         ]
@@ -250,7 +251,7 @@
           },
           {
             "href":"http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/pbra017e_ch3",
-            "title":"Basic principles of strapdown inertial navigation systems (requires MIT Certs)"
+            "title":"Basic principles of strapdown inertial navigation systems -- <b>Sections 3.1 and 3.2 only</b> (requires MIT Certs)"
           },
           {
             "href": "reading_assignments.html#2017-03-15",
@@ -265,10 +266,13 @@
        ],
        "materials": [
           {
-            "title": "(Slides)"
+            "title": "(Slides)",
+            "href": "materials/inertial-slides.pdf"
+
           },
           {
-            "title": "(Notes)"
+            "title": "(Notes)",
+            "href": "materials/inertial-notes.pdf"
           },
           {
             "href": "materials/motion.zip",
@@ -293,6 +297,10 @@
           {
             "href":"http://link.springer.com.libproxy.mit.edu/chapter/10.1007/978-3-540-24646-6_1",
             "title":"Activity recognition from user-annotated acceleration data"
+          },
+          {
+            "href": "reading_assignments.html#2017-03-20",
+            "title": "Reading Question"
           }
         ],
         "assignments": [
