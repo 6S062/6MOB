@@ -305,7 +305,8 @@
         ],
         "assignments": [
           {
-            "title": "Out: Lab 3"
+            "title": "Out: Lab 3",
+            "href": "lab3-swift.html"
           }
         ],
         "materials": [
@@ -405,7 +406,8 @@
         "title": "No Class (Friday)",
         "assignments": [
           {
-            "title": "Due: Lab 3"
+            "title": "Due: Lab 3",
+            "href": "lab3-swift.html"
           },
           {
             "title": "Out: Lab 4"
