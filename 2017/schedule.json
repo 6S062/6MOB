@@ -310,10 +310,13 @@
         ],
         "materials": [
           {
-            "title": "(Slides)"
+            "title": "(Slides)",
+            "href": "materials/activity-slides.pdf"
+
           },
           {
-            "title": "(Notes)"
+            "title": "(Notes)",
+            "href": "materials/activity-notes.pdf"
           },
           {
             "href": "materials/feature_test.zip",
