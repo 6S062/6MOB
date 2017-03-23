@@ -340,10 +340,13 @@
         ],
         "materials": [
           {
-            "title": "(Slides)"
+            "title": "(Slides)",
+            "href": "materials/pothole-slides.pdf"
+
           },
           {
-            "title": "(Notes)"
+            "title": "(Notes)",
+            "href": "materials/pothole-notes.pdf"
           },
           {
             "href": "materials/pothole-demo.zip",
