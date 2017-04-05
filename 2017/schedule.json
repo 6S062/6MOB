@@ -382,7 +382,8 @@
         ],
         "materials": [
           {
-            "title": "(Slides)"
+            "title": "(Slides)",
+            "href": "lectures/lec13-ctrack.pdf"
           }
         ]
       },
