@@ -401,7 +401,8 @@
           }],
         "materials": [
           {
-            "title": "(Slides)"
+            "title": "(Slides)",
+            "href": "lectures/lec14-mapinference.pdf"
           }
         ]
       },
