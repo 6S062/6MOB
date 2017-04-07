@@ -415,7 +415,8 @@
             "href": "lab3-swift.html"
           },
           {
-            "title": "Out: Lab 4"
+            "title": "Out: Lab 4",
+            "href": "lab4.html"
           }
         ]
       }
@@ -465,7 +466,8 @@
         ],
         "assignments": [
           {
-            "title": "Due: Lab 4"
+            "title": "Due: Lab 4",
+            "href": "lab4.html"
           }
         ],
         "materials": [
