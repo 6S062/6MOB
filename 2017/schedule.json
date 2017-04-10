@@ -445,7 +445,7 @@
         "title": "16. Shooter localization",
         "readings": [
           {
-            "href":"http://www.eecs.harvard.edu/~mdw/course/cs263/papers/simon-sensys04.pdf",
+            "href": "http://www.isis.vanderbilt.edu/sites/default/files/Simon_G_11_3_2004_Sensor_Net.pdf",
             "title":"Sensor Network-Based Countersniper System"
           }
         ],
