@@ -451,7 +451,8 @@
         ],
         "materials": [
           {
-            "title":"(Slides)"
+            "title":"(Slides)",
+            "href": "materials/lec16-shooterslides.pdf"
           }
         ]
       },
@@ -483,7 +484,17 @@
     "events": [
       {
         "date": "2017-04-24",
-        "title": "In-class quiz, 11 am - 12:30 pm"
+        "title": "In-class quiz, 11 am - 12:30 pm",
+        "materials": [
+          {
+            "title": "(Practice Quiz)",
+            "href": "materials/practice_quiz.pdf"
+          },
+          {
+            "title": "(Practice Quiz Solutions)",
+            "href": "materials/practice_quiz_solutions.pdf"
+          }
+        ]
       }
     ]
   },
