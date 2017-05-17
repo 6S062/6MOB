@@ -297,7 +297,16 @@
                 <tr>
                     <td class="left">
                         <p>
-                        In this work, algorithms are developed and evaluated to detect physical activities from data acquired using five small biaxial accelerometers worn simultaneously on different parts of the body. Acceleration data was collected from 20 subjects without researcher supervision or observation. Subjects were asked to perform a sequence of everyday tasks but not told specifically where or how to do them. Mean, energy, frequency-domain entropy, and correlation of acceleration data was calculated and several classifiers using these features were tested. Decision tree classifiers showed the best performance recognizing everyday activities with an overall accuracy rate of 84%. The results show that although some activities are recognized well with subject-independent training data, others appear to require subject-specific training data. The results suggest that multiple accelerometers aid in recognition because conjunctions in acceleration feature values can effectively discriminate many activities. With just two biaxial accelerometers – thigh and wrist – the recognition performance dropped only slightly. This is the first work to investigate performance of recognition algorithms with multiple, wire-free accelerometers on 20 activities using datasets annotated by the subjects themselves.
+                        When holding an event in Kresge Auditorium, volume becomes a main concern. Due to the structural setup of Kresge Auditorium,
+sound from one room will bleed into another, often times causing a disruption during simultaneous events. NoKlipping is a
+system using Arduinos to detect if the sound from one room is bleeding into another. Our research consisted of designing a system to
+distribute across the 4 rooms of Kresge (Rehearsal Room A, Rehearsal Room B, Kresge Little Theater, and Kresge Auditorium) to detect
+when the noise present in one room is coming from another. The full system has 3 components: Arduino sensors which collect sound data from a room, 
+a server as the central hub for all data and frequency response processing, and a mobile/web application to display the findings. We have
+deployed a prototype sensor setup, developed a server application, and created a demo mobile application to display the data.
+We made correlations between the FFT of the audio recordings from each sesnsor to detect noise bleeding into Kresge rooms and showed that 
+we have developed a feasible system with the potential to expand further.
+
 
                         </p>
                     </td>
