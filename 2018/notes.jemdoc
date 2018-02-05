@@ -1,0 +1,86 @@
+# jemdoc: menu{MENU}{notes.html}
+=  Notes
+
+
+== Lec \#1: Introduction and Course Overview
+*Thr, Sep 7, 2017*
+- Lecture slides [./materials/lecture1.pdf \[pdf\]]
+
+
+== Lec \#2: WiFi MAC and Rate Adaptation
+*Tue, Sep 12, 2017*
+- Scribe notes [./materials/lecture2.pdf \[pdf\]]
+- CSMA diagram [./materials/csma.pdf \[pdf\]]
+
+== Lec \#3: Wireless Channels & Modulation
+*Thr, Sep 14, 2017*
+- Scribe notes [./materials/lecture3.pdf \[pdf\]]
+
+== Lec \#4: Interference
+*Tue, Sep 19, 2017*
+- Scribe notes [./materials/lecture4.pdf \[pdf\]]
+
+== Lec \#5: Localization: Angle of Arrival
+*Thr, Sep 21, 2017*
+- Scribe notes [./materials/lecture5.pdf \[pdf\]]
+
+== Lec \#6: Device-Free Localization
+*Tue, Sep 26, 2017*
+- Scirbe notes [./materials/lecture6.pdf \[pdf\]]
+- Lecture slides [./materials/lecture6-slides.pdf \[pdf\]]
+
+== Lec \#7: Physiological Signals from Wireless
+*Thr, Sep 28, 2017*
+- Scirbe notes [./materials/lecture7.pdf \[pdf\]]
+- Lecture slides [./materials/lecture7-slides.pdf \[pdf\]]
+
+== Lec \#8: Multihop routing
+*Tue, Oct 3. 2017*
+- Scirbe notes [./materials/lecture8.pdf \[pdf\]]
+
+== Lec \#9: MIMO
+*Thr, Oct 5, 2017*
+- Scirbe notes [./materials/lecture9.pdf \[pdf\]]
+- Lecture slides [./materials/lecture9-slides.pdf \[pdf\]]
+
+== Lec \#10: Backscatter
+*Tue, Oct 17, 2017*
+- Scirbe notes [./materials/lecture10.pdf \[pdf\]]
+- Lecture slides [./materials/lecture10-slides.pdf \[pdf\]]
+
+== Lec \#11: Mobile Security
+*Thr, Oct 19, 2017*
+- Scirbe notes [./materials/lecture11.pdf \[pdf\]]
+
+== Lec \#12: Full Duplex
+*Tue, Oct 24, 2017*
+- Scirbe notes [./materials/lecture12.pdf \[pdf\]]
+- Lecture slides [./materials/lecture12-slides.pdf \[pdf\]]
+
+== Lec \#13: Visible light communication
+*Tue, Oct 26, 2017*
+- Scirbe notes [./materials/lecture13.pdf \[pdf\]]
+- Lecture slides [./materials/lecture13-slides.pdf \[pdf\]]
+
+== Lec \#14: Congestion Control
+*Tue, Oct 31, 2017*
+- Scirbe notes [./materials/lecture14.pdf \[pdf\]]
+
+== Lec \#15: BGP
+*Tue, Nov 2, 2017*
+- Scirbe notes [./materials/lecture15.pdf \[pdf\]]
+- Lecture slides [./materials/lecture15-slides.pdf \[pdf\]]
+
+== Lec \#16: Datacenter Networks
+*Tue, Nov 9, 2017*
+- Scribe notes [./materials/lecture16.pdf \[pdf\]]
+- Lecture slides [./materials/lecture16-slides.pdf \[pdf\]]
+
+== Lec \#17: SDN
+*Tue, Nov 16, 2017*
+- Scribe notes [./materials/lecture17.pdf \[pdf\]]
+
+== Lec \#18: Video Streaming
+*Tue, Nov 21, 2017*
+- Lecture slides [./materials/lecture18.pptx \[pptx\]]
+- Scribe notes [./materials/lecture18-1.pdf \[pdf1\]] [./materials/lecture18-2.pdf \[pdf2\]]

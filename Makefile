@@ -1,4 +1,3 @@
-all: 2017/index.html
+all: 2018/index.html
 
-2017/index.html: 2017/schedule.json build.py
-	./build.py $< $@
+2018/index.html: 2018/index.html 

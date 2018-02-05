@@ -1,0 +1,93 @@
+# jemdoc: menu{MENU}{answers.html}
+=  Course Project
+
+The term project is a major component of 6.829, since that's where you draw upon
+your knowledge and experience from the course readings and elsewhere to actually do research.
+This document is intended to ease the process of figuring out what to work on and writing a
+short proposal explaining what you want to work on. We expect teams of *3* people.
+
+*Project proposal deadline:* Oct. 9, 2017 23:59pm. Each team should submit only one proposal.
+
+[./materials/project_ideas.pdf *Here*] are some project ideas to help you with the initial proposal.
+Feel free to propose your own ideas.
+
+*Project report 1 deadline:* Oct. 23, 2017 23:59pm.
+
+This is an initial report to describe the progress you had over the past two weeks since the proposal. We are looking for one to two pages of progress report which provides two or three paragraphs, each paragraph describes progress along one aspect of your project.
+
+Also by now we expect that many of you used the past two weeks to start experimenting with your ideas and collecting initial measurements. We do not expect that you have results, only some initial measurements related to the topic of your proposal.
+
+An example report could be three paragraphs as follows. The first paragraph describes some revisions you did to your ideas since submitting the proposal.  The second paragraph describes the process of acquiring the equipment you will use in your project and a relevant test that you did with your equipment. The third paragraph provides some numbers or graphs based on the measurements that you collected, and explain what you learned. If you don not have measurements yet, it is OK, just let us know what measurements you are planning and what you expect to see.
+
+In short, use report to describe the progress you made on your ideas regardless of whether the progress is in terms of measurements, theoretical analysis, or literature review.
+
+== Find Teammates
+If you are interested in working on one of the suggested projects and already have a team,
+you can claim the project by sending an email to *6.829-fall2017@mit.edu*.
+Start the email with a title \[6.829 - project X claimed\] and tell us the names of your team members.
+
+If you are interested in working on one of the suggested projects but still looking for teammates,
+also send an email to *6.829-fall2017@mit.edu* with a title \[6.829 - project X\] and briefly
+describe your background. People interested in the same project can reply to the email and form a team.
+
+You can also send an email to the list with your own project ideas to recruit team members.
+Start the email with a title \[6.829 - project YOUR-PROJECT-NAME\].
+
+
+#== Teams
+#
+#*Detect Drowsy Drivers Using Wireless Signals and Machine Learning*:
+#
+#- Contact Person: Shichao Yue, scyue@mit.edu
+#
+#- 6.829 Students:
+#
+#*Driverless Cars that Deal with Snow and Fog*
+#
+#- Contact Person: Ezzeldin Hamed, ezz@mit.edu
+#
+#- 6.829 Students: Felix Naser, fnaser@mit.edu
+#
+#*In Body Tracking using RF Signals*
+#
+#- Contact Person: Deepak Vasisht, deepakv@mit.edu; Guo Zhang, guozhang@mit.edu
+#
+#- 6.829 Students: Guo Zhang, guozhang@mit.edu
+#
+#*Creating Large Antenna Arrays by using Multiple Access Points for Localization*
+#
+#- Contact Person: Deepak Vasisht, deepakv@mit.edu
+#
+#- 6.829 Students:
+#
+#*Gmesture recognition using multiple RFIDs*
+#
+#- Contact Person:
+#
+#- 6.829 Students: Danielle Olson (dolson@mit.edu), Mojdeh Shakeri, Jonathan Kelly
+#
+#*Robot Navigation using Wireless Signals*
+#
+#- Contact Person:
+#
+#- 6.829 Students:
+#
+#*Low Latency Networks for Robotics*
+#
+#- Contact Person: Jake Read, jake.read@cba.mit.edu
+#
+#- 6.829 Students: Jake Read, jake.read@cba.mit.edu
+#
+#*P2P wireless distributed network*
+#
+#- Contact Person: Patricio Noyola, pnoyola@mit.edu
+#
+#- 6.829 Students: Patricio Noyola, pnoyola@mit.edu
+#
+#*Sybil-resilient peer-to-peer gossip networks*
+#
+#- 6.829 Students: Kai Xiao (kaix@mit.edu), Prateek Kukreja(pkukreja@mit.edu), Derek Leung (dtl@mit.edu)
+
+#Fill in the following form if you want us to help you find a team.
+
+#{{<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScH1d25HDYOvKjKK5hpdrXOwXxB6A44WP8aCkQZf77Xe-KeoA/viewform?embedded=true" width="900" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>}}

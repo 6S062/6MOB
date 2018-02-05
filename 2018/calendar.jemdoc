@@ -1,0 +1,274 @@
+# jemdoc: menu{MENU}{papers.html}
+= 6.S062 Calendar: Spring 2018
+
+Here is the tentative schedule of lectures and due dates.
+
+~~~
+{}{raw}
+<style>
+table.calendar {
+    font-family: arial, helvetica;
+    font-size: 10pt;
+    empty-cells: show;
+    border: 1px solid #000000;
+    border-collapse: collapse;
+}
+table.calendar tr td {
+    border: 1px solid #aaaaaa;
+}
+table.calendar tr {
+    vertical-align: center;
+    height: 3em;
+    background: #eeeeee;
+}
+table.calendar thead tr {
+    text-align: center;
+    background: #444444;
+    color: #ffffff;
+    height: auto;
+    font-weight: bold;
+}
+.lecture {
+    background: #ffffaa;
+}
+.recitation {
+    background: #cccc99;
+}
+.tutorial {
+    background: #dddd55;
+}
+.quiz {
+    background: #ff9900;
+}
+.holiday {
+    background: #ccffcc;
+}
+.special {
+    background: #aaaaff;
+}
+.important {
+    background: #ffaaaa;
+}
+.reading {
+    color: #3333ff;
+}
+.deadline {
+    color: #ff0000;
+}
+.assignment {
+    color: #0aa00a;
+}
+.date {
+    color: #444444;
+}
+.due {
+    background: #ffaaaa;
+}
+</style>
+<table class="calendar" cellspacing="0" cellpadding="6" width="100%">
+ <thead>
+  <tr>
+   <td width="16%">Monday</td><td width="26%">Tuesday</td>
+   <td width="16%">Wednesday</td><td width="26%">Thursday</td>
+   <td width="16%">Friday</td>
+  </tr>
+ </thead>
+<tr> <!-- week of feb 5 -->
+  <td id="2018-2-5" class="special"><span class="date">Feb 5</span><br />
+  	<i>Reg day</i></td>
+  <td id="2018-2-6" class="lecture"><span class="date">Feb 6</span><br />
+    <b>LEC 1:</b> Introduction and Course Overview<br />
+    <i>First day of classes</i></td></td>
+  <td id="2018-2-7"<span class="date">Feb 7</span></td>
+  <td id="2018-2-8" class="lecture"><span class="date">Feb 8</span><br />
+	<b>LEC 2:</b> Intro to Positioning and Indoor Location Systems<br />
+  	<span class="reading"><b>Preparation:</b> Read <a
+href="http://nms.lcs.mit.edu/papers/cricket.pdf">Cricket</a>, <a href="http://onlinelibrary.wiley.com.libproxy.mit.edu/doi/10.1002/0470092335.ch6/pdf">Location-based Services, Chapter 6</span><br />
+  	<span class="reading"><b>Assigned:</b> <a href="#">Lab 0</a></span></td>
+  <td id="2018-2-9"><span class="date">Feb 9</span></td>
+</tr>
+<tr> <!-- week of feb 12 -->
+  <td id="2018-2-12" class="date"><span class="date">Feb 12</span></td>
+  <td id="2018-2-13" class="lecture"><span class="date">Feb 13</span><br />
+    <b>LEC 3:</b> GPS: Outdoor Location<br />
+  	<span class="reading"><b>Preparation:</b> Read <a
+href="https://en.wikipedia.org/wiki/Global_Positioning_System">GPS</a></span><br />
+  	<span class="reading"><b>Assigned:</b> <a href="#">Lab 1</a></span><br />
+  	<span class="deadline"><b>DUE:</b> <a href="#">Lab 0</a></span></td>
+  <td id="2018-2-14"<span class="date">Feb 14</span></td>
+  <td id="2018-2-15" class="lecture"><span class="date">Feb 15</span><br />
+    <b>LEC 4:</b> Indoor Location with RF<br />
+  	<span class="reading"><b>Preparation:</b> Read <a
+href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/infocom2000.pdf">RADAR</a>, <a href="http://witrack.csail.mit.edu/witrack-paper.pdf">WiTrack</a></span></td>
+  <td id="2018-2-16"><span class="date">Feb 16</span></td>
+</tr>
+<tr> <!-- week of feb 19 -->
+  <td id="2018-2-19" class="holiday"><span class="date">Feb 19</span><br />
+    President's day</td>
+  <td id="2018-2-20" class="special"><span class="date">Feb 20</span><br />
+  	<i>Monday schedule</i></td>
+  <td id="2018-2-21"><span class="date">Feb 21</span></td>
+  <td id="2018-2-22" class="lecture"><span class="date">Feb 22</span><br />
+    <b>LEC 5:</b> Connectivity Overview and BLE</td>
+  <td id="2018-2-23"><span class="date">Feb 23</span></td>
+</tr>
+<tr> <!-- week of feb 26 -->
+  <td id="2018-2-26" class="date"><span class="date">Feb 26</span></td>
+  <td id="2018-2-27" class="lecture"><span class="date">Feb 27</span><br />
+    <b>LEC 6:</b> Mesh and Multi-Hop Wireless Networks <br />
+  	<span class="reading"><b>Preparation:</b> Read <a
+href="https://pdos.csail.mit.edu/papers/grid:mobicom03/paper.pdf">ETX</a></span><br />
+  	<span class="reading"><b>Assigned:</b> <a href="#">Lab 2</a></span><br />
+  	<span class="deadline"><b>DUE:</b> <a href="#">Lab 1</a></span></td>
+  <td id="2018-2-28"<span class="date">Feb 28</span></td>
+  <td id="2018-3-1" class="lecture"><span class="date">Mar 1</span><br />
+    <b>LEC 7:</b> Intro to Inertial Sensing and Activity Recognition<br />
+  	<span class="reading"><b>Preparation:</b> Read <a
+href="http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/pbra017e_ch2">Developments of Inertial Sensing</a>, <a href="http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/pbra017e_ch3">Principles of Innertial Sensing</a>, <a href="http://link.springer.com.libproxy.mit.edu/chapter/10.1007/978-3-540-24646-6_1">Activity Recognition</a></span></td>
+  <td id="2018-3-2"><span class="date">Mar 2</span></td>
+</tr>
+<tr> <!-- week of mar 5 -->
+  <td id="2018-3-5"><span class="date">Mar 5</span></td>
+  <td id="2018-3-6" class="lecture"><span class="date">Mar 6</span><br />
+    <b>LEC 8:</b> Pothole detection<br />
+  	<span class="reading"><b>Preparation:</b> Read <a
+href="http://nms.csail.mit.edu/papers/p2-mobisys-2008.pdf">Pothole Patrol</a></span></td>
+  <td id="2018-3-7"<span class="date">Mar 6</span></td>
+  <td id="2018-3-8" class="lecture"><span class="date">Mar 8</span><br />
+    <b>LEC 9:</b> Wireless sensing<br />
+  	<span class="reading"><b>Preparation:</b> Read <a
+href="http://witrack.csail.mit.edu/vitalradio/content/vitalradio-paper.pdf">Vital-Radio</a></span></td>
+  <td id="2018-3-9"><span class="date">Mar 9</span></td>
+</tr>
+<tr> <!-- week of mar 12 -->
+  <td id="2018-3-12"><span class="date">Mar 12</span></td>
+  <td id="2018-3-13" class="lecture"><span class="date">Mar 13</span><br />
+    <b>LEC 10:</b> In-network Aggregation<br />
+  	<span class="reading"><b>Preparation:</b> Read <a
+href="http://db.cs.berkeley.edu/papers/osdi02-tag.pdf">TAG</a></span><br />
+  	<span class="deadline"><b>DUE:</b> <a href="#">Project Proposals</a></span></td>
+  <td id="2018-3-14"<span class="date">Mar 14</span></td>
+  <td id="2018-3-15" class="lecture"><span class="date">Mar 15</span><br />
+    <b>LEC 11:</b> Agriculture IoT<br />
+  	<span class="reading"><b>Preparation:</b> Read <a
+href="https://www.usenix.org/system/files/conference/nsdi17/nsdi17-vasisht.pdf">FarmBeats</a></span></td>
+  <td id="2018-3-16"><span class="date">Mar 16</span></td>
+</tr>
+<tr> <!-- week of mar 19 -->
+  <td id="2018-3-19"><span class="date">Mar 19</span></td>
+  <td id="2018-3-20" class="lecture"><span class="date">Mar 20</span><br />
+	<i> <a href="#">Project meetings</a></i><br />
+  	<span class="reading"><b>Assigned:</b> <a href="#">Lab 3</a></span><br />
+  	<span class="deadline"><b>DUE:</b> <a href="#">Lab 2</a></span></td>
+  <td id="2018-3-21"<span class="date">Mar 21</span></td>
+  <td id="2018-3-22" class="lecture"><span class="date">Mar 22</span><br />
+    <b>LEC 12:</b> Map-matching with cellular data<br />
+  	<span class="reading"><b>Preparation:</b> Read <a
+href="http://nms.csail.mit.edu/papers/index.php?detail=203">CTrack</a></span></td>
+  <td id="2018-3-23"><span class="date">Mar 23</span></td>
+</tr>
+<tr> <!-- week of mar 26 -->
+  <td id="2018-3-26" class="holiday"><span class="date">Mar 26</span><br />
+    Spring break</td>
+  <td id="2018-3-27" class="holiday"><span class="date">Mar 27</span><br />
+    Spring break</td>
+  <td id="2018-3-28" class="holiday"><span class="date">Mar 28</span><br />
+    Spring break</td>
+  <td id="2018-3-29" class="holiday"><span class="date">Mar 29</span><br />
+    Spring break</td>
+  <td id="2018-3-30" class="holiday"><span class="date">Mar 30</span><br />
+    Spring break</td>
+</tr>
+<tr> <!-- week of apr 2 -->
+  <td id="2018-4-2"><span class="date">Apr 2</span></td>
+  <td id="2018-4-3" class="lecture"><span class="date">Apr 3</span><br />
+    <b>LEC 13:</b> Map inference<br />
+  	<span class="reading"><b>Preparation:</b> Read <a
+href="http://dl.acm.org.libproxy.mit.edu/citation.cfm?id=2424333">Map Inference</a></span></td>
+  <td id="2018-4-4"<span class="date">Apr 4</span></td>
+  <td id="2018-4-5" class="lecture"><span class="date">Apr 5</span><br />
+    <b>LEC 14:</b> Shooter localization<br />
+  	<span class="reading"><b>Preparation:</b> Read <a
+href="http://www.isis.vanderbilt.edu/sites/default/files/Simon_G_11_3_2004_Sensor_Net.pdf">Sensor Network-Based Countersniper System</a></span><br />
+  	<span class="reading"><b>Assigned:</b> <a href="#">Lab 4</a></span><br />
+  	<span class="deadline"><b>DUE:</b> <a href="#">Lab 3</a></span></td>
+  <td id="2018-4-6"><span class="date">Apr 6</span></td>
+</tr>
+<tr> <!-- week of apr 9 -->
+  <td id="2018-4-9"><span class="date">Apr 9</span></td>
+  <td id="2018-4-10" class="lecture"><span class="date">Apr 10</span><br />
+    <b>LEC 15:</b> Attacks on acoustic sensing<br />
+  	<span class="reading"><b>Preparation:</b> Read <a
+href="http://synrg.csl.illinois.edu/papers/backdoor_mobisys17.pdf">BackDoor</a></span></td>
+  <td id="2018-4-11"<span class="date">Apr 11</span></td>
+  <td id="2018-4-12" class="lecture"><span class="date">Apr 12</span><br />
+    <b>LEC 16:</b> Habitat monitoring with acoustic sensors<br />
+  	<span class="reading"><b>Preparation:</b> Read <a
+href="http://ieeexplore.ieee.org.libproxy.mit.edu/xpl/login.jsp?tp=&arnumber=4505488&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D4505488">VoxNet</a></span></td>
+  <td id="2018-4-13"><span class="date">Apr 13</span></td>
+</tr>
+<tr> <!-- week of apr 16 -->
+  <td id="2018-4-16" class="holiday"><span class="date">Apr 16</span><br />
+    Patriots' day</td>
+  <td id="2018-4-17" class="holiday"><span class="date">Apr 17</span><br />
+    Patriots' day</td>
+  <td id="2018-4-18"<span class="date">Apr 18</span></td>
+  <td id="2018-4-19" class="lecture"><span class="date">Apr 19</span><br />
+    <b>LEC 17:</b> Continuous object recognition<br />
+  	<span class="reading"><b>Preparation:</b> Read <a
+href="http://nms.csail.mit.edu/papers/index.php?detail=236">Glimpse</a></span><br />
+  	<span class="deadline"><b>DUE:</b> <a href="#">Lab 4</a></span></td>
+  <td id="2018-4-20"><span class="date">Apr 20</span></td>
+</tr>
+<tr> <!-- week of apr 23 -->
+  <td id="2018-4-23"><span class="date">Apr 23</span></td>
+  <td id="2018-4-24" class="quiz"><span class="date">Apr 24</span><br />
+  	<b>Quiz during lecture time</b></td>
+  <td id="2018-4-25"<span class="date">Apr 25</span></td>
+  <td id="2018-4-26" class="special"><span class="date">Apr 26</span><br />
+	<i> <a href="#">Project meetings</a></i><br />
+	<i>DROP DATE</i></td>
+  <td id="2018-4-27"><span class="date">Apr 27</span></td>
+</tr>
+<tr> <!-- week of apr 30 -->
+  <td id="2018-4-30"><span class="date">Apr 30</span></td>
+  <td id="2018-5-1" class="special"><span class="date">May 1</span><br />
+	<i> <a href="#">Project meetings</a></i>
+  <td id="2018-5-2"<span class="date">May 2</span></td>
+  <td id="2018-5-3" class="special"><span class="date">May 3</span><br />
+	<i> <a href="#">Project meetings</a></i>
+  <td id="2018-5-4"><span class="date">May 4</span></td>
+</tr>
+<tr> <!-- week of may 7 -->
+  <td id="2018-5-7"><span class="date">May 7</span></td>
+  <td id="2018-5-8" class="special"><span class="date">May 8</span><br />
+	<i> <a href="#">Project meetings</a></i>
+  <td id="2018-5-9"<span class="date">May 9</span></td>
+  <td id="2018-5-10" class="special"><span class="date">May 10</span><br />
+	<i> <a href="#">Project meetings</a></i><br />
+  	<span class="deadline"><b>DUE:</b> <a href="#">Project Titles and Abstracts</a></span></td>
+  <td id="2018-5-11"><span class="date">May 11</span></td>
+</tr>
+<tr> <!-- week of may 14 -->
+  <td id="2018-5-14"><span class="date">May 14</span></td>
+  <td id="2018-5-15" class="special"><span class="date">May 15</span><br />
+	<i> <a href="#">Project meetings</a></i>
+  <td id="2018-5-16"<span class="date">May 16</span></td>
+  <td id="2018-5-17" class="special"><span class="date">May 17</span><br />
+  	<i> <a href="#">Project presentations</a></i><br />
+  	<span class="deadline"><b>DUE:</b> <a href="#">Posters, Presentations, and Demos</a></span><br />
+  	<i>Last day of classes</i></td></td>
+  <td id="2018-5-18"><span class="date">May 18</span></td>
+</tr>
+</table>
+<script type="text/javascript">
+var d = new Date();
+for (var fwd = 0; fwd < 3; fwd++) {
+  var i = d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
+  var e = document.getElementById(i);
+  if (e) { e.style.border = '2px solid blue'; break; }
+  d.setTime(d.getTime() + 24*60*60*1000);
+}
+</script>
+<p>
+~~~
