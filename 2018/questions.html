@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>
-6.829 Fall 2017 Paper Questions
+6.S062 Spring 2018 Reading Questions
 </title>
 
 <!-- To add a new question, just put in within a <div> tag, give it
@@ -28,18 +28,13 @@ div.questionbox {
 
 <div align="center">
 <h2>
-<a href="index.html">6.829</a> Fall 2017 Paper Questions
+<a href="index.html">6.S062</a> Spring 2018 Reading Questions
 </h2>
 </div>
 
 <a name="top"></a>
-<p>
-For each paper, by 11:59PM the evening before lecture:
-
 <ul>
-<li>Submit your answers to each lecture's paper questions via the
-    <a href="answers.html">submission
-    web site</a>
+<li>Before the start of class, please send your response to the questions to 6s062-submit@mit.edu from an mit.edu email address.
 </ul>
 
 </p>
@@ -47,237 +42,59 @@ For each paper, by 11:59PM the evening before lecture:
 <div id="questions">
 
 
-<div class="questionbox" ID="q-lec2">
-<p>
-Read Chapters 1, 2, and 5 from [<a href="papers/SampleRate.pdf">SampleRate</a>]. Answer the following two questions:
-<br><br>
-(1) Assume that two clients are connected to the same access point, would
-SampleRate make the two clients achieve the same rate on average? Answer
-yes or no and explain your answer using a sentence or two.
-<br><br>
-(2) Under some conditions, SampleRate does not perform too well. State
-one such condition and explain why its performance is sub-optimal.
-</p>
-</div>
-
-
-<div class="questionbox" ID="q-lec3">
-<p>
-Answer True OR False, and provide a 1-setence justification for each.
-<br><br>
-(1) Consider a wireless channel that is frequency selective, i.e., different frequencies experience different attenuation and phase rotation. In this case, a scheme like 802.11b, which does not divide the bandwidth into sub-carriers but rather transmit each bit over the whole bandwidth is better than a scheme like OFDM which divides the bandwidth into sub-carriers and transmits different bits on different sub-carriers.
-<br><br>
-(2) Channel that suffer from more multipath requires a longer OFDM cyclic prefix than channels that do not suffer from multipath (e.g., line of sight channels).
-<br><br>
-(3) One of the benefits of OFDM is that the receiver does not need to correct for carrier frequency offset (CFO)
-<br><br>
-(4) With OFDM, the transmitter can use a different modulation scheme (i.e., BPSK, 4QAM or 16QAM) for different OFDM sub-carriers.
-</p>
-</div>
-
-
-<div class="questionbox" ID="q-lec4">
-<p>
-Read the ZigZag paper and answer the following questions.
-<br><br>
-(1) What is the "hidden terminal" problem? Why does it arise even when
-carrier sense is used?
-<br><br>
-(2) Why is a random wait before retransmission in the 802.11 MAC protocol
-important for the success of the ZigZag idea?
-<br><br>
-(3) Does ZigZag as described in the paper achieve its intended goals when
-different nodes pick different bit rates of transmission?
-</p>
-</div>
-
-
-<div class="questionbox" ID="q-lec5">
-<p>
-Provide a short answer for each of the following questions:
-<br><br>
-(1) How does the number of antenna in the array affects your ability to localize (i.e., why do we need an array)?
-<br><br>
-(2) How does array track deal with multipath?
-<br><br>
-(3) List two disadvantages of ArrayTrack.
-</p>
-</div>
-
-
 <div class="questionbox" ID="q-lec6">
 <p>
-Provide a short answer for each of the following questions:
+<b>Lecture 6</b>
 <br><br>
-(1) In WiTrack, how does FMCW compute the time of flight?
-<br><br>
-(2) In WiTrack, what is the difference between static and dynamic multipath?
-<br><br>
-(3) List 2 advantages and 2 disadvantages for WiTrack over ArrayTrack.
+Suppose we want to send data from node S to node T in a multi-hop wireless network. The probability of successfully receiving an ACK for a packet sent from S to T directly is q. The other choice is to use an intermediate node, N; the probability of successfully receiving an ACK for a packet from S to N is p, the same as the probability of successfully receiving an ACK for a packet sent from N to T.
+
+Using ETX, under what conditions would the direct link from S to T be preferred to the path S — N — T?
 </p>
 </div>
 
-
 <div class="questionbox" ID="q-lec7">
-<p>Please read the vital radio paper and answer the following questions:
+<p>
+<b>Lecture 7</b>
 <br><br>
-(1) Last lecture we learned that WiTrack's accuracy is about 20cm.
-Further, we learned that the resolution of FMCW is C/2B, where C is the
-speed of light and B is the bandwidth. VitalRdaio uses the same FMCW
-radio that WiTrack uses. So how is it possible for VitalRadio to measure
-movements as small as the chest inhale-exhale motion?
+(1) Describe two settings in which inertial sensing can be superior to/preferred over GPS for navigation applications.
 <br><br>
-(2) VitalRadio can measure sub-centimeter motion. Can one use that
-technique to improve trajectory resolution in WiTrack to localize a
-person to within sub-centimeter accuracy? Explain your answer.
+(2) Based on the results in the paper, which pair of activities is hardest to tell apart? Based your understanding of how accelerometers work, why do you think this is the case?
 </p>
 </div>
 
 <div class="questionbox" ID="q-lec8">
-<p>Please answer the following question:
+<p>
+<b>Lecture 8</b>
 <br><br>
-The ETX metric accounts for the delivery ratio on the forward path and on the backward path. State one reason why the forward deliver ratio can be different from the backward delivery ratio.
+A simple method to detect potholes would be to look at time windows during which the absolute magnitude of the acceleration vector is above some threshold. This will lead to a number of false positives, as described in the paper. After reading the paper, list two sources of such false positives, and how the paper proposes to address them.
 </p>
 </div>
-
-<div class="questionbox" ID="q-lec9">
-<p>Answer the following questions about MIMOs:
-<br><br>
-(1) What is the difference between MIMO diversity and MIMO multiplexing?
-<br><br>
-(2) Consider a 2-antenna WiFi access point transmitting packets to a 2-antenna receiver. Describe a scenario in which the AP achieves a higher throughput if it uses MIMO diversity (as opposed to multiplexing) to transmit to the client. Describe a scenario in which the AP achieves a higher throughput if it uses MIMO multiplexing to transmit to the client.
-<br><br>
-(3) Can a 2-antenna AP transmit 2 concurrent packets where each packet is destined to a different single antenna client? How can the clients decode without interference?
-<br><br>
-(4) Consider a scenario where all the WiFi nodes implement n+. What is the upper limit on the number of concurrent streams determined by?
-</p>
-</div>
-
 
 <div class="questionbox" ID="q-lec10">
-<p>Read the assigned paper and answer the following questions:
+<p>
+<b>Lecture 10</b>
 <br><br>
-(1) Explain in two sentences the meaning of backscatter communication
-<br><br>
-(2) Compressive sensing relies on the encoded vector x being sparse.
-Explain what is x in the context of Buzz and why it is expected to be sparse.
-</p>
-</div>
-
-
-<div class="questionbox" ID="q-lec11">
-<p>Read the Backdoor paper and answer the following questions:
-<br><br>
-(1) Alice and Ben have invited a few colleagues to an important private
-meeting They are however worried that one of their colleagues may use
-his cell phone to record the conversation at the meeting. Alice claims
-that She and Ben can use the technique in the paper to prevent such
-recording. Is Alice right? Explain your answer.
-<br><br>
-(2) List two advantages for the technique in the paper in comparison with
-past work on near-ultrasound.
+Summarize in 1-2 sentences how the type of aggregation function used in the query affects the communication efficiency of TAG.
 </p>
 </div>
 
 
 <div class="questionbox" ID="q-lec12">
-<p>Answer the following questions about the full-duplex papers:
+<p>
+<b>Lecture 12</b>
 <br><br>
-(1) In the Mobicom'10 paper, explain why the design does not work well
-with wideband channels (i.e., what happens as the channel bandwidth increases)?
-How is this problem addressed in the NSDI 2014 paper?
-<br><br>
-(2) Full-duplex radios should remove two types of self-interference: linear and nonlinear.
-For each paper, explain how it addresses each type of intereference.
-You need only to list the name of the mechanism or technique that addresses
-a particular type of interference (no need for a detailed explanation)
+Explain the problem that CTrack solves: i.e., what are the inputs to CTrack, and what are the outputs?
 </p>
 </div>
 
 
 <div class="questionbox" ID="q-lec13">
-<p>Answer the following questions about the papers:
-<br><br>
-(1) In the StarLight paper, what are virtual shadow maps?
-Briefly explain why applying the same idea for RF sensing would be much harder.
-<br><br>
-(2) If DarkLight had a larger communication range, would it support
-the same applications as StarLight?  Briefly justify your answer.
-</p>
-</div>
-
-
-<div class="questionbox" ID="q-lec14">
-<p>Answer the following questions about the papers:
-<br><br>
-(1) The congestion avoidance method in this paper increases the congestion window (cwnd) by 1/cwnd on each arriving ACK. Explain why this method increases cwnd <b>linearly</b> in time.
-<br><br>
-(2) This paper describes a congestion control scheme where packet losses are the only explicit signal that congestion has occurred. When a queue is full and a packet arrives at a router ("gateway"), suppose the router can drop either the arriving packet, or a packet at the very front of the queue. Which approach would you choose, and why?
-<br><br>
-(3) If a router never drops packets, what happens to the delays experienced by packets?
-</p>
-</div>
-
-
-<div class="questionbox" ID="q-lec15">
 <p>
-In the interdomain topology shown below, each node is an autonomous system (AS). Denote the set of IP addresses inside an AS X by IPx. Assume standard customer-peer-provider route filtering and ranking rules as discussed in the paper assigned. There are no other autonomous systems of interest in the following questions.
-<br/> <br/>
-<img src="./materials/question15.png" alt="q7img">
-<i>(Notice that directed edges indicate a costumer-provider relationship, and plain edges indicate a peering relationship.)</i>
-<br/> <br/>
-Consider AS F. From each of its neighboring autonomous systems, F receives some set of routes using BGP.
-<br/> <br/>
-From each AS given below, for which IP addresses (in IPx notation) does F receive advertisements?
-<br/> <br/>
-Neighbor AS
-<br/> <br/>
-From G:
-<br/>
-From B:
-<br/>
-From C:
-<br/> <br/>
-After F processes BGP advertisements received from each neighbor, F routing table entries whose next-hops are routers in a neighboring AS. For each neighboring AS given below, list the IP addresses (in IPx notation) for which that AS's router is F's next-hop.
-<br/> <br/>
-Next-hop
-<br/> <br/>
-G:
-<br/>
-B:
-<br/>
-C:
+<b>Lecture 13</b>
+<br><br>
+In the paper by Biagioni and Eriksson, to find road centerlines, the authors develop a new gray-scale skeletonization method. This method iterates through binary skeletonization starting from the highest density level and proceeding downwards in density levels. Why does it produce a better result than using binary skeletonization once at a low density level?
 </p>
 </div>
-
-
-<div class="questionbox" ID="q-lec16">
-<p>Answer the following questions about the papers:
-<br><br>
-(1) Explain briefly how VL2 leverages TCP congestion control to achieve its goals of uniform high capacity and performance isolation. What can go wrong for non-TCP traffic?
-<br><br>
-(2) VL2 uses two types of IP addresses in its architecture: location-specific (LA) and application-specific (AA) addresses. By way of analogy, which addresses in mobile IP play the same role as LA and AA addresses in VL2?
-</p>
-</div>
-
-
-<div class="questionbox" ID="q-lec17">
-<p> No reading questions today!
-<br><br>
-</p>
-</div>
-
-
-<div class="questionbox" ID="q-lec18">
-<p>Answer the following questions about the papers:
-<br><br>
-(1) Why does continuously choosing the highest possible bitrate lead to depleting the buffer and increasing the rebuffer rates?
-<br><br>
-(2) Briefly explain how the slow-start-restart behavior of TCP impacts an ABR’s predictor.
-</p>
-</div>
-
-
 
 <!-- add questions before here-->
 </div>
@@ -286,6 +103,6 @@ C:
 
 <hr>
 
-<b><a href= "index.html">6.829 home</a></b></p>
+<b><a href= "index.html">6.S062 home</a></b></p>
 </body>
 </html>

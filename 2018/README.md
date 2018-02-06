@@ -1,3 +1,3 @@
-# 6.829-website
+# 6.S062-website
 
-This is the web page for 6.829 Fall 2016 offering.
+This is the web page for 6.S062 Spring 2018 offering.
