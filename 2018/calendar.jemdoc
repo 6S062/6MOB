@@ -82,8 +82,7 @@ table.calendar thead tr {
   <td id="2018-2-7"<span class="date">Feb 7</span></td>
   <td id="2018-2-8" class="lecture"><span class="date">Feb 8</span><br />
 	<b>LEC 2:</b> Intro to Positioning and Indoor Location Systems<br />
-  	<span class="reading"><b>Preparation:</b> Read <a
-href="http://nms.lcs.mit.edu/papers/cricket.pdf">Cricket</a> and <a href="http://onlinelibrary.wiley.com.libproxy.mit.edu/doi/10.1002/0470092335.ch6/pdf">Location-based Services, Chapter 6</span><br />
+  	<span class="reading"><b>Preparation:</b> Read <a href="http://onlinelibrary.wiley.com.libproxy.mit.edu/doi/10.1002/0470092335.ch6/pdf" target="_blank">Location-based Services, Chapter 6</a> and <a href="http://nms.lcs.mit.edu/papers/cricket.pdf" target="_blank">Cricket</a> (<a href="questions.html?q=q-lec2">Questions</a>)</span><br />
   	<span class="reading"><b>Assigned:</b> <a href="lab0.html">Lab 0</a></span></td>
   <td id="2018-2-9"><span class="date">Feb 9</span></td>
 </tr>
@@ -92,14 +91,14 @@ href="http://nms.lcs.mit.edu/papers/cricket.pdf">Cricket</a> and <a href="http:/
   <td id="2018-2-13" class="lecture"><span class="date">Feb 13</span><br />
     <b>LEC 3:</b> GPS: Outdoor Location<br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="https://en.wikipedia.org/wiki/Global_Positioning_System">GPS</a></span><br />
+href="https://en.wikipedia.org/wiki/Global_Positioning_System" target="_blank">GPS</a></span><br />
   	<span class="reading"><b>Assigned:</b> <a href="lab1.html">Lab 1</a></span><br />
   	<span class="deadline"><b>DUE:</b> <a href="lab0.html">Lab 0</a></span></td>
   <td id="2018-2-14"<span class="date">Feb 14</span></td>
   <td id="2018-2-15" class="lecture"><span class="date">Feb 15</span><br />
     <b>LEC 4:</b> Indoor Location with RF<br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/infocom2000.pdf">RADAR</a> and <a href="http://witrack.csail.mit.edu/witrack-paper.pdf">WiTrack</a></span></td>
+href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/infocom2000.pdf" target="_blank">RADAR</a> and <a href="http://witrack.csail.mit.edu/witrack-paper.pdf" target="_blank">WiTrack</a></span></td>
   <td id="2018-2-16"><span class="date">Feb 16</span></td>
 </tr>
 <tr> <!-- week of feb 19 -->
@@ -117,14 +116,14 @@ href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/infoco
   <td id="2018-2-27" class="lecture"><span class="date">Feb 27</span><br />
     <b>LEC 6:</b> Mesh and Multi-Hop Wireless Networks <br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="https://pdos.csail.mit.edu/papers/grid:mobicom03/paper.pdf">ETX</a> (<a href="questions.html?q=q-lec6">Questions</a>)</span><br />
+href="https://pdos.csail.mit.edu/papers/grid:mobicom03/paper.pdf" target="_blank">ETX</a> (<a href="questions.html?q=q-lec6">Questions</a>)</span><br />
   	<span class="reading"><b>Assigned:</b> <a href="lab2.html">Lab 2</a></span><br />
   	<span class="deadline"><b>DUE:</b> <a href="lab1.html">Lab 1</a></span></td>
   <td id="2018-2-28"<span class="date">Feb 28</span></td>
   <td id="2018-3-1" class="lecture"><span class="date">Mar 1</span><br />
     <b>LEC 7:</b> Intro to Inertial Sensing and Activity Recognition<br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/pbra017e_ch2">Developments of Inertial Sensing</a> and <a href="http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/pbra017e_ch3">Principles of Innertial Sensing</a> and <a href="http://link.springer.com.libproxy.mit.edu/chapter/10.1007/978-3-540-24646-6_1">Activity Recognition</a> (<a href="questions.html?q=q-lec7">Questions</a>)</span></td>
+href="http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/pbra017e_ch2" target="_blank">Developments of Inertial Sensing</a> and <a href="http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/pbra017e_ch3" target="_blank">Principles of Innertial Sensing</a> and <a href="http://link.springer.com.libproxy.mit.edu/chapter/10.1007/978-3-540-24646-6_1" target="_blank">Activity Recognition</a> (<a href="questions.html?q=q-lec7">Questions</a>)</span></td>
   <td id="2018-3-2"><span class="date">Mar 2</span></td>
 </tr>
 <tr> <!-- week of mar 5 -->
@@ -132,12 +131,12 @@ href="http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/p
   <td id="2018-3-6" class="lecture"><span class="date">Mar 6</span><br />
     <b>LEC 8:</b> Pothole detection<br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="http://nms.csail.mit.edu/papers/p2-mobisys-2008.pdf">Pothole Patrol</a> (<a href="questions.html?q=q-lec8">Questions</a>)</span></td>
+href="http://nms.csail.mit.edu/papers/p2-mobisys-2008.pdf" target="_blank">Pothole Patrol</a> (<a href="questions.html?q=q-lec8">Questions</a>)</span></td>
   <td id="2018-3-7"<span class="date">Mar 6</span></td>
   <td id="2018-3-8" class="lecture"><span class="date">Mar 8</span><br />
     <b>LEC 9:</b> Wireless sensing<br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="http://witrack.csail.mit.edu/vitalradio/content/vitalradio-paper.pdf">Vital-Radio</a></span></td>
+href="http://witrack.csail.mit.edu/vitalradio/content/vitalradio-paper.pdf" target="_blank">Vital-Radio</a></span></td>
   <td id="2018-3-9"><span class="date">Mar 9</span></td>
 </tr>
 <tr> <!-- week of mar 12 -->
@@ -145,13 +144,13 @@ href="http://witrack.csail.mit.edu/vitalradio/content/vitalradio-paper.pdf">Vita
   <td id="2018-3-13" class="lecture"><span class="date">Mar 13</span><br />
     <b>LEC 10:</b> In-network Aggregation<br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="http://db.cs.berkeley.edu/papers/osdi02-tag.pdf">TAG</a> (<a href="questions.html?q=q-lec10">Questions</a>)</span><br />
+href="http://db.cs.berkeley.edu/papers/osdi02-tag.pdf" target="_blank">TAG</a> (<a href="questions.html?q=q-lec10">Questions</a>)</span><br />
   	<span class="deadline"><b>DUE:</b> <a href="projects.html">Project Proposals</a></span></td>
   <td id="2018-3-14"<span class="date">Mar 14</span></td>
   <td id="2018-3-15" class="lecture"><span class="date">Mar 15</span><br />
     <b>LEC 11:</b> Agriculture IoT<br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="https://www.usenix.org/system/files/conference/nsdi17/nsdi17-vasisht.pdf">FarmBeats</a></span></td>
+href="https://www.usenix.org/system/files/conference/nsdi17/nsdi17-vasisht.pdf" target="_blank">FarmBeats</a></span></td>
   <td id="2018-3-16"><span class="date">Mar 16</span></td>
 </tr>
 <tr> <!-- week of mar 19 -->
@@ -164,7 +163,7 @@ href="https://www.usenix.org/system/files/conference/nsdi17/nsdi17-vasisht.pdf">
   <td id="2018-3-22" class="lecture"><span class="date">Mar 22</span><br />
     <b>LEC 12:</b> Map-matching with cellular data<br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="http://nms.csail.mit.edu/papers/index.php?detail=203">CTrack</a> (<a href="questions.html?q=q-lec12">Questions</a>)</span></td>
+href="http://nms.csail.mit.edu/papers/index.php?detail=203" target="_blank">CTrack</a> (<a href="questions.html?q=q-lec12">Questions</a>)</span></td>
   <td id="2018-3-23"><span class="date">Mar 23</span></td>
 </tr>
 <tr> <!-- week of mar 26 -->
@@ -184,12 +183,12 @@ href="http://nms.csail.mit.edu/papers/index.php?detail=203">CTrack</a> (<a href=
   <td id="2018-4-3" class="lecture"><span class="date">Apr 3</span><br />
     <b>LEC 13:</b> Map inference<br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="http://dl.acm.org.libproxy.mit.edu/citation.cfm?id=2424333">Map Inference</a> (<a href="questions.html?q=q-lec13">Questions</a>)</span></td>
+href="http://dl.acm.org.libproxy.mit.edu/citation.cfm?id=2424333" target="_blank">Map Inference</a> (<a href="questions.html?q=q-lec13">Questions</a>)</span></td>
   <td id="2018-4-4"<span class="date">Apr 4</span></td>
   <td id="2018-4-5" class="lecture"><span class="date">Apr 5</span><br />
     <b>LEC 14:</b> Shooter localization<br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="http://www.isis.vanderbilt.edu/sites/default/files/Simon_G_11_3_2004_Sensor_Net.pdf">Sensor Network-Based Countersniper System</a></span><br />
+href="http://www.isis.vanderbilt.edu/sites/default/files/Simon_G_11_3_2004_Sensor_Net.pdf" target="_blank">Sensor Network-Based Countersniper System</a></span><br />
   	<span class="reading"><b>Assigned:</b> <a href="lab4.html">Lab 4</a></span><br />
   	<span class="deadline"><b>DUE:</b> <a href="lab3.html">Lab 3</a></span></td>
   <td id="2018-4-6"><span class="date">Apr 6</span></td>
@@ -199,12 +198,12 @@ href="http://www.isis.vanderbilt.edu/sites/default/files/Simon_G_11_3_2004_Senso
   <td id="2018-4-10" class="lecture"><span class="date">Apr 10</span><br />
     <b>LEC 15:</b> Attacks on acoustic sensing<br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="http://synrg.csl.illinois.edu/papers/backdoor_mobisys17.pdf">BackDoor</a></span></td>
+href="http://synrg.csl.illinois.edu/papers/backdoor_mobisys17.pdf" target="_blank">BackDoor</a></span></td>
   <td id="2018-4-11"<span class="date">Apr 11</span></td>
   <td id="2018-4-12" class="lecture"><span class="date">Apr 12</span><br />
     <b>LEC 16:</b> Habitat monitoring with acoustic sensors<br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="http://ieeexplore.ieee.org.libproxy.mit.edu/xpl/login.jsp?tp=&arnumber=4505488&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D4505488">VoxNet</a></span></td>
+href="http://ieeexplore.ieee.org.libproxy.mit.edu/xpl/login.jsp?tp=&arnumber=4505488&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D4505488" target="_blank">VoxNet</a></span></td>
   <td id="2018-4-13"><span class="date">Apr 13</span></td>
 </tr>
 <tr> <!-- week of apr 16 -->
@@ -216,7 +215,7 @@ href="http://ieeexplore.ieee.org.libproxy.mit.edu/xpl/login.jsp?tp=&arnumber=450
   <td id="2018-4-19" class="lecture"><span class="date">Apr 19</span><br />
     <b>LEC 17:</b> Continuous object recognition<br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="http://nms.csail.mit.edu/papers/index.php?detail=236">Glimpse</a></span><br />
+href="http://nms.csail.mit.edu/papers/index.php?detail=236" target="_blank">Glimpse</a></span><br />
   	<span class="deadline"><b>DUE:</b> <a href="lab4.html">Lab 4</a></span></td>
   <td id="2018-4-20"><span class="date">Apr 20</span></td>
 </tr>
