@@ -140,7 +140,7 @@ href="http://nms.csail.mit.edu/papers/p2-mobisys-2008.pdf" target="_blank">Potho
   <td id="2018-3-8" class="lecture"><span class="date">Mar 8</span><br />
     <b>LEC 9:</b> Wireless sensing<br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="http://witrack.csail.mit.edu/vitalradio/content/vitalradio-paper.pdf" target="_blank">Vital-Radio</a></span></td>
+href="http://witrack.csail.mit.edu/vitalradio/content/vitalradio-paper.pdf" target="_blank">Vital-Radio</a> (<a href="questions.html?q=q-lec9">Questions</a>)</span></td>
   <td id="2018-3-9"><span class="date">Mar 9</span></td>
 </tr>
 <tr> <!-- week of mar 12 -->
@@ -152,9 +152,9 @@ href="http://db.cs.berkeley.edu/papers/osdi02-tag.pdf" target="_blank">TAG</a> (
   	<span class="deadline"><b>DUE:</b> <a href="projects.html">Project Proposals</a></span></td>
   <td id="2018-3-14"<span class="date">Mar 14</span></td>
   <td id="2018-3-15" class="lecture"><span class="date">Mar 15</span><br />
-    <b>LEC 11:</b> Agriculture IoT<br />
+    <b>LEC 11:</b> Battery-Free Sensors and Localization<br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="https://www.usenix.org/system/files/conference/nsdi17/nsdi17-vasisht.pdf" target="_blank">FarmBeats</a></span></td>
+href="http://www.mit.edu/~fadel/papers/RFind-paper.pdf" target="_blank">RFind</a></span></td>
   <td id="2018-3-16"><span class="date">Mar 16</span></td>
 </tr>
 <tr> <!-- week of mar 19 -->
@@ -190,9 +190,9 @@ href="http://nms.csail.mit.edu/papers/index.php?detail=203" target="_blank">CTra
 href="http://dl.acm.org.libproxy.mit.edu/citation.cfm?id=2424333" target="_blank">Map Inference</a> (<a href="questions.html?q=q-lec13">Questions</a>)</span></td>
   <td id="2018-4-4"<span class="date">Apr 4</span></td>
   <td id="2018-4-5" class="lecture"><span class="date">Apr 5</span><br />
-    <b>LEC 14:</b> Shooter localization<br />
+    <b>LEC 14:</b> Agriculture IoT<br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="http://www.isis.vanderbilt.edu/sites/default/files/Simon_G_11_3_2004_Sensor_Net.pdf" target="_blank">Sensor Network-Based Countersniper System</a></span><br />
+href="https://www.usenix.org/system/files/conference/nsdi17/nsdi17-vasisht.pdf" target="_blank">FarmBeats</a></span><br />
   	<span class="reading"><b>Assigned:</b> <a href="lab4.html">Lab 4</a></span><br />
   	<span class="deadline"><b>DUE:</b> <a href="lab3.html">Lab 3</a></span></td>
   <td id="2018-4-6"><span class="date">Apr 6</span></td>
