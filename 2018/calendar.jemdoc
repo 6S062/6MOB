@@ -138,7 +138,7 @@ href="http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/p
 href="http://nms.csail.mit.edu/papers/p2-mobisys-2008.pdf" target="_blank">Pothole Patrol</a> (<a href="questions.html?q=q-lec8">Questions</a>)</span></td>
   <td id="2018-3-7"<span class="date">Mar 7</span></td>
   <td id="2018-3-8" class="lecture"><span class="date">Mar 8</span><br />
-    <b>LEC 9:</b> Wireless sensing<br />
+    <b>LEC 9:</b> Wireless sensing (<a href="./materials/vital_radio.pdf">Slides</a>)<br />
   	<span class="reading"><b>Preparation:</b> Read <a
 href="http://witrack.csail.mit.edu/vitalradio/content/vitalradio-paper.pdf" target="_blank">Vital-Radio</a> (<a href="questions.html?q=q-lec9">Questions</a>)</span></td>
   <td id="2018-3-9"><span class="date">Mar 9</span></td>
@@ -154,7 +154,7 @@ href="http://db.cs.berkeley.edu/papers/osdi02-tag.pdf" target="_blank">TAG</a> (
   <td id="2018-3-15" class="lecture"><span class="date">Mar 15</span><br />
     <b>LEC 11:</b> Battery-Free Sensors and Localization<br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="http://www.mit.edu/~fadel/papers/RFind-paper.pdf" target="_blank">RFind</a></span></td>
+href="http://www.mit.edu/~fadel/papers/RFind-paper.pdf" target="_blank">RFind</a> (<a href="questions.html?q=q-lec11">Questions</a>)</span></td>
   <td id="2018-3-16"><span class="date">Mar 16</span></td>
 </tr>
 <tr> <!-- week of mar 19 -->
