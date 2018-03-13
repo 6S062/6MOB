@@ -145,16 +145,21 @@ href="http://witrack.csail.mit.edu/vitalradio/content/vitalradio-paper.pdf" targ
 </tr>
 <tr> <!-- week of mar 12 -->
   <td id="2018-3-12"><span class="date">Mar 12</span></td>
+  <td id="2018-3-13" class="special"><span class="date">Mar 13</span><br />
+  	<i>Snow day</i></td>
+  <!--
   <td id="2018-3-13" class="lecture"><span class="date">Mar 13</span><br />
     <b>LEC 10:</b> In-network Aggregation<br />
   	<span class="reading"><b>Preparation:</b> Read <a
 href="http://db.cs.berkeley.edu/papers/osdi02-tag.pdf" target="_blank">TAG</a> (<a href="questions.html?q=q-lec10">Questions</a>)</span><br />
   	<span class="deadline"><b>DUE:</b> <a href="projects.html">Project Proposals</a></span></td>
+  -->
   <td id="2018-3-14"<span class="date">Mar 14</span></td>
   <td id="2018-3-15" class="lecture"><span class="date">Mar 15</span><br />
     <b>LEC 11:</b> Battery-Free Sensors and Localization<br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="http://www.mit.edu/~fadel/papers/RFind-paper.pdf" target="_blank">RFind</a> (<a href="questions.html?q=q-lec11">Questions</a>)</span></td>
+href="http://www.mit.edu/~fadel/papers/RFind-paper.pdf" target="_blank">RFind</a> (<a href="questions.html?q=q-lec11">Questions</a>)</span><br />
+  	<span class="deadline"><b>DUE:</b> <a href="projects.html">Project Proposals</a></span></td>
   <td id="2018-3-16"><span class="date">Mar 16</span></td>
 </tr>
 <tr> <!-- week of mar 19 -->
