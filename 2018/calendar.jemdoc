@@ -198,7 +198,7 @@ href="http://dl.acm.org.libproxy.mit.edu/citation.cfm?id=2424333" target="_blank
   <td id="2018-4-5" class="lecture"><span class="date">Apr 5</span><br />
     <b>LEC 14:</b> Agriculture IoT<br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="https://www.usenix.org/system/files/conference/nsdi17/nsdi17-vasisht.pdf" target="_blank">FarmBeats</a></span><br />
+href="https://www.usenix.org/system/files/conference/nsdi17/nsdi17-vasisht.pdf" target="_blank">FarmBeats</a> (<a href="questions.html?q=q-lec14">Questions</a>)</span><br />
   	<span class="reading"><b>Assigned:</b> <a href="lab4.html">Lab 4</a></span><br />
   <td id="2018-4-6"><span class="date">Apr 6</span></td>
 </tr>
