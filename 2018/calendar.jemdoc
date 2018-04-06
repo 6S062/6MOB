@@ -196,7 +196,7 @@ href="http://dl.acm.org.libproxy.mit.edu/citation.cfm?id=2424333" target="_blank
   	<span class="deadline"><b>DUE:</b> <a href="projects.html">Revised Project Proposals</a></span></td>
   <td id="2018-4-4"<span class="date">Apr 4</span></td>
   <td id="2018-4-5" class="lecture"><span class="date">Apr 5</span><br />
-    <b>LEC 14:</b> Agriculture IoT<br />
+    <b>LEC 14:</b> Agriculture IoT (<a href="./materials/farmbeats.pdf">Slides</a>)<br />
   	<span class="reading"><b>Preparation:</b> Read <a
 href="https://www.usenix.org/system/files/conference/nsdi17/nsdi17-vasisht.pdf" target="_blank">FarmBeats</a> (<a href="questions.html?q=q-lec14">Questions</a>)</span><br />
   	<span class="reading"><b>Assigned:</b> <a href="lab4.html">Lab 4</a></span><br />
@@ -207,7 +207,7 @@ href="https://www.usenix.org/system/files/conference/nsdi17/nsdi17-vasisht.pdf" 
   <td id="2018-4-10" class="lecture"><span class="date">Apr 10</span><br />
     <b>LEC 15:</b> Attacks on acoustic sensing<br />
   	<span class="reading"><b>Preparation:</b> Read <a
-href="http://synrg.csl.illinois.edu/papers/backdoor_mobisys17.pdf" target="_blank">BackDoor</a></span><br />
+href="http://synrg.csl.illinois.edu/papers/backdoor_mobisys17.pdf" target="_blank">BackDoor</a> (<a href="questions.html?q=q-lec15">Questions</a>)</span><br />
   	<span class="deadline"><b>DUE:</b> <a href="lab3-swift.html">Lab 3</a></span></td>
   <td id="2018-4-11"<span class="date">Apr 11</span></td>
   <td id="2018-4-12" class="lecture"><span class="date">Apr 12</span><br />
