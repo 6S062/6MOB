@@ -205,7 +205,7 @@ href="https://www.usenix.org/system/files/conference/nsdi17/nsdi17-vasisht.pdf" 
 <tr> <!-- week of apr 9 -->
   <td id="2018-4-9"><span class="date">Apr 9</span></td>
   <td id="2018-4-10" class="lecture"><span class="date">Apr 10</span><br />
-    <b>LEC 15:</b> Attacks on acoustic sensing<br />
+    <b>LEC 15:</b> Attacks on acoustic sensing (<a href="./materials/backdoor.pdf">Slides</a>)<br />
   	<span class="reading"><b>Preparation:</b> Read <a
 href="http://synrg.csl.illinois.edu/papers/backdoor_mobisys17.pdf" target="_blank">BackDoor</a> (<a href="questions.html?q=q-lec15">Questions</a>)</span><br />
   	<span class="deadline"><b>DUE:</b> <a href="lab3-swift.html">Lab 3</a></span></td>
