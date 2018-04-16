@@ -6,12 +6,10 @@
 *Tue, Feb 6, 2018*
 - Course Overview [./materials/overview.pdf \[pdf\]]
 
-
 == Lec \#2: Intro to Positioning and Indoor Location Systems
 *Thr, Feb 8, 2018*
 - Intro to Positioning [./materials/positioning.pdf \[pdf\]]
 - Cricket [./materials/cricket.pdf \[pdf\]]
-
 
 == Lec \#4: Indoor Location with RF
 *Thr, Feb 15, 2018*
@@ -29,6 +27,10 @@
 == Lec \#11: Battery-Free Sensors and Localization
 *Thr, Mar 15, 2018*
 - RFind [./materials/rfind.pdf \[pdf\]]
+
+== Lec \#14: Agriculture IoT
+*Thr, Apr 5, 2018*
+- Farmbeats [./materials/farmbeats.pdf \[pdf\]]
 
 == Lec \#15: Attacks on Acousing Sensing
 *Tue, Apr 10, 2018*
