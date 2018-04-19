@@ -91,7 +91,7 @@ table.calendar thead tr {
 <tr> <!-- week of feb 12 -->
   <td id="2018-2-12" class="date"><span class="date">Feb 12</span></td>
   <td id="2018-2-13" class="lecture"><span class="date">Feb 13</span><br />
-    <b>LEC 3:</b> GPS: Outdoor Location<br />
+    <b>LEC 3:</b> GPS: Outdoor Location (<a href="./materials/gps.pdf">Slides</a>)<br />
   	<span class="reading"><b>Preparation:</b> Read <a
 href="https://en.wikipedia.org/wiki/Global_Positioning_System" target="_blank">GPS</a> (<a href="questions.html?q=q-lec3">Questions</a>)</span><br />
   	<span class="reading"><b>Assigned:</b> <a href="lab1.html">Lab 1</a></span><br />
@@ -110,7 +110,7 @@ href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/infoco
   	<i>Monday schedule</i></td>
   <td id="2018-2-21"><span class="date">Feb 21</span></td>
   <td id="2018-2-22" class="lecture"><span class="date">Feb 22</span><br />
-    <b>LEC 5:</b> Connectivity Overview and BLE <br />
+    <b>LEC 5:</b> Connectivity Overview and BLE (<a href="./materials/connectivity.pdf">Slides</a>)<br />
   	<span class="reading"><b>Preparation:</b> Read <a
 href="http://iot.stanford.edu/pubs/zachariah-gateway-hotmobile15.pdf" target="_blank">IoT Gateway Problem</a> (<a href="questions.html?q=q-lec5">Questions</a>)</span></td>
   <td id="2018-2-23"><span class="date">Feb 23</span></td>
@@ -118,7 +118,7 @@ href="http://iot.stanford.edu/pubs/zachariah-gateway-hotmobile15.pdf" target="_b
 <tr> <!-- week of feb 26 -->
   <td id="2018-2-26" class="date"><span class="date">Feb 26</span></td>
   <td id="2018-2-27" class="lecture"><span class="date">Feb 27</span><br />
-    <b>LEC 6:</b> Mesh and Multi-Hop Wireless Networks <br />
+    <b>LEC 6:</b> Mesh and Multi-Hop Wireless Networks (<a href="./materials/etx.pdf">Slides</a>)<br />
   	<span class="reading"><b>Preparation:</b> Read <a
 href="https://pdos.csail.mit.edu/papers/grid:mobicom03/paper.pdf" target="_blank">ETX</a> (<a href="questions.html?q=q-lec6">Questions</a>)</span><br />
   	<span class="reading"><b>Assigned:</b> <a href="lab2.html">Lab 2</a></span><br />
@@ -133,7 +133,7 @@ href="http://digital-library.theiet.org.libproxy.mit.edu/content/books/10.1049/p
 <tr> <!-- week of mar 5 -->
   <td id="2018-3-5"><span class="date">Mar 5</span></td>
   <td id="2018-3-6" class="lecture"><span class="date">Mar 6</span><br />
-    <b>LEC 8:</b> Pothole detection<br />
+    <b>LEC 8:</b> Pothole detection (<a href="./materials/pothole.pdf">Slides</a>)<br />
   	<span class="reading"><b>Preparation:</b> Read <a
 href="http://nms.csail.mit.edu/papers/p2-mobisys-2008.pdf" target="_blank">Pothole Patrol</a> (<a href="questions.html?q=q-lec8">Questions</a>)</span></td>
   <td id="2018-3-7"<span class="date">Mar 7</span></td>
@@ -170,7 +170,7 @@ href="http://www.mit.edu/~fadel/papers/RFind-paper.pdf" target="_blank">RFind</a
   	<span class="deadline"><b>DUE:</b> <a href="lab2.html">Lab 2</a></span></td>
   <td id="2018-3-21"<span class="date">Mar 21</span></td>
   <td id="2018-3-22" class="lecture"><span class="date">Mar 22</span><br />
-    <b>LEC 12:</b> Map-matching with cellular data<br />
+    <b>LEC 12:</b> Map-matching with cellular data (<a href="./materials/ctrack.pdf">Slides</a>)<br />
   	<span class="reading"><b>Preparation:</b> Read <a
 href="http://nms.csail.mit.edu/papers/index.php?detail=203" target="_blank">CTrack</a> (<a href="questions.html?q=q-lec12">Questions</a>)</span></td>
   <td id="2018-3-23"><span class="date">Mar 23</span></td>
@@ -190,7 +190,7 @@ href="http://nms.csail.mit.edu/papers/index.php?detail=203" target="_blank">CTra
 <tr> <!-- week of apr 2 -->
   <td id="2018-4-2"><span class="date">Apr 2</span></td>
   <td id="2018-4-3" class="lecture"><span class="date">Apr 3</span><br />
-    <b>LEC 13:</b> Map inference<br />
+    <b>LEC 13:</b> Map inference (<a href="./materials/mapinference.pdf">Slides</a>)<br />
   	<span class="reading"><b>Preparation:</b> Read <a
 href="http://dl.acm.org.libproxy.mit.edu/citation.cfm?id=2424333" target="_blank">Map Inference</a> (<a href="questions.html?q=q-lec13">Questions</a>)</span><br />
   	<span class="deadline"><b>DUE:</b> <a href="projects.html">Revised Project Proposals</a></span></td>
