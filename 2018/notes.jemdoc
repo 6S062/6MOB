@@ -11,14 +11,30 @@
 - Intro to Positioning [./materials/positioning.pdf \[pdf\]]
 - Cricket [./materials/cricket.pdf \[pdf\]]
 
+== Lec \#3: GPS
+*Tue, Feb 13, 2018*
+- GPS [./materials/gps.pdf \[pdf\]]
+
 == Lec \#4: Indoor Location with RF
 *Thr, Feb 15, 2018*
 - RADAR [./materials/radar.pdf \[pdf\]]
 - WiTrack [./materials/witrack.pdf \[pdf\]]
 
+== Lec \#5: Connectivity Overview and BLE
+*Thr, Feb 22, 2018*
+- IoT Connectivity [./materials/connectivity.pdf \[pdf\]]
+
+== Lec \#6: Mesh and Multi-Hop Wireless Networks
+*Tue, Feb 27, 2018*
+- ETX [./materials/etx.pdf \[pdf\]]
+
 == Lec \#7: Inertial Sensing
 *Thr, Mar 1, 2018*
 - Intro to Inertial Sensing [./materials/inertial_sensing.pdf \[pdf\]]
+
+== Lec \#8: Pothole Detection
+*Tue, Mar 6, 2018*
+- Pothole Patrol [./materials/pothole.pdf \[pdf\]]
 
 == Lec \#9: Wireless Sensing
 *Thr, Mar 8, 2018*
@@ -27,6 +43,14 @@
 == Lec \#11: Battery-Free Sensors and Localization
 *Thr, Mar 15, 2018*
 - RFind [./materials/rfind.pdf \[pdf\]]
+
+== Lec \#12: Map-matching with Cellular Data
+*Thr, Mar 22, 2018*
+- CTrack [./materials/ctrack.pdf \[pdf\]]
+
+== Lec \#13: Map Inference
+*Tue, Apr 3, 2018*
+- Map Inference [./materials/mapinference.pdf \[pdf\]]
 
 == Lec \#14: Agriculture IoT
 *Thr, Apr 5, 2018*
