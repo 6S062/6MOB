@@ -1,3 +1,3 @@
-# 6.S062-website
+# 6.808-website
 
-This is the web page for 6.S062 Spring 2018 offering.
+This is the web page for 6.808 Spring 2019 offering.
