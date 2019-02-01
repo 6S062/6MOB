@@ -1,4 +1,4 @@
-DOCS=index lectures announcements papers calendar answers notes scribe project
+DOCS=index calendar notes 
 
 HDOCS=$(addsuffix .html, $(DOCS))
 PHDOCS=$(addprefix , $(HDOCS))
