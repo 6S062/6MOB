@@ -42,8 +42,6 @@
 [ <a href="#layout">Xcode's Layout</a>
 | <a href="#xcode-shortcuts">Xcode Shortcuts</a>
 | <a href="#xcode-docs">Xcode Docs</a>
-| <a href="#obj-c">Objective-C Syntax</a>
-| <a href="#references">References</a>
 | <a href="#assignment">Lab Assignment</a>
 ]
 
@@ -126,94 +124,11 @@
 <img src="images/lab0/option_click.gif" alt="option_click">
 <p>You can get to class documentation by option + clicking the class in question.</p>
 
-<ul class="tab">
-<li><a href="javascript:void(0)" class="tablinks tab1 active" onclick="switchTab(1);">Objective-C</a></li>
-<li><a href="javascript:void(0)" class="tablinks tab2" onclick="switchTab(2);">Swift</a></li>
-</ul>
-<div class="tabcontent tab1">
-    <h2>Some info about Objective-C</h2>
+<h2>Some info about Swift</h2>
 
-    <img src="images/lab0/weird.gif" alt="taylor swift wtf?">
-    <p>Let's get this out of the way. Objective-C Looks odd.</p>
+<p>As Swift is relatively easier than Objective-C, we don't have a long tutorial for it. </p>
 
-    <img src="images/lab0/stop.gif" alt="">
-    <p>Unfortunately, I'm running out of gifs to explain it to you. Enough fooling around. Let's bring the buzz-feed part of this lecture to a halt.</p>
-
-    <h2 id="obj-c">Let's look at some actual syntax</h2>
-
-    <p>In the following examples, the code on top is Objective-C and the code on the bottom can be thought of as Python, though it really is just a generic OOP language.</p>
-
-    <h4>Passing Messages to Objects:</h4>
-    <img src="images/lab0/example1.png" alt="[object performAction]; object.performAction();">
-    <p>This above example is clear enough. We're calling a method (<code>performAction</code>) on an object (<code>object</code>). In Objective-C parlance we're passing a message to an object, telling it, "Run your implementation of the method performAction." The name of a method is referred to as a selector.</p>
-
-    <img src="images/lab0/example2.png" alt="[object performAction:firstParameter]; object.performAction(firstParameter);">
-    <p>Here, we call a method which takes one parameter. Note that methods in Objective-C indicate their parameters with colons.</p>
-
-    <img src="images/lab0/example3.png" alt="[object performAction:firstParameter withTwoParameters:secondParameter]; object.performAction(firstParameter, secondParameter);">
-    <p>Note that method parameters are interspersed with method names, <code>-performAction:withTwoParameters:</code>. This is similar to keyword arguments in Python, except none of the parameters is optional. If you take this into consideration when naming your methods, you will find Objective-C code can be very readable and self-documenting.</p>
-
-
-    <h4>Declaring Methods on Objects:</h4>
-    <img src="images/lab0/declaration.png" alt="">
-    <p>Declaring methods looks odd, too. Sorry.</p>
-
-    <p>(Some of images were stolen from <a href="https://ashfurrow.com/blog/why-objective-c-is-hard-to-learn/">https://ashfurrow.com/blog/why-objective-c-is-hard-to-learn/</a>. There's a good post there.)</p>
-
-    <h4>Declaring Properties on Objects</h4>
-    <code>@property (copy, nonatomic) NSString *foo;</code>
-    <p>In the above case, <code>NSString</code> is the class, and <code>foo</code> is the property name. The asterisk (<code>*</code>) signifies that <code>foo</code> is a pointer.</p> This is a bit complicated to explain, but there are a few good paragraphs on it <a href="http://blog.teamtreehouse.com/the-beginners-guide-to-objective-c-language-and-variables">here</a>.
-
-    <p>The <code>copy</code> and <code>nonatomic</code> attribute refer to the storage and atomicity of the property, respectively. Properties are <code>strong</code> and <code>atomic</code> by default.</p>
-
-    <p>Properties that are strong maintain strong references to an object. They will remain in memory until either the object that points to them is deleted, or they are deleted directly. This has to do with Automatic Reference Counting (ARC), which is similar to garbage collection in other languages.</p>
-
-    <p>Properties that are <code>atomic</code> are fully retrieved or set, even if called simultaneously from different threads.</p>
-
-    <p>Here is a concise <a href="https://stackoverflow.com/questions/9859719/objective-c-declared-property-attributes-nonatomic-copy-strong-weak">Stack Overflow post on property attributes</a>. The <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/EncapsulatingData/EncapsulatingData.html">Apple documentation on encapsulating data</a> is also quite helpful. </p>
-
-    <h2>Objective-C Syntactic Sugar</h2>
-
-    <p>There's some nice stuff built in, that's meant to simplify the syntax. For example, initializing arrays</p>
-
-    <code>NSArray *fizz = [NSArray arrayWithObjects:@"foo", @"bar", nil]</code>
-    <p>becomes</p>
-    <code>NSArray *fizz = @[@"foo", @"bar"]</code>
-
-    <hr>
-    <code>NSNumber *num = [NSNumber numberWithInt:2];</code>
-    <p>becomes</p>
-    <code>NSNumber *num = @"2"</code>
-
-    <hr>
-    <code>NSString *str = [myObj strProperty];</code>
-    <p>becomes</p>
-    <code>NSString *str = myObj.strProperty;</code>
-
-    <p>You might notice that syntactic sugar often begins with an <code>@</code> symbol. This is often the case.</p>
-
-    <p>Keep in mind that some of this syntactic sugar is quite recent. When you find old StackOverflow answers, they may use older notation.</p>
-
-    <h2 id="references">Some References</h2>
-    <ul>
-      <li>If you'd like to know more about Objective-C, here's <a href="images/lab0/Objective_C_Full_Presentation.pdf" target="_blank">a user's guide</a></li>
-      <li>Ray Wenderlich has the best <a href="https://github.com/raywenderlich/objective-c-style-guide" target="_blank">style guide</a> out there. It'll make your code easier to read and maintain.</p>
-      <li>This <a href="http://www.amazon.com/gp/product/032194206X" target="_blank">Objective-C book</a> is the staff favorite</li>
-      <li>This <a href="http://www.amazon.com/gp/product/0321942051?" target="_blank">iOS book</a> is full of nice tutorials</li>
-      <li>And then there's this <a href="http://goshdarnblocksyntax.com/" target="_blank" title="This is the SFW link. You can probably work out the other one.">indispensable reference for Objective-C's block syntax (which are similar to lambdas and closures).</a></li>
-      <li>Additionally, Apple has excellent <a href="https://developer.apple.com/library/ios/navigation/">developer docs</a>. In particular, <a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/OOP_ObjC/Introduction/Introduction.html">their introduction to Objective-C</a>.</li>
-      <li>If you want a deeper understanding of Objective-C and the why and how of the Cocoa APIs, Apple's <a href="https://developer.apple.com/library/ios/documentation/General/Conceptual/CocoaEncyclopedia/Introduction/Introduction.html">Concepts in Objective-C Programming</a> is your best source.</li>
-    </ul>
-</div>
-
-<div class="tabcontent tab2">
-    <h2>Some info about Swift</h2>
-
-    <p>As Swift is relatively easier than Objective-C, we don't have a long tutorial for it. </p>
-
-    <p>You may check <a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309" target="_blank">Apple's programming guide of Swift</a> for details. </p>
-</div>
-
+<p>You may check <a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309" target="_blank">Apple's programming guide of Swift</a> for details. </p>
 
 <h2 id="assignment">On to your lab assignment!</h2>
 
@@ -232,64 +147,27 @@
 <h4>Video 1 - Hello World</h4>
 <p>We create the project and print "Hello World". You'll also notice that we resize the simulator, and click on some of the menu bars. This just so that you see what those buttons do.</p>
 
-<ul class="tab">
-<li><a href="javascript:void(0)" class="tablinks tab1 active" onclick="switchTab(1);">Objective-C</a></li>
-<li><a href="javascript:void(0)" class="tablinks tab2" onclick="switchTab(2);">Swift</a></li>
-</ul>
-
-<pre class="tabcontent tab1">
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/zi6Z13-3oyI?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen>
-</iframe>
-</pre>
-<pre class="tabcontent tab2">
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/JtbR3gY6YXY" frameborder="0" allowfullscreen>
 </iframe>
-</pre>
 
 <hr>
 <hr>
 <h4>Video 2 - Making a <code>Weather</code> Class </h4>
 <p>Here, we define a weather class with some properties and methods</p>
 
-<ul class="tab">
-<li><a href="javascript:void(0)" class="tablinks tab1 active" onclick="switchTab(1);">Objective-C</a></li>
-<li><a href="javascript:void(0)" class="tablinks tab2" onclick="switchTab(2);">Swift</a></li>
-</ul>
-
-<pre class="tabcontent tab1"> 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/usGJJQu54so?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen>
-</iframe>
-</pre>
-<pre class="tabcontent tab2"> 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/Jvjs8ePFl2Y" frameborder="0" allowfullscreen>
 </iframe>
-</pre>
-
 
 <hr>
 <hr>
 <h4>Video 3 - Flushing out the <code>Weather</code> Methods</h4>
 <p>We add some details to the weather methods from the previous video. In the next video, we instantiate the weather class, and debug it. This video contains an intentional error. We'll debug it in the next one. Note that the API shown in the Objective-C video is actually out of data. </p>
 
-<ul class="tab">
-<li><a href="javascript:void(0)" class="tablinks tab1 active" onclick="switchTab(1);">Objective-C</a></li>
-<li><a href="javascript:void(0)" class="tablinks tab2" onclick="switchTab(2);">Swift</a></li>
-</ul>
-
-<pre class="tabcontent tab1"> 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/r2aSxMbzJ0Y?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen>
-</iframe>
-</pre>
-<pre class="tabcontent tab2"> 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/YYCasqQWSnU" frameborder="0" allowfullscreen>
 </iframe>
-</pre>
 
 <hr>
 <hr>
@@ -297,22 +175,9 @@ src="https://www.youtube.com/embed/YYCasqQWSnU" frameborder="0" allowfullscreen>
 <p>There was an error with weather. We illustrate some of the tools the debugger has.</p>
 <p>Using the debugger will make your life much, much easier, and we think it's worth learning.</p>
 
-<ul class="tab">
-<li><a href="javascript:void(0)" class="tablinks tab1 active" onclick="switchTab(1);">Objective-C</a></li>
-<li><a href="javascript:void(0)" class="tablinks tab2" onclick="switchTab(2);">Swift</a></li>
-</ul>
-
-<pre class="tabcontent tab1"> 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/m_JneOZb_Gk?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen>
-</iframe>
-</pre>
-<pre class="tabcontent tab2"> 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/yIXXW55gwHw" frameborder="0" allowfullscreen>
 </iframe>
-</pre>
-
 
 <hr>
 <hr>
@@ -320,22 +185,9 @@ src="https://www.youtube.com/embed/yIXXW55gwHw" frameborder="0" allowfullscreen>
 <p>We add a new button to the interface and define its constraints.</p>
 <p><strong>We're pressing the control key while dragging from the button to the <code>.h</code> file</strong></p>
 
-<ul class="tab">
-<li><a href="javascript:void(0)" class="tablinks tab1 active" onclick="switchTab(1);">Objective-C</a></li>
-<li><a href="javascript:void(0)" class="tablinks tab2" onclick="switchTab(2);">Swift</a></li>
-</ul>
-
-<pre class="tabcontent tab1"> 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/vje0rXuqD80?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen>
-</iframe>
-</pre>
-<pre class="tabcontent tab2"> 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/aT5O_qyeQGk" frameborder="0" allowfullscreen>
 </iframe>
-</pre>
-
 
 <hr>
 <hr>
@@ -343,22 +195,9 @@ src="https://www.youtube.com/embed/aT5O_qyeQGk" frameborder="0" allowfullscreen>
 <p>This is pretty straightforward. We're making the button actually do stuff now.</p>
 <p>Again remember to press the control key while dragging!</p>
 
-<ul class="tab">
-<li><a href="javascript:void(0)" class="tablinks tab1 active" onclick="switchTab(1);">Objective-C</a></li>
-<li><a href="javascript:void(0)" class="tablinks tab2" onclick="switchTab(2);">Swift</a></li>
-</ul>
-
-<pre class="tabcontent tab1"> 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/2tuVHTDPxn8?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen>
-</iframe>
-</pre>
-<pre class="tabcontent tab2"> 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/evw_KboMG2Q" frameborder="0" allowfullscreen>
 </iframe>
-</pre>
-
 
 <hr>
 <hr>
@@ -366,22 +205,9 @@ src="https://www.youtube.com/embed/evw_KboMG2Q" frameborder="0" allowfullscreen>
 <p>We add some labels to display the weather. Note how we're using stack view here.</p>
 <p>There are at least 5 ways to lay out elements in Xcode. This is probably the fastest.</p>
 
-<ul class="tab">
-<li><a href="javascript:void(0)" class="tablinks tab1 active" onclick="switchTab(1);">Objective-C</a></li>
-<li><a href="javascript:void(0)" class="tablinks tab2" onclick="switchTab(2);">Swift</a></li>
-</ul>
-
-<pre class="tabcontent tab1"> 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/NYgcR3tL6I4?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen>
-</iframe>
-</pre>
-<pre class="tabcontent tab2"> 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/KWdTqycEP-E" frameborder="0" allowfullscreen>
 </iframe>
-</pre>
-
 
 <hr>
 <hr>
@@ -389,66 +215,27 @@ src="https://www.youtube.com/embed/KWdTqycEP-E" frameborder="0" allowfullscreen>
 <p>We now update the UI Labels when results are fetched from the API</p>
 <p>You may notice us fixing a misplaced view warning. The view was well defined, but the placement wasn't done correctly, so we ask Xcode to update the placement and the error goes away</p>
 
-<ul class="tab">
-<li><a href="javascript:void(0)" class="tablinks tab1 active" onclick="switchTab(1);">Objective-C</a></li>
-<li><a href="javascript:void(0)" class="tablinks tab2" onclick="switchTab(2);">Swift</a></li>
-</ul>
-
-<pre class="tabcontent tab1"> 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/F3SBBLW6vH8?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen>
-</iframe>
-</pre>
-<pre class="tabcontent tab2"> 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/r55JUaOVh7k" frameborder="0" allowfullscreen>
 </iframe>
-</pre>
-
 
 <hr>
 <hr>
 <h4>Video 9 - UI Polish</h4>
 <p>This is about showing and hiding the keyboard.</p>
 
-<ul class="tab">
-<li><a href="javascript:void(0)" class="tablinks tab1 active" onclick="switchTab(1);">Objective-C</a></li>
-<li><a href="javascript:void(0)" class="tablinks tab2" onclick="switchTab(2);">Swift</a></li>
-</ul>
-
-<pre class="tabcontent tab1"> 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/u4oOeNQ-_oI?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen>
-</iframe>
-</pre>
-<pre class="tabcontent tab2"> 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/kFcwheYqVKQ" frameborder="0" allowfullscreen>
 </iframe>
-</pre>
 
 <hr>
 <hr>
 <h4>Video 10 - Blocks and Async</h4>
 <p>We update the app to work asynchronously. Mobile devices often have very flaky connections, so it's important to know how to deal with them.</p>
-<p>Confused about what's going on? Checkout <a href="http://assets.iosappsdev.org/objective-c/tutorials/objective-c/blocks.html">this handy guide</a> and <a href="http://goshdarnblocksyntax.com/" target="_blank" title="This is the SFW link. You can probably work out the other one.">this reference</a>.</p>
-
-<ul class="tab">
-<li><a href="javascript:void(0)" class="tablinks tab1 active" onclick="switchTab(1);">Objective-C</a></li>
-<li><a href="javascript:void(0)" class="tablinks tab2" onclick="switchTab(2);">Swift</a></li>
-</ul>
-
-<pre class="tabcontent tab1"> 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/k1EvVjqArZg?list=PLvcqxggo1z8GxADVB48Ts-CxsWFAtjg1u" frameborder="0" allowfullscreen>
-</iframe>
-</pre>
-<pre class="tabcontent tab2"> 
 
 <p>We don't have a video here. Instead, we put the code of two important functions here. You may try them, or write your own.
-<p>"Weather.swift": <code1>fetchWeatherForZip</code1> function</p>
-<code class="swift hljs">
-func fetchWeatherForZip(zip:String, completionHandler: @escaping (Bool) -> Void) -> Void
+<p>"Weather.swift": <code>fetchWeatherForZip</code> function</p>
+<pre><code class="swift hljs">func fetchWeatherForZip(zip:String, completionHandler: @escaping (Bool) -> Void) -> Void
 {
     NSLog("Getting conditions in %@", zip)
     let urlString : String = "https://api.wunderground.com/api/\(APP_ID)/conditions/q/\(zip).json"
@@ -466,11 +253,10 @@ func fetchWeatherForZip(zip:String, completionHandler: @escaping (Bool) -> Void)
     task.resume()
     
 }
-</code>
+</code></pre>
 
-<p>"ViewController.swift" <code1>weatherButton</code1> function (Button Handler)</p>
-<code class="swift hljs">
-@IBAction func weatherButton(_ sender: UIButton) {
+<p>"ViewController.swift" <code>weatherButton</code> function (Button Handler)</p>
+<pre><code class="swift hljs">@IBAction func weatherButton(_ sender: UIButton) {
         
         NSLog("Get Weather")
         sender.isEnabled = false
@@ -492,19 +278,13 @@ func fetchWeatherForZip(zip:String, completionHandler: @escaping (Bool) -> Void)
             sender.isEnabled = true
         })
 }
-</code>
-
-
-
-
-
-</pre>
+</code></pre>
 
 
 
 <hr>
 <hr>
-<p>That's it for now. Have a good one! No checkoff is required.</p>
+<p>That's it for now. Have a good one! (No checkoff is required.)</p>
 <img src="images/lab0/hack_the_planet.gif" alt="HACK THE PLANET!" title="There are no speed limits on the information highway.">
 
   </body>
