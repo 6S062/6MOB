@@ -1,19 +1,19 @@
 # jemdoc: menu{MENU}{index.html}
-= 6.S062: Mobile and Sensor Computing, Spring 2018
+= 6.808: Mobile and Sensor Computing, Spring 2019
 
 *Instructors:* [http://nms.csail.mit.edu/~hari/ Hari Balakrishnan] and [http://www.mit.edu/~fadel/ Fadel Adib]
 
-*TAs:* Richard Song (rsong@mit.edu)
+*TAs:* Ara Adhikari (adhikara@mit.edu) and James Pruegsanusak (korrawat@mit.edu)
 
-*Lectures:* Tue/Thr 1:00-2:30pm at 32-141
+*Lectures:* Mon/Wed 11:00am-12:30pm at 66-144
 
 *Office Hours:*
 - Hari and Fadel: By appointment
-- Richard: Mon 4pm-5pm and Wed 4pm-5pm in the 32-G9 lounge 
+- TAs: TBD
 
 = Course Overview
 
-The ubiquity of sensor-equipped smartphones, combined with the widespread availability of low-power wireless communication and sensing modules, has led to a renewed interest in sensor computing, aka the “Internet of Things” (IoT). 6.S062 is an advanced undergraduate course designed to study the fundamental sensing, computing, and communication software technologies at the core of the recent flurry of activity on IoT. In addition to exposure to fundamental technologies (power management, positioning, ranging, wireless radios, inertial sensors, etc), students will learn how to design and implement (1) libraries and applications on mobile devices that interact with internal and external sensors, (2) server-side modules for computation and storage, and (3) embedded software.
+The ubiquity of sensor-equipped smartphones, combined with the widespread availability of low-power wireless communication and sensing modules, has led to a renewed interest in sensor computing, aka the “Internet of Things” (IoT). 6.808 is an advanced undergraduate course designed to study the fundamental sensing, computing, and communication software technologies at the core of the recent flurry of activity on IoT. In addition to exposure to fundamental technologies (power management, positioning, ranging, wireless radios, inertial sensors, etc), students will learn how to design and implement (1) libraries and applications on mobile devices that interact with internal and external sensors, (2) server-side modules for computation and storage, and (3) embedded software.
 
 Topics include the principles, practices, and emerging applications in:
 - Positioning technologies, including GPS, WiFi and cellular localization
@@ -26,45 +26,9 @@ Topics include the principles, practices, and emerging applications in:
 - Embedded system security
 - iOS APIs for accessing various sensing and wireless networking technologies
 
-#Over the past two decades, the Internet has grown from a research
-#curiosity to something we all rely on daily. It has been able to
-#withstand rapid growth and accommodate numerous unforeseen
-#applications.
-#
-#How does this global infrastructure work? What design principles allow
-#it to scale well? What settings render these principles inadequate,
-#and why? How can we make it work much better in the future? These are
-#some questions that we will address in this course.
-#
-#Our goals are:
-#
-#- to understand a good slice of the state-of-the-art in network architecture, protocols, and networked systems, and
-#- to understand how to conduct networking research and develop innovative ideas.
-#
-#Topics include the principles and practice of:
-#
-#- Internet architecture: resource management and congestion control, inter-domain routing, mobility, naming
-#- "Underlay" networks: wireless and datacenter networks, software-defined networks, and programmable data-planes
-#- "Overlay" networks: content distribution networks, peer-to-peer networks, video streaming, and web performance
-
 = Announcements
-#- Please signup for [scribe.html lecture scribe].
-#- [https://scripts.mit.edu:444/~6.829/2016/course_only/quiz2016_solns.pdf Solutions] for Quiz are released. 
-#- [https://scripts.mit.edu:444/~6.829/2016/course_only/ps3-solns.pdf Solutions] for Pset3 are released.
-#- Past [http://web.mit.edu/6.829/www/2016/materials/quiz_2013.pdf quiz] from 2013 is posted. 
-#- [http://web.mit.edu/6.829/www/2016/ps3/ps3.pdf Pset 3] is released. It will be due on Nov 8 at 11:59 pm EST.
-#- [https://scripts.mit.edu:444/~6.829/2016/course_only/ps1-solns.pdf Solutions] for Pset1 are released. 
-#- [http://web.mit.edu/6.829/www/2016/pset2.html Pset 2] is released. It will be due on Oct 24 at 11:59 pm EST.
-#- Sign up for the project [https://goo.gl/forms/fDRhr7EYpMhYpRP22 here].
-#- Project proposal submission deadline is extended to 11:59PM Oct 10 (Monday). 
-#- [https://docs.google.com/document/d/1PGIw4gOiFREQFfAGz6GmRkLe8A0-uU7Xxht6DlHuNAU/edit Logistics] of the project and some suggested project ideas are released.  
-#- [https://scripts.mit.edu:444/~6.829/2016/pset.cgi?_assignment=PS1 Pset 1] is released. A PDF copy of Pset1 webpage can be found [./materials/pset1.pdf here]. 
-#- The lecture on Tuesday, September 13, will be from 1:30-2:30pm. 
-#  The first lecture will be on Tuesday, February 6.
-#- Sign up for the [https://piazza.com/mit/fall2016/6829/home 6.829 Piazza forum]. We'll be using Piazza for Q&A and other discussions, so please sign up ASAP.
-
-- Sign up for the [https://piazza.com/mit/spring2018/6s062 6.S062 Piazza forum]. We'll be using Piazza for Q&A and other discussions, so please sign up ASAP.
-- The iOS tutorial will be from 2:30pm-4pm on Friday, February 9 at 26-168.
+- Sign up for the [https://piazza.com/mit/spring2019/6808 6.808 Piazza forum]. We'll be using Piazza for Q&A and other discussions, so please sign up ASAP.
+#- The iOS tutorial will be from 2:30pm-4pm on Friday, February 8 at 26-168.
 
 
 = About the Course
@@ -77,16 +41,9 @@ Topics include the principles, practices, and emerging applications in:
 
 6.033 or equivalent (or permission of instructor). 
 
-#== Piazza
-
-#We will be using the [https://piazza.com/mit/fall2016/6829/home 6.829
-#Piazza forum] for Q\&A and other discussions.  Please
-#[https://piazza.com/mit/fall2016/6829/home sign up] and check Piazza
-#regularly.
-
 == Grading policy
 
-Grading in 6.S062 will consist of 4 labs, a midterm, a final project, and class participation, broken down as follows:
+Grading in 6.808 will consist of 4 labs, a midterm, a final project, and class participation, broken down as follows:
 
 - *Labs: 25%*
 - *Midterm: 25%*
@@ -96,7 +53,7 @@ Grading in 6.S062 will consist of 4 labs, a midterm, a final project, and class 
 
 == Readings
 
-Many classes have reading questions. Please send your response to the questions to 6s062-submit@mit.edu before class (please submit from an mit.edu email address.)
+Many classes have reading questions. Please send your response to the questions to 6808-submit@mit.edu before class (please submit from an mit.edu email address.)
 
 
 == Labs and Software Development
@@ -105,15 +62,4 @@ The class will involving programming for iPhones in XCode, which requires a Mac 
 
 == Midterm
 
-There will be one midterm, in-class, on Tuesday, April 24.
-
-# 15 + 5 minutes
-
-### Proposal: Oct 7
-### PSET1: Sep 15-30
-### PSET2: Oct 4-21
-### PSET3: Nov 4
-
-
-
-
+There will be one midterm, in-class, on Monday, April 22.
