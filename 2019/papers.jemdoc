@@ -1,0 +1,152 @@
+# jemdoc: menu{MENU}{papers.html}
+= Reading List
+
+This is a temporary page to list any papers we might want to talk about.
+
+== Links to related classes
+- [http://web.stanford.edu/class/cs244/timetable.html Stanford]
+- [http://people.eecs.berkeley.edu/~sylvia/cs268-2016/syllabus.html Berkeley]
+- [https://www.cs.princeton.edu/courses/archive/fall14/cos561/syllabus.html Princeton]
+- [https://courses.engr.illinois.edu/cs538/fa2013/ UIUC 2013], and [https://courses.engr.illinois.edu/cs538/ UIUC 2016]
+- [http://www.cs.cmu.edu/~srini/15-744/S16/syllabus.html CMU]
+
+== Network Architecture
+- D. D. Clark, The Design Philosophy of the DARPA Internet Protocols, SIGCOMM 1988
+- J. H. Saltzer, D. P. Reed, D. D. Clark, End-to-End Arguments in System Design, Distributed Computing Systems, 1981.
+- M. Handley, Why the Internet only just works, BT Technology Journal, 24(3), July 2006.
+- D. D. Clark. Tussle in Cyberspace: Defining Tomorrow’s Internet. ToN 2005.
+
+
+
+== Resource Management
+=== End-to-end congestion control
+- V. Jacobson and M. Karels, Congestion Avoidance and Control, expanded version of ACM SIGCOMM 1988 paper.
+
+=== Network assisted congestion control
+- D. Katabi, M. Handley, C. Rohrs, Congestion control for high bandwidth-delay product networks, SIGCOMM 2002.
+- N. Dukkipati, N. McKeown, Why Flow-Completion Time is the Right Metric for Congestion Control, SIGCOMM CCR 2006.
+
+=== Active queue management
+- S. Floyd and V. Jacobson, Random Early Detection Gateways for Congestion Avoidance, IEEE/ACM Trans. on Networking, 1(4), Aug. 1993.
+- C. Hollot et al. Analysis and design of controllers for AQM routers supporting TCP flows. IEEE Transactions on automatic control 47.6 (2002): 945-959.
+*\[MA: Probably too theoretical.\]*
+- [https://tools.ietf.org/html/draft-ietf-aqm-pie-06 PIE RFC]
+
+=== Scheduling and Fairness
+- A. Demers et al. Analysis and simulation of a fair queueing algorithm, SIGCOMM 1989.
+- A. Parekh and R. Gallager, A generalized processor sharing approach to flow control in integrated services networks: the single-node case, IEEE/ACM Transactions on Networking (TON) 1993.
+- I. Stoica et al. Core-Stateless Fair Queueing: Achieving Approximately Fair Bandwidth Allocations in High Speed Networks, SIGCOMN 1998.
+- B. Briscoe, Flow Rate Fairness: Dismantling a Religion, SIGCOMM CCR 2007.
+
+=== Modern congestion control
+- D. Wischik et al., Design, implementation and evaluation of congestion control for multipath TCP, NSDI 2011.
+- K. Winstein et al., Stochastic Forecasts Achieve High Throughput and Low Delay over Cellular Networks, NSDI 2013.
+- K. Winstein et al., TCP ex Machina: Computer-Generated Congestion Control, SIGCOMM 2013.
+- M. Dong et al., PCC: Re-architecting Congestion Control for Consistent High Performance, NSDI 2015. *\[MA: In case you want to spend a lecture slamming the paper!\]*
+
+== Router design
+=== Classic
+- T. Anderson et al., High-speed Switch Scheduling for Local-area Networks, ACM Trans. Computer Systems, 1993.
+- N. McKeown, The iSLIP Scheduling Algorithm for Input-Queued Switches, IEEE/ACM Trans. on Networking, 9(2), April 1999.
+
+=== Buffer sizing
+- G. Appenzeller et al., Sizing Router Buffers, SIGCOMM 2004.
+
+=== Software routers
+- E. Kohler et al., The Click Modular Router, ACM TOCS 2000.
+- M. Dobrescu et al., RouteBricks: Exploiting Parallelism To Scale Software Routers, SOSP 2009.
+
+=== Programmable dataplanes
+- P. Bosshart et al., P4: Programming Protocol-Independent Packet Processors, SIGCOMM CCR 2014.
+- P. Bosshart et al., Forwarding Metamorphosis: Fast Programmable Match-Action Processing in Hardware for SDN, SIGCOMM 2013.
+
+== Routing
+=== BGP
+- L. Gao, J. Rexford. Stable Internet Routing Without Global Coordination, ToN 2001.
+- C. Labovitz et al. Internet Routing Instability, SIGCOMM 1997.
+- [http://people.eecs.berkeley.edu/~sylvia/cs268-2016/papers/hari-bgpnotes.pdf Hari's notes]
+- M. Roughan, 10 Lessons from 10 Years of Measuring and Modeling the Internet’s Autonomous Systems, IEEE JSAC 2011.
+
+=== BGP security
+- R. Lychev et al. BGP Security in Partial Deployment, SIGCOMM 2013.
+- S. Goldberg. Why Is It Taking So Long to Secure Internet Routing?, Communications of the ACM 2014.
+- K. Butler et al.  A survey of BGP security issues and solutions, Proc. IEEE, Jan. 2010. 
+*\[Read Sections I, II from start through end of II-A, IV from start through end of IV-A. Skim the rest.\]*
+
+=== Other approaches
+- N. Feamster et al. The Case for Separating Routing from Routers, SIGCOMM 2004.
+- J. P. John et al. Consensus Routing: The Internet as a Distributed System, NSDI 2008.
+- P. Godfrey et al. Pathlet Routing. SIGCOMM 2009.
+
+
+
+== Measurement
+- V. Paxson, Strategies for Sound Internet Measurement, ICM 2004
+- N. Spring et al., Measuring ISP Topologies with Rocketfuel, SIGCOMM 2002.
+- V. Paxson, End-to-End Internet Packet Dynamics, SIGCOMM 1997.
+
+
+== Datacenters
+=== Architecture
+- A. Greenberg et al., VL2: A Scalable and Flexible Data Center Network, SIGCOMM 2009.
+- A. Singh et al., Jupiter Rising: A Decade of Clos Topologies and Centralized Control in Google’s Datacenter Network, SIGCOMM 2015.
+
+=== Transport
+- M. Alizadeh et al., Data Center TCP (DCTCP), SIGCOMM 2010.
+- M. Alizadeh et al., pFabric: Minimal Near-Optimal Datacenter Transport, SIGCOMM 2013.
+- J. Perry et al., Fastpass: A Centralized “Zero-Queue” Datacenter Network, SIGCOMM 2014.
+
+== SDN
+=== History
+- N. Feamster, J. Rexford, and E. Zegura, The Road to SDN: An Intellectual History of Programmable Networks, SIGCOMM CCR 2014.
+- D. L. Tennenhouse and D. J. Wetherall, Toward an Active Network Architecture, SIGCOMM CCR 1996.
+
+=== Logically centralized control plane
+- M. Caesar et al., Design and Implementation of a Routing Control Platform, NSDI 2005.
+- A. Greenberg et al., A Clean Slate 4D Approach to Network Control and Management, SIGCOMM CCR 2005.
+- M. Casado et al. Ethane: Taking Control of the Enterprise, SIGCOMM 2007.
+- T. Koponen et al. Onix: A Distributed Control Platform for Large-scale Production Networks, OSDI 2010.
+
+=== Deployments
+- S. Jain et al., B4: Experience with a Globally-Deployed Software Defined WAN, SIGCOMM 2013.
+
+=== Network verification
+- P. Kazemian, G. Varghese, and N. McKeown, Header Space Analysis: Static Checking For Networks, NSDI 2012.
+
+
+== Web/Video
+- R. Netravali, et al., Polaris: Faster Page Loads Using Fine-grained Dependency Tracking, NSDI 2016.
+- X. Yin et al., A Control-Theoretic Approach for Dynamic Adaptive Video Streaming over HTTP, SIGCOMM 2015.
+- T.Y. Huang et al, A Buffer-based Approach to Rate Adaptation: Evidence from a Large Video Streaming Service, SIGCOMM 2014.
+- X. Liu et al. A Case for a Coordinated Internet Video Control Plane, SIGCOMM 2012.
+- A. Ganjam et al. C3: Internet-Scale Control Plane for Video Quality Optimization, NSDI 2015.
+
+
+== CDNs, Overlays and P2P
+- M. Piatek et al., Do incentives build robustness in BitTorrent?, NSDI 2007.
+- Ion Stoica et al., Chord: A Scalable Peer-to-Peer Lookup Protocol for Internet Applications, Transactions On Networking, 2003.
+- M. J. Freedman, Experiences with CoralCDN: A Five-Year Operational View, NSDI 2010.
+- C. Huang et al. Measuring and Evaluating Large-Scale CDNs, IMC 2008.
+- S. A. Baset et al., An Analysis of the Skype Peer-to-Peer Internet Telephony Protocol, INFOCOM 2006.
+- D. G. Andersen et al. Resilient Overlay Networks, SOSP 2001.
+- E. Nygren etg al. The Akamai Network: A Platform for High-Performance Internet Applications, ACM SIGOPS Operating Systems Review, Vol. 44, No. 3, July 2010.
+
+== Wireless
+- S. Biswas, R. Morris. ExOR: Opportunistic Multi-Hop Routing for Wireless Networks, SIGCOMM 2005.
+- S. Katti et al., XORs in The Air: Practical Wireless Network Coding, SIGCOMM 2006.
+- J. Bicket et al., Architecture and Evaluation of an Unplanned 802.11b Mesh Network, MobiCom 2005.
+- J. Bicket,  Bit-rate Selection in Wireless Networks, SM Thesis, MIT, February 2005.
+- M. Vutukuru et al.,  Cross-Layer Wireless Bit Rate Adaptation, SIGCOMM 2009.
+- J. Perry et al.  Spinal Codes, SIGCOMM 2012.
+
+== Privacy
+- D. Naylor et al., Balancing Accountability and Privary in the Network, SIGCOMM 2014.
+- R. Dingledine et al., Tor: The Second-Generation Onion Router, SSYM 2004. 
+
+== Mobility
+- L. Peterson and B. Davie, Section on Mobile IP
+- K. Winstein and H. Balakrishnan, Mosh: An Interactive Remote Shell for Mobile Clients, Usenix ATC 2012.
+- P. Zave, J. Rexford, The Design Space of Network Mobility, Recent Advances in Networking 2013.
+
+== Middleboxes
+- J. Sherry et al., BlindBox: Deep Packet Inspection over Encrypted Traffic, SIGCOMM 2015.

@@ -1,0 +1,90 @@
+
+
+If the first line of the file startest with +\# jemdoc+, special functions like [menu.html menus] will be...
+
+== Example
+
+Here are some *text* /features/ . I could [http://cvsxmod.net/ link somewhere] or insert raw link [donwload.html] . 
+I could use +monospace+, too.
+
+I could write special characters \# \$ \+ . or detect email [jacobm@stanford.edu email address]
+
+~~~
+Save the file as +index.jemdoc+, say and simply compile
+~~~
+
+
+== Next bit, next heading
+=== level three
+
+List
+- to explain list
+- to demo a line\n break
+
+Or perhaps a
+. Multilevel
+  .. Numberd list
+  .. Is more
+. Useful?
+
+: {Definition} lists, especialy when there are many defs : {Can be useful}
+
+== Finally, a few more blocks 
+This `section' features "smart quotes".
+
+~~~
+{Simple block}
+This is a simple text with title. Notice how the previous line has only one set of braces (\{\}).
+~~~
+
+
+~~~
+{Interactive Python listing}{pyint} 
+>>> print 'Interactive python code.' 'Interactive python code.'
+~~~
+
+~~~
+{}{}
+Plain code block
+~~~
+
+You might need 2--3 dashes---blah.
+
+
+== cheatsheat
+
+
+/italics/
+*bold*
++monospace+
+- is a hyphen
+-- is a dash
+--- is em-dash
+... is epipsis
+\~ is non-breaking space
+\C is
+\R is 
+single qouted text `blah'
+double quoted "blah"
+
+sgdsgsd \n works
+
+This is $X^2 = 2$ . 
+
+\( Z_4 = 5 \)
+
+~~~
+{Optionally empty title} {Optionally empty highlight mode} 
+Code block with mono text.
+~~~
+
+
+- bulet one
+  -- bullet two
+
+. number one
+  .. number two
+  .. number three
+
+: {jemdoc} blah blah
+: {ascii} blah2 blah2
